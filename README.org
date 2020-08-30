@@ -18,7 +18,7 @@
      mv ~/.emacs.d ~/.emacs.d-bak && git clone https://github.com/KiteAB/.emacs.d ~/.emacs.d && cd ~/.emacs.d && mkdir third-party gtd
      git clone https://github.com/manateelazycat/emacs-application-framework third-party/emacs-application-framework --depth=1
      git clone https://github.com/loyalpartner/english-teacher.el third-party/english-teacher.el --depth=1
-     cp bookmarks var/bookmarks
+     ln bookmarks var/bookmarks
    #+end_src
    And enjoy the Emacs!
 
