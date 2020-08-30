@@ -55,7 +55,8 @@
 								(setq dashboard-startup-banner 'logo)
 								(setq dashboard-center-content t
 											dashboard-set-heading-icons t
-											dashboard-set-navigator t)))
+											dashboard-set-navigator t
+											dashboard-init-info "KiteAB's Emacs")))
 
 ;;; Org
 (package-require
