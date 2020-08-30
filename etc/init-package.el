@@ -310,10 +310,4 @@
  'quickrun
  :keymap '(("C-' r" . quickrun-shell)))
 
-;;; Command Log Mode
-(package-require
- 'command-log-mode
- :keymap '(("C-' C-b g" . global-command-log-mode)
-					 ("C-' C-b c" . clm/toggle-command-log-buffer)))
-
 (provide 'init-package)
