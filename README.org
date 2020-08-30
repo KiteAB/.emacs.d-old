@@ -1,0 +1,26 @@
+* My Emacs Configuration
+  Hello everyone, this repository saved my personal emacs configuration file.
+  I'm a new in Emacs, welcome to submit an issue or a pull request.
+
+** Dependencies
+   You need some dependencies at below:
+   - Emacs >= 27.1
+   - Git
+   - libvterm (To use Vterm in emacs)
+   - CMake
+   - Fira Code Nerd Font (Optional. You can edit the font use ~C-z C-c ui RET~)
+   - The dependences in [[https://github.com/manateelazycat/emacs-application-framework][Emacs Application Framework]]. (To use EAF)
+   - The dependences in [[https://github.com/loyalpartner/english-teacher.el][english-teacher.el]]. (To use english-teacher)
+
+** Installation
+   You need to run the commands at below:
+   #+begin_src shell
+     mv ~/.emacs.d ~/.emacs.d-bak && git clone https://github.com/KiteAB/.emacs.d ~/.emacs.d && cd ~/.emacs.d && mkdir third-party gtd
+     git clone https://github.com/manateelazycat/emacs-application-framework third-party/emacs-application-framework --depth=1
+     git clone https://github.com/loyalpartner/english-teacher.el third-party/english-teacher.el --depth=1
+     cp bookmarks var/bookmarks
+   #+end_src
+   And enjoy the Emacs!
+
+** License
+   MIT

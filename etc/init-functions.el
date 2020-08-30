@@ -85,7 +85,7 @@ If it's daytime now,return t.Otherwise return nil."
 	(let ((now-time
 				 (string-to-number (cl-subseq (current-time-string) 11 13))))
 		(if (and (>= now-time 6) (< now-time 19))
-				;t
+				t
 			nil)))
 
 (defun load-the-theme ()
