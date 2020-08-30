@@ -5,41 +5,24 @@
 (("KitPixel"
  (handler . eaf--bookmark-restore)
  (eaf-app . "browser")
- (filename . "https://github.com/orgs/KitPixel"))
-("netease-music-api"
- (handler . eaf--bookmark-restore)
- (eaf-app . "browser")
- (filename . "https://www.jianshu.com/p/97e35fa456ce"))
-("iconfont"
+ (filename . "https://github.com/KitPixel"))
+("Iconfont"
  (handler . eaf--bookmark-restore)
  (eaf-app . "browser")
  (filename . "https://www.iconfont.cn/"))
-("zhihu"
+("Zhihu"
  (handler . eaf--bookmark-restore)
  (eaf-app . "browser")
  (filename . "https://www.zhihu.com/"))
-("Yingtao"
- (handler . eaf--bookmark-restore)
- (eaf-app . "browser")
- (filename . "https://space.bilibili.com/27137545?from=search&seid=2741825724149172775"))
 ("Wallpapers"
  (handler . eaf--bookmark-restore)
  (eaf-app . "browser")
  (filename . "https://bz.zzzmh.cn/#anime"))
-("org-capture-last-stored"
- (filename . "~/.emacs.d/gtd/tasks.org")
- (front-context-string . "*** STUDY <2020-")
- (rear-context-string . "	看C Primer Plus\n")
- (position . 1830))
-("nbnhhsh"
- (handler . eaf--bookmark-restore)
- (eaf-app . "browser")
- (filename . "https://lab.magiconch.com/nbnhhsh/"))
 ("bilibili"
  (handler . eaf--bookmark-restore)
  (eaf-app . "browser")
- (filename . "https://www.bilibili.com/"))
-("book"
+ (filename . "https://t.bilibili.com/"))
+("Emacs-Book"
  (handler . eaf--bookmark-restore)
  (eaf-app . "browser")
  (filename . "http://book.emacs-china.org/"))
@@ -55,8 +38,4 @@
  (handler . eaf--bookmark-restore)
  (eaf-app . "browser")
  (filename . "http://cn.bing.com/"))
-("TheCW"
- (handler . eaf--bookmark-restore)
- (eaf-app . "browser")
- (filename . "https://space.bilibili.com/13081489?from=search&seid=1712991057856407993"))
 )
