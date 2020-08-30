@@ -22,5 +22,12 @@
    #+end_src
    And enjoy the Emacs!
 
+** Notes
+   - This configuration file is use ~package-require~
+   - This configuration file is extend by [[https://github.com/SpringHan/.emacs.d][SpringHan/.emacs.d]], you can use that configuration too.
+*** Todos
+    - Use ~[[https://github.com/jwiegley/use-package][use-package]~ are not ~[[https://github.com/SpringHan/.emacs.d/blob/master/etc/init-require-package.el][package-require]~
+    - Add some useful functions and bind to ~C-z~ keys group.
+
 ** License
    MIT
