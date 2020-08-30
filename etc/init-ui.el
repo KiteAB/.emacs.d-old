@@ -7,7 +7,6 @@
 (global-linum-mode t) ; Show the line number
 (global-hl-line-mode -1) ; Highlight the current line
 (toggle-frame-fullscreen) ; Set fullscreen
-(set-frame-parameter nil 'alpha '(90 . 100)) ; Set transparent background (90%)
 (setq-default cursor-type '(bar . 1)) ; Cursor Shape
 (setq inhibit-splash-screen t) ; Close the start flash
 (set-face-attribute
