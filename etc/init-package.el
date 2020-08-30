@@ -1,4 +1,9 @@
 ;;;; This file is used for packages configuration and more
+;;; Init use-package
+(eval-when-compile
+  ;; Following line is not needed if use-package.el is in ~/.emacs.d
+  (add-to-list 'load-path "~/.emacs.d/third-party/use-package")
+  (require 'use-package))
 ;;; Set the plugin keybinding
 (define-prefix-command 'plugin-key)
 (global-set-key (kbd "C-'") 'plugin-key)
@@ -8,128 +13,121 @@
 
 ;;; Third-party
 ;;; Emacs Application Framework
-(package-require
- 'eaf
- :outside
- :before-load-eval '(add-to-list 'load-path "~/.emacs.d/third-party/emacs-application-framework")
- :keymap '(("C-z C-w l" . eaf-open-browser)
-					 ("C-z C-w h" . eaf-open-browser-with-history)
-					 ("C-z C-m b" . eaf-open-bookmark))
- :delay-eval '(progn
-								(eaf-setq eaf-browser-remember-history "true")
-								(eaf-setq eaf-browser-default-zoom "1.0")
-								(defun eaf-browser-set ()
-									(interactive)
-									(if (day-or-night)
-											(eaf-setq eaf-browser-dark-mode "false")
-										(eaf-setq eaf-browser-dark-mode "true")))
-								(eaf-browser-set)))
+(use-package eaf
+ :load-path "~/.emacs.d/third-party/emacs-application-framework"
+ :bind (("C-z C-w l" . eaf-open-browser)
+			  ("C-z C-w h" . eaf-open-browser-with-history)
+			  ("C-z C-m b" . eaf-open-bookmark))
+ :config (progn
+					 (eaf-setq eaf-browser-remember-history "true")
+					 (eaf-setq eaf-browser-default-zoom "1.0")
+					 (defun eaf-browser-set ()
+						 (interactive)
+						 (if (day-or-night)
+								 (eaf-setq eaf-browser-dark-mode "false")
+							 (eaf-setq eaf-browser-dark-mode "true")))
+					 (eaf-browser-set)))
 
 ;;; English Teacher
-(package-require
- 'english-teacher
- :outside
- :before-load-eval '(add-to-list 'load-path "~/.emacs.d/third-party/english-teacher.el")
- :keymap '(("C-' C-l" . english-teacher-smart-translation))
- :delay-eval '(setq english-teacher-backend 'baidu
-										english-teacher-show-result-function 'english-teacher-eldoc-show-result-function)
- :hook '((Info-mode-hook eww-mode-hook help-mode-hook) . english-teacher-follow-mode))
+(use-package english-teacher
+ :load-path "~/.emacs.d/third-party/english-teacher.el"
+ :bind (("C-' C-l" . english-teacher-smart-translation))
+ :config (setq english-teacher-backend 'baidu
+							 english-teacher-show-result-function 'english-teacher-eldoc-show-result-function)
+ :hook ((Info-mode-hook eww-mode-hook help-mode-hook) . english-teacher-follow-mode))
 
 ;;; Netease Cloud Music
-(package-require
- 'netease-cloud-music
- :outside
- :before-load-eval '(add-to-list 'load-path "~/.emacs.d/third-party/netease-cloud-music.el")
- :keymap '(("C-' C-m t" . netease-cloud-music)
-					 ("C-' C-m r" . netease-cloud-music-change-repeat-mode)))
+(use-package netease-cloud-music
+ :load-path "~/.emacs.d/third-party/netease-cloud-music.el"
+ :bind (("C-' C-m t" . netease-cloud-music)
+				("C-' C-m r" . netease-cloud-music-change-repeat-mode)))
 ;;; Child package
-(package-require 'request)
+(use-package request :ensure t)
 
 
 ;;; Dashboard
-(package-require
- 'dashboard
- :delay-eval '(progn
-								(dashboard-setup-startup-hook)
-								(setq dashboard-banner-logo-title "Vim Defector No.114514")
-								(setq dashboard-startup-banner 'logo)
-								(setq dashboard-center-content t
-											dashboard-set-heading-icons t
-											dashboard-set-navigator t
-											dashboard-init-info "KiteAB's Emacs")))
+(use-package dashboard
+	:ensure t
+	:config (progn
+						 (dashboard-setup-startup-hook)
+						 (setq dashboard-banner-logo-title "Vim Defector No.114514")
+						 (setq dashboard-startup-banner 'logo)
+						 (setq dashboard-center-content t
+									 dashboard-set-heading-icons t
+									 dashboard-set-navigator t
+									 dashboard-init-info "KiteAB's Emacs")))
 
 ;;; Org
-(package-require
- 'org
- :before-load-eval '(progn
-											(define-prefix-command 'org-key-map)
-											(global-set-key (kbd "C-z C-c") 'org-key-map))
- :keymap '(("C-z C-c g" . org-agenda)
-					 ("C-z C-c c" . org-capture)
-					 ("C-z C-c s" . org-timer-start)
-					 ("C-z C-c S" . org-timer-set-timer)
-					 ("C-z C-c e" . org-timer-stop)
-					 ("C-z C-c SPC" . org-timer-pause-or-continue)
-					 ("C-z C-c C-i" . spring/use-space-indent))
- :delay-eval '(progn
-								(setq org-src-fontify-natively t)
-								(require 'init-org))
- :hook '(org-mode-hook . (lambda () (setq indent-tabs-mode nil) (define-key org-mode-map (kbd "C-'") nil))))
+(use-package org
+ :ensure t
+ :init (progn
+				 (define-prefix-command 'org-key-map)
+				 (global-set-key (kbd "C-z C-c") 'org-key-map))
+ :bind (("C-z C-c g" . org-agenda)
+				("C-z C-c c" . org-capture)
+				("C-z C-c s" . org-timer-start)
+				("C-z C-c S" . org-timer-set-timer)
+				("C-z C-c e" . org-timer-stop)
+				("C-z C-c SPC" . org-timer-pause-or-continue)
+				("C-z C-c C-i" . spring/use-space-indent))
+ :config (progn
+					 (setq org-src-fontify-natively t)
+					 (require 'init-org))
+ :hook (org-mode-hook . (lambda () (setq indent-tabs-mode nil) (define-key org-mode-map (kbd "C-'") nil))))
 ;;; Child package
-(package-require
- 'org-bullets
- :hook '(org-mode-hook . (lambda () (org-bullets-mode t)))
- :delay-eval '(setq org-bullets-bullet-list '("" "☯" "❀" "✿")))
+(use-package org-bullets
+ :ensure t
+ :hook (org-mode-hook . (lambda () (org-bullets-mode t)))
+ :config (setq org-bullets-bullet-list '("" "☯" "❀" "✿")))
 
 ;;; Vterm
-(package-require
- 'vterm
- :keymap '(("C-' C-t" . open-vterm))
- :delay-eval '(progn
-								(define-key vterm-mode-map (kbd "C-c p") 'previous-buffer)
-								(define-key vterm-mode-map (kbd "C-c n") 'next-buffer)))
+(use-package vterm
+ :ensure t
+ :bind (("C-' C-t" . open-vterm))
+ :config (progn
+					 (define-key vterm-mode-map (kbd "C-c p") 'previous-buffer)
+					 (define-key vterm-mode-map (kbd "C-c n") 'next-buffer)))
 
 ;;; Counsel
-(package-require
- 'counsel
- :keymap '(("M-x" . counsel-M-x)
-					 ("C-x C-f" . counsel-find-file)
-					 ("C-z a" . counsel-linux-app)))
+(use-package counsel
+ :ensure t
+ :bind (("M-x" . counsel-M-x)
+				("C-x C-f" . counsel-find-file)
+				("C-z a" . counsel-linux-app)))
 
 ;;; Icons
-(package-require
- 'all-the-icons
- :keymap '(("C-' C-i" . all-the-icons-insert)))
+(use-package all-the-icons
+ :ensure t
+ :bind (("C-' C-i" . all-the-icons-insert)))
 
 ;;; ivy
-(package-require
- 'ivy
- :hook '(after-init-hook . ivy-mode))
+(use-package ivy
+ :ensure t
+ :hook (after-init-hook . ivy-mode))
 ;;; Child Packages
-(package-require
- 'posframe
- :delay-eval '(setq posframe-mouse-banish nil))
-(package-require
- 'ivy-posframe
- :hook '(ivy-mode-hook . ivy-posframe-mode)
- :delay-eval '(progn
-								(setq ivy-posframe-display-functions-alist
-											'((t . ivy-posframe-display-at-frame-center)))
-								(setq ivy-posframe-parameters '((left-fringe . 8)
-																								(right-fringe . 8)))))
+(use-package posframe
+ :ensure t
+ :config (setq posframe-mouse-banish nil))
+(use-package ivy-posframe
+ :ensure t
+ :hook (ivy-mode-hook . ivy-posframe-mode)
+ :config (progn
+					 (setq ivy-posframe-display-functions-alist
+								 '((t . ivy-posframe-display-at-frame-center)))
+					 (setq ivy-posframe-parameters '((left-fringe . 8)
+																					 (right-fringe . 8)))))
 
 ;;; Bongo
-(package-require 'bongo)
+(use-package bongo
+	:ensure t)
 
 ;;; Which Key
-(package-require
- 'which-key
- :hook '(after-init-hook . which-key-mode))
+(use-package which-key
+	:hook (after-init-hook . which-key-mode))
 
 ;;; ace window
-(package-require
- 'ace-window
- :keymap '(("C-' C-c" . ace-window)))
+(use-package ace-window
+ :bind (("C-' C-c" . ace-window)))
 
 ;;; Calendar-China
 (package-require 'cal-china-x)
