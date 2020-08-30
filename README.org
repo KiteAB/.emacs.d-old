@@ -18,6 +18,7 @@
      mv ~/.emacs.d ~/.emacs.d-bak && git clone https://github.com/KiteAB/.emacs.d ~/.emacs.d && cd ~/.emacs.d && mkdir third-party gtd
      git clone https://github.com/manateelazycat/emacs-application-framework third-party/emacs-application-framework --depth=1
      git clone https://github.com/loyalpartner/english-teacher.el third-party/english-teacher.el --depth=1
+     git clone https://github.com/jwiegley/use-package third-party/use-package --depth=1
      ln bookmarks var/bookmarks
    #+end_src
    And enjoy the Emacs!
@@ -26,7 +27,7 @@
    - This configuration file is use ~package-require~
    - This configuration file is extend by [[https://github.com/SpringHan/.emacs.d][SpringHan/.emacs.d]], you can use that configuration too.
 *** Todos
-    - Use [[https://github.com/jwiegley/use-package][use-package]] are not [[https://github.com/SpringHan/.emacs.d/blob/master/etc/init-require-package.el][package-require]]
+    - Use [[https://github.com/jwiegley/use-package][use-package]] are not [[https://github.com/SpringHan/.emacs.d/blob/master/etc/init-require-package.el][package-require]] (doing...)
     - Add some useful functions and bind to ~C-z~ keys group.
 
 ** License
