@@ -4,8 +4,6 @@
 (require 'cl-lib) ; Common Lisp
 (setq package-archives '(("gnu" . "http://mirrors.bfsu.edu.cn/elpa/gnu/")
 												 ("melpa" . "http://mirrors.bfsu.edu.cn/elpa/melpa/")))
-(package-initialize)
-
 ;;;; Variables
 (defvar spring/time-block nil
 	"If the the time-block changed, it is t.
@@ -55,6 +53,7 @@ Otherwise it's nil.")
 (setq initial-scratch-message
 			";; KiteAB's Emacs
 ;; This is the temp buffer named *scratch*
+;; You can test the Emacs Lisp in it
 
 ")
 (setq-default tab-width 2) ; The tab width
@@ -70,6 +69,7 @@ Otherwise it's nil.")
 
 ;;;; Plugin requires
 (require 'init-package)
+(package-initialize)
 
 ;;;; Enable Disbaled command
 (require 'novice)
