@@ -104,6 +104,17 @@
 (package-require
  'ivy
  :hook '(after-init-hook . ivy-mode))
+;;; Child Packages
+(package-require
+ 'posframe
+ :delay-eval '(setq posframe-mouse-banish nil))
+(package-require
+ 'ivy-posframe
+ :hook '(ivy-mode-hook . ivy-posframe-mode)
+ :delay-eval '(progn
+								(setq ivy-posframe-display-functions-alist
+											'((t . ivy-posframe-display-at-frame-center)))
+								(setq ivy-posframe-parameters '((left-fringe . 8)
 
 ;;; Bongo
 (package-require 'bongo)
