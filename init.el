@@ -88,6 +88,3 @@ Otherwise it's nil.")
 ;;; Erc
 ;(kiteab/open-erc) ; Auto open erc
 ;(switch-to-buffer "*dashboard*") ; Hide erc at backstage
-;;; Cursor
-;(set-cursor-color "white")
-																				; Set the cursor color
