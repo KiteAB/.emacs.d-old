@@ -123,85 +123,87 @@
 
 ;;; Which Key
 (use-package which-key
+	:ensure t
 	:hook (after-init-hook . which-key-mode))
 
 ;;; ace window
 (use-package ace-window
+	:ensure t
  :bind (("C-' C-c" . ace-window)))
 
 ;;; Calendar-China
-(package-require 'cal-china-x)
+(use-package cal-china-x
+	:ensure t)
 
 ;;; Iedit
-(package-require
- 'iedit
- :keymap '(("C-' C-e" . iedit-mode)))
+(use-package iedit
+ :ensure t
+ :bind (("C-' C-e" . iedit-mode)))
 
 ;;; hungry-delete
-(package-require
- 'hungry-delete
- :keymap '(("C-' C-h" . hungry-delete-mode)
-					 ("C-' DEL" . hungry-delete-backward))
- :hook '((emacs-lisp-mode-hook lisp-mode-hook) . hungry-delete-mode))
+(use-package hungry-delete
+ :ensure t
+ :bind (("C-' C-h" . hungry-delete-mode)
+			  ("C-' DEL" . hungry-delete-backward))
+ :hook ((emacs-lisp-mode-hook lisp-mode-hook) . hungry-delete-mode))
 
 ;;; js2-mode
-(package-require
- 'js2-mode
- :hook '(js-mode . js2-mode))
+(use-package js2-mode
+ :ensure t
+ :hook (js-mode . js2-mode))
 
 ;;; Web-mode
-(package-require
- 'web-mode
- :delay-eval '(progn
-								(setq auto-mode-alist
-											(append '(("\\.html\\'" . web-mode)) auto-mode-alist))
-								(setq-default web-mode-markup-indent-offset 2 ; Indent of HTML
-															web-mode-css-indent-offset 2
-															web-mode-code-indent-offset 2) ; Indent of JavaScript in HTML
-								))
+(use-package web-mode
+	:ensure t
+	:config (progn
+						(setq auto-mode-alist
+									(append '(("\\.html\\'" . web-mode)) auto-mode-alist))
+						(setq-default web-mode-markup-indent-offset 2 ; Indent of HTML
+													web-mode-css-indent-offset 2
+													web-mode-code-indent-offset 2))) ; Indent of JavaScript in HTML
 
 
 ;;; Auto Completion
 ;;; Company (Complete Anything)
-(package-require
- 'company
- :hook '(after-init-hook . global-company-mode)
- :delay-eval '(progn
-								(setq company-idle-delay 0
-											company-minimum-prefix-length 1)
-								(with-eval-after-load
-										'company
-									(define-key company-active-map (kbd "M-p") nil)
-									(define-key company-active-map (kbd "M-n") nil)
-									(define-key company-active-map (kbd "C-n") #'company-select-next)
-									(define-key company-active-map (kbd "C-p") #'company-select-previous))
-								(package-require 'company-lsp)
-								(package-require
-								 'company-c-headers
-								 :delay-eval '(add-to-list 'company-backends 'company-c-headers))))
+(use-package company
+ :ensure t
+ :hook (after-init-hook . global-company-mode)
+ :config (progn
+					 (setq company-idle-delay 0
+								 company-minimum-prefix-length 1)
+					 (with-eval-after-load
+							 'company
+						 (define-key company-active-map (kbd "M-p") nil)
+						 (define-key company-active-map (kbd "M-n") nil)
+						 (define-key company-active-map (kbd "C-n") #'company-select-next)
+						 (define-key company-active-map (kbd "C-p") #'company-select-previous))
+					 (use-package company-lsp
+						 :ensure t)
+					 (use-package company-c-headers
+						 :ensure t
+						 :config (add-to-list 'company-backends 'company-c-headers))))
 
 ;;; Lsp-mode
-(package-require
- 'lsp-mode
- :hook '((c-mode-hook python-mode c++-mode-hook lisp-mode-hook js-mode-hook web-mode-hook) . lsp)
- :keymap '(("C-' F" . lsp-format-buffer))
- :delay-eval '(progn
-								(setq lsp-idle-delay 1200
-											lsp-auto-guess-root nil
-											lsp-file-watch-threshold 2000
-											lsp-eldoc-hook nil
-											lsp-prefer-flymake nil)))
+(use-package lsp-mode
+ :hook ((c-mode-hook python-mode c++-mode-hook lisp-mode-hook js-mode-hook web-mode-hook) . lsp)
+ :bind (("C-' F" . lsp-format-buffer))
+ :config (progn
+					 (setq lsp-idle-delay 1200
+								 lsp-auto-guess-root nil
+								 lsp-file-watch-threshold 2000
+								 lsp-eldoc-hook nil
+								 lsp-prefer-flymake nil)))
 
 ;; ccls (For lsp-mode)
-;; (package-require
-;;  'ccls
-;;  :hook '((c-mode-hook c++-mode-hook objc-mode-hook) . (lambda () (lsp))))
+;; (use-package ccls
+;;  :ensure t
+;;  :hook ((c-mode-hook c++-mode-hook objc-mode-hook) . (lambda () (lsp))))
 
 ;;; emmet-mode
-(package-require
- 'emmet-mode
- :hook '(web-mode-hook . emmet-mode)
- :delay-eval '(progn (setq emmet-self-closing-tag-style " /")))
+(use-package emmet-mode
+ :ensure t
+ :hook (web-mode-hook . emmet-mode)
+ :config (progn (setq emmet-self-closing-tag-style " /")))
 
 ;;; Snippet
 (package-require
