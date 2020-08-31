@@ -1,10 +1,4 @@
 ;;;; This file is used for packages configuration and more
-;;; Init use-package
-(eval-when-compile
-  ;; Following line is not needed if use-package.el is in ~/.emacs.d
-  (add-to-list 'load-path "~/.emacs.d/third-party/use-package")
-  (require 'use-package))
-(setq use-package-hook-name-suffix nil) ;; Make use-package's ":hook" don't run macro to add "-hook" in the hook name, default value is "-hook"
 ;;; Set the plugin keybinding
 (define-prefix-command 'plugin-key)
 (global-set-key (kbd "C-'") 'plugin-key)
@@ -213,7 +207,8 @@
 			  ("C-' C-y" . yas-expand-from-trigger-key))
  :hook (after-init-hook . yas-global-mode)
  :config (progn
-					 (package-require 'yasnippet-snippets)
+					 (use-package yasnippet-snippets
+						 :ensure t)
 					 (setq yas-snippet-dirs '("~/.emacs.d/snippets"
 																		"~/.emacs.d/elpa/yasnippet-snippets-20200802.1658/snippets"))))
 

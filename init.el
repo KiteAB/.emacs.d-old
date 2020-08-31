@@ -4,6 +4,13 @@
 (require 'cl-lib) ; Common Lisp
 (setq package-archives '(("gnu" . "http://mirrors.bfsu.edu.cn/elpa/gnu/")
 												 ("melpa" . "http://mirrors.bfsu.edu.cn/elpa/melpa/")))
+;;; Init use-package
+(eval-when-compile
+  ;; Following line is not needed if use-package.el is in ~/.emacs.d
+  (add-to-list 'load-path "~/.emacs.d/third-party/use-package")
+  (require 'use-package))
+(setq use-package-hook-name-suffix nil) ;; Make use-package's ":hook" don't run macro to add "-hook" in the hook name, default value is "-hook"
+
 ;;;; Variables
 (defvar kiteab/time-block nil
 	"If the the time-block changed, it is t.
