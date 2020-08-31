@@ -108,7 +108,10 @@ If it's daytime now,return t.Otherwise return nil."
 		 :load-theme 'atom-one-dark)
 		(when (string= spring/time-block "daytime")
 			(eaf-browser-set))
-		(setq spring/time-block "night")))
+		(setq spring/time-block "night"))
+	(if (day-or-night)
+	    (set-cursor-color "black")
+	  (set-cursor-color "white")))
 
 (defun kill-unwanted-buffer ()
 	"Kill the unwanted buffers."
