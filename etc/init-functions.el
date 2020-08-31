@@ -14,7 +14,6 @@
 		("org" (find-file "~/.emacs.d/etc/init-org.el"))
 		("keymap" (find-file "~/.emacs.d/etc/init-keymaps.el"))
 		("mode" (find-file "~/.emacs.d/etc/init-modes.el"))
-		("package" (find-file "~/.emacs.d/etc/init-require-package.el"))
 		("packages" (find-file "~/.emacs.d/etc/init-package.el"))
 		("function" (find-file "~/.emacs.d/etc/init-functions.el"))))
 
@@ -98,17 +97,17 @@ If it's daytime now,return t.Otherwise return nil."
 				 :outside
 				 :before-load-eval '(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 				 :load-theme 'atom-one-light)
-				(when (string= spring/time-block "night")
+				(when (string= kiteab/time-block "night")
 					(eaf-browser-set))
-				(setq spring/time-block "daytime"))
+				(setq kiteab/time-block "daytime"))
 		(package-require
 		 'atom-one-dark
 		 :outside
 		 :before-load-eval '(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 		 :load-theme 'atom-one-dark)
-		(when (string= spring/time-block "daytime")
+		(when (string= kiteab/time-block "daytime")
 			(eaf-browser-set))
-		(setq spring/time-block "night"))
+		(setq kiteab/time-block "night"))
 	(if (day-or-night)
 	    (set-cursor-color "black")
 	  (set-cursor-color "white")))
@@ -128,19 +127,19 @@ If it's daytime now,return t.Otherwise return nil."
 	(tab-bar-new-tab)
 	(switch-to-buffer buffer-name))
 
-(defun spring/tab-bar-new-scratch ()
+(defun kiteab/tab-bar-new-scratch ()
 	"Create a new tab then select the *Scratch* buffer."
 	(interactive)
 	(tab-bar-new-tab)
 	(switch-to-buffer "*scratch*"))
 
-(defun spring/tab-bar-close-tab-kill-buffer ()
+(defun kiteab/tab-bar-close-tab-kill-buffer ()
 	"Kill the current buffer and close the current tab."
 	(interactive)
 	(kill-buffer)
 	(tab-bar-close-tab))
 
-(defun spring/copy-license (license-name)
+(defun kiteab/copy-license (license-name)
 	"Copy the license file to current directory."
 	(interactive (list
 								(completing-read "sLincense name: "
@@ -154,19 +153,19 @@ If it's daytime now,return t.Otherwise return nil."
 		 (find-file "./LICENSE")
 		 (message "Copy license action done."))))
 
-(defun spring/open-scratch ()
+(defun kiteab/open-scratch ()
 	"Open the scratch buffer after closing it."
 	(interactive)
 	(switch-to-buffer "*scratch*")
 	(insert initial-scratch-message)
 	(message "Open the scratch action done."))
 
-(defun spring/use-space-indent ()
+(defun kiteab/use-space-indent ()
 	"Use the space indent in org-mode."
 	(interactive)
 	(setq indent-tabs-mode nil))
 
-(defun spring/touch-not-alpha ()
+(defun kiteab/touch-not-alpha ()
 	"Make the not-alpha file."
 	(interactive)
 	(let ((file-name
@@ -174,7 +173,7 @@ If it's daytime now,return t.Otherwise return nil."
 		(unless (file-exists-p file-name)
 			(make-empty-file file-name))))
 
-(defun spring/open-erc ()
+(defun kiteab/open-erc ()
 	"Open the erc with only one time."
 	(interactive)
 	(let ((erc-file-path
@@ -202,17 +201,17 @@ If it's daytime now,return t.Otherwise return nil."
 							(insert (format "%s" user-password))))
 					(erc :nick user-name :password user-password))))))
 
-(defun spring/downcase-word-first-letter ()
+(defun kiteab/downcase-word-first-letter ()
 	"Downcase the first letter in the word at point."
 	(interactive)
 	(let ((letter (cl-subseq (thing-at-point 'word t) 0 1)))
 		(delete-char 1)
 		(insert (downcase letter))))
 
-(defun spring/add-todo-in-code ()
+(defun kiteab/add-todo-in-code ()
 	"Add todo content in code."
 	(interactive)
 	(comment-dwim 2)
-	(insert "<TODO(SpringHan)> "))
+	(insert "<TODO(KiteAB)> "))
 
 (provide 'init-functions)

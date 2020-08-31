@@ -5,7 +5,7 @@
 (setq package-archives '(("gnu" . "http://mirrors.bfsu.edu.cn/elpa/gnu/")
 												 ("melpa" . "http://mirrors.bfsu.edu.cn/elpa/melpa/")))
 ;;;; Variables
-(defvar spring/time-block nil
+(defvar kiteab/time-block nil
 	"If the the time-block changed, it is t.
 Otherwise it's nil.")
 
@@ -16,7 +16,7 @@ Otherwise it's nil.")
 ;; Macros
 (load-file "~/.emacs.d/macros.el")
 ;;; GitHub
-(when (spring/error-check '("~/.emacs.d/init.el::17" "init.el") :file-exists "~/.emacs.d/token.el")
+(when (kiteab/error-check '("~/.emacs.d/init.el::17" "init.el") :file-exists "~/.emacs.d/token.el")
 	(load-file "~/.emacs.d/token.el")
 	(require 'github-token))
 ;;; The cache directory
@@ -79,7 +79,7 @@ Otherwise it's nil.")
 
 ;;;; Autostart
 ;;; Erc
-;(spring/open-erc) ; Auto open erc
+;(kiteab/open-erc) ; Auto open erc
 ;(switch-to-buffer "*dashboard*") ; Hide erc at backstage
 ;;; Cursor
 ;(set-cursor-color "white")

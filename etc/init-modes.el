@@ -9,9 +9,9 @@
 (setq-default abbrev-mode t) ; Open abbrev-mode
 (define-abbrev-table
 	'global-abbrev-table
-	'(("MyName" "SpringHan")
-		("MyEmail" "<springchohaku@qq.com>")
-		("Copyright" "Copyright (C) <+++> SpringHan")))
+	'(("MyName" "KiteAB")
+		("MyEmail" "<kiteabpl@outlook.com>")
+		("Copyright" "Copyright (C) <+++> KiteAB")))
 
 ;; Eshell-mode
 (add-hook 'eshell-mode-hook (lambda () (linum-mode -1)))

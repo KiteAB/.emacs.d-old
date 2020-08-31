@@ -1,6 +1,6 @@
 ;;;; This file is used to define functions about the disabled commands
 
-(defconst spring/enable-commands
+(defconst kiteab/enable-commands
 	'(narrow-to-region downcase-region upcase-region)
 	"The disabled commands that I want to enable.")
 
@@ -35,10 +35,10 @@
 								 "n"))
 					(if (string= y-or-n "y")
 							(progn
-								(enable-commands spring/enable-commands)
+								(enable-commands kiteab/enable-commands)
 								(make-empty-file enable-file))
 						(make-empty-file disable-file)))
 			(when (file-exists-p enable-file)
-				(enable-commands spring/enable-commands)))))
+				(enable-commands kiteab/enable-commands)))))
 
 (provide 'init-enable-disabled-commands)

@@ -69,7 +69,7 @@
 				("C-z C-c S" . org-timer-set-timer)
 				("C-z C-c e" . org-timer-stop)
 				("C-z C-c SPC" . org-timer-pause-or-continue)
-				("C-z C-c C-i" . spring/use-space-indent))
+				("C-z C-c C-i" . kiteab/use-space-indent))
  :config (progn
 					 (setq org-src-fontify-natively t)
 					 (require 'init-org))

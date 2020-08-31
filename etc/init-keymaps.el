@@ -4,7 +4,7 @@
 (global-set-key (kbd "C-z i") 'open-config-file) ; Open the init.el
 (global-set-key (kbd "C-z p") 'package-list-packages) ; Open the package interface
 (global-set-key (kbd "C-z C-b") 'buffer-menu) ; Open the buffer menu
-(global-set-key (kbd "C-z C-i") 'spring/open-erc) ;Open the erc
+(global-set-key (kbd "C-z C-i") 'kiteab/open-erc) ; Open the erc
 (global-set-key (kbd "C-z C-p") 'previous-buffer) ; Goto previous buffer
 (global-set-key (kbd "C-z C-n") 'next-buffer)	  ;Goto Next buffer
 (global-set-key (kbd "C-z m") 'set-mark-command) ; The mark key map
@@ -22,19 +22,19 @@
 (global-set-key (kbd "C-z e") 'eshell) ; Open eshell
 (global-set-key (kbd "C-z C-t") 'load-the-theme) ; Load theme
 (global-set-key (kbd "C-x t O") 'tab-bar-switch-to-prev-tab) ; tab-previous
-(global-set-key (kbd "C-z C-s") 'spring/error-show) ; Show the all-the-config-errors
+(global-set-key (kbd "C-z C-s") 'kiteab/error-show) ; Show the all-the-config-errors
 (global-set-key (kbd "C-z k") 'kill-unwanted-buffer) ; Kill the unwanted buffers made in init load
 (global-set-key (kbd "C-x t 3") 'tab-bar-new-with-buffer) ; Create a new tab then select a buffer
 (global-set-key (kbd "C-x t 4") 'tab-bar-close-tab-by-name) ; Close the tab by its name
-(global-set-key (kbd "C-x t s") 'spring/tab-bar-new-scratch) ; Create a new tab then select scratch buffer
-(global-set-key (kbd "C-x t k") 'spring/tab-bar-close-tab-kill-buffer) ; Kill the current buffer and close the tab
-(global-set-key (kbd "C-z C") 'spring/copy-license) ; Copy the license to current directory
-(global-set-key (kbd "C-z o") 'spring/open-scratch) ; Open the scratch buffer
-(global-set-key (kbd "C-z n") 'spring/touch-not-alpha) ; Touch the not alpha file
+(global-set-key (kbd "C-x t s") 'kiteab/tab-bar-new-scratch) ; Create a new tab then select scratch buffer
+(global-set-key (kbd "C-x t k") 'kiteab/tab-bar-close-tab-kill-buffer) ; Kill the current buffer and close the tab
+(global-set-key (kbd "C-z C") 'kiteab/copy-license) ; Copy the license to current directory
+(global-set-key (kbd "C-z o") 'kiteab/open-scratch) ; Open the scratch buffer
+(global-set-key (kbd "C-z n") 'kiteab/touch-not-alpha) ; Touch the not alpha file
 (global-set-key (kbd "C-z C-d") 'delete-char) ; Delete the char
 (global-set-key (kbd "C-z C-r") 'revert-buffer) ; Revert current buffer
-(global-set-key (kbd "C-z M-c") 'spring/downcase-word-first-letter) ; Downcase the first letter in the word at point
-(global-set-key (kbd "C-z A") 'spring/add-todo-in-code)	; Add the todo in code
+(global-set-key (kbd "C-z M-c") 'kiteab/downcase-word-first-letter) ; Downcase the first letter in the word at point
+(global-set-key (kbd "C-z A") 'kiteab/add-todo-in-code)	; Add the todo in code
 (global-set-key (kbd "C-z v") 'vterm-other-window) ; Open a terminal below the current window
 
 ;; Key Macros
