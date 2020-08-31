@@ -42,4 +42,7 @@
 (global-set-key (kbd "C-z C-k r") 'replace-placeholder) ; Replace Placeholder
 (global-set-key (kbd "C-z C-k s") 'search-todo-in-code) ; Search the todo thing in code
 
+;; Unset
+(global-unset-key (kbd "C-SPC"))
+
 (provide 'init-keymaps)
