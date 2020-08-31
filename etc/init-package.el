@@ -206,108 +206,108 @@
  :config (progn (setq emmet-self-closing-tag-style " /")))
 
 ;;; Snippet
-(package-require
- 'yasnippet
- :keymap '(("C-' i" . yas-insert-snippet)
-					 ("C-' C-y" . yas-expand-from-trigger-key))
- :hook '(after-init-hook . yas-global-mode)
- :delay-eval '(progn
-								(package-require 'yasnippet-snippets)
-								(setq yas-snippet-dirs '("~/.emacs.d/snippets"
-																				 "~/.emacs.d/elpa/yasnippet-snippets-20200802.1658/snippets"))))
+(use-package yasnippet
+ :ensure t
+ :bind (("C-' i" . yas-insert-snippet)
+			  ("C-' C-y" . yas-expand-from-trigger-key))
+ :hook (after-init-hook . yas-global-mode)
+ :config (progn
+					 (package-require 'yasnippet-snippets)
+					 (setq yas-snippet-dirs '("~/.emacs.d/snippets"
+																		"~/.emacs.d/elpa/yasnippet-snippets-20200802.1658/snippets"))))
 
 ;;;FlyMake
-(package-require
- 'flymake
- :keymap '(("C-' C-f" . flymake-mode)))
+(use-package flymake
+ :ensure t
+ :bind (("C-' C-f" . flymake-mode)))
 
 ;;; rainbow-delimiters
-(package-require
- 'rainbow-delimiters
- :hook '((lisp-mode-hook emacs-lisp-mode-hook org-mode-hooke eshell-mode-hook) . rainbow-delimiters-mode))
+(use-package rainbow-delimiters
+ :ensure t
+ :hook ((lisp-mode-hook emacs-lisp-mode-hook org-mode-hooke eshell-mode-hook) . rainbow-delimiters-mode))
 
 ;;; indent guide
-(package-require
- 'indent-guide
- :hook '(after-init-hook . indent-guide-global-mode))
+(use-package indent-guide
+ :ensure t
+ :hook (after-init-hook . indent-guide-global-mode))
 
 ;;; doom-modeline
-(package-require
- 'doom-modeline
- :hook '(after-init-hook . doom-modeline-mode)
- :delay-eval '(progn
-								(setq-default doom-modeline-height 13)
-								(setq-default doom-modeline-bar-width 3)))
+(use-package doom-modeline
+ :ensure t
+ :hook (after-init-hook . doom-modeline-mode)
+ :config (progn
+					 (setq-default doom-modeline-height 13)
+					 (setq-default doom-modeline-bar-width 3)))
 
-;;; magit
-(package-require
- 'magit
- :keymap '(("C-' m" . magit-status)))
+;;; Magit
+(use-package magit
+ :ensure t
+ :bind (("C-' m" . magit-status)))
 
 ;;; Window Resize
-(package-require
- 'windresize
- :keymap '(("C-' C-r" . windresize)))
+(use-package windresize
+ :ensure t
+ :bind (("C-' C-r" . windresize)))
 
-;;; multiple cursor
-(package-require
- 'multiple-cursors
- :keymap '(("C-M-l" . mc/edit-lines)
-					 ("C->" . mc/mark-next-like-this)
-					 ("C-<" . mc/mark-previous-like-this)
-					 ("M-m" . newline)))
+;;; Multiple cursor
+(use-package multiple-cursors
+ :ensure t
+ :bind (("C-M-l" . mc/edit-lines)
+				("C->" . mc/mark-next-like-this)
+				("C-<" . mc/mark-previous-like-this)
+				("M-m" . newline)))
 
-;;; youdao translate
-(package-require
- 'youdao-dictionary
- :keymap '(("C-' t" . youdao-dictionary-search-at-point)))
+;;; Youdao translate
+(use-package youdao-dictionary
+ :ensure t
+ :bind (("C-' t" . youdao-dictionary-search-at-point)))
 
-;;; Treemacs : File explore
-(package-require
- 'treemacs
- :keymap '(("C-' e" . treemacs)))
+;;; Treemacs - File explore
+(use-package treemacs
+ :ensure t
+ :bind (("C-' e" . treemacs)))
 
 ;;; Dap-mode
-(package-require
- 'dap-mode
- :keymap '(("C-' d" . dap-debug)
-					 ("<F5>" . dap-breakpoint-toggle)
-					 ("<F6>" . dap-continue)))
+(use-package dap-mode
+ :ensure t
+ :bind (("C-' d" . dap-debug)
+			  ("<F5>" . dap-breakpoint-toggle)
+				("<F6>" . dap-continue)))
 
 ;;; avy-mode
-(package-require
- 'avy
- :keymap '(("C-' a c" . avy-goto-char)
-					 ("C-' a C" . avy-goto-char-2)
-					 ("C-' a l" . avy-goto-line)
-					 ("C-' a w" . avy-goto-word-1)
-					 ("C-' a W" . avy-goto-word-0)
-					 ("C-' a r" . avy-resume)))
+(use-package avy
+ :ensure t
+ :bind (("C-' a c" . avy-goto-char)
+			  ("C-' a C" . avy-goto-char-2)
+				("C-' a l" . avy-goto-line)
+				("C-' a w" . avy-goto-word-1)
+				("C-' a W" . avy-goto-word-0)
+				("C-' a r" . avy-resume)))
 
-;;; Caps_Lock
-(package-require
- 'caps-lock
- :keymap '(("C-' g" . caps-lock-mode)))
+;;; CapsLock
+(use-package caps-lock
+ :ensure t
+ :bind (("C-' g" . caps-lock-mode)))
 
 ;;; isolate-mode
-(package-require
- 'isolate
- :keymap '(("C-' C-a s" . isolate-quick-add)
-					 ("C-' C-a S" . isolate-long-add)
-					 ("C-' C-a d" . isolate-quick-delete)
-					 ("C-' C-a D" . isolate-long-delete)
-					 ("C-' C-a c" . isolate-quick-change)
-					 ("C-' C-a C" . isolate-long-change)))
+(use-package isolate
+ :ensure t
+ :bind (("C-' C-a s" . isolate-quick-add)
+				("C-' C-a S" . isolate-long-add)
+				("C-' C-a d" . isolate-quick-delete)
+				("C-' C-a D" . isolate-long-delete)
+				("C-' C-a c" . isolate-quick-change)
+				("C-' C-a C" . isolate-long-change)))
 
-;;; paredit mode
-(package-require
- 'paredit
- :hook '((lisp-mode-hook emacs-lisp-mode-hook eshell-mode-hook lisp-interaction-mode-hook) . paredit-mode)
- :keymap '(("C-' f" . paredit-focus-on-defun)))
+;;; paredit-mode
+(use-package paredit
+ :ensure t
+ :hook ((lisp-mode-hook emacs-lisp-mode-hook eshell-mode-hook lisp-interaction-mode-hook) . paredit-mode)
+ :bind (("C-' f" . paredit-focus-on-defun)))
 
 ;;; QuickRun
-(package-require
- 'quickrun
- :keymap '(("C-' r" . quickrun-shell)))
+(use-package quickrun
+ :ensure t
+ :bind (("C-' r" . quickrun-shell)))
 
 (provide 'init-package)
