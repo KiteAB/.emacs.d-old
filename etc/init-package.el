@@ -15,7 +15,7 @@
 			  ("C-z C-m b" . eaf-open-bookmark))
  :config (progn
 					 (eaf-setq eaf-browser-remember-history "true")
-					 (eaf-setq eaf-browser-default-zoom "1.0")
+					 (eaf-setq eaf-browser-default-zoom "1.2")
 					 (defun eaf-browser-set ()
 						 (interactive)
 						 (if (day-or-night)
