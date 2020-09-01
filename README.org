@@ -24,8 +24,17 @@
    #+end_src
    And enjoy the Emacs!
 
+** Shortcuts
+   I binded the ~C-z~ key and ~C-'~ key be the user defined keys.
+
+   ~C-z~ key bind the functions in ~etc/init-functions.el~
+
+   ~C-'~ key bind the packages functions in ~etc/init-package.el~
+
+   You can view these files and change somethings.
+
 ** Notes
-   - This configuration file is use ~package-require~
+   - This configuration file is use ~use-package~
    - This configuration file is extend by [[https://github.com/SpringHan/.emacs.d][SpringHan/.emacs.d]], you can use that configuration too.
 *** Todos
     - Use [[https://github.com/jwiegley/use-package][use-package]] are not [[https://github.com/SpringHan/.emacs.d/blob/master/etc/init-require-package.el][package-require]] (almost done)
