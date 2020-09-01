@@ -1,5 +1,6 @@
 * My Emacs Configuration
   Hello everyone, this repository saved my personal emacs configuration file.
+
   I'm a new in Emacs, welcome to submit an issue or a pull request.
 
 ** Dependencies
@@ -27,7 +28,7 @@
    - This configuration file is use ~package-require~
    - This configuration file is extend by [[https://github.com/SpringHan/.emacs.d][SpringHan/.emacs.d]], you can use that configuration too.
 *** Todos
-    - Use [[https://github.com/jwiegley/use-package][use-package]] are not [[https://github.com/SpringHan/.emacs.d/blob/master/etc/init-require-package.el][package-require]] (doing...)
+    - Use [[https://github.com/jwiegley/use-package][use-package]] are not [[https://github.com/SpringHan/.emacs.d/blob/master/etc/init-require-package.el][package-require]] (almost done)
     - Add some useful functions and bind to ~C-z~ keys group.
 
 ** License
