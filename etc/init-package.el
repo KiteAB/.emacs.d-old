@@ -16,6 +16,9 @@
  :config (progn
 					 (eaf-setq eaf-browser-remember-history "true")
 					 (eaf-setq eaf-browser-default-zoom "1.2")
+  				 ; Set the default browser
+					 (setq browse-url-browser-function 'eaf-open-browser)
+					 (defalias 'browse-web #'eaf-open-browser)
 					 (defun eaf-browser-set ()
 						 (interactive)
 						 (if (day-or-night)
