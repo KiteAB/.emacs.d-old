@@ -27,13 +27,11 @@
    And enjoy the Emacs!
 
 ** Shortcuts
-   I binded the ~C-z~ key and ~C-'~ key be the user defined keys.
+   I binded the ~C-z~ key to be the user defined key.
 
    ~C-z~ key bind the functions in ~etc/init-functions.el~
 
-   ~C-'~ key bind the packages functions in ~etc/init-package.el~
-
-   You can view these files and change somethings.
+   You can view this file and change somethings.
 
 ** Notes
    - This configuration file is use ~use-package~
