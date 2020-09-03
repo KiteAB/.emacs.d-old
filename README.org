@@ -3,6 +3,8 @@
 
   I'm a new in Emacs, welcome to submit an issue or a pull request.
 
+  [[./screenshots/dark.png]]
+
 ** Dependencies
    You need some dependencies at below:
    - Emacs >= 27.1
