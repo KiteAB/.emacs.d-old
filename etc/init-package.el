@@ -40,7 +40,8 @@
  :bind (("C-' C-m t" . netease-cloud-music)
 				("C-' C-m r" . netease-cloud-music-change-repeat-mode)))
 ;;; Child package
-(use-package request :ensure t)
+(use-package request
+ :ensure t)
 
 
 ;;; Dashboard
