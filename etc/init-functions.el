@@ -30,12 +30,13 @@
 	"Open some directory by the DIR-NAME."
 	(interactive (list
 								(completing-read "The directory's name: "
-																 '("emacs" "git" "gtd" "c"))))
+																 '("emacs" "git" "gtd" "c" "script"))))
 	(pcase dir-name
 		("gtd" (find-file "~/.emacs.d/gtd"))
 		("git" (find-file "~/Github"))
 		("emacs" (find-file "~/.emacs.d"))
-		("cpp" (find-file "~/cpp/src"))))
+		("cpp" (find-file "~/cpp/src"))
+		("script" (find-file "~/scripts"))))
 
 (defun set-alpha (var)
 	"Set the backgroud alpha by VAR."
