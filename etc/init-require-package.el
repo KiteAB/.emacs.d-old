@@ -92,9 +92,9 @@ If it's, return t. Otherwise return nil."
 						(ignore
 						 (when (not (package-themep others))
 							 (message
-								(format "The %s package from third-party is not installed." package-name)))))
+								(format "The %s package from third-party folder is not installed." package-name)))))
 				(ignore (message
-								 (format "The %s package is not exists.And now it'll be installed." package-name))
+								 (format "The %s package is not exists. And now it'll be installed." package-name))
 								(package-download package-name)
 								(require package-name))))
 	(when others

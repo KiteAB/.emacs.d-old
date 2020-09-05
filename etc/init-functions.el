@@ -7,8 +7,8 @@
 (defun open-etc-config (file)
 	"Open the config file in the etc directory."
 	(interactive (list (completing-read "Enter the filename: "
-																 '("ui" "org" "keymap" "mode"
-																	 "package" "packages" "function"))))
+																			'("ui" "org" "keymap" "mode"
+																				"packages" "function"))))
 	(pcase file
 		("ui" (find-file "~/.emacs.d/etc/init-ui.el"))
 		("org" (find-file "~/.emacs.d/etc/init-org.el"))
