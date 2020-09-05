@@ -12,7 +12,7 @@
 (set-face-attribute
  'default nil
  :height 160
- :family "Fira Code Nerd Font Mono"
+ :family "Fira Code Nerd Font"
  :weight 'normal
  :width 'normal) ; Set the font size
 ;; Set backgroup alpha
