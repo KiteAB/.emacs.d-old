@@ -16,16 +16,21 @@
    - The dependences in [[https://github.com/loyalpartner/english-teacher.el][english-teacher.el]]. (To use english-teacher)
 
 ** Installation
-   You need to run the commands at below:
-   #+begin_src shell
-     mv ~/.emacs.d ~/.emacs.d-bak && git clone https://github.com/KiteAB/.emacs.d ~/.emacs.d && cd ~/.emacs.d && mkdir third-party gtd
-     git clone https://github.com/manateelazycat/emacs-application-framework third-party/emacs-application-framework --depth=1
-     git clone https://github.com/loyalpartner/english-teacher.el third-party/english-teacher.el --depth=1
-     git clone https://github.com/SpringHan/netease-cloud-music.el third-party/netease-cloud-music.el --depth=1
-     git clone https://github.com/jwiegley/use-package third-party/use-package --depth=1
-     ln bookmarks var/bookmarks
-   #+end_src
-   And enjoy the Emacs!
+*** The 1st Method
+    You need to run the commands at below:
+    #+begin_src shell
+      mv ~/.emacs.d ~/.emacs.d-bak && git clone https://github.com/KiteAB/.emacs.d ~/.emacs.d && cd ~/.emacs.d && mkdir third-party gtd
+      git clone https://github.com/manateelazycat/emacs-application-framework third-party/emacs-application-framework --depth=1
+      git clone https://github.com/loyalpartner/english-teacher.el third-party/english-teacher.el --depth=1
+      git clone https://github.com/SpringHan/netease-cloud-music.el third-party/netease-cloud-music.el --depth=1
+      git clone https://github.com/jwiegley/use-package third-party/use-package --depth=1
+      ln bookmarks var/bookmarks
+    #+end_src
+
+*** 2nd Method
+    You need to run the ~make install~ in the terminal or manually run the commands written in the ~Makefile~
+
+  And enjoy the Emacs!
 
 ** Shortcuts
    I binded the ~C-z~ key to be the user defined key.
