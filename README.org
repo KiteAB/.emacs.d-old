@@ -9,8 +9,8 @@
    You need some dependencies at below:
    - Emacs >= 27.1
    - Git
-   - libvterm (To use Vterm in emacs)
-   - CMake
+   - libvterm (To use VTerm in emacs)
+   - CMake (To compile the VTerm)
    - Fira Code Nerd Font (Optional. You can edit the font use ~C-z C-c ui RET~)
    - The dependences in [[https://github.com/manateelazycat/emacs-application-framework][Emacs Application Framework]]. (To use EAF)
    - The dependences in [[https://github.com/loyalpartner/english-teacher.el][english-teacher.el]]. (To use english-teacher)
@@ -21,6 +21,7 @@
      mv ~/.emacs.d ~/.emacs.d-bak && git clone https://github.com/KiteAB/.emacs.d ~/.emacs.d && cd ~/.emacs.d && mkdir third-party gtd
      git clone https://github.com/manateelazycat/emacs-application-framework third-party/emacs-application-framework --depth=1
      git clone https://github.com/loyalpartner/english-teacher.el third-party/english-teacher.el --depth=1
+     git clone https://github.com/SpringHan/netease-cloud-music.el third-party/netease-cloud-music.el --depth=1
      git clone https://github.com/jwiegley/use-package third-party/use-package --depth=1
      ln bookmarks var/bookmarks
    #+end_src
