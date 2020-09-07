@@ -1,7 +1,8 @@
 install:
-	mv ~/.emacs.d ~/.emacs.d-bak
-	git clone https://github.com/KiteAB/.emacs.d ~/.emacs.d
-	cd ~/.emacs.d
+	cd ${HOME}
+	mv .emacs.d .emacs.d-bak
+	git clone https://github.com/KiteAB/.emacs.d .emacs.d
+	cd .emacs.d
 	mkdir third-party gtd
   ln bookmarks var/bookmarks
   git clone https://github.com/manateelazycat/emacs-application-framework third-party/emacs-application-framework --depth=1
@@ -11,6 +12,7 @@ install:
 	echo "Installed."
 
 uninstall:
-	mv ~/.emacs.d ~/.emacs.d-ab
-	mv ~/.emacs.d-bak ~/.emacs.d
+	cd ${HOME}
+	mv .emacs.d .emacs.d-ab
+	mv .emacs.d-bak .emacs.d
 	echo "Uninstalled."
