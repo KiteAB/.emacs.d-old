@@ -4,7 +4,7 @@
 (scroll-bar-mode -1) ; Close Scroll bar
 (tab-bar-mode -1) ; Set tab bar not display
 (setq tab-bar-show nil) ; Always not display tab bar
-(global-linum-mode t) ; Show the line number
+(global-display-line-numbers-mode t) ; Show the line number
 (global-hl-line-mode -1) ; Highlight the current line
 (toggle-frame-fullscreen) ; Set fullscreen
 (setq-default cursor-type '(bar . 1)) ; Cursor Shape
