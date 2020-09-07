@@ -28,6 +28,8 @@ Otherwise it's nil.")
 	(require 'github-token))
 ;;; The cache directory
 (setq user-emacs-directory "~/.emacs.d/var")
+;;; FZF
+(setq counsel-fzf-cmd "fd --type f | fzf -f \"%s\" --algo=v1")
 ;;; Other files
 (add-to-list 'load-path "~/.emacs.d/etc/")
 ;; UI

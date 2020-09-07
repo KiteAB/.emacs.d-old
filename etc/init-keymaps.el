@@ -35,6 +35,7 @@
 (global-set-key (kbd "C-z C-r") 'revert-buffer) ; Revert current buffer
 (global-set-key (kbd "C-z M-c") 'kiteab/downcase-word-first-letter) ; Downcase the first letter in the word at point
 (global-set-key (kbd "C-z A") 'kiteab/add-todo-in-code)	; Add the todo in code
+(global-set-key (kbd "C-z C-f") 'kiteab/find-file) ; Search file use FZF
 
 ;; Key Macros
 (global-set-key (kbd "C-z C-k i") 'insert-placeholder) ; Insert Placeholder

@@ -215,4 +215,9 @@ If it's daytime now,return t.Otherwise return nil."
 	(comment-dwim 2)
 	(insert "<TODO(KiteAB)> "))
 
+(defun kiteab/find-file (&optional dir)
+	"Search file use fuzzy file finder"
+	(interactive "DInput the directory: ")
+	(counsel-fzf nil dir))
+
 (provide 'init-functions)

@@ -9,6 +9,7 @@
    You need some dependencies at below:
    - Emacs >= 27.1
    - Git
+   - FZF (To use ~kiteab/find-file~ function)
    - libvterm (To use VTerm in emacs)
    - CMake (To compile the VTerm)
    - Fira Code Nerd Font (Optional. You can edit the font use ~C-z C-c ui RET~)
