@@ -9,7 +9,7 @@
   ;; Following line is not needed if use-package.el is in ~/.emacs.d
   (add-to-list 'load-path "~/.emacs.d/third-party/use-package")
   (require 'use-package))
-(setq use-package-hook-name-suffix nil) ;; Make use-package's ":hook" keyword don't run macro to add "-hook" in the hoobk name, default value is "-hook"
+(setq use-package-hook-name-suffix nil) ;; Make sure use-package don't add "-hook" chars
 
 ;;;; Variables
 (defvar kiteab/time-block nil
