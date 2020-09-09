@@ -113,15 +113,6 @@ If it's daytime now,return t.Otherwise return nil."
 	    (set-cursor-color "black")
 	  (set-cursor-color "white")))
 
-(defun kill-unwanted-buffer ()
-	"Kill the unwanted buffers."
-	(interactive)
-	(kill-buffer "*dashboard*")
-	(kill-buffer "notes.org")
-	(kill-buffer "tasks.org")
-	(when (get-buffer "user-init.el")
-		(kill-buffer "user-init.el")))
-
 (defun tab-bar-new-with-buffer (buffer-name)
 	"Create a new tab then select a buffer."
 	(interactive "bBuffer Name: ")
@@ -219,5 +210,10 @@ If it's daytime now,return t.Otherwise return nil."
 	"Search file use fuzzy file finder"
 	(interactive "DInput the directory: ")
 	(counsel-fzf nil dir))
+
+(defun kiteab/kill-magit ()
+	"Clear the buffer about Magit"
+	(interactive)
+	(kill-buffer "" (buffer-file-name)))
 
 (provide 'init-functions)
