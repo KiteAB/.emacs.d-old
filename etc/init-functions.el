@@ -211,9 +211,15 @@ If it's daytime now,return t.Otherwise return nil."
 	(interactive "DInput the directory: ")
 	(counsel-fzf nil dir))
 
-(defun kiteab/kill-magit ()
+(defun kiteab/kill-magit (&optional dir)
 	"Clear the buffer about Magit"
-	(interactive)
-	(kill-buffer "" (buffer-file-name)))
+	(interactive "sInput the directory of Git repository: ")
+	(progn
+		(if (gnus-buffer-exists-p (format "magit: %s" dir))
+				(kill-buffer "magit: " dir))
+		(if (gnus-buffer-exists-p (format "magit-process: %s" dir))
+				(kill-buffer "magit-process: " dir))
+		(if (gnus-buffer-exists-p (format "magit-diff: %s" dir))
+				(kill-buffer "magit-diff: " dir))))
 
 (provide 'init-functions)
