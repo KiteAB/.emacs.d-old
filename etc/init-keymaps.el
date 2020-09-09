@@ -36,6 +36,7 @@
 (global-set-key (kbd "C-z M-c") 'kiteab/downcase-word-first-letter) ; Downcase the first letter in the word at point
 (global-set-key (kbd "C-z A") 'kiteab/add-todo-in-code)	; Add the todo in code
 (global-set-key (kbd "C-z C-f") 'kiteab/find-file) ; Search file use FZF
+(global-set-key (kbd "C-z b") 'kiteab/kill-magit) ; Kill buffers about Magit
 
 ;; Key Macros
 (global-set-key (kbd "C-z C-k i") 'insert-placeholder) ; Insert Placeholder

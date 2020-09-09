@@ -216,10 +216,10 @@ If it's daytime now,return t.Otherwise return nil."
 	(interactive "sInput the directory of Git repository: ")
 	(progn
 		(if (gnus-buffer-exists-p (format "magit: %s" dir))
-				(kill-buffer "magit: " dir))
+				(kill-buffer (format "magit: %s" dir)))
 		(if (gnus-buffer-exists-p (format "magit-process: %s" dir))
-				(kill-buffer "magit-process: " dir))
+				(kill-buffer (format "magit-process: %s" dir)))
 		(if (gnus-buffer-exists-p (format "magit-diff: %s" dir))
-				(kill-buffer "magit-diff: " dir))))
+				(kill-buffer (format "magit-diff: %s" dir)))))
 
 (provide 'init-functions)
