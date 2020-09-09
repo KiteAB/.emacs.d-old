@@ -310,4 +310,10 @@
  :ensure t
  :bind (("C-' r" . quickrun-shell)))
 
+;;; Grugru - Rotate text at point
+(use-package grugru
+	:ensure t
+	:init (grugru-default-setup)
+	:bind (("C-' C-g" . grugru)))
+
 (provide 'init-package)
