@@ -88,5 +88,5 @@ Otherwise it's nil.")
 
 ;;;; Autostart
 ;;; Erc
-;(kiteab/open-erc) ; Auto open erc
-;(switch-to-buffer "*dashboard*") ; Hide erc at backstage
+(kiteab/open-erc) ; Auto open erc
+(switch-to-buffer "*dashboard*") ; Hide erc at backstage
