@@ -220,6 +220,8 @@ If it's daytime now,return t.Otherwise return nil."
 		(if (gnus-buffer-exists-p (format "magit-process: %s" dir))
 				(kill-buffer (format "magit-process: %s" dir)))
 		(if (gnus-buffer-exists-p (format "magit-diff: %s" dir))
-				(kill-buffer (format "magit-diff: %s" dir)))))
+				(kill-buffer (format "magit-diff: %s" dir)))
+		(if (gnus-buffer-exists-p "*Backtrace*")
+				(kill-buffer "*Backtrace*"))))
 
 (provide 'init-functions)
