@@ -223,6 +223,6 @@ If it's daytime now,return t.Otherwise return nil."
 				(kill-buffer (format "magit-diff: %s" dir)))
 		(if (gnus-buffer-exists-p "*Backtrace*")
 				(kill-buffer "*Backtrace*"))
-		(delete-window)))
+		(delete-window nil)))
 
 (provide 'init-functions)
