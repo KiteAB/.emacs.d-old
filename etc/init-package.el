@@ -320,4 +320,10 @@
 (use-package telega
 	:ensure t)
 
+;;; Perspective - "Virtual Desktop" in Emacs
+(use-package perspective
+	:ensure t
+	:config
+	(persp-mode))
+
 (provide 'init-package)
