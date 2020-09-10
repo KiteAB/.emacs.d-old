@@ -61,8 +61,38 @@ Otherwise it's nil.")
       )
 (setq initial-scratch-message
 			";; KiteAB's Emacs
-;; This is the temp buffer named *scratch*
-;; You can test the Emacs Lisp in it
+;; Elisp interactive arguments
+;; a -- Function name: symbol with a function definition.
+;; b -- Name of existing buffer.
+;; B -- Name of buffer, possibly nonexistent.
+;; c -- Character (no input method is used).
+;; C -- Command name: symbol with interactive function definition.
+;; d -- Value of point as number.  Does not do I/O.
+;; D -- Directory name.
+;; e -- Parameterized event (i.e., one that’s a list) that invoked this command.
+;;      If used more than once, the Nth ‘e’ returns the Nth parameterized event.
+;;      This skips events that are integers or symbols.
+;; f -- Existing file name.
+;; F -- Possibly nonexistent file name.
+;; G -- Possibly nonexistent file name, defaulting to just directory name.
+;; i -- Ignored, i.e. always nil.  Does not do I/O.
+;; k -- Key sequence (downcase the last event if needed to get a definition).
+;; K -- Key sequence to be redefined (do not downcase the last event).
+;; m -- Value of mark as number.  Does not do I/O.
+;; M -- Any string.  Inherits the current input method.
+;; n -- Number read using minibuffer.
+;; N -- Numeric prefix arg, or if none, do like code ‘n’.
+;; p -- Prefix arg converted to number.  Does not do I/O.
+;; P -- Prefix arg in raw form.  Does not do I/O.
+;; r -- Region: point and mark as 2 numeric args, smallest first.  Does no I/O.
+;; s -- Any string.  Does not inherit the current input method.
+;; S -- Any symbol.
+;; U -- Mouse up event discarded by a previous k or K argument.
+;; v -- Variable name: symbol that is ‘custom-variable-p’.
+;; x -- Lisp expression read but not evaluated.
+;; X -- Lisp expression read and evaluated.
+;; z -- Coding system.
+;; Z -- Coding system, nil if no prefix arg.
 
 ")
 (setq-default tab-width 2) ; The tab width
