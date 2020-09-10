@@ -316,4 +316,8 @@
 	:init (grugru-default-setup)
 	:bind (("C-' C-g" . grugru)))
 
+;;; Telega
+(use-package telega
+	:ensure t)
+
 (provide 'init-package)
