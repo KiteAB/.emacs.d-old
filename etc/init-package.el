@@ -3,10 +3,10 @@
 (define-prefix-command 'plugin-key)
 (global-set-key (kbd "C-'") 'plugin-key)
 
-;;;; Themes
+;;;; Set Theme
 (load-the-theme)
 
-;;; Third-party
+;;; Third Party Packages
 ;;; Emacs Application Framework
 (use-package eaf
  :load-path "~/.emacs.d/third-party/emacs-application-framework"
@@ -39,7 +39,7 @@
  :load-path "~/.emacs.d/third-party/netease-cloud-music.el"
  :bind (("C-' C-m t" . netease-cloud-music)
 				("C-' C-m r" . netease-cloud-music-change-repeat-mode)))
-;;; Child package
+;;; Child Package
 (use-package request
  :ensure t)
 
@@ -56,7 +56,7 @@
 									 dashboard-set-navigator t
 									 dashboard-init-info "KiteAB's Emacs")))
 
-;;; Org
+;;; Org Mode
 (use-package org
  :ensure t
  :init (progn
@@ -73,13 +73,13 @@
 					 (setq org-src-fontify-natively t)
 					 (require 'init-org))
  :hook (org-mode-hook . (lambda () (setq indent-tabs-mode nil) (define-key org-mode-map (kbd "C-'") nil))))
-;;; Child package
+;;; Child Package
 (use-package org-bullets
  :ensure t
  :hook (org-mode-hook . (lambda () (org-bullets-mode t)))
  :config (setq org-bullets-bullet-list '("" "☯" "❀" "✿")))
 
-;;; Vterm
+;;; VTerm
 (use-package vterm
  :ensure t
  :bind (("C-' C-t" . open-vterm))
@@ -99,7 +99,7 @@
  :ensure t
  :bind (("C-' C-i" . all-the-icons-insert)))
 
-;;; ivy
+;;; Ivy
 (use-package ivy
  :ensure t
  :hook (after-init-hook . ivy-mode))
@@ -125,12 +125,12 @@
 	:ensure t
 	:hook (after-init-hook . which-key-mode))
 
-;;; ace window
+;;; Ace Window
 (use-package ace-window
 	:ensure t
  :bind (("C-' C-c" . ace-window)))
 
-;;; Calendar-China
+;;; Calendar China
 (use-package cal-china-x
 	:ensure t)
 
@@ -139,19 +139,19 @@
  :ensure t
  :bind (("C-' C-e" . iedit-mode)))
 
-;;; hungry-delete
+;;; Hungry Delete
 (use-package hungry-delete
  :ensure t
  :bind (("C-' C-h" . hungry-delete-mode)
 			  ("C-' DEL" . hungry-delete-backward))
  :hook ((emacs-lisp-mode-hook lisp-mode-hook) . hungry-delete-mode))
 
-;;; js2-mode
+;;; js2 Mode
 (use-package js2-mode
  :ensure t
  :hook (js-mode . js2-mode))
 
-;;; Web-mode
+;;; Web Mode
 (use-package web-mode
 	:ensure t
 	:config (progn
@@ -182,7 +182,7 @@
 						 :ensure t
 						 :config (add-to-list 'company-backends 'company-c-headers))))
 
-;;; Lsp-mode
+;;; Lsp Mode
 (use-package lsp-mode
  :hook ((c-mode-hook python-mode c++-mode-hook lisp-mode-hook js-mode-hook web-mode-hook) . lsp)
  :bind (("C-' F" . lsp-format-buffer))
@@ -193,18 +193,18 @@
 								 lsp-eldoc-hook nil
 								 lsp-prefer-flymake nil)))
 
-;; ccls (For lsp-mode)
+;; ccls (For Lsp Mode)
 ;; (use-package ccls
 ;;  :ensure t
 ;;  :hook ((c-mode-hook c++-mode-hook objc-mode-hook) . (lambda () (lsp))))
 
-;;; emmet-mode
+;;; Emmet Mode
 (use-package emmet-mode
  :ensure t
  :hook (web-mode-hook . emmet-mode)
  :config (progn (setq emmet-self-closing-tag-style " /")))
 
-;;; Snippet
+;;; Snippets
 (use-package yasnippet
  :ensure t
  :bind (("C-' i" . yas-insert-snippet)
@@ -221,17 +221,17 @@
  :ensure t
  :bind (("C-' C-f" . flymake-mode)))
 
-;;; rainbow-delimiters
+;;; Rainbow Delimiters
 (use-package rainbow-delimiters
  :ensure t
  :hook ((lisp-mode-hook emacs-lisp-mode-hook org-mode-hooke eshell-mode-hook) . rainbow-delimiters-mode))
 
-;;; indent guide
+;;; Indent Guide
 (use-package indent-guide
  :ensure t
  :hook (after-init-hook . indent-guide-global-mode))
 
-;;; doom-modeline
+;;; Doom Modeline
 (use-package doom-modeline
  :ensure t
  :hook (after-init-hook . doom-modeline-mode)
@@ -249,7 +249,7 @@
  :ensure t
  :bind (("C-' C-r" . windresize)))
 
-;;; Multiple cursor
+;;; Multiple Cursor
 (use-package multiple-cursors
  :ensure t
  :bind (("C-M-l" . mc/edit-lines)
@@ -257,24 +257,24 @@
 				("C-<" . mc/mark-previous-like-this)
 				("M-m" . newline)))
 
-;;; Youdao translate
+;;; Youdao Translate
 (use-package youdao-dictionary
  :ensure t
  :bind (("C-' t" . youdao-dictionary-search-at-point)))
 
-;;; Treemacs - File explore
+;;; Treemacs - File Explore
 (use-package treemacs
  :ensure t
  :bind (("C-' e" . treemacs)))
 
-;;; Dap-mode
+;;; Dap Mode
 (use-package dap-mode
  :ensure t
  :bind (("C-' d" . dap-debug)
 			  ("<F5>" . dap-breakpoint-toggle)
 				("<F6>" . dap-continue)))
 
-;;; avy-mode
+;;; Avy Mode
 (use-package avy
  :ensure t
  :bind (("C-' a c" . avy-goto-char)
@@ -289,7 +289,7 @@
  :ensure t
  :bind (("C-' g" . caps-lock-mode)))
 
-;;; isolate-mode
+;;; Isolate Mode
 (use-package isolate
  :ensure t
  :bind (("C-' C-a s" . isolate-quick-add)
@@ -299,7 +299,7 @@
 				("C-' C-a c" . isolate-quick-change)
 				("C-' C-a C" . isolate-long-change)))
 
-;;; paredit-mode
+;;; Paredit Mode
 (use-package paredit
  :ensure t
  :hook ((lisp-mode-hook emacs-lisp-mode-hook eshell-mode-hook lisp-interaction-mode-hook) . paredit-mode)
