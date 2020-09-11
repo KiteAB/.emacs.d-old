@@ -103,6 +103,7 @@ Otherwise it's nil.")
 (column-number-mode t) ; Show the column number in the modeline
 (setq backward-delete-char-untabify-method nil) ; Delete the tab by once
 (setq user-init-file "~/.emacs.d/var/user-init.el")
+(save-place-mode t) ; Save the point position
 (add-hook 'markdown-mode-hook #'markdown-table-keymap) ; Add the markdown table align keymap
 (add-hook 'erc-mode-hook #'(lambda () (linum-mode -1)))
 
