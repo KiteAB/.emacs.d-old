@@ -18,9 +18,7 @@
 					 (defalias 'browse-web #'eaf-open-browser)
 					 (defun eaf-browser-set ()
 						 (interactive)
-						 (if (day-or-night)
-								 (eaf-setq eaf-browser-dark-mode "false")
-							 (eaf-setq eaf-browser-dark-mode "true")))
+						 (eaf-setq eaf-browser-dark-mode "true"))
 					 (eaf-browser-set)))
 
 ;;; English Teacher
@@ -352,5 +350,10 @@
   :ensure t
   :hook (after-init-hook . page-break-lines-mode)
   :config (turn-on-page-break-lines-mode))
+
+;;; Git-Gutter
+(use-package git-gutter
+	:ensure t
+	:hook (after-init-hook . git-gutter-mode))
 
 (provide 'init-packages)
