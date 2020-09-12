@@ -342,4 +342,19 @@
 	:config (progn
 		(pyim-basedict-enable)))
 
+;;; Beacon
+(use-package beacon
+  :ensure t
+  :hook (after-init-hook . beacon-mode))
+
+;;; Info Colors
+(use-package info-colors
+  :ensure t
+  :hook ('Info-selection-hook . 'info-colors-fontify-node))
+
+;;; NyanCat Mode
+(use-package nyan-mode
+  :ensure t
+  :hook (after-init-hook . nyan-mode))
+
 (provide 'init-package)

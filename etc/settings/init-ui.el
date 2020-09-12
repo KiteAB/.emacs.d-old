@@ -4,6 +4,7 @@
 (scroll-bar-mode -1) ; Close Scroll bar
 (tab-bar-mode -1) ; Set tab bar not display
 (display-battery-mode t) ; Display battery status
+(global-hl-line-mode t) ; Highlight current line
 (setq tab-bar-show nil) ; Always not display tab bar
 (global-display-line-numbers-mode t) ; Show the line number
 (global-hl-line-mode -1) ; Highlight the current line
