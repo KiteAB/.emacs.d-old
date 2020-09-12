@@ -357,4 +357,4 @@
   :ensure t
   :hook (after-init-hook . nyan-mode))
 
-(provide 'init-package)
+(provide 'init-packages)

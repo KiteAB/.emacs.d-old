@@ -109,7 +109,7 @@ Otherwise it's nil.")
 (add-hook 'erc-mode-hook #'(lambda () (linum-mode -1)))
 
 ;;; Plugin requires
-(require 'init-package)
+(require 'init-packages)
 (package-initialize)
 
 ;;; Enable Disbaled command
