@@ -342,7 +342,10 @@
 ;;; NyanCat Mode
 (use-package nyan-mode
   :ensure t
-  :hook (after-init-hook . nyan-mode))
+  :hook (after-init-hook . nyan-mode)
+	:config
+	(nyan-start-animation)
+	(nyan-toggle-wavy-trail))
 
 ;;; Page Break Lines
 (use-package page-break-lines
