@@ -1,7 +1,7 @@
 ;;;; This file is used to define functions about the disabled commands
 
 (defconst kiteab/enable-commands
-	'(narrow-to-region downcase-region upcase-region)
+	'(narrow-to-region downcase-region upcase-region erase-buffer)
 	"The disabled commands that I want to enable.")
 
 ;;;###autoload
