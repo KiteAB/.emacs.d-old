@@ -7,7 +7,7 @@
 (global-hl-line-mode t) ; Highlight current line
 (setq tab-bar-show nil) ; Always not display tab bar
 (global-display-line-numbers-mode t) ; Show the line number
-(global-hl-line-mode -1) ; Highlight the current line
+(global-hl-line-mode t) ; Highlight the current line
 (toggle-frame-fullscreen) ; Set fullscreen
 (setq inhibit-splash-screen t) ; Close the start flash
 (set-face-attribute
