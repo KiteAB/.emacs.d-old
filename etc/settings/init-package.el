@@ -169,16 +169,17 @@
 						 (define-key company-active-map (kbd "M-p") nil)
 						 (define-key company-active-map (kbd "M-n") nil)
 						 (define-key company-active-map (kbd "C-n") #'company-select-next)
-						 (define-key company-active-map (kbd "C-p") #'company-select-previous))
-					 (use-package company-lsp
-						 :ensure t)
-					 (use-package company-c-headers
-						 :ensure t
-						 :config (add-to-list 'company-backends 'company-c-headers))))
+						 (define-key company-active-map (kbd "C-p") #'company-select-previous))))
+;;; Child Packages
+(use-package company-c-headers
+	:ensure t
+	:config (add-to-list 'company-backends 'company-c-headers))
+(use-package company-lsp
+	:ensure t)
 
 ;;; Lsp Mode
 (use-package lsp-mode
- :hook ((c-mode-hook python-mode c++-mode-hook lisp-mode-hook js-mode-hook web-mode-hook) . lsp)
+ :hook ((c-mode-hook python-mode-hook c++-mode-hook lisp-mode-hook js-mode-hook web-mode-hook) . lsp)
  :bind (("C-' F" . lsp-format-buffer))
  :config (progn
 					 (setq lsp-idle-delay 1200

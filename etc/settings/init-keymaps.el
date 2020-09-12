@@ -39,6 +39,7 @@
 (global-set-key (kbd "C-z b") 'kiteab/kill-magit) ; Kill buffers about Magit
 (global-set-key (kbd "C-z E") 'open-etc-config-by-char) ; Call the open-etc-config by its index
 (global-set-key (kbd "C-z O") 'spring/scratch-erase-contents) ; Erase all the contents of *scratch* buffer
+(global-set-key (kbd "C-z P") 'list-processes) ; Show the processes buffer
 
 ;; Key Macros
 (global-set-key (kbd "C-z C-k i") 'insert-placeholder) ; Insert Placeholder
