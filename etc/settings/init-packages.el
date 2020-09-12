@@ -45,7 +45,7 @@
 	:ensure t
 	:config (progn
 						 (dashboard-setup-startup-hook)
-						 (setq dashboard-banner-logo-title "Vim Defector No.114514 - KiteAB's Emacs")
+						 (setq dashboard-banner-logo-title "KiteAB's Emacs - Vim Defector No.114514")
 						 (setq dashboard-startup-banner 'logo)
 						 (setq dashboard-center-content t
 									 dashboard-set-heading-icons t
