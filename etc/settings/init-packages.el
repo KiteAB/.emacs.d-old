@@ -327,11 +327,6 @@
 	:ensure t
 	:bind (("C-' G" . github-explorer)))
 
-;;; Beacon
-(use-package beacon
-  :ensure t
-  :hook (after-init-hook . beacon-mode))
-
 ;;; Info Colors
 (use-package info-colors
   :ensure t
