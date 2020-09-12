@@ -357,4 +357,10 @@
   :ensure t
   :hook (after-init-hook . nyan-mode))
 
+;;; Page Break Lines
+(use-package page-break-lines
+  :ensure t
+  :hook (after-init-hook . page-break-lines-mode)
+  :config (turn-on-page-break-lines-mode))
+
 (provide 'init-packages)
