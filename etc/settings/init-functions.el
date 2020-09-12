@@ -85,40 +85,6 @@
 	(interactive)
 	(define-key markdown-mode-map (kbd "C-c C-c TAB") 'markdown-table-align))
 
-(defun day-or-night ()
-	"Return t/nil.
-If it's daytime now,return t.Otherwise return nil."
-	(let ((now-time
-				 (string-to-number (cl-subseq (current-time-string) 11 13))))
-		(if (and (>= now-time 9) (< now-time 19))
-				;t
-			nil)))
-
-(defun load-the-theme ()
-	"Load the theme by time."
-	(interactive)
-	(if (day-or-night)
-			(progn
-				(package-require
-				 'atom-one-light
-				 :outside
-				 :before-load-eval '(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-				 :load-theme 'atom-one-light)
-				(when (string= kiteab/time-block "night")
-					(eaf-browser-set))
-				(setq kiteab/time-block "daytime"))
-		(package-require
-		 'atom-one-dark
-		 :outside
-		 :before-load-eval '(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-		 :load-theme 'atom-one-dark)
-		(when (string= kiteab/time-block "daytime")
-			(eaf-browser-set))
-		(setq kiteab/time-block "night"))
-	(if (day-or-night)
-	    (set-cursor-color "black")
-	  (set-cursor-color "white")))
-
 (defun tab-bar-new-with-buffer (buffer-name)
 	"Create a new tab then select a buffer."
 	(interactive "bBuffer Name: ")

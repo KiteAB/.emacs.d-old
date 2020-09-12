@@ -11,11 +11,6 @@
   (require 'use-package))
 (setq use-package-hook-name-suffix nil) ;; Make sure use-package don't add "-hook" chars
 
-;;; Variables
-(defvar kiteab/time-block nil
-	"If the the time-block changed, it is t.
-Otherwise it's nil.")
-
 ;;;; Other config files
 ;;; Error Capture
 (load-file "~/.emacs.d/init-error-manager.el")

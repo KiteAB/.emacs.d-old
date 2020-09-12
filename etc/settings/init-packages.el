@@ -3,9 +3,6 @@
 (define-prefix-command 'plugin-key)
 (global-set-key (kbd "C-'") 'plugin-key)
 
-;;;; Set Theme
-(load-the-theme)
-
 ;;; Third Party Packages
 ;;; Emacs Application Framework
 (use-package eaf
@@ -37,6 +34,11 @@
 ;;; Request
 (use-package request
  :ensure t)
+
+;;; Atom One Dark Theme
+(use-package atom-one-dark-theme
+	:ensure t
+	:config (load-theme 'atom-one-dark t))
 
 ;;; Dashboard
 (use-package dashboard
@@ -324,23 +326,6 @@
 (use-package github-explorer
 	:ensure t
 	:bind (("C-' G" . github-explorer)))
-
-;;; Input Method
-(use-package pyim
-	:ensure t
-	:config (progn
-								(setq default-input-method "pyim"
-											pyim-default-scheme 'quanpin
-											pyim-page-tooltip 'posframe
-											pyim-page-length 8)
-								(pyim-isearch-mode t))
-	:bind (("C-' C-\\" . toggle-input-method)
-				 ("M-j" . pyim-convert-string-at-point)))
-;;; Child Package
-(use-package pyim-basedict
-	:ensure t
-	:config (progn
-		(pyim-basedict-enable)))
 
 ;;; Beacon
 (use-package beacon

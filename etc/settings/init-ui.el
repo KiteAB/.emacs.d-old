@@ -9,7 +9,8 @@
 (global-display-line-numbers-mode t) ; Show the line number
 (global-hl-line-mode -1) ; Highlight the current line
 (toggle-frame-fullscreen) ; Set fullscreen
-(setq-default cursor-type '(bar . 1)) ; Cursor Shape
+(setq-default cursor-type '(bar . 1)) ; Set the cursor style
+(set-cursor-color "white") ; Set the cursor color
 (setq inhibit-splash-screen t) ; Close the start flash
 (set-face-attribute
  'default nil
