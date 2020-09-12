@@ -34,15 +34,9 @@
 							 english-teacher-show-result-function 'english-teacher-eldoc-show-result-function)
  :hook ((Info-mode-hook eww-mode-hook help-mode-hook) . english-teacher-follow-mode))
 
-;;; Netease Cloud Music
-(use-package netease-cloud-music
- :load-path "~/.emacs.d/third-party/netease-cloud-music.el"
- :bind (("C-' C-m t" . netease-cloud-music)
-				("C-' C-m r" . netease-cloud-music-change-repeat-mode)))
-;;; Child Package
+;;; Request
 (use-package request
  :ensure t)
-
 
 ;;; Dashboard
 (use-package dashboard
@@ -114,7 +108,7 @@
 					 (setq ivy-posframe-display-functions-alist
 								 '((t . ivy-posframe-display-at-frame-center)))
 					 (setq ivy-posframe-parameters '((left-fringe . 8)
-																					 (right-fringe . 8)))))
+																					 (add-hook 'ivy-mode-hook #'ivy-posframe-mode)))))
 
 ;;; Bongo
 (use-package bongo
@@ -325,5 +319,27 @@
 	:ensure t
 	:config
 	(persp-mode))
+
+;;; GitHub Explorer
+(use-package github-explorer
+	:ensure t
+	:bind (("C-' G" . github-explorer)))
+
+;;; Input Method
+(use-package pyim
+	:ensure t
+	:config (progn
+								(setq default-input-method "pyim"
+											pyim-default-scheme 'quanpin
+											pyim-page-tooltip 'posframe
+											pyim-page-length 8)
+								(pyim-isearch-mode t))
+	:bind (("C-' C-\\" . toggle-input-method)
+				 ("M-j" . pyim-convert-string-at-point)))
+;;; Child Package
+(use-package pyim-basedict
+	:ensure t
+	:config (progn
+		(pyim-basedict-enable)))
 
 (provide 'init-package)

@@ -4,18 +4,24 @@
 	(interactive)
 	(find-file "~/.emacs.d/init.el"))
 
-(defun open-etc-config (file)
+(defun open-etc-config (index)
 	"Open the config file in the etc directory."
-	(interactive (list (completing-read "Enter the filename: "
-																			'("ui" "org" "keymap" "mode"
-																				"packages" "function"))))
-	(pcase file
-		("ui" (find-file "~/.emacs.d/etc/init-ui.el"))
-		("org" (find-file "~/.emacs.d/etc/init-org.el"))
-		("keymap" (find-file "~/.emacs.d/etc/init-keymaps.el"))
-		("mode" (find-file "~/.emacs.d/etc/init-modes.el"))
-		("packages" (find-file "~/.emacs.d/etc/init-package.el"))
-		("function" (find-file "~/.emacs.d/etc/init-functions.el"))))
+	(interactive (list (completing-read "Enter the index of config: "
+																			'("languages" "settings"))))
+	(let* ((path (pcase index
+								 ("languages" "~/.emacs.d/etc/languages/")
+								 ("settings" "~/.emacs.d/etc/settings/")))
+				 (filename
+					(completing-read "Enter the filename: "
+													 (delete ".." (delete "." (directory-files path))))))
+		(find-file (concat path filename))))
+
+(defun open-etc-config-by-char (char)
+	"Call the open-etc-config with its index."
+	(interactive "cEnter the char: ")
+	(open-etc-config (pcase char
+										 (115 "settings")
+										 (108 "languages"))))
 
 (defun open-vterm (&optional dir)
 	"Open the vterm by DIR"
@@ -149,8 +155,20 @@ If it's daytime now,return t.Otherwise return nil."
 	"Open the scratch buffer after closing it."
 	(interactive)
 	(switch-to-buffer "*scratch*")
-	(insert initial-scratch-message)
-	(message "Open the scratch action done."))
+	(unless (get-buffer "*scratch*")
+		(insert initial-scratch-message)
+		(message "Open the scratch action done.")))
+
+(defun kiteab/scratch-erase-contents ()
+	"Erase all the contents of *scratch* buffer."
+	(interactive)
+	(with-current-buffer "*scratch*"
+		(let ((content	(buffer-string)))
+			(unless (string= content initial-scratch-message)
+				(erase-buffer)
+				(insert initial-scratch-message)
+				(message "Erased contents in *scratch* buffer.")
+				(end-of-buffer)))))
 
 (defun kiteab/use-space-indent ()
 	"Use the space indent in org-mode."
