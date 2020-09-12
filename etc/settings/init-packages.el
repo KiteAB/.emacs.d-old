@@ -42,6 +42,14 @@
 	(setq-default cursor-type '(bar . 1))
 	(set-cursor-color "white"))
 
+;;; Modus Vivendi Theme
+(use-package modus-vivendi-theme
+	:ensure t)
+
+;;; Modus Operandi Theme
+(use-package modus-operandi-theme
+	:ensure t)
+
 ;;; Dashboard
 (use-package dashboard
 	:ensure t
