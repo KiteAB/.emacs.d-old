@@ -29,6 +29,11 @@
 							 english-teacher-show-result-function 'english-teacher-eldoc-show-result-function)
  :hook ((Info-mode-hook eww-mode-hook help-mode-hook) . english-teacher-follow-mode))
 
+;;; Company English Helper
+(use-package company-english-helper
+	:load-path "~/.emacs.d/third-party/company-english-helper"
+	:bind (("C-' M-t" . toggle-company-english-helper)))
+
 ;;; Request
 (use-package request
  :ensure t)
