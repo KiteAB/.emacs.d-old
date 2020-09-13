@@ -356,4 +356,9 @@
    '(git-gutter:deleted-sign "_")
 	 '(git-gutter:modified-sign "~")))
 
+;;; Beacon
+(use-package beacon
+	:ensure t
+	:hook (after-init-hook . beacon-mode))
+
 (provide 'init-packages)
