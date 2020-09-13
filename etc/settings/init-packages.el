@@ -49,6 +49,7 @@
 						 (setq dashboard-startup-banner 'logo)
 						 (setq dashboard-center-content t
 									 dashboard-set-heading-icons t
+									 dashboard-set-file-icons t
 									 dashboard-set-navigator t)))
 
 ;;; Org Mode
@@ -175,8 +176,6 @@
 (use-package company-c-headers
 	:ensure t
 	:config (add-to-list 'company-backends 'company-c-headers))
-(use-package company-lsp
-	:ensure t)
 
 ;;; Lsp Mode
 (use-package lsp-mode
