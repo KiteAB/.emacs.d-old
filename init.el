@@ -1,4 +1,18 @@
 ;;;;; KiteAB's Personal Emacs Configuration File
+
+;;; Auto opzimization
+(setq gc-cons-threshold-original gc-cons-threshold)
+(setq gc-cons-threshold (* 1024 1024 1))
+(setq file-name-handler-alist-original file-name-handler-alist)
+(setq file-name-handler-alist nil)
+(run-with-idle-timer 5 nil (lambda ()
+														 (setq gc-cons-threshold gc-cons-threshold-original)
+                             (setq file-name-handler-alist file-name-handler-alist-original)
+                             (makunbound 'gc-cons-threshold-original)
+                             (makunbound 'file-name-handler-alist-original)
+														 ;; (message "gc-cons-threshold and file-name-handler-alist restored")
+                             (message "Auto opzimization done.")))
+
 ;;; Mirror
 (require 'package)
 (require 'cl-lib) ; Common Lisp
