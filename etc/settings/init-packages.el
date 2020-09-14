@@ -366,4 +366,9 @@
 	:ensure t
 	:hook (after-init-hook . beacon-mode))
 
+;;; Yafolding
+(use-package yafolding
+	:ensure t
+	:bind (("C-' RET" . yafolding-toggle-element)))
+
 (provide 'init-packages)

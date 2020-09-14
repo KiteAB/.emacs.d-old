@@ -1,5 +1,9 @@
 ;;;;; KiteAB's Personal Emacs Configuration File
 
+;;; Todos
+;; wucuo config: https://github.com/redguardtoo/wucuo
+;; find new emacs plugins: https://github.com/explore
+
 ;;; Auto opzimization
 (setq gc-cons-threshold-original gc-cons-threshold)
 (setq gc-cons-threshold (* 1024 1024 1))
