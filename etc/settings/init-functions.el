@@ -74,12 +74,6 @@
 			(write-file (concat "/sudo:root@localhost:" (ido-read-file-name "File:")))
 		(write-file (concat "/sudo:root@localhost:" buffer-file-name))))
 
-(defun write-scratch ()
-	"Open the write scratch buffer."
-	(interactive)
-	(switch-to-buffer "*Write-Scratch*")
-	(markdown-mode))
-
 (defun markdown-table-keymap ()
 	"Add table map in markdown mode."
 	(interactive)
