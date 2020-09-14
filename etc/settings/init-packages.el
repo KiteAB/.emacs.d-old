@@ -323,8 +323,7 @@
 ;;; Perspective - "Virtual Desktop" in Emacs
 (use-package perspective
 	:ensure t
-	:config
-	(persp-mode))
+	:hook (after-init-hook . persp-mode))
 
 ;;; GitHub Explorer
 (use-package github-explorer
