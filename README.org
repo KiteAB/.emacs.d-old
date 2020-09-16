@@ -20,11 +20,11 @@
 *** The 1st Method
     You need to run the commands at below:
     #+begin_src shell
-      mv ~/.emacs.d ~/.emacs.d-bak && git clone https://github.com/KiteAB/.emacs.d ~/.emacs.d && cd ~/.emacs.d && mkdir third-party gtd
-      git clone https://github.com/manateelazycat/emacs-application-framework third-party/emacs-application-framework --depth=1
-      git clone https://github.com/loyalpartner/english-teacher.el third-party/english-teacher.el --depth=1
-      git clone https://github.com/manateelazycat/english-teacher.el third-party/company-english-helper --depth=1
-      git clone https://github.com/jwiegley/use-package third-party/use-package --depth=1
+      mv ~/.emacs.d ~/.emacs.d-bak && git clone https://github.com/KiteAB/.emacs.d ~/.emacs.d && cd ~/.emacs.d && mkdir site-lisp gtd
+      git clone https://github.com/manateelazycat/emacs-application-framework site-lisp/emacs-application-framework --depth=1
+      git clone https://github.com/loyalpartner/english-teacher.el site-lisp/english-teacher.el --depth=1
+      git clone https://github.com/manateelazycat/english-teacher.el site-lisp/company-english-helper --depth=1
+      git clone https://github.com/jwiegley/use-package site-lisp/use-package --depth=1
       ln bookmarks var/bookmarks
     #+end_src
 

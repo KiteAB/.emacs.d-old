@@ -6,7 +6,7 @@
 ;;; Third Party Packages
 ;;; Emacs Application Framework
 (use-package eaf
- :load-path "~/.emacs.d/third-party/emacs-application-framework"
+ :load-path "~/.emacs.d/site-lisp/emacs-application-framework"
  :bind (("C-z C-w l" . eaf-open-browser)
 			  ("C-z C-w h" . eaf-open-browser-with-history)
 			  ("C-z C-m b" . eaf-open-bookmark))
@@ -23,7 +23,7 @@
 
 ;;; English Teacher
 (use-package english-teacher
- :load-path "~/.emacs.d/third-party/english-teacher.el"
+ :load-path "~/.emacs.d/site-lisp/english-teacher.el"
  :bind (("C-' C-l" . english-teacher-smart-translation))
  :config (setq english-teacher-backend 'baidu
 							 english-teacher-show-result-function 'english-teacher-eldoc-show-result-function)
@@ -31,7 +31,7 @@
 
 ;;; Company English Helper
 (use-package company-english-helper
-	:load-path "~/.emacs.d/third-party/company-english-helper"
+	:load-path "~/.emacs.d/site-lisp/company-english-helper"
 	:bind (("C-' M-t" . toggle-company-english-helper)))
 
 ;;; Request

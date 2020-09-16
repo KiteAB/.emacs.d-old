@@ -25,7 +25,7 @@
 ;;; Init use-package
 (eval-when-compile
   ;; Following line is not needed if use-package.el is in ~/.emacs.d
-  (add-to-list 'load-path "~/.emacs.d/third-party/use-package")
+  (add-to-list 'load-path "~/.emacs.d/site-lisp/use-package")
   (require 'use-package))
 (setq use-package-hook-name-suffix nil) ;; Make sure use-package don't add "-hook" chars
 
