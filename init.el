@@ -133,9 +133,3 @@
 
 ;;; Languages settings
 (require 'kiteab-python)
-
-;;; Autostart
-;;; Erc
-;(kiteab/open-erc) ; Auto open erc
-;(switch-to-buffer "*dashboard*")
-																				; Hide erc at backstage
