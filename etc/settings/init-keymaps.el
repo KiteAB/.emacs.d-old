@@ -23,7 +23,7 @@
 (global-set-key (kbd "C-z C-t") 'load-the-theme) ; Load theme
 (global-set-key (kbd "C-x t O") 'tab-bar-switch-to-prev-tab) ; tab-previous
 (global-set-key (kbd "C-z C-s") 'kiteab/error-show) ; Show the all-the-config-errors
-(global-set-key (kbd "C-z k") 'kill-unwanted-buffer) ; Kill the unwanted buffers made in init load
+(global-set-key (kbd "C-z k") 'kiteab/kill-help-buffer) ; Kill the *Help* buffer
 (global-set-key (kbd "C-x t 3") 'tab-bar-new-with-buffer) ; Create a new tab then select a buffer
 (global-set-key (kbd "C-x t 4") 'tab-bar-close-tab-by-name) ; Close the tab by its name
 (global-set-key (kbd "C-x t s") 'kiteab/tab-bar-new-scratch) ; Create a new tab then select scratch buffer
