@@ -206,7 +206,7 @@
 (defun kiteab/kill-help-buffer ()
 	"If buffer is *Help*, kill it and kill the window, Otherwise just kill current buffer."
 	(interactive)
-	(if ((equal buffer-file-name "*Help*"))
+	(if (equal "*Help*" (buffer-name))
 			(progn
 				(kill-buffer "*Help*")
 				(delete-window))
