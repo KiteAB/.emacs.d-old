@@ -16,9 +16,7 @@
   				 ; Set the default browser
 					 (setq browse-url-browser-function 'eaf-open-browser)
 					 (defalias 'browse-web #'eaf-open-browser)
-					 (defun eaf-browser-set ()
-						 (interactive)
-						 (eaf-setq eaf-browser-dark-mode "true"))
+					 (eaf-setq eaf-browser-dark-mode "true")
 					 (eaf-browser-set)))
 
 ;;; English Teacher
