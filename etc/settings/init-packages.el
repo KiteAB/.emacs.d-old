@@ -241,6 +241,9 @@
 (use-package magit
  :ensure t
  :bind (("C-' m" . magit-status)))
+;;; Child Package
+(use-package forge
+	:ensure t)
 
 ;;; Window Resize
 (use-package windresize
