@@ -36,7 +36,7 @@
 	"Open some directory by the DIR-NAME."
 	(interactive (list
 								(completing-read "The directory's name: "
-																 '("emacs" "git" "gtd" "c" "script"))))
+																 '("emacs" "git" "gtd" "cpp" "script"))))
 	(pcase dir-name
 		("gtd" (find-file "~/.emacs.d/gtd"))
 		("git" (find-file "~/Github"))
