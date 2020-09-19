@@ -353,7 +353,7 @@
 	:config
 	(global-git-gutter-mode +1)
 	(custom-set-variables
-	 '(git-gutter:update-interval 2)
+	 '(git-gutter:update-interval 1)
 	 '(git-gutter:added-sign "+")
    '(git-gutter:deleted-sign "_")
 	 '(git-gutter:modified-sign "~")))
