@@ -179,6 +179,8 @@
 (defun kiteab/kill-unwanted-buffers ()
 	"Kill unwanted buffers for me."
 	(interactive)
-	(kill-buffer "tasks.org" "*Help*"))
+	(progn
+		(kill-buffer "tasks.org")
+		(kill-buffer "*Help*")))
 
 (provide 'init-functions)
