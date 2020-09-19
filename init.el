@@ -16,18 +16,7 @@
                              (makunbound 'file-name-handler-alist-original)
                              (message "Auto opzimization done.")))
 
-;;; Mirror
-(require 'package)
-(require 'cl-lib) ; Common Lisp
-(setq package-archives '(("gnu" . "http://mirrors.bfsu.edu.cn/elpa/gnu/")
-												 ("melpa" . "http://mirrors.bfsu.edu.cn/elpa/melpa/")))
-;;; Init use-package
-(eval-when-compile
-  (add-to-list 'load-path "~/.emacs.d/site-lisp/use-package")
-  (require 'use-package))
-(setq use-package-hook-name-suffix nil)
-
-;;;; Other config files
+;;;; Config Files
 ;;; Macros
 (load-file "~/.emacs.d/macros.el")
 ;;; GitHub
@@ -50,7 +39,7 @@
 (require 'init-modes)
 
 
-;;; Basic things
+;;; Basic Settings
 ;;; Functions
 (fset 'yes-or-no-p 'y-or-n-p) ; Change the asking's answer way
 (delete-selection-mode t) ; Delete the seleceted text
@@ -111,7 +100,6 @@
 (setq user-init-file "~/.emacs.d/var/user-init.el")
 (save-place-mode t) ; Save the point position
 (add-hook 'markdown-mode-hook #'markdown-table-keymap) ; Add the markdown table align keymap
-(add-hook 'erc-mode-hook #'(lambda () (linum-mode -1)))
 
 ;;; Plugin requires
 (require 'init-packages)
