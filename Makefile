@@ -8,7 +8,6 @@ install:
   git clone https://github.com/manateelazycat/emacs-application-framework site-lisp/emacs-application-framework --depth=1
   git clone https://github.com/loyalpartner/english-teacher.el site-lisp/english-teacher.el --depth=1
   git clone https://github.com/jwiegley/use-package site-lisp/use-package --depth=1
-  git clone https://github.com/manateelazycat/company-english-helper site-lisp/company-english-helper --depth=1
 	echo "Installed."
 
 uninstall:

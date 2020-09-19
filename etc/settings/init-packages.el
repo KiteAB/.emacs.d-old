@@ -19,11 +19,11 @@
 (use-package eaf
  :load-path "~/.emacs.d/site-lisp/emacs-application-framework"
  :bind (("C-z C-w l" . eaf-open-browser))
- :config (progn
-					 (eaf-setq eaf-browser-remember-history "true")
-					 (eaf-setq eaf-browser-default-zoom "1.5")
-					 (defalias 'browse-web #'eaf-open-browser)
-					 (eaf-setq eaf-browser-dark-mode "true")))
+ :config
+ (eaf-setq eaf-browser-remember-history "true")
+ (eaf-setq eaf-browser-default-zoom "1.5")
+ (defalias 'browse-web #'eaf-open-browser)
+ (eaf-setq eaf-browser-dark-mode "true"))
 
 ;;; English Teacher
 (use-package english-teacher
@@ -33,11 +33,6 @@
 							 english-teacher-show-result-function 'english-teacher-eldoc-show-result-function)
  :hook ((Info-mode-hook eww-mode-hook help-mode-hook) . english-teacher-follow-mode))
 
-;;; Company English Helper
-(use-package company-english-helper
-	:load-path "~/.emacs.d/site-lisp/company-english-helper"
-	:bind (("C-' T" . toggle-company-english-helper)))
-
 ;;; Request
 (use-package request
  :ensure t)
@@ -45,21 +40,22 @@
 ;;; Atom One Dark Theme
 (use-package atom-one-dark-theme
 	:ensure t
-	:config (load-theme 'atom-one-dark t)
+	:config
+	(load-theme 'atom-one-dark t)
 	(setq-default cursor-type '(bar . 1))
 	(set-cursor-color "white"))
 
 ;;; Dashboard
 (use-package dashboard
 	:ensure t
-	:config (progn
-						 (dashboard-setup-startup-hook)
-						 (setq dashboard-banner-logo-title "KiteAB's Emacs - Vim Defector No.114514")
-						 (setq dashboard-startup-banner 'logo)
-						 (setq dashboard-center-content t
-									 dashboard-set-heading-icons t
-									 dashboard-set-file-icons t
-									 dashboard-set-navigator t)))
+	:config
+	(dashboard-setup-startup-hook)
+	(setq dashboard-banner-logo-title "KiteAB's Emacs - Vim Defector No.114514"
+				dashboard-startup-banner 'logo
+				dashboard-center-content t
+				dashboard-set-heading-icons t
+				dashboard-set-file-icons t
+				dashboard-set-navigator t))
 
 ;;; Org Mode
 (use-package org
@@ -74,9 +70,9 @@
 				("C-z C-c e" . org-timer-stop)
 				("C-z C-c SPC" . org-timer-pause-or-continue)
 				("C-z C-c C-i" . kiteab/use-space-indent))
- :config (progn
-					 (setq org-src-fontify-natively t)
-					 (require 'init-org))
+ :config
+ (setq org-src-fontify-natively t)
+ (require 'init-org)
  :hook (org-mode-hook . (lambda () (setq indent-tabs-mode nil) (define-key org-mode-map (kbd "C-'") nil))))
 ;;; Child Package
 (use-package org-bullets
@@ -88,9 +84,9 @@
 (use-package vterm
  :ensure t
  :bind (("C-' C-t" . open-vterm))
- :config (progn
-					 (define-key vterm-mode-map (kbd "C-c p") 'previous-buffer)
-					 (define-key vterm-mode-map (kbd "C-c n") 'next-buffer)))
+ :config
+ (define-key vterm-mode-map (kbd "C-c p") 'previous-buffer)
+ (define-key vterm-mode-map (kbd "C-c n") 'next-buffer))
 
 ;;; Counsel
 (use-package counsel
@@ -115,11 +111,11 @@
 (use-package ivy-posframe
  :ensure t
  :hook (ivy-mode-hook . ivy-posframe-mode)
- :config (progn
-					 (setq ivy-posframe-display-functions-alist
-								 '((t . ivy-posframe-display-at-frame-center)))
-					 (setq ivy-posframe-parameters '((left-fringe . 8)
-																					 (add-hook 'ivy-mode-hook #'ivy-posframe-mode)))))
+ :config
+ (setq ivy-posframe-display-functions-alist
+			 '((t . ivy-posframe-display-at-frame-center)))
+ (setq ivy-posframe-parameters '((left-fringe . 8)
+																 (add-hook 'ivy-mode-hook #'ivy-posframe-mode))))
 
 ;;; Bongo
 (use-package bongo
@@ -151,7 +147,7 @@
 			  ("C-' DEL" . hungry-delete-backward))
  :hook ((emacs-lisp-mode-hook lisp-mode-hook) . hungry-delete-mode))
 
-;;; js2 Mode
+;;; JS2 Mode
 (use-package js2-mode
  :ensure t
  :hook (js-mode . js2-mode))
@@ -159,12 +155,12 @@
 ;;; Web Mode
 (use-package web-mode
 	:ensure t
-	:config (progn
-						(setq auto-mode-alist
-									(append '(("\\.html\\'" . web-mode)) auto-mode-alist))
-						(setq-default web-mode-markup-indent-offset 2 ; Indent of HTML
-													web-mode-css-indent-offset 2
-													web-mode-code-indent-offset 2))) ; Indent of JavaScript in HTML
+	:config
+	(setq auto-mode-alist
+				(append '(("\\.html\\'" . web-mode)) auto-mode-alist))
+	(setq-default web-mode-markup-indent-offset 2 ; Indent of HTML
+								web-mode-css-indent-offset 2
+								web-mode-code-indent-offset 2)) ; Indent of JavaScript in HTML
 
 
 ;;; Auto Completion
@@ -172,15 +168,14 @@
 (use-package company
  :ensure t
  :hook (after-init-hook . global-company-mode)
- :config (progn
-					 (setq company-idle-delay 0
-								 company-minimum-prefix-length 1)
-					 (with-eval-after-load
-							 'company
-						 (define-key company-active-map (kbd "M-p") nil)
-						 (define-key company-active-map (kbd "M-n") nil)
-						 (define-key company-active-map (kbd "C-n") #'company-select-next)
-						 (define-key company-active-map (kbd "C-p") #'company-select-previous))))
+ :config
+ (setq company-idle-delay 0
+			 company-minimum-prefix-length 1)
+ (with-eval-after-load 'company
+	 (define-key company-active-map (kbd "M-p") nil)
+	 (define-key company-active-map (kbd "M-n") nil)
+	 (define-key company-active-map (kbd "C-n") #'company-select-next)
+	 (define-key company-active-map (kbd "C-p") #'company-select-previous)))
 ;;; Child Packages
 (use-package company-c-headers
 	:ensure t
@@ -190,12 +185,12 @@
 (use-package lsp-mode
  :hook ((c-mode-hook python-mode-hook c++-mode-hook lisp-mode-hook js-mode-hook web-mode-hook) . lsp)
  :bind (("C-' F" . lsp-format-buffer))
- :config (progn
-					 (setq lsp-idle-delay 1200
-								 lsp-auto-guess-root nil
-								 lsp-file-watch-threshold 2000
-								 lsp-eldoc-hook nil
-								 lsp-prefer-flymake nil)))
+ :config
+ (setq lsp-idle-delay 1200
+			 lsp-auto-guess-root nil
+			 lsp-file-watch-threshold 2000
+			 lsp-eldoc-hook nil
+			 lsp-prefer-flymake nil))
 
 ;; ccls (For Lsp Mode)
 ;; (use-package ccls
@@ -206,7 +201,7 @@
 (use-package emmet-mode
  :ensure t
  :hook (web-mode-hook . emmet-mode)
- :config (progn (setq emmet-self-closing-tag-style " /")))
+ :config (setq emmet-self-closing-tag-style " /"))
 
 ;;; Snippets
 (use-package yasnippet
@@ -214,13 +209,13 @@
  :bind (("C-' i" . yas-insert-snippet)
 			  ("C-' C-y" . yas-expand-from-trigger-key))
  :hook (after-init-hook . yas-global-mode)
- :config (progn
-					 (use-package yasnippet-snippets
-						 :ensure t)
-					 (setq yas-snippet-dirs '("~/.emacs.d/snippets"
-																		"~/.emacs.d/elpa/yasnippet-snippets-20200802.1658/snippets"))))
+ :config
+ (use-package yasnippet-snippets
+	 :ensure t)
+ (setq yas-snippet-dirs '("~/.emacs.d/snippets"
+													"~/.emacs.d/elpa/yasnippet-snippets-20200802.1658/snippets")))
 
-;;;FlyMake
+;;; FlyMake
 (use-package flymake
  :ensure t
  :bind (("C-' C-f" . flymake-mode)))
@@ -239,9 +234,9 @@
 (use-package doom-modeline
  :ensure t
  :hook (after-init-hook . doom-modeline-mode)
- :config (progn
-					 (setq-default doom-modeline-height 13)
-					 (setq-default doom-modeline-bar-width 3)))
+ :config
+ (setq-default doom-modeline-height 13)
+ (setq-default doom-modeline-bar-width 3))
 
 ;;; Magit
 (use-package magit
