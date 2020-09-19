@@ -35,16 +35,14 @@
 (require 'github-token)
 ;;; The cache directory
 (setq user-emacs-directory "~/.emacs.d/var")
-;;; FZF
+;;; Fuzzy Files Finder
 (setq counsel-fzf-cmd "fd --type f | fzf -f \"%s\" --algo=v1")
 ;;; Other files
 (add-to-list 'load-path "~/.emacs.d/etc/settings")
 (add-to-list 'load-path "~/.emacs.d/etc/languages")
-;;; UI
+;;; User Interface
 (require 'init-ui)
-;;; Packages
-(require 'init-require-package)
-;;; The functions
+;;; Functions
 (require 'init-functions)
 ;;; Keymaps
 (require 'init-keymaps)
