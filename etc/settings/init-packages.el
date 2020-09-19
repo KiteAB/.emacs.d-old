@@ -41,7 +41,16 @@
 (use-package atom-one-dark-theme
 	:ensure t
 	:config
-	(load-theme 'atom-one-dark t)
+;	(load-theme 'atom-one-dark t)
+;	(setq-default cursor-type '(bar . 1))
+;	(set-cursor-color "white")
+	)
+
+;;; Doom Themes
+(use-package doom-themes
+	:ensure t
+	:config
+	(load-theme 'doom-horizon t)
 	(setq-default cursor-type '(bar . 1))
 	(set-cursor-color "white"))
 
