@@ -50,7 +50,7 @@
 (use-package doom-themes
 	:ensure t
 	:config
-	(load-theme 'doom-horizon t)
+	(load-theme 'doom-one t)
 	(setq-default cursor-type '(bar . 1))
 	(set-cursor-color "white"))
 
