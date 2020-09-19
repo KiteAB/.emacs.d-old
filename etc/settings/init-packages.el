@@ -189,6 +189,9 @@
 (use-package company-c-headers
 	:ensure t
 	:config (add-to-list 'company-backends 'company-c-headers))
+(use-package company-box
+	:ensure t
+	:hook (company-mode-hook . company-box-mode))
 
 ;;; Lsp Mode
 (use-package lsp-mode
