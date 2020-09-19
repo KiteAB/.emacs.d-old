@@ -41,7 +41,6 @@
 
 (defun markdown-table-keymap ()
 	"Add table map in markdown mode."
-	(interactive)
 	(define-key markdown-mode-map (kbd "C-c C-c TAB") 'markdown-table-align))
 
 (defun tab-bar-new-with-buffer (buffer-name)
