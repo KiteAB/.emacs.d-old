@@ -50,15 +50,18 @@
 (use-package doom-themes
 	:ensure t
 	:config
-	(load-theme 'doom-one t)
-	(setq-default cursor-type '(bar . 1))
-	(set-cursor-color "white"))
+;	(load-theme 'doom-one t)
+;	(setq-default cursor-type '(bar . 1))
+;	(set-cursor-color "white")
+	)
 
 ;;; Spacemacs Theme
 (use-package ewal-spacemacs-themes
 	:ensure t
 	:config
-	(load-theme 'spacemacs-dark t))
+	(load-theme 'spacemacs-dark t)
+	(setq-default cursor-type '(bar . 1))
+	(set-cursor-color "white"))
 
 ;;; Dashboard
 (use-package dashboard
