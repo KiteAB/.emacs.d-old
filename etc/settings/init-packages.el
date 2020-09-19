@@ -12,12 +12,11 @@
 			  ("C-z C-m b" . eaf-open-bookmark))
  :config (progn
 					 (eaf-setq eaf-browser-remember-history "true")
-					 (eaf-setq eaf-browser-default-zoom "1.2")
+					 (eaf-setq eaf-browser-default-zoom "1.5")
   				 ; Set the default browser
 					 (setq browse-url-browser-function 'eaf-open-browser)
 					 (defalias 'browse-web #'eaf-open-browser)
-					 (eaf-setq eaf-browser-dark-mode "true")
-					 (eaf-browser-set)))
+					 (eaf-setq eaf-browser-dark-mode "true")))
 
 ;;; English Teacher
 (use-package english-teacher
