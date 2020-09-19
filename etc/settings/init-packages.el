@@ -7,14 +7,10 @@
 ;;; Emacs Application Framework
 (use-package eaf
  :load-path "~/.emacs.d/site-lisp/emacs-application-framework"
- :bind (("C-z C-w l" . eaf-open-browser)
-			  ("C-z C-w h" . eaf-open-browser-with-history)
-			  ("C-z C-m b" . eaf-open-bookmark))
+ :bind (("C-z C-w l" . eaf-open-browser))
  :config (progn
 					 (eaf-setq eaf-browser-remember-history "true")
 					 (eaf-setq eaf-browser-default-zoom "1.5")
-  				 ; Set the default browser
-					 (setq browse-url-browser-function 'eaf-open-browser)
 					 (defalias 'browse-web #'eaf-open-browser)
 					 (eaf-setq eaf-browser-dark-mode "true")))
 
@@ -29,7 +25,7 @@
 ;;; Company English Helper
 (use-package company-english-helper
 	:load-path "~/.emacs.d/site-lisp/company-english-helper"
-	:bind (("C-' M-t" . toggle-company-english-helper)))
+	:bind (("C-' T" . toggle-company-english-helper)))
 
 ;;; Request
 (use-package request
