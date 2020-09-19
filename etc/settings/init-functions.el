@@ -176,4 +176,9 @@
 				(delete-window))
 		(kill-buffer)))
 
+(defun kiteab/kill-unwanted-buffers ()
+	"Kill unwanted buffers for me."
+	(interactive)
+	(kill-buffer "tasks.org" "*Help*"))
+
 (provide 'init-functions)
