@@ -42,6 +42,3 @@
 ** Notes
    - This configuration file is use ~use-package~
    - This configuration file is extend by [[https://github.com/SpringHan/.emacs.d][SpringHan/.emacs.d]], you can use that configuration too.
-*** Todos
-    - Use [[https://github.com/jwiegley/use-package][use-package]] are not [[https://github.com/SpringHan/.emacs.d/blob/master/etc/init-require-package.el][package-require]] (almost done)
-    - Add some useful functions and bind to ~C-z~ keys group.
