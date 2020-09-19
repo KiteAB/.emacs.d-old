@@ -14,7 +14,6 @@
                              (setq file-name-handler-alist file-name-handler-alist-original)
                              (makunbound 'gc-cons-threshold-original)
                              (makunbound 'file-name-handler-alist-original)
-														 ;; (message "gc-cons-threshold and file-name-handler-alist restored")
                              (message "Auto opzimization done.")))
 
 ;;; Mirror
@@ -24,21 +23,16 @@
 												 ("melpa" . "http://mirrors.bfsu.edu.cn/elpa/melpa/")))
 ;;; Init use-package
 (eval-when-compile
-  ;; Following line is not needed if use-package.el is in ~/.emacs.d
   (add-to-list 'load-path "~/.emacs.d/site-lisp/use-package")
   (require 'use-package))
-(setq use-package-hook-name-suffix nil) ;; Make sure use-package don't add "-hook" chars
+(setq use-package-hook-name-suffix nil)
 
 ;;;; Other config files
-;;; Error Capture
-(load-file "~/.emacs.d/init-error-manager.el")
-(require 'init-error-manager)
 ;;; Macros
 (load-file "~/.emacs.d/macros.el")
 ;;; GitHub
-(when (kiteab/error-check '("~/.emacs.d/init.el::17" "init.el") :file-exists "~/.emacs.d/token.el")
-	(load-file "~/.emacs.d/token.el")
-	(require 'github-token))
+(load-file "~/.emacs.d/token.el")
+(require 'github-token)
 ;;; The cache directory
 (setq user-emacs-directory "~/.emacs.d/var")
 ;;; FZF

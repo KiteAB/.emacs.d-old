@@ -16,13 +16,6 @@
 													 (delete ".." (delete "." (directory-files path))))))
 		(find-file (concat path filename))))
 
-(defun open-etc-config-by-char (char)
-	"Call the open-etc-config with its index."
-	(interactive "cEnter the char: ")
-	(open-etc-config (pcase char
-										 (115 "settings")
-										 (108 "languages"))))
-
 (defun open-vterm (&optional dir)
 	"Open the vterm by DIR"
 	(interactive "DInput the directory: ")
@@ -32,40 +25,12 @@
 		(linum-mode -1)
 		(kill-buffer current-buffer-name)))
 
-(defun open-the-dir (dir-name)
-	"Open some directory by the DIR-NAME."
-	(interactive (list
-								(completing-read "The directory's name: "
-																 '("emacs" "git" "gtd" "cpp" "script"))))
-	(pcase dir-name
-		("gtd" (find-file "~/.emacs.d/gtd"))
-		("git" (find-file "~/Github"))
-		("emacs" (find-file "~/.emacs.d"))
-		("cpp" (find-file "~/cpp/src"))
-		("script" (find-file "~/scripts"))))
-
 (defun set-alpha (var)
 	"Set the backgroud alpha by VAR."
 	(interactive "sAlpha or not(y-or-n): ")
 	(pcase var
 		("y" (set-frame-parameter nil 'alpha '(90 . 100)))
 		("n" (set-frame-parameter nil 'alpha '(100 . 100)))))
-
-(defun window-move (way)
-	"Move the buffer window position by WAY."
-	(interactive "sEnter the way(n-e-u-i): ")
-	(let ((current-window-buffer (window-buffer))
-				(current-window (get-buffer-window)))
-		(pcase way
-			("n" (windmove-left))
-			("e" (windmove-down))
-			("u" (windmove-up))
-			("i" (windmove-right)))
-		(setq another-window-buffer (get-buffer-window))
-		(if (not (eql current-window-buffer another-window-buffer))
-				(progn
-					(set-window-buffer current-window (window-buffer))
-					(set-window-buffer (get-buffer-window) current-window-buffer))))) ; Move the window
 
 (defun sudo-save ()
 	"Save the current buffer file with sudo."

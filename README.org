@@ -46,6 +46,3 @@
 *** Todos
     - Use [[https://github.com/jwiegley/use-package][use-package]] are not [[https://github.com/SpringHan/.emacs.d/blob/master/etc/init-require-package.el][package-require]] (almost done)
     - Add some useful functions and bind to ~C-z~ keys group.
-
-** License
-   MIT
