@@ -390,4 +390,9 @@
 	:ensure t
 	:bind (("C-' RET" . yafolding-toggle-element)))
 
+;;; Wucuo - Spell Check
+(use-package wucuo
+	:ensure t
+	:hook ((markdown-mode org-mode-hook) . wucuo-start))
+
 (provide 'init-packages)
