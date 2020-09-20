@@ -5,6 +5,11 @@
 
   [[./screenshots/dark.png]]
 
+  - [[#dependencies][Dependencies]]
+  - [[#installation][Installation]]
+  - [[#shortcuts][Shortcuts]]
+  - [[#notes][Notes]]
+
 ** Dependencies
    You need some dependencies at below:
    - Emacs >= 27.1
