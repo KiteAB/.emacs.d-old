@@ -405,4 +405,9 @@
 	:ensure t
 	:hook ((markdown-mode org-mode-hook) . wucuo-start))
 
+;;; Lispy
+(use-package lispy
+	:ensure t
+	:hook (emacs-lisp-mode . lispy-mode))
+
 (provide 'init-packages)
