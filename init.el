@@ -7,6 +7,7 @@
 (setq gc-cons-threshold-original gc-cons-threshold)
 (setq gc-cons-threshold (* 1024 1024 1))
 (setq file-name-handler-alist-original file-name-handler-alist)
+(setq inhibit-compacting-font-caches nil)
 (setq file-name-handler-alist nil)
 (run-with-idle-timer 5 nil (lambda ()
 														 (setq gc-cons-threshold gc-cons-threshold-original)
@@ -99,6 +100,16 @@
 (setq user-init-file "~/.emacs.d/var/user-init.el")
 (save-place-mode t) ; Save the point position
 (add-hook 'markdown-mode-hook #'markdown-table-keymap) ; Add the markdown table align keymap
+(setq ring-bell-function 'ignore blink-cursor-mode nil) ; Disable Infos
+(setq scroll-step 2
+      scroll-margin 2
+      hscroll-step 2
+      hscroll-margin 2
+      scroll-conservatively 101
+      scroll-up-aggressively 0.01
+      scroll-down-aggressively 0.01
+      scroll-preserve-screen-position 'always) ; Scroll
+(setq mouse-yank-at-point nil)
 
 ;;; Plugin requires
 (require 'init-packages)
