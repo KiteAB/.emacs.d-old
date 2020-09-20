@@ -46,15 +46,6 @@
 ;	(set-cursor-color "white")
 	)
 
-;;; Doom Themes
-(use-package doom-themes
-	:ensure t
-	:config
-;	(load-theme 'doom-one t)
-;	(setq-default cursor-type '(bar . 1))
-;	(set-cursor-color "white")
-	)
-
 ;;; Spacemacs Theme
 (use-package ewal-spacemacs-themes
 	:ensure t
