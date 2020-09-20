@@ -1,7 +1,7 @@
 * My Emacs Configuration
   Hello everyone, this repository saved my personal emacs configuration file.
 
-  I'm a new in Emacs, welcome to submit an issue or a pull request.
+  I'm new in Emacs, welcome to submit an issue or a pull request.
 
   [[./screenshots/dark.png]]
 
@@ -10,27 +10,16 @@
    - Emacs >= 27.1
    - Git
    - FZF (To use ~kiteab/find-file~ function)
-   - libvterm (To use VTerm in emacs)
+   - libvterm (To use VTerm)
    - CMake (To compile the VTerm)
    - Fira Code Nerd Font (Optional. You can edit the font use ~C-z C-c settings RET init-ui.el RET~)
    - The dependences in [[https://github.com/manateelazycat/emacs-application-framework][Emacs Application Framework]]. (To use EAF)
    - The dependences in [[https://github.com/loyalpartner/english-teacher.el][english-teacher.el]]. (To use english-teacher)
 
 ** Installation
-*** The 1st Method
-    You need to run the commands at below:
-    #+begin_src shell
-      mv ~/.emacs.d ~/.emacs.d-bak && git clone https://github.com/KiteAB/.emacs.d ~/.emacs.d && cd ~/.emacs.d && mkdir site-lisp gtd
-      git clone https://github.com/manateelazycat/emacs-application-framework site-lisp/emacs-application-framework --depth=1
-      git clone https://github.com/loyalpartner/english-teacher.el site-lisp/english-teacher.el --depth=1
-      git clone https://github.com/jwiegley/use-package site-lisp/use-package --depth=1
-      ln bookmarks var/bookmarks
-    #+end_src
+   You need to run the ~make install~ in the terminal or manually run the commands written in the ~Makefile~
 
-*** 2nd Method
-    You need to run the ~make install~ in the terminal or manually run the commands written in the ~Makefile~
-
-    And enjoy the Emacs!
+   And enjoy the Emacs!
 
 ** Shortcuts
    I binded the ~C-z~ key to be the user defined key.
