@@ -346,10 +346,6 @@
 	:init (grugru-default-setup)
 	:bind (("C-' C-g" . grugru)))
 
-;;; Telega
-(use-package telega
-	:ensure t)
-
 ;;; Perspective - "Virtual Desktop" in Emacs
 (use-package perspective
 	:ensure t
