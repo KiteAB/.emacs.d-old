@@ -41,6 +41,7 @@
 (global-set-key (kbd "C-z O") 'spring/scratch-erase-contents) ; Erase all the contents of *scratch* buffer
 (global-set-key (kbd "C-z P") 'list-processes) ; Show the processes buffer
 (global-set-key (kbd "C-z K") 'kiteab/kill-unwanted-buffers) ; Kill unwanted buffers
+(global-set-key (kbd "C-z R") 'query-replace) ; Replace
 
 ;; Key Macros
 (global-set-key (kbd "C-z C-k i") 'insert-placeholder) ; Insert Placeholder
