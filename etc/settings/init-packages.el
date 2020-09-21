@@ -293,6 +293,9 @@
 (use-package treemacs
  :ensure t
  :bind (("C-' e" . treemacs)))
+;;; Child Package
+(use-package treemacs-all-the-icons
+	:ensure t)
 
 ;;; Dap Mode
 (use-package dap-mode
@@ -397,5 +400,17 @@
 (use-package lispy
 	:ensure t
 	:hook (emacs-lisp-mode . lispy-mode))
+
+;;; Dired
+(use-package dired
+	:ensure nil)
+;;; Child Package
+(use-package all-the-icons-dired
+	:ensure t)
+
+;;; Auto Revert
+(use-package autorevert
+  :ensure nil
+  :hook (after-init-hook . global-auto-revert-mode))
 
 (provide 'init-packages)
