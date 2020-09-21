@@ -401,6 +401,7 @@
 	:ensure t
 	:hook (emacs-lisp-mode . lispy-mode))
 
+;;; Built-in Packages' Configuration
 ;;; Dired
 (use-package dired
 	:ensure nil)
