@@ -1,7 +1,7 @@
 ;;;;; KiteAB's Personal Emacs Configuration File
 
-;;; Todos
-; empty
+;;; Benchmark
+;(load-file "~/.emacs.d/benchmark.el")
 
 ;;; Auto opzimization
 (setq gc-cons-threshold-original gc-cons-threshold)
