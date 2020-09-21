@@ -47,8 +47,8 @@
 	)
 
 ;;; Spacemacs Theme
-(use-package ewal-spacemacs-themes
-	:ensure t
+(use-package spacemacs-common
+	:ensure spacemacs-theme
 	:config
 	(load-theme 'spacemacs-dark t)
 	(setq-default cursor-type '(bar . 1))
