@@ -33,6 +33,7 @@
 							 english-teacher-show-result-function 'english-teacher-eldoc-show-result-function)
  :hook ((Info-mode-hook eww-mode-hook help-mode-hook) . english-teacher-follow-mode))
 
+
 ;;; Request
 (use-package request
  :ensure t)
@@ -40,7 +41,7 @@
 ;;; Atom One Dark Theme
 (use-package atom-one-dark-theme
 	:ensure t
-	:config
+;	:config
 ;	(load-theme 'atom-one-dark t)
 ;	(setq-default cursor-type '(bar . 1))
 ;	(set-cursor-color "white")
@@ -69,9 +70,9 @@
 ;;; Org Mode
 (use-package org
  :ensure t
- :init (progn
-				 (define-prefix-command 'org-key-map)
-				 (global-set-key (kbd "C-z C-c") 'org-key-map))
+ :init
+ (define-prefix-command 'org-key-map)
+ (global-set-key (kbd "C-z C-c") 'org-key-map)
  :bind (("C-z C-c g" . org-agenda)
 				("C-z C-c c" . org-capture)
 				("C-z C-c s" . org-timer-start)
@@ -138,11 +139,7 @@
 ;;; Ace Window
 (use-package ace-window
 	:ensure t
- :bind (("C-' C-c" . ace-window)))
-
-;;; Calendar China
-(use-package cal-china-x
-	:ensure t)
+	:bind (("C-' C-c" . ace-window)))
 
 ;;; Iedit
 (use-package iedit
@@ -350,11 +347,6 @@
 (use-package perspective
 	:ensure t
 	:hook (after-init-hook . persp-mode))
-
-;;; GitHub Explorer
-(use-package github-explorer
-	:ensure t
-	:bind (("C-' G" . github-explorer)))
 
 ;;; Info Colors
 (use-package info-colors
