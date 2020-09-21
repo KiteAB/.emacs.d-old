@@ -5,7 +5,7 @@
 
 ;;; Auto opzimization
 (setq gc-cons-threshold-original gc-cons-threshold)
-(setq gc-cons-threshold (* 1024 1024 1))
+(setq gc-cons-threshold (* 1024 1024 100))
 (setq file-name-handler-alist-original file-name-handler-alist)
 (setq inhibit-compacting-font-caches nil)
 (setq file-name-handler-alist nil)
