@@ -391,18 +391,8 @@
 	:ensure t
 	:bind (("C-' RET" . yafolding-toggle-element)))
 
-;;; Wucuo - Spell Check
-(use-package wucuo
-	:ensure t
-	:hook ((markdown-mode org-mode-hook) . wucuo-start))
-
-;;; Lispy
-(use-package lispy
-	:ensure t
-	:hook (emacs-lisp-mode . lispy-mode))
-
 ;;; Built-in Packages' Configuration
-;;; Dired
+;;; Dired - File Operations
 (use-package dired
 	:ensure nil)
 ;;; Child Package
