@@ -85,9 +85,9 @@
  :hook (org-mode-hook . (lambda () (setq indent-tabs-mode nil) (define-key org-mode-map (kbd "C-'") nil))))
 ;;; Child Package
 (use-package org-bullets
- :ensure t
- :hook (org-mode-hook . (lambda () (org-bullets-mode t)))
- :config (setq org-bullets-bullet-list '("" "☯" "❀" "✿")))
+  :ensure t
+  :hook ('org-mode . 'org-bullets-mode)
+  :custom (org-bullets-bullet-list '("☰" "☷" "✿" "☭")))
 
 ;;; VTerm
 (use-package vterm
