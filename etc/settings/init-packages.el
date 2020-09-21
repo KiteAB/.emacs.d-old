@@ -86,8 +86,8 @@
 ;;; Child Package
 (use-package org-bullets
   :ensure t
-  :hook ('org-mode . 'org-bullets-mode)
-  :custom (org-bullets-bullet-list '("☰" "☷" "✿" "☭")))
+	:hook (org-mode-hook . (lambda () (org-bullets-mode t)))
+	:custom (org-bullets-bullet-list '("☰" "☷" "✿" "☭")))
 
 ;;; VTerm
 (use-package vterm
