@@ -1,6 +1,6 @@
 ;;;; This file is used for the keybindings
-(define-prefix-command 'ctl-z-map)		 ; Create the C-z map
-(global-set-key (kbd "C-z") 'ctl-z-map)		 ; Set the C-z
+(define-prefix-command 'ctl-z-map) ; Create the C-z map
+(global-set-key (kbd "C-z") 'ctl-z-map) ; Set the C-z
 (global-set-key (kbd "C-z i") 'open-config-file) ; Open the init.el
 (global-set-key (kbd "C-z p") 'package-list-packages) ; Open the package interface
 (global-set-key (kbd "C-z C-b") 'buffer-menu) ; Open the buffer menu
@@ -20,9 +20,7 @@
 (global-set-key (kbd "C-z w") 'write-scratch) ; New a write scratch buffer
 (global-set-key (kbd "C-z f") 'mark-defun) ; Mark the function SAME LIKE C-M-h
 (global-set-key (kbd "C-z e") 'eshell) ; Open eshell
-(global-set-key (kbd "C-z C-t") 'load-the-theme) ; Load theme
 (global-set-key (kbd "C-x t O") 'tab-bar-switch-to-prev-tab) ; tab-previous
-(global-set-key (kbd "C-z C-s") 'kiteab/error-show) ; Show the all-the-config-errors
 (global-set-key (kbd "C-z k") 'kiteab/kill-help-buffer) ; Kill the *Help* buffer
 (global-set-key (kbd "C-x t 3") 'tab-bar-new-with-buffer) ; Create a new tab then select a buffer
 (global-set-key (kbd "C-x t 4") 'tab-bar-close-tab-by-name) ; Close the tab by its name
