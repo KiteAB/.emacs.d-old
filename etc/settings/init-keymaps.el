@@ -33,8 +33,6 @@
 (global-set-key (kbd "C-z M-c") 'kiteab/downcase-word-first-letter) ; Downcase the first letter in the word at point
 (global-set-key (kbd "C-z A") 'kiteab/add-todo-in-code)	; Add the todo in code
 (global-set-key (kbd "C-z C-f") 'kiteab/find-file) ; Search file use FZF
-(global-set-key (kbd "C-z b") 'kiteab/kill-magit) ; Kill buffers about Magit
-(global-set-key (kbd "C-z E") 'open-etc-config-by-char) ; Call the open-etc-config by its index
 (global-set-key (kbd "C-z P") 'list-processes) ; Show the processes buffer
 (global-set-key (kbd "C-z K") 'kiteab/kill-unwanted-buffers) ; Kill unwanted buffers
 (global-set-key (kbd "C-z R") 'query-replace) ; Replace
@@ -44,8 +42,5 @@
 (global-set-key (kbd "C-z C-k i") 'insert-placeholder) ; Insert Placeholder
 (global-set-key (kbd "C-z C-k r") 'replace-placeholder) ; Replace Placeholder
 (global-set-key (kbd "C-z C-k s") 'search-todo-in-code) ; Search the todo thing in code
-
-;; Unset
-(global-unset-key (kbd "C-SPC"))
 
 (provide 'init-keymaps)
