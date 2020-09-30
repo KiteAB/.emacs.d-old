@@ -367,8 +367,7 @@
 ;;; Page Break Lines
 (use-package page-break-lines
   :ensure t
-  :hook (after-init-hook . page-break-lines-mode)
-  :config (turn-on-page-break-lines-mode))
+  :hook (help-mode-hook . page-break-lines-mode))
 
 ;;; Git-Gutter
 (use-package git-gutter
