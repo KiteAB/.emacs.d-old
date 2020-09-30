@@ -391,6 +391,10 @@
 	:ensure t
 	:bind (("C-' RET" . yafolding-toggle-element)))
 
+;;; Pacman in Emacs
+(use-package arch-packer
+	:ensure t)
+
 ;;; Built-in Packages' Configuration
 ;;; Dired - File Operations
 (use-package dired
@@ -404,11 +408,7 @@
   :ensure nil
   :hook (after-init-hook . global-auto-revert-mode))
 
-;;; Pacman in Emacs
-(use-package arch-packer
-	:ensure t)
-
-;;; Command Shower
+;;; Command Log
 (use-package command-log-mode
 	:ensure nil
 	:config
