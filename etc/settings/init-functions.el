@@ -7,10 +7,11 @@
 (defun open-etc-config (index)
 	"Open the config file in the etc directory."
 	(interactive (list (completing-read "Enter the index of config: "
-																			'("languages" "settings"))))
+																			'("languages" "settings" "tools"))))
 	(let* ((path (pcase index
 								 ("languages" "~/.emacs.d/etc/languages/")
-								 ("settings" "~/.emacs.d/etc/settings/")))
+								 ("settings" "~/.emacs.d/etc/settings/")
+								 ("tools" "~/.emacs.d/etc/tools/")))
 				 (filename
 					(completing-read "Enter the filename: "
 													 (delete ".." (delete "." (directory-files path))))))
@@ -144,7 +145,7 @@
 
 (defun kiteab/kill-magit (&optional dir)
 	"Kill the buffer about Magit"
-	(interactive "sInput the directory of Git repository: ")
+	(interactive)
 	(magit-mode-bury-buffer)
 	(unless (null (magit-mode-get-buffers))
 		(dolist (buffer (magit-mode-get-buffers))
