@@ -404,4 +404,20 @@
   :ensure nil
   :hook (after-init-hook . global-auto-revert-mode))
 
+;;; Pacman in Emacs
+(use-package arch-packer
+	:ensure t)
+
+;;; Command Shower
+(use-package command-log-mode
+	:ensure nil
+	:config
+	(defun kiteab/open-or-close-command-log-mode ()
+		"Open the command-log-mode."
+		(interactive)
+		(global-command-log-mode)
+		(clm/toggle-command-log-buffer))
+	:bind (("C-' k" . kiteab/open-or-close-command-log-mode)
+				 ("C-' K" . clm/command-log-clear)))
+
 (provide 'init-packages)

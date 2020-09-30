@@ -83,17 +83,6 @@
 		(insert initial-scratch-message)
 		(message "Open the scratch action done.")))
 
-(defun kiteab/scratch-erase-contents ()
-	"Erase all the contents of *scratch* buffer."
-	(interactive)
-	(with-current-buffer "*scratch*"
-		(let ((content	(buffer-string)))
-			(unless (string= content initial-scratch-message)
-				(erase-buffer)
-				(insert initial-scratch-message)
-				(message "Erased contents in *scratch* buffer.")
-				(end-of-buffer)))))
-
 (defun kiteab/use-space-indent ()
 	"Use the space indent in org-mode."
 	(interactive)
@@ -154,33 +143,24 @@
 	(counsel-fzf nil dir))
 
 (defun kiteab/kill-magit (&optional dir)
-	"Clear the buffer about Magit"
+	"Kill the buffer about Magit"
 	(interactive "sInput the directory of Git repository: ")
-	(progn
-		(if (gnus-buffer-exists-p (format "magit: %s" dir))
-				(kill-buffer (format "magit: %s" dir)))
-		(if (gnus-buffer-exists-p (format "magit-process: %s" dir))
-				(kill-buffer (format "magit-process: %s" dir)))
-		(if (gnus-buffer-exists-p (format "magit-diff: %s" dir))
-				(kill-buffer (format "magit-diff: %s" dir)))
-		(if (gnus-buffer-exists-p "*Backtrace*")
-				(kill-buffer "*Backtrace*"))
-		(delete-window nil)))
-
-(defun kiteab/kill-help-buffer ()
-	"If buffer is *Help*, kill it and kill the window, Otherwise just kill current buffer."
-	(interactive)
-	(if (equal "*Help*" (buffer-name))
-			(progn
-				(kill-buffer "*Help*")
-				(delete-window))
-		(kill-buffer)))
+	(magit-mode-bury-buffer)
+	(unless (null (magit-mode-get-buffers))
+		(dolist (buffer (magit-mode-get-buffers))
+			(kill-buffer buffer))))
 
 (defun kiteab/kill-unwanted-buffers ()
 	"Kill unwanted buffers for me."
 	(interactive)
 	(progn
 		(kill-buffer "tasks.org")
-		(kill-buffer "*Help*")))
+		(kill-buffer "*Help*")
+		(kill-buffer "*Backtrace*")))
+
+(defun kiteab/search-engine ()
+	"Open search page by eaf-browser."
+	(interactive "MThe text you want to search: ")
+	(eaf-open-browser (concat "https://cn.bing.com/search?q=" content)))
 
 (provide 'init-functions)

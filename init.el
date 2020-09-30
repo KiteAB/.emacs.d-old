@@ -17,8 +17,11 @@
                              (message "Auto opzimization done.")))
 
 ;;;; Config Files
+(add-to-list 'load-path "~/.emacs.d/etc/settings")
+(add-to-list 'load-path "~/.emacs.d/etc/languages")
+(add-to-list 'load-path "~/.emacs.d/etc/tools")
 ;;; Macros
-(load-file "~/.emacs.d/macros.el")
+(require 'init-macros)
 ;;; GitHub
 (load-file "~/.emacs.d/token.el")
 (require 'github-token)
@@ -26,9 +29,7 @@
 (setq user-emacs-directory "~/.emacs.d/var")
 ;;; Fuzzy Files Finder
 (setq counsel-fzf-cmd "fd --type f | fzf -f \"%s\" --algo=v1")
-;;; Other files
-(add-to-list 'load-path "~/.emacs.d/etc/settings")
-(add-to-list 'load-path "~/.emacs.d/etc/languages")
+;;; Other Settings
 ;;; User Interface
 (require 'init-ui)
 ;;; Functions
@@ -100,6 +101,8 @@
 (setq user-init-file "~/.emacs.d/var/user-init.el")
 (save-place-mode t) ; Save the point position
 (add-hook 'markdown-mode-hook #'markdown-table-keymap) ; Add the markdown table align keymap
+(add-hook 'erc-mode-hook #'(lambda () (display-line-numbers-mode -1)))
+(add-hook 'magit-mode-hook #'(lambda () (define-key magit-mode-map "q" 'kiteab/kill-magit)))
 (setq ring-bell-function 'ignore blink-cursor-mode nil) ; Disable Infos
 (setq scroll-step 2
       scroll-margin 2
@@ -117,7 +120,6 @@
 
 ;;; Enable Disbaled command
 (require 'novice)
-(load-file "~/.emacs.d/init-enable-disabled-commands.el")
 (require 'init-enable-disabled-commands)
 (enable-commands-init)
 

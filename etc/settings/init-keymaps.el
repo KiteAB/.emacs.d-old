@@ -21,7 +21,6 @@
 (global-set-key (kbd "C-z f") 'mark-defun) ; Mark the function SAME LIKE C-M-h
 (global-set-key (kbd "C-z e") 'eshell) ; Open eshell
 (global-set-key (kbd "C-x t O") 'tab-bar-switch-to-prev-tab) ; tab-previous
-(global-set-key (kbd "C-z k") 'kiteab/kill-help-buffer) ; Kill the *Help* buffer
 (global-set-key (kbd "C-x t 3") 'tab-bar-new-with-buffer) ; Create a new tab then select a buffer
 (global-set-key (kbd "C-x t 4") 'tab-bar-close-tab-by-name) ; Close the tab by its name
 (global-set-key (kbd "C-x t s") 'kiteab/tab-bar-new-scratch) ; Create a new tab then select scratch buffer
@@ -36,10 +35,10 @@
 (global-set-key (kbd "C-z C-f") 'kiteab/find-file) ; Search file use FZF
 (global-set-key (kbd "C-z b") 'kiteab/kill-magit) ; Kill buffers about Magit
 (global-set-key (kbd "C-z E") 'open-etc-config-by-char) ; Call the open-etc-config by its index
-(global-set-key (kbd "C-z O") 'spring/scratch-erase-contents) ; Erase all the contents of *scratch* buffer
 (global-set-key (kbd "C-z P") 'list-processes) ; Show the processes buffer
 (global-set-key (kbd "C-z K") 'kiteab/kill-unwanted-buffers) ; Kill unwanted buffers
 (global-set-key (kbd "C-z R") 'query-replace) ; Replace
+(global-set-key (kbd "C-z C-s") 'kiteab/search-engine) ; Open search engine by eaf-browser
 
 ;; Key Macros
 (global-set-key (kbd "C-z C-k i") 'insert-placeholder) ; Insert Placeholder
