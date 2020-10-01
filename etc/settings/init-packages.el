@@ -360,7 +360,7 @@
   :ensure t
   :hook (help-mode-hook . page-break-lines-mode))
 
-;;; Git-Gutter
+;;; Git Gutter
 (use-package git-gutter
 	:ensure t
 	:config
