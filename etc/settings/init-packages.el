@@ -389,9 +389,12 @@
 (use-package figlet
 	:ensure t)
 
-;;; Tramp
-(use-package tramp
-	:ensure t)
+;;; Elfeed - RSS
+(use-package elfeed
+	:ensure t
+	:bind (("C-' R" . elfeed))
+	:config
+	(setq elfeed-feeds '("https://www.archlinux.org/feeds/news/")))
 
 ;;; Built-in Packages' Configuration
 ;;; Dired - File Operations
