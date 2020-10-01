@@ -4,17 +4,20 @@
 	(interactive)
 	(find-file "~/.emacs.d/init.el"))
 
-(defun open-etc-config (index)
+(defun open-etc-config ()
 	"Open the config file in the etc directory."
-	(interactive (list (completing-read "Enter the index of config: "
-																			'("languages" "settings" "tools"))))
-	(let* ((path (pcase index
-								 ("languages" "~/.emacs.d/etc/languages/")
-								 ("settings" "~/.emacs.d/etc/settings/")
-								 ("tools" "~/.emacs.d/etc/tools/")))
-				 (filename
-					(completing-read "Enter the filename: "
-													 (delete ".." (delete "." (directory-files path))))))
+	(interactive)
+	(let (path filename)
+		(while (or (null filename)
+							 (string= filename ".."))
+			(setq path (pcase (completing-read
+												 "Enter the index of config: "
+												 '("languages" "settings" "tools"))
+									 ("languages" "~/.emacs.d/etc/languages/")
+									 ("settings" "~/.emacs.d/etc/settings/")
+									 ("tools" "~/.emacs.d/etc/tools/")))
+			(setq filename (completing-read "Enter the filename: "
+																			(delete "." (directory-files path)))))
 		(find-file (concat path filename))))
 
 (defun open-vterm (&optional dir)
