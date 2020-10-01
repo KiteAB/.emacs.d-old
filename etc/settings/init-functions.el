@@ -12,9 +12,9 @@
 							 (string= filename ".."))
 			(setq path (pcase (completing-read
 												 "Enter the index of config: "
-												 '("languages" "settings" "tools"))
-									 ("languages" "~/.emacs.d/etc/languages/")
+												 '("settings" "languages" "tools"))
 									 ("settings" "~/.emacs.d/etc/settings/")
+									 ("languages" "~/.emacs.d/etc/languages/")
 									 ("tools" "~/.emacs.d/etc/tools/")))
 			(setq filename (completing-read "Enter the filename: "
 																			(delete "." (directory-files path)))))
