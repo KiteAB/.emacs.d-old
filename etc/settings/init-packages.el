@@ -38,15 +38,6 @@
 (use-package request
 	:ensure t)
 
-;;; Atom One Dark Theme
-(use-package atom-one-dark-theme
-	:ensure t
-																				;	:config
-																				;	(load-theme 'atom-one-dark t)
-																				;	(setq-default cursor-type '(bar . 1))
-																				;	(set-cursor-color "white")
-	)
-
 ;;; Spacemacs Theme
 (use-package spacemacs-common
 	:ensure spacemacs-theme
@@ -396,6 +387,10 @@
 
 ;;; Figlet
 (use-package figlet
+	:ensure t)
+
+;;; Tramp
+(use-package tramp
 	:ensure t)
 
 ;;; Built-in Packages' Configuration
