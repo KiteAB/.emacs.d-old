@@ -138,8 +138,9 @@
 (defun kiteab/add-todo-in-code ()
 	"Add todo content in code."
 	(interactive)
-	(comment-dwim 2)
-	(insert "<TODO(KiteAB)> "))
+	(comment-dwim nil)
+	(let ((todo-content (read-string "Enter your todo content: ")))
+		(insert (format "<TODO(KiteAB)> %s [%s]" todo-content (current-time-string)))))
 
 (defun kiteab/find-file (&optional dir)
 	"Search file use fuzzy file finder"
