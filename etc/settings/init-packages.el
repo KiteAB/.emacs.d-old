@@ -399,7 +399,33 @@
 ;;; Built-in Packages' Configuration
 ;;; Dired - File Operations
 (use-package dired
-	:ensure nil)
+	:ensure nil
+	:config
+	(setq dired-guess-shell-alist-user `((,(rx "."
+																						 (or
+																							;; Videos
+																							"mp4" "avi" "mkv" "flv" "ogv" "mov"
+																							;; Music
+																							"wav" "mp3" "flac"
+																							;; Images
+																							"jpg" "jpeg" "png" "gif" "xpm" "svg" "bmp"
+																							;; Docs
+																							"pdf" "md" "djvu" "ps" "eps")
+																						 string-end)
+																				,(cond ((eq system-type 'gnu/linux) "xdg-open")
+																							 ((eq system-type 'darwin) "open")
+																							 ((eq system-type 'windows-nt) "start")
+																							 (t "")))))
+	(define-advice dired-do-print (:override (&optional _))
+    "Show/hide dotfiles."
+    (interactive)
+    (if (or (not (boundp 'dired-dotfiles-show-p)) dired-dotfiles-show-p)
+        (progn
+          (setq-local dired-dotfiles-show-p nil)
+          (dired-mark-files-regexp "^\\.")
+          (dired-do-kill-lines))
+      (revert-buffer)
+      (setq-local dired-dotfiles-show-p t))))
 ;;; Child Package
 (use-package all-the-icons-dired
 	:ensure t)
@@ -420,5 +446,17 @@
 		(clm/toggle-command-log-buffer))
 	:bind (("C-' k" . kiteab/open-or-close-command-log-mode)
 				 ("C-' K" . clm/command-log-clear)))
+
+;;; Align
+(use-package align
+	:ensure nil
+	:bind (("C-' A" . align-regexp)))
+
+;;; I-search
+(use-package isearch
+	:ensure nil
+	:config
+	(setq isearch-lazy-count t
+				lazy-count-prefix-format "%s/%s "))
 
 (provide 'init-packages)
