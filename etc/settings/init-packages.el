@@ -35,16 +35,27 @@
 
 
 ;;; Request
-(use-package request
-	:ensure t)
+(use-package request :ensure t)
 
 ;;; Spacemacs Theme
 (use-package spacemacs-common
 	:ensure spacemacs-theme
+	:defer
+;	:config
+;	(load-theme 'spacemacs-dark t)
+;	(setq-default cursor-type '(bar . 1))
+;	(set-cursor-color "white")
+	)
+
+;;; Circadian - Switch Theme
+(use-package circadian
+	:ensure t
 	:config
-	(load-theme 'spacemacs-dark t)
-	(setq-default cursor-type '(bar . 1))
-	(set-cursor-color "white"))
+	(setq calendar-latitude 27.831940
+				calendar-longitude 113.148087)
+	(setq circadian-themes '((:sunrise . spacemacs-light)
+													 (:sunset . spacemacs-dark)))
+	(circadian-setup))
 
 ;;; Dashboard
 (use-package dashboard
@@ -119,8 +130,7 @@
 																	(add-hook 'ivy-mode-hook #'ivy-posframe-mode))))
 
 ;;; Bongo
-(use-package bongo
-	:ensure t)
+(use-package bongo :ensure t)
 
 ;;; Which Key
 (use-package which-key
@@ -192,11 +202,6 @@
 				lsp-eldoc-hook nil
 				lsp-prefer-flymake nil))
 
-;; ccls (For Lsp Mode)
-;; (use-package ccls
-;;  :ensure t
-;;  :hook ((c-mode-hook c++-mode-hook objc-mode-hook) . (lambda () (lsp))))
-
 ;;; Emmet Mode
 (use-package emmet-mode
 	:ensure t
@@ -210,8 +215,7 @@
 			   ("C-' C-y" . yas-expand-from-trigger-key))
 	:hook (after-init-hook . yas-global-mode)
 	:config
-	(use-package yasnippet-snippets
-		:ensure t)
+	(use-package yasnippet-snippets :ensure t)
 	(setq yas-snippet-dirs '("~/.emacs.d/snippets"
 													 "~/.emacs.d/elpa/yasnippet-snippets-20200802.1658/snippets")))
 
@@ -285,8 +289,7 @@
 	:ensure t
 	:bind (("C-' e" . treemacs)))
 ;;; Child Package
-(use-package treemacs-all-the-icons
-	:ensure t)
+(use-package treemacs-all-the-icons :ensure t)
 
 ;;; Dap Mode
 (use-package dap-mode
@@ -351,9 +354,8 @@
 (use-package nyan-mode
   :ensure t
   :hook (after-init-hook . nyan-mode)
-	:config
-	(nyan-start-animation)
-	(nyan-toggle-wavy-trail))
+	:config (setq nyan-wavy-trail t
+								nyan-animate-nyancat t))
 
 ;;; Page Break Lines
 (use-package page-break-lines
@@ -379,15 +381,17 @@
 ;;; Yafolding
 (use-package yafolding
 	:ensure t
-	:bind (("C-' RET" . yafolding-toggle-element)))
+	:bind (("C-' M-f a" . yafolding-show-all)
+				 ("C-' M-f A" . yafolding-hide-all)
+				 ("C-' M-f t" . yafolding-toggle-element)))
 
 ;;; Pacman in Emacs
-(use-package arch-packer
-	:ensure t)
+(use-package arch-packer :ensure t)
 
 ;;; Figlet
 (use-package figlet
-	:ensure t)
+	:ensure t
+	:bind (("C-' F" . figlet)))
 
 ;;; Elfeed - RSS
 (use-package elfeed
@@ -412,8 +416,7 @@
       (revert-buffer)
       (setq-local dired-dotfiles-show-p t))))
 ;;; Child Package
-(use-package all-the-icons-dired
-	:ensure t)
+(use-package all-the-icons-dired :ensure t)
 
 ;;; Auto Revert
 (use-package autorevert
