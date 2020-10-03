@@ -34,6 +34,9 @@
 *** Update Site Lisp
     If you want to update the packages in ~site-lisp~ folder, you need to run command below:
     #+begin_src shell
+      git submodule foreach git pull
+    #+end_src
+    #+begin_src shell
       git pull --recurse-submodules
     #+end_src
     Or:
