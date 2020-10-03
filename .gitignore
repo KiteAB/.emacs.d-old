@@ -5,5 +5,4 @@ token.el
 abbrev_defs
 var
 gtd
-site-lisp
 disable-commands
