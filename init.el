@@ -42,25 +42,24 @@
 (require 'init-modes)
 ;;; Macros
 (require 'init-macros)
-;;; GitHub (Markdown Preview)
-(if (file-exist-p "~/.emacs.d/token.el")
-		(progn
-			(load-file "~/.emacs.d/token.el")
-			(require 'github-token))
-	(progn
-		(switch-to-buffer "*Warning*")
-		(insert "~/.emacs.d/token.el not found. You'll can't use EAF's markdown preview feature.\n")
-		(insert "If you want to fix this problem, see the documents below:\n\n")
-		(insert "If you use EAF Markdown Previewer, to get consistent previewing, you need to access Github Personal access token site, fill something in 'Token description' and click button 'Generate token' to get your personal token. Then set the token:")
-		(insert "(setq eaf-grip-token \"yourtokencode\"")
-		(insert "Github Personal access token site: https://github.com/settings/tokens/new?scopes=")))
-
-;;; Basic Things
-(require 'init-basic)
-
 ;;; Plugin requires
 (require 'init-packages)
 (package-initialize)
+;;; GitHub (Markdown Preview)
+(if '(file-exist-p "~/.emacs.d/token.el")
+    (progn
+      (load-file "~/.emacs.d/token.el")
+      (require 'github-token))
+  (progn
+    (switch-to-buffer "*Warning*")
+    (insert "~/.emacs.d/token.el not found. You'll can't use EAF's markdown preview feature.\n")
+    (insert "If you want to fix this problem, see the documents below:\n\n")
+    (insert "If you use EAF Markdown Previewer, to get consistent previewing, you need to access Github Personal access token site, fill something in 'Token description' and click button 'Generate token' to get your personal token. Then set the token:")
+    (insert "(setq eaf-grip-token \"yourtokencode\"")
+    (insert "Github Personal access token site: https://github.com/settings/tokens/new?scopes=")))
+
+;;; Basic Things
+(require 'init-basic)
 
 ;;; Enable Disbaled command
 (require 'novice)
