@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# contributor: KiteAB
+# name: provide
+# key: provide
+# --
+(provide '${1:feature})$0
