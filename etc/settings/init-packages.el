@@ -17,6 +17,9 @@
 	(package-install 'use-package))
 (setq use-package-hook-name-suffix nil)
 
+;;; Built-in Packages' Configuration
+(require 'init-built-in-packages)
+
 ;;; Third Party Packages
 ;;; Emacs Application Framework
 (use-package eaf
@@ -408,8 +411,5 @@
 	:bind (("C-' R" . elfeed))
 	:config
 	(setq elfeed-feeds '("https://www.archlinux.org/feeds/news/")))
-
-;;; Built-in Packages' Configuration
-(require 'init-built-in-packages)
 
 (provide 'init-packages)
