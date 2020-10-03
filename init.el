@@ -49,7 +49,7 @@
 (if '(file-exist-p "~/.emacs.d/token.el")
     (progn
       (load-file "~/.emacs.d/token.el")
-      (require 'github-token))
+      (require 'gh-token))
   (progn
     (switch-to-buffer "*Warning*")
     (insert "~/.emacs.d/token.el not found. You'll can't use EAF's markdown preview feature.\n")
