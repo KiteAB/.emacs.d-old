@@ -361,6 +361,7 @@
 ;;; Git Gutter
 (use-package git-gutter
 	:ensure t
+	:disabled
 	:config
 	(global-git-gutter-mode +1)
 	(custom-set-variables
@@ -372,6 +373,11 @@
 	(set-face-foreground 'git-gutter:added "#8CFF88")
 	(set-face-foreground 'git-gutter:modified "#8CFF88")
 	(set-face-foreground 'git-gutter:deleted "#FF2323"))
+
+;;; Diff Highlight
+(use-package diff-hl
+	:ensure t
+	:hook (prog-mode-hook . diff-hl-mode))
 
 ;;; Beacon
 (use-package beacon
