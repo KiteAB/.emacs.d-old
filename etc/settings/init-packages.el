@@ -32,7 +32,7 @@
 (use-package english-teacher
 	:load-path "~/.emacs.d/site-lisp/english-teacher.el"
 	:bind (("C-' C-l" . english-teacher-smart-translation))
-	:config (setq english-teacher-backend 'baidu
+	:config (setq english-teacher-backend 'google
 								english-teacher-show-result-function 'english-teacher-eldoc-show-result-function)
 	:hook ((Info-mode-hook eww-mode-hook help-mode-hook) . english-teacher-follow-mode))
 
