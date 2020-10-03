@@ -367,7 +367,8 @@
 	 '(git-gutter:update-interval 1)
 	 '(git-gutter:added-sign "+")
    '(git-gutter:deleted-sign "_")
-	 '(git-gutter:modified-sign "~")))
+	 '(git-gutter:modified-sign "~")
+	 '(git-gutter:hide-gutter t)))
 
 ;;; Beacon
 (use-package beacon
