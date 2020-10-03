@@ -8,9 +8,6 @@
 ;; Author: KiteAB (https://github.com/KiteAB)
 ;; Repository: https://github.com/KiteAB/.emacs.d
 
-;;; Benchmark
-;(load-file "~/.emacs.d/benchmark.el")
-
 ;;; Auto opzimization
 (setq gc-cons-threshold-original gc-cons-threshold)
 (setq gc-cons-threshold (* 1024 1024 100))
