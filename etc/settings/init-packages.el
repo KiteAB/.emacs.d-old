@@ -34,9 +34,6 @@
 	:hook ((Info-mode-hook eww-mode-hook help-mode-hook) . english-teacher-follow-mode))
 
 
-;;; Request
-(use-package request :ensure t)
-
 ;;; Spacemacs Theme
 (use-package spacemacs-common
 	:ensure spacemacs-theme
