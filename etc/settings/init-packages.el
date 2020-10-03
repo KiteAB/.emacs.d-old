@@ -42,7 +42,6 @@
 	:ensure spacemacs-theme
 	:defer
 ;	:config
-;	(load-theme 'spacemacs-dark t)
 ;	(setq-default cursor-type '(bar . 1))
 ;	(set-cursor-color "white")
 	)
@@ -55,7 +54,8 @@
 				calendar-longitude 113.148087)
 	(setq circadian-themes '((:sunrise . spacemacs-light)
 													 (:sunset . spacemacs-dark)))
-	(circadian-setup))
+	(circadian-setup)
+	(setq-default cursor-type '(bar . 1)))
 
 ;;; Dashboard
 (use-package dashboard
