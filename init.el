@@ -43,8 +43,8 @@
 ;;; Macros
 (require 'init-macros)
 ;;; Plugin requires
-(require 'init-packages)
 (package-initialize)
+(require 'init-packages)
 ;;; GitHub (Markdown Preview)
 (load-file "~/.emacs.d/token.el")
 (require 'gh-token)
