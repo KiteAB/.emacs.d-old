@@ -47,3 +47,5 @@
    [[./screenshots/dark.png]]
 
    [[./screenshots/light.png]]
+
+   *Note: You need to go to [[https://www.latlong.net][LatLong]] and replace latitude & longitude at ~init-packages.el~!*
