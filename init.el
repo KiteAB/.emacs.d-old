@@ -43,7 +43,6 @@
 ;;; Macros
 (require 'init-macros)
 ;;; Plugin requires
-(package-initialize)
 (require 'init-packages)
 ;;; GitHub (Markdown Preview)
 (load-file "~/.emacs.d/token.el")
