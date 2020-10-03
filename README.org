@@ -3,11 +3,13 @@
 
   I'm new in Emacs, welcome to submit an issue or a pull request.
 
-  - [[#dependencies][Dependencies]]
-  - [[#installation][Installation]]
-  - [[#shortcuts][Shortcuts]]
-  - [[#notes][Notes]]
-  - [[#screenshots][Screenshots]]
+  * [[#dependencies][Dependencies]]
+  * [[#installation][Installation]]
+    - [[#update-site-lisp][Update Site Lisp]]
+    - [[#add-more-site-lisp][Add More Site Lisp]]
+  * [[#shortcuts][Shortcuts]]
+  * [[#notes][Notes]]
+  * [[#screenshots][Screenshots]]
 
 ** Dependencies
    You need some dependencies at below:
