@@ -7,6 +7,7 @@
   - [[#installation][Installation]]
   - [[#shortcuts][Shortcuts]]
   - [[#notes][Notes]]
+  - [[#screenshots][Screenshots]]
 
 ** Dependencies
    You need some dependencies at below:
