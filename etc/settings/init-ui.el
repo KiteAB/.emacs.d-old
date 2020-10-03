@@ -6,6 +6,7 @@
 (display-battery-mode t) ; Display battery status
 (global-hl-line-mode t) ; Highlight current line
 (setq tab-bar-show nil) ; Always not display tab bar
+(setq display-line-numbers-type 'relative)
 (global-display-line-numbers-mode t) ; Show the line number
 (global-hl-line-mode t) ; Highlight the current line
 (toggle-frame-fullscreen) ; Set fullscreen
