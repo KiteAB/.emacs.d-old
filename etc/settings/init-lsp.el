@@ -5,10 +5,6 @@
 
 (eval-after-load 'lsp-mode
 	'(progn
-		 (setq lsp-log-io nil ; Close the log
-					 lsp-enable-folding nil
-					 lsp-enable-snippet nil
-					 lsp-prefer-flymake :none)
 		 (defvar lsp-on-touch-time 0)
      (defadvice lsp-on-change (around lsp-on-change-hack activate)
        ;; don't run `lsp-on-change' too frequently

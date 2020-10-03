@@ -1,6 +1,8 @@
 ;;;; This file is used for the keybindings
 (define-prefix-command 'ctl-z-map) ; Create the C-z map
+(define-prefix-command 'more-functions)
 (global-set-key (kbd "C-z") 'ctl-z-map) ; Set the C-z
+(global-set-key (kbd "C-=") 'more-functions)
 (global-set-key (kbd "C-z i") 'open-config-file) ; Open the init.el
 (global-set-key (kbd "C-z p") 'package-list-packages) ; Open the package interface
 (global-set-key (kbd "C-z C-b") 'buffer-menu) ; Open the buffer menu
@@ -37,6 +39,7 @@
 (global-set-key (kbd "C-z K") 'kiteab/kill-unwanted-buffers) ; Kill unwanted buffers
 (global-set-key (kbd "C-z R") 'query-replace) ; Replace
 (global-set-key (kbd "C-z C-s") 'kiteab/search-engine) ; Open search engine by eaf-browser
+(global-set-key (kbd "C-= SPC") 'kiteab/change-indent-type)
 
 ;; Key Macros
 (global-set-key (kbd "C-z C-k i") 'insert-placeholder) ; Insert Placeholder

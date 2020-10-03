@@ -196,14 +196,17 @@
 
 ;;; Lsp Mode
 (use-package lsp-mode
-	:hook ((c-mode-hook python-mode-hook c++-mode-hook lisp-mode-hook js-mode-hook web-mode-hook) . lsp)
+	:hook ((c-mode-hook c++-mode-hook lisp-mode-hook js-mode-hook web-mode-hook) . lsp)
 	:bind (("C-' F" . lsp-format-buffer))
 	:config
 	(setq lsp-idle-delay 1200
 				lsp-auto-guess-root nil
 				lsp-file-watch-threshold 2000
 				lsp-eldoc-hook nil
-				lsp-prefer-flymake nil))
+				lsp-log-io nil
+				lsp-enable-folding nil
+				lsp-enable-snippet nil
+				lsp-prefer-flymake :none))
 
 ;;; Emmet Mode
 (use-package emmet-mode

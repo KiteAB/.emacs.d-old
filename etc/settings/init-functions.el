@@ -168,4 +168,12 @@
 	(interactive "MThe text you want to search: ")
 	(eaf-open-browser (concat "https://cn.bing.com/search?q=" content)))
 
+(defun kiteab/change-indent-type (type)
+	"Change the indent type."
+	(interactive (list (completing-read "Enter the indent type: "
+																			'("tab" "space"))))
+	(pcase type
+		("tab" (setq-local indent-tabs-mode t))
+		("space" (setq-local indent-tabs-mode nil))))
+
 (provide 'init-functions)
