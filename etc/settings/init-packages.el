@@ -182,7 +182,9 @@
 		(define-key company-active-map (kbd "M-p") nil)
 		(define-key company-active-map (kbd "M-n") nil)
 		(define-key company-active-map (kbd "C-n") #'company-select-next)
-		(define-key company-active-map (kbd "C-p") #'company-select-previous)))
+		(define-key company-active-map (kbd "C-p") #'company-select-previous))
+	(push 'company-capf company-backends)
+	:bind (("C-' C-y" . yas-expand-from-trigger-key)))
 ;;; Child Packages
 (use-package company-c-headers
 	:ensure t
@@ -211,8 +213,7 @@
 ;;; Snippets
 (use-package yasnippet
 	:ensure t
-	:bind (("C-' i" . yas-insert-snippet)
-			   ("C-' C-y" . yas-expand-from-trigger-key))
+	:bind (("C-' C-y" . yas-expand-from-trigger-key))
 	:hook (after-init-hook . yas-global-mode)
 	:config
 	(use-package yasnippet-snippets :ensure t)
