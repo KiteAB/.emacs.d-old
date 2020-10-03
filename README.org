@@ -34,7 +34,11 @@
 *** Update Site Lisp
     If you want to update the packages in ~site-lisp~ folder, you need to run command below:
     #+begin_src shell
-      git submodule forearch git pull
+      git pull --recurse-submodules
+    #+end_src
+    Or:
+    #+begin_src shell
+      git submodule update --recursive
     #+end_src
     Info: The EAF package is pull from my [[https://gitee.com/KiteAB/emacs-application-framework][mirror repository]], and I will merge it with the [[https://github.com/manateelazycat/emacs-application-framework][original repository]] every week!
 
