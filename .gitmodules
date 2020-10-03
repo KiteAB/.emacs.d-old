@@ -1,0 +1,6 @@
+[submodule "site-lisp/english-teacher.el"]
+	path = site-lisp/english-teacher.el
+	url = https://github.com/loyalpartner/english-teacher.el
+[submodule "site-lisp/emacs-application-framework"]
+	path = site-lisp/emacs-application-framework
+	url = https://gitee.com/KiteAB/emacs-application-framework
