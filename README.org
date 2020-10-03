@@ -3,8 +3,6 @@
 
   I'm new in Emacs, welcome to submit an issue or a pull request.
 
-  [[./screenshots/dark.png]]
-
   - [[#dependencies][Dependencies]]
   - [[#installation][Installation]]
   - [[#shortcuts][Shortcuts]]
@@ -45,6 +43,7 @@
 
    Then replace ~yourtoken~ to your personal token.
 
-** Notes
-   - This configuration file is use ~use-package~
-   - This configuration file is extend by [[https://github.com/SpringHan/.emacs.d][SpringHan/.emacs.d]], you can use that configuration too.
+** Screenshots
+   [[./screenshots/dark.png]]
+
+   [[./screenshots/light.png]]
