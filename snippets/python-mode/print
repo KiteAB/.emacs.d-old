@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# contributor: KiteAB
+# name: print
+# key: print
+# --
+print(${1:content})$0

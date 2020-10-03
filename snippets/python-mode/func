@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# contributor: KiteAB
+# name: function
+# key: func
+# --
+def ${1:name}(${2:arg}):
+  $0

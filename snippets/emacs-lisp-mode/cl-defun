@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# contributor: KiteAB
+# name: cl-defun
+# key: cdefun
+# --
+(cl-defun ${1:name})

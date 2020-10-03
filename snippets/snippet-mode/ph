@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# contributor: KiteAB
+# name: placeholder
+# key: ph
+# --
+\${${1:n}:${2:content}}$0

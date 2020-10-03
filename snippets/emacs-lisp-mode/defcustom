@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# contributor: KiteAB
+# name: defcustom
+# key: defcustom
+# --
+(defcustom ${1:name} ${2:value}
+					 "${3:DOC}"
+					 $0)

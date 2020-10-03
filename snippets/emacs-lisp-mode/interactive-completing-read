@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# contributor: KiteAB
+# name: interactive-completing-read
+# key: ic
+# --
+(interactive (list (completing-read "${1:Content}" $0)))

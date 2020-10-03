@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# contributor: KiteAB
+# name: let
+# key: let
+# --
+(let (${1:vars})
+		 $0)
