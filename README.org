@@ -21,9 +21,28 @@
    - The dependences in [[https://github.com/loyalpartner/english-teacher.el][English Teacher]]. (To use English Teacher)
 
 ** Installation
-   You need to run the ~make install~ in the terminal or manually run the commands written in the ~Makefile~
+   You need to install the dependencies and run command below:
+   #+begin_src shell
+     git submodule update --init --recursive
+   #+end_src
+   And see the [[#token][Token]] part to edit ~token.el~
 
-   And enjoy the Emacs!
+   Then enjoy the Emacs!
+
+*** Update Site Lisp
+    If you want to update the packages in ~site-lisp~ folder, you need to run command below:
+    #+begin_src shell
+      git submodule forearch git pull
+    #+end_src
+    Info: The EAF package is pull from my [[https://gitee.com/KiteAB/emacs-application-framework][mirror repository]], and I will merge it with the [[https://github.com/manateelazycat/emacs-application-framework][original repository]] every week!
+
+*** Add More Site Lisp
+    If you want to add more site lisp, you can run commands below:
+    #+begin_src shell
+      git clone <repo link> site-lisp/<repo name>
+      git submodule add <repo link> site-lisp/<repo name>
+    #+end_src
+    Then you can manage your third party packages by ~git submodule~!
 
 ** Shortcuts
    I binded the ~C-z~ key to be the user defined key.
