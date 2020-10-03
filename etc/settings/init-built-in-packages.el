@@ -45,4 +45,11 @@
 	(setq isearch-lazy-count t
 				lazy-count-prefix-format "%s/%s "))
 
+;;; New Comment
+(use-package newcomment
+	:ensure nil
+	:bind (("C-' c d" . comment-dwin)
+				 ("C-' c l" . comment-line)
+				 ("C-' c b" . comment-box)))
+
 (provide 'init-built-in-packages)
