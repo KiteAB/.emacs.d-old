@@ -8,7 +8,7 @@
     - [[#update-site-lisp][Update Site Lisp]]
     - [[#add-more-site-lisp][Add More Site Lisp]]
   * [[#shortcuts][Shortcuts]]
-  * [[#notes][Notes]]
+  * [[#token][Token]]
   * [[#screenshots][Screenshots]]
 
 ** Dependencies
