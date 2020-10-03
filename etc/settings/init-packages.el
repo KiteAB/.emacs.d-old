@@ -368,7 +368,10 @@
 	 '(git-gutter:added-sign "+")
    '(git-gutter:deleted-sign "_")
 	 '(git-gutter:modified-sign "~")
-	 '(git-gutter:hide-gutter t)))
+	 '(git-gutter:hide-gutter t))
+	(set-face-foreground 'git-gutter:added "#8CFF88")
+	(set-face-foreground 'git-gutter:modified "#8CFF88")
+	(set-face-foreground 'git-gutter:deleted "#FF2323"))
 
 ;;; Beacon
 (use-package beacon
