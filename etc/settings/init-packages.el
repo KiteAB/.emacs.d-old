@@ -105,7 +105,8 @@
 	:ensure t
 	:bind (("M-x" . counsel-M-x)
 				 ("C-x C-f" . counsel-find-file)
-				 ("C-z a" . counsel-linux-app)))
+				 ("C-z a" . counsel-linux-app)
+				 ("C-x b" . counsel-switch-buffer)))
 
 ;;; Icons
 (use-package all-the-icons
@@ -334,12 +335,6 @@
 (use-package quickrun
 	:ensure t
 	:bind (("C-' r" . quickrun-shell)))
-
-;;; Grugru - Rotate text at point
-(use-package grugru
-	:ensure t
-	:init (grugru-default-setup)
-	:bind (("C-' C-g" . grugru)))
 
 ;;; Perspective - "Virtual Desktop" in Emacs
 (use-package perspective
