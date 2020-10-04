@@ -58,4 +58,10 @@
 	:ensure nil
 	:hook (after-init-hook . winner-mode))
 
+;;; Recentf
+(use-package recentf
+	:ensure nil
+	:hook (after-init-hook . recentf-mode)
+	:bind (("C-' r" . recentf-open-files)))
+
 (provide 'init-built-in-packages)
