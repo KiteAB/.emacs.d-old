@@ -54,9 +54,9 @@
     Then you can manage your third party packages by ~git submodule~!
 
 ** Shortcuts
-   I binded the ~C-z~ key to be the user defined key.
+   I binded the ~C-q~ key to be the user defined key.
 
-   ~C-z~ key bind the functions in ~etc/init-functions.el~
+   ~C-q~ key bind the functions in ~etc/init-functions.el~
 
    You can view this file and change somethings.
 
