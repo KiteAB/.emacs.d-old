@@ -1,6 +1,7 @@
 ;;;; This file is used for packages configuration and more
 ;;; Set the plugin keybinding
 (define-prefix-command 'plugin-key)
+(define-prefix-command 'plugin-key-2)
 (global-set-key (kbd "C-'") 'plugin-key)
 (global-set-key (kbd "C--") 'plugin-key-2)
 
@@ -214,6 +215,9 @@
 				lsp-enable-folding nil
 				lsp-enable-snippet nil
 				lsp-prefer-flymake :none))
+
+;;; Evil Mode
+(require 'init-evil)
 
 ;;; Emmet Mode
 (use-package emmet-mode
