@@ -32,7 +32,8 @@
 	(eaf-setq eaf-browser-default-zoom "1.5")
 	(defalias 'browse-web #'eaf-open-browser)
 	(eaf-setq eaf-browser-dark-mode "true")
-	:hook (eaf-mode-hook . (lambda () (evil-emacs-state))))
+;	:hook (eaf-mode-hook . (lambda () (evil-emacs-state)))
+	)
 
 ;;; English Teacher
 (use-package english-teacher
@@ -218,7 +219,7 @@
 				lsp-prefer-flymake :none))
 
 ;;; Evil Mode
-(require 'init-evil)
+;(require 'init-evil)
 
 ;;; Emmet Mode
 (use-package emmet-mode

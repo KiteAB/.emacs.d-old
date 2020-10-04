@@ -35,7 +35,7 @@
 ;;; Functions
 (require 'init-functions)
 ;;; Keymaps
-(require 'init-keymaps)
+(require 'init-keybindings)
 ;;; Other mode settings
 (require 'init-modes)
 ;;; Macros
