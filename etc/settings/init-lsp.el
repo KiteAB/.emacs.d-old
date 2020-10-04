@@ -13,4 +13,19 @@
 				 (setq lsp-on-touch-time (float-time (current-time)))
 				 ad-do-it))))
 
+;;;; Lsp User Interface
+(use-package lsp-ui
+	:ensure t
+	:hook (lsp-mode-hook . lsp-ui-mode)
+	:config
+	;; SideLine
+	(setq lsp-ui-sideline-enable t
+				lsp-ui-sideline-delay 5)
+	;; Peek
+	(setq lsp-ui-peek-enable t)
+	(define-key lsp-ui-mode-map [remap xref-find-definitions] #'lsp-ui-peek-find-definitions)
+	(define-key lsp-ui-mode-map [remap xref-find-references] #'lsp-ui-peek-find-references)
+	;; Documents
+	(setq lsp-ui-doc-enable t))
+
 (provide 'init-lsp)
