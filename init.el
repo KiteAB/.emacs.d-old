@@ -43,8 +43,11 @@
 ;;; Plugin requires
 (require 'init-packages)
 ;;; GitHub (Markdown Preview)
-(load-file "~/.emacs.d/token.el")
-(require 'gh-token)
+(if (file-exists-p "~/.emacs.d/token.el")
+		(progn
+			(load-file "~/.emacs.d/token.el")
+			(require 'gh-token))
+	(message "token.el not found. Please check it or ignore this message."))
 
 ;;; Basic Things
 (require 'init-basic)
