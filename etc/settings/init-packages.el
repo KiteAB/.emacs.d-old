@@ -69,7 +69,7 @@
 	:load-path "~/.emacs.d/site-lisp/aweshell")
 
 
-;;; Spacemacs Theme
+;;; Spacemacs Themes
 (use-package spacemacs-common
 	:ensure spacemacs-theme
 	:defer
@@ -166,9 +166,6 @@
 				 ("C-r" . swiper-backward)
 				 ("C-- s" . swiper-all)))
 
-;;; Bongo
-(use-package bongo :ensure t)
-
 ;;; Which Key
 (use-package which-key
 	:ensure t
@@ -213,7 +210,7 @@
 	:ensure t
 	:hook (after-init-hook . global-company-mode)
 	:config
-	(setq company-idle-delay 3
+	(setq company-idle-delay 2
 				company-minimum-prefix-length 1)
 	(with-eval-after-load 'company
 		(define-key company-active-map (kbd "M-p") nil)
@@ -337,29 +334,14 @@
 (use-package dap-mode
 	:ensure t
 	:bind (("C-' d" . dap-debug)
-			   ("<F5>" . dap-breakpoint-toggle)
-				 ("<F6>" . dap-continue)))
-
-;;; Isolate Mode
-(use-package isolate
-	:ensure t
-	:bind (("C-' C-a s" . isolate-quick-add)
-				 ("C-' C-a S" . isolate-long-add)
-				 ("C-' C-a d" . isolate-quick-delete)
-				 ("C-' C-a D" . isolate-long-delete)
-				 ("C-' C-a c" . isolate-quick-change)
-				 ("C-' C-a C" . isolate-long-change)))
+			   ("<f5>" . dap-breakpoint-toggle)
+				 ("<f6>" . dap-continue)))
 
 ;;; Paredit Mode
 (use-package paredit
 	:ensure t
 	:hook ((lisp-mode-hook emacs-lisp-mode-hook eshell-mode-hook lisp-interaction-mode-hook) . paredit-mode)
 	:bind (("C-' f" . paredit-focus-on-defun)))
-
-;;; Perspective - "Virtual Desktop" in Emacs
-(use-package perspective
-	:ensure t
-	:hook (after-init-hook . persp-mode))
 
 ;;; Info Colors
 (use-package info-colors
