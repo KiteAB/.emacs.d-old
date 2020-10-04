@@ -345,11 +345,6 @@
 			   ("<F5>" . dap-breakpoint-toggle)
 				 ("<F6>" . dap-continue)))
 
-;;; CapsLock
-(use-package caps-lock
-	:ensure t
-	:bind (("C-' g" . caps-lock-mode)))
-
 ;;; Isolate Mode
 (use-package isolate
 	:ensure t
