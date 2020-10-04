@@ -38,11 +38,37 @@
 ;;; English Teacher
 (use-package english-teacher
 	:load-path "~/.emacs.d/site-lisp/english-teacher.el"
-	:bind (("C-' C-l" . english-teacher-smart-translation))
 	:config (setq english-teacher-backend 'google
 								english-teacher-show-result-function 'english-teacher-eldoc-show-result-function)
 	:hook ((Info-mode-hook eww-mode-hook help-mode-hook) . english-teacher-follow-mode))
 
+;;; Company English Helper
+(use-package company-english-helper
+	:load-path "~/.emacs.d/site-lisp/company-english-helper"
+	:config
+	(load-file "~/.emacs.d/site-lisp/company-english-helper/company-english-helper-data.el")
+	:bind (("C-' C-l s" . company-english-helper-search)))
+
+;;; Awesome Tray
+(use-package awesome-tray
+	:load-path "~/.emacs.d/site-lisp/awesome-tray"
+	:hook (after-init-hook . awesome-tray-mode)
+	:config
+	(add-to-list 'awesome-tray-active-modules "buffer-name")
+	(add-to-list 'awesome-tray-active-modules "git"))
+
+;;; Insert Translated Name
+(use-package insert-translated-name
+	:load-path "~/.emacs.d/site-lisp/insert-translated-name"
+	:bind (("C-' C-l i" . insert-translated-name-insert)
+				 ("C-' C-l u" . insert-translated-name-insert-with-underline)
+				 ("C-' C-l c" . insert-translated-name-insert-with-camel)
+				 ("C-' C-l l" . insert-translated-name-insert-with-line)
+				 ("C-' C-l o" . insert-translated-name-insert-original-translation)
+				 ("C-' C-l r" . insert-translated-name-replace)
+				 ("C-' C-l U" . insert-translated-name-replace-with-underline)
+				 ("C-' C-l C" . insert-translated-name-replace-with-camel)
+				 ("C-' C-l L" . insert-translated-name-replace-with-line)))
 
 ;;; Spacemacs Theme
 (use-package spacemacs-common
@@ -274,6 +300,7 @@
 ;;; Doom Modeline
 (use-package doom-modeline
 	:ensure t
+	:disabled
 	:hook (after-init-hook . doom-modeline-mode)
 	:config
 	(setq-default doom-modeline-height 13)
@@ -365,6 +392,7 @@
 ;;; NyanCat Mode
 (use-package nyan-mode
   :ensure t
+	:disabled
   :hook (after-init-hook . nyan-mode)
 	:config (setq nyan-wavy-trail t
 								nyan-animate-nyancat t))
