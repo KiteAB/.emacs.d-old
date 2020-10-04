@@ -176,4 +176,24 @@
 		("tab" (setq-local indent-tabs-mode t))
 		("space" (setq-local indent-tabs-mode nil))))
 
+(defun kiteab/edit-snippets (type)
+	"Edit the snippets in current mode."
+	(interactive (list (completing-read "Enter the edit type: "
+																			'("add" "edit" "delete"))))
+	(let ((path (format "~/.emacs.d/snippets/%S/" major-mode))
+				snippet-name)
+		(if (string= type "add")
+				(setq snippet-name (read-string "Snippet name: "))
+			(setq snippet-name (completing-read "Snippet name: "
+																					(delete "."
+																									(delete ".."
+																													(directory-files path))))))
+		(pcase type
+			("add"
+			 (find-file (concat path snippet-name)))
+			("edit"
+			 (find-file (concat path snippet-name)))
+			("delete"
+			 (delete-file (concat path snippet-name))))))
+
 (provide 'init-functions)

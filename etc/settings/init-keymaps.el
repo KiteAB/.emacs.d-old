@@ -39,6 +39,7 @@
 (global-set-key (kbd "C-z K") 'kiteab/kill-unwanted-buffers) ; Kill unwanted buffers
 (global-set-key (kbd "C-z R") 'query-replace) ; Replace
 (global-set-key (kbd "C-z C-s") 'kiteab/search-engine) ; Open search engine by eaf-browser
+(global-set-key (kbd "C-z E") 'kiteab/edit-snippets)
 (global-set-key (kbd "C-= SPC") 'kiteab/change-indent-type)
 
 ;; Key Macros
