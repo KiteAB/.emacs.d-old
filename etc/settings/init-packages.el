@@ -68,6 +68,10 @@
 				 ("C-' C-l C" . insert-translated-name-replace-with-camel)
 				 ("C-' C-l L" . insert-translated-name-replace-with-line)))
 
+;;; Lazycat Themes
+(use-package lazycat-theme
+	:load-path "~/.emacs.d/site-lisp/lazycat-theme")
+
 ;;; Spacemacs Theme
 (use-package spacemacs-common
 	:ensure spacemacs-theme
@@ -83,14 +87,15 @@
 	:config
 	(setq calendar-latitude 27.831940
 				calendar-longitude 113.148087)
-	(setq circadian-themes '((:sunrise . spacemacs-light)
-													 (:sunset . spacemacs-dark)))
+	(setq circadian-themes '((:sunrise . lazycat-light)
+													 (:sunset . lazycat-dark)))
 	(circadian-setup)
 	(setq-default cursor-type '(bar . 1)))
 
 ;;; Dashboard
 (use-package dashboard
 	:ensure t
+	:disabled
 	:config
 	(dashboard-setup-startup-hook)
 	(setq dashboard-banner-logo-title "KiteAB's Emacs - Vim Defector No.114514"
@@ -372,11 +377,6 @@
 	:hook ((lisp-mode-hook emacs-lisp-mode-hook eshell-mode-hook lisp-interaction-mode-hook) . paredit-mode)
 	:bind (("C-' f" . paredit-focus-on-defun)))
 
-;;; QuickRun
-(use-package quickrun
-	:ensure t
-	:bind (("C-' r" . quickrun-shell)))
-
 ;;; Perspective - "Virtual Desktop" in Emacs
 (use-package perspective
 	:ensure t
@@ -421,11 +421,6 @@
 	:ensure t
 	:hook (prog-mode-hook . diff-hl-mode))
 
-;;; Beacon
-(use-package beacon
-	:ensure t
-	:hook (after-init-hook . beacon-mode))
-
 ;;; Pacman in Emacs
 (use-package arch-packer :ensure t)
 
@@ -433,13 +428,6 @@
 (use-package figlet
 	:ensure t
 	:bind (("C-' F" . figlet)))
-
-;;; Elfeed - RSS
-(use-package elfeed
-	:ensure t
-	:bind (("C-' R" . elfeed))
-	:config
-	(setq elfeed-feeds '("https://www.archlinux.org/feeds/news/")))
 
 ;;; Vc Message
 (use-package vc-msg
