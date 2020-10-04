@@ -48,7 +48,6 @@
 	:hook (after-init-hook . awesome-tray-mode)
 	:config
 	(setq awesome-tray-active-modules '("circe"
-;																			"file-path"
 																			"git"
 																			"parent-dir"
 																			"location"
