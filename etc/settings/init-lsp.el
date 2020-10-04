@@ -16,7 +16,7 @@
 ;;;; Lsp User Interface
 (use-package lsp-ui
 	:ensure t
-	:hook (lsp-mode-hook . lsp-ui-mode)
+	:after lsp-mode
 	:config
 	;; SideLine
 	(setq lsp-ui-sideline-enable t
