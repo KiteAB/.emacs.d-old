@@ -4,6 +4,6 @@
 ;	:hook (after-init-hook . evil-mode)
 	)
 ;;; Child Package
-;(use-package undo-tree :ensure t)
+(use-package undo-tree :ensure t)
 
 (provide 'init-evil)
