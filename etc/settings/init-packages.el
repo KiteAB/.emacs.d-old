@@ -215,7 +215,7 @@
 	:ensure t
 	:hook (after-init-hook . global-company-mode)
 	:config
-	(setq company-idle-delay 0
+	(setq company-idle-delay 3
 				company-minimum-prefix-length 1)
 	(with-eval-after-load 'company
 		(define-key company-active-map (kbd "M-p") nil)
