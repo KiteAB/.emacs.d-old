@@ -5,4 +5,6 @@
 																(other . "linux"))
 							c-basic-offset 2)
 
+(add-hook 'c-mode-hook #'(lambda () (outline-minor-mode t)))
+
 (provide 'kiteab-c)

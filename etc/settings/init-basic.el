@@ -58,9 +58,6 @@
 (setq backward-delete-char-untabify-method nil) ; Delete the tab by once
 (setq user-init-file "~/.emacs.d/var/user-init.el")
 (save-place-mode t) ; Save the point position
-(add-hook 'markdown-mode-hook #'markdown-table-keymap) ; Add the markdown table align keymap
-(add-hook 'erc-mode-hook #'(lambda () (display-line-numbers-mode -1))) ; Disable line numbers in ERC
-(add-hook 'magit-mode-hook #'(lambda () (define-key magit-mode-map "q" 'kiteab/kill-magit))) ; Clear buffer about Magit
 (setq ring-bell-function 'ignore blink-cursor-mode nil) ; Disable Infos
 (setq scroll-step 2
       scroll-margin 2
@@ -73,4 +70,11 @@
 (setq mouse-yank-at-point nil)
 (setq counsel-fzf-cmd "fd --type f | fzf -f \"%s\" --algo=v1") ; Fuzzy File Finder
 
+(add-hook 'markdown-mode-hook #'markdown-table-keymap) ; Add the markdown table align keymap
+(add-hook 'erc-mode-hook #'(lambda () (display-line-numbers-mode -1))) ; Disable line numbers in ERC
+(add-hook 'magit-mode-hook #'(lambda () (define-key magit-mode-map "q" 'kiteab/kill-magit))) ; Clear buffer about Magit
+(add-hook 'emacs-lisp-mode-hook #'(lambda () (outline-minor-mode t)))
+(add-hook 'web-mode-hook #'(lambda () (outline-minor-mode t)))
+
 (provide 'init-basic)
+(provide 'kiteab-c)
