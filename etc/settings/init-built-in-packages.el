@@ -53,4 +53,9 @@
 				 ("C-' c l" . comment-line)
 				 ("C-' c b" . comment-box)))
 
+;;; Winner Mode
+(use-package winner-mode
+	:ensure nil
+	:hook (after-init-hook . winner-mode))
+
 (provide 'init-built-in-packages)
