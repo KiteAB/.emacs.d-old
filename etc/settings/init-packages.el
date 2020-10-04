@@ -47,13 +47,7 @@
 	:load-path "~/.emacs.d/site-lisp/awesome-tray"
 	:hook (after-init-hook . awesome-tray-mode)
 	:config
-	(setq awesome-tray-active-modules '("circe"
-																			"git"
-																			"parent-dir"
-																			"location"
-																			"mode-name"
-																			"buffer-name"
-																			"date")))
+	(setq awesome-tray-active-modules '("circe" "git" "parent-dir" "location" "mode-name" "buffer-name" "date")))
 
 ;;; Insert Translated Name
 (use-package insert-translated-name
