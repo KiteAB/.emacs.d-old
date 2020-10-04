@@ -6,7 +6,7 @@
 (electric-pair-mode t) ; Auto complete the ()
 (setq electric-pair-pairs
 			'((?\" . ?\")
-				(?\( . ?\))
+  			(?\( . ?\))
 				(?\< . ?\>)
 				(?\{ . ?\}))) ; Set the electric-pair-mode's pair keywords
 (setq make-backup-files nil ; Don't let Emacs make up backup file
