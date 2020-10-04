@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# contributor: KiteAB
+# name: snippet
+# key: snippet
+# --
+# -*- mode: snippet -*-
+# contributor: KiteAB
+# name: ${1:name}
+# key: ${2:key}
+# --

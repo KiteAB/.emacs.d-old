@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# contributor: KiteAB
+# name: setq
+# key: setq
+# --
+(setq ${1:name} ${0:value})
