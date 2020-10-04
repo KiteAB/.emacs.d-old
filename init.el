@@ -22,47 +22,23 @@
                              (makunbound 'file-name-handler-alist-original)))
 
 ;;;; Config Files
-(add-to-list 'load-path "~/.emacs.d/etc/settings")
-(add-to-list 'load-path "~/.emacs.d/etc/languages")
-(add-to-list 'load-path "~/.emacs.d/etc/tools")
+(defun add-subdirs-to-load-path(dir) 
+  "Recursive add directories to `load-path`."
+  (let ((default-directory (file-name-as-directory dir))) 
+    (add-to-list 'load-path dir) 
+    (normal-top-level-add-subdirs-to-load-path)))
 
-;;; The cache directory
+(let ((gc-cons-threshold most-positive-fixnum)
+      (file-name-handler-alist nil))
+  (add-subdirs-to-load-path "~/.emacs.d/etc/"))
+
+;;; The Cache Directory
 (setq user-emacs-directory "~/.emacs.d/var")
 
-;;; Other Settings
-;;; User Interface
-(require 'init-ui)
-;;; Functions
-(require 'init-functions)
-;;; Keymaps
-(require 'init-keybindings)
-;;; Other mode settings
-(require 'init-modes)
-;;; Macros
-(require 'init-macros)
-;;; Plugin requires
-(require 'init-packages)
-;;; GitHub (Markdown Preview)
-(if (file-exists-p "~/.emacs.d/token.el")
-		(progn
-			(load-file "~/.emacs.d/token.el")
-			(require 'gh-token))
-	(switch-to-buffer "*Warning*")
-	(insert "token.el not found. Please check it or ignore this message at init.el")
-	(switch-to-buffer-other-window "*Warning*"))
+;;; Require Configuration Files
+(require 'init-config)
 
-;;; Basic Things
-(require 'init-basic)
-
-;;; Enable Disbaled command
-(require 'novice)
-(require 'init-enable-disabled-commands)
-(enable-commands-init)
-
-;;; Languages settings
-(require 'kiteab-python)
-(require 'kiteab-c)
-
+;;; Display Startup Time
 (add-hook 'emacs-startup-hook (lambda ()
 																(message "Emacs ready in %s with %d garbage collections."
 																				 (format "%.2f seconds"

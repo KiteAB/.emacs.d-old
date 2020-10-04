@@ -102,29 +102,6 @@
 				dashboard-set-file-icons t
 				dashboard-set-navigator t))
 
-;;; Org Mode
-(use-package org
-	:ensure t
-	:init
-	(define-prefix-command 'org-key-map)
-	(global-set-key (kbd "C-q C-c") 'org-key-map)
-	:bind (("C-q C-c g" . org-agenda)
-				 ("C-q C-c c" . org-capture)
-				 ("C-q C-c s" . org-timer-start)
-				 ("C-q C-c S" . org-timer-set-timer)
-				 ("C-q C-c e" . org-timer-stop)
-				 ("C-q C-c SPC" . org-timer-pause-or-continue)
-				 ("C-q C-c C-i" . kiteab/use-space-indent))
-	:config
-	(setq org-src-fontify-natively t)
-	(require 'init-org)
-	:hook (org-mode-hook . (lambda () (setq indent-tabs-mode nil) (define-key org-mode-map (kbd "C-'") nil))))
-;;; Child Package
-(use-package org-bullets
-  :ensure t
-	:hook (org-mode-hook . (lambda () (org-bullets-mode t)))
-	:custom (org-bullets-bullet-list '("☰" "☷" "✿" "☭")))
-
 ;;; VTerm
 (use-package vterm
 	:ensure t

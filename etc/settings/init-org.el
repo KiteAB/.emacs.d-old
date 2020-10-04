@@ -1,5 +1,20 @@
-;;;; This file is about org-mode settings
+;;;; This file is about Org Mode settings
+(use-package org
+	:ensure t
+	:init
+	(define-prefix-command 'org-key-map)
+	(global-set-key (kbd "C-q C-c") 'org-key-map)
+	:bind (("C-q C-c g" . org-agenda)
+				 ("C-q C-c c" . org-capture)
+				 ("C-q C-c s" . org-timer-start)
+				 ("C-q C-c S" . org-timer-set-timer)
+				 ("C-q C-c e" . org-timer-stop)
+				 ("C-q C-c SPC" . org-timer-pause-or-continue)
+				 ("C-q C-c C-i" . kiteab/use-space-indent))
+	:hook (org-mode-hook . (lambda () (setq indent-tabs-mode nil) (define-key org-mode-map (kbd "C-'") nil))))
+
 (setq org-log-mode 'note) ; Set the log mode type
+(setq org-src-fontify-natively t)
 (setq org-todo-keywords
 			'((sequence "TODO(t)" "STUDY(s)" "WAIT(w@/!)" "|" "DONE(d@/!)" "CANCEL(c@/!)")
 				(sequence "BUG(b)" "KNOWN(k)" "|" "FINISHED(f@/!)"))) ; Set the todo's keywords
@@ -11,7 +26,7 @@
 			org-src-fontify-natively t
 			org-src-tab-acts-natively t) ; Highlight code in babel and not ask
 
-;; org-babel
+;; Org Babel
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((C . t)
@@ -48,5 +63,10 @@
 			'("lof" "lot" "tex" "aux" "idx" "log" "out" "toc" "nav" "snm" "vrb" "dvi" "fdb_latexmk" "blg""brf" "fls" "entoc" "ps" "spl" "bbl" "xdv"))
 (setq org-image-actual-width '(300))
 (setq org-export-with-sub-superscripts nil)
+
+(use-package org-bullets
+  :ensure t
+	:hook (org-mode-hook . (lambda () (org-bullets-mode t)))
+	:custom (org-bullets-bullet-list '("☰" "☷" "✿" "☭")))
 
 (provide 'init-org)
