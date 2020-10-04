@@ -9,8 +9,8 @@
 (setq-default abbrev-mode t) ; Open abbrev-mode
 (define-abbrev-table
 	'global-abbrev-table
-	'(("name" "KiteAB")
-		("email" "<kiteabpl@outlook.com>")
+	'(("myname" "KiteAB")
+		("myemail" "<kiteabpl@outlook.com>")
 		("copyr" "Copyright (C) <+++> KiteAB")))
 
 (provide 'init-modes)
