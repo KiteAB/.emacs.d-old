@@ -24,6 +24,7 @@
 (display-time-mode t) ; Display the time
 (column-number-mode t) ; Show the column number in the modeline
 (setq backward-delete-char-untabify-method nil) ; Delete the tab by once
+(setq user-emacs-directory "~/.emacs.d/var") ;;; The Cache Directory
 (setq user-init-file "~/.emacs.d/var/user-init.el")
 (save-place-mode t) ; Save the point position
 (setq ring-bell-function 'ignore blink-cursor-mode nil) ; Disable Infos

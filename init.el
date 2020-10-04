@@ -32,9 +32,6 @@
       (file-name-handler-alist nil))
   (add-subdirs-to-load-path "~/.emacs.d/etc/"))
 
-;;; The Cache Directory
-(setq user-emacs-directory "~/.emacs.d/var")
-
 ;;; Require Configuration Files
 (require 'init-config)
 
