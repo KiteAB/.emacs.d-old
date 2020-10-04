@@ -45,4 +45,3 @@
 (add-hook 'web-mode-hook #'(lambda () (outline-minor-mode t)))
 
 (provide 'init-basic)
-(provide 'kiteab-c)
