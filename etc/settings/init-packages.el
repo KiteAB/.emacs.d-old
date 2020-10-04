@@ -345,16 +345,6 @@
 			   ("<F5>" . dap-breakpoint-toggle)
 				 ("<F6>" . dap-continue)))
 
-;;; Avy Mode
-(use-package avy
-	:ensure t
-	:bind (("C-' a c" . avy-goto-char)
-			   ("C-' a C" . avy-goto-char-2)
-				 ("C-' a l" . avy-goto-line)
-				 ("C-' a w" . avy-goto-word-1)
-				 ("C-' a W" . avy-goto-word-0)
-				 ("C-' a r" . avy-resume)))
-
 ;;; CapsLock
 (use-package caps-lock
 	:ensure t
