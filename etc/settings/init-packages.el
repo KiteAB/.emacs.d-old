@@ -26,12 +26,13 @@
 ;;; Emacs Application Framework
 (use-package eaf
 	:load-path "~/.emacs.d/site-lisp/emacs-application-framework"
-	:bind (("C-z C-w l" . eaf-open-browser))
+	:bind (("C-q C-w l" . eaf-open-browser))
 	:config
 	(eaf-setq eaf-browser-remember-history "true")
 	(eaf-setq eaf-browser-default-zoom "1.5")
 	(defalias 'browse-web #'eaf-open-browser)
-	(eaf-setq eaf-browser-dark-mode "true"))
+	(eaf-setq eaf-browser-dark-mode "true")
+	:hook (eaf-mode-hook . (lambda () (evil-emacs-state))))
 
 ;;; English Teacher
 (use-package english-teacher
@@ -79,14 +80,14 @@
 	:ensure t
 	:init
 	(define-prefix-command 'org-key-map)
-	(global-set-key (kbd "C-z C-c") 'org-key-map)
-	:bind (("C-z C-c g" . org-agenda)
-				 ("C-z C-c c" . org-capture)
-				 ("C-z C-c s" . org-timer-start)
-				 ("C-z C-c S" . org-timer-set-timer)
-				 ("C-z C-c e" . org-timer-stop)
-				 ("C-z C-c SPC" . org-timer-pause-or-continue)
-				 ("C-z C-c C-i" . kiteab/use-space-indent))
+	(global-set-key (kbd "C-q C-c") 'org-key-map)
+	:bind (("C-q C-c g" . org-agenda)
+				 ("C-q C-c c" . org-capture)
+				 ("C-q C-c s" . org-timer-start)
+				 ("C-q C-c S" . org-timer-set-timer)
+				 ("C-q C-c e" . org-timer-stop)
+				 ("C-q C-c SPC" . org-timer-pause-or-continue)
+				 ("C-q C-c C-i" . kiteab/use-space-indent))
 	:config
 	(setq org-src-fontify-natively t)
 	(require 'init-org)
@@ -110,7 +111,7 @@
 	:ensure t
 	:bind (("M-x" . counsel-M-x)
 				 ("C-x C-f" . counsel-find-file)
-				 ("C-z a" . counsel-linux-app)
+				 ("C-q a" . counsel-linux-app)
 				 ("C-x b" . counsel-switch-buffer)))
 
 ;;; Icons
