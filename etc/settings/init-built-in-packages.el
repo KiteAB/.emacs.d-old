@@ -41,6 +41,7 @@
 ;;; I-search
 (use-package isearch
 	:ensure nil
+	:disabled
 	:config
 	(setq isearch-lazy-count t
 				lazy-count-prefix-format "%s/%s "))

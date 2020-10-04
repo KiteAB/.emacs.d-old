@@ -2,6 +2,7 @@
 ;;; Set the plugin keybinding
 (define-prefix-command 'plugin-key)
 (global-set-key (kbd "C-'") 'plugin-key)
+(global-set-key (kbd "C--") 'plugin-key-2)
 
 ;;; Init Packages
 (package-initialize)
@@ -131,7 +132,10 @@
 	(setq ivy-posframe-display-functions-alist
 				'((t . ivy-posframe-display-at-frame-center)))
 	(setq ivy-posframe-parameters '((left-fringe . 8)
-																	(add-hook 'ivy-mode-hook #'ivy-posframe-mode))))
+																	(add-hook 'ivy-mode-hook #'ivy-posframe-mode)))
+	:bind (("C-s" . swiper)
+				 ("C-r" . swiper-backward)
+				 ("C-- s" . swiper-all)))
 
 ;;; Bongo
 (use-package bongo :ensure t)
@@ -390,13 +394,6 @@
 	:ensure t
 	:hook (after-init-hook . beacon-mode))
 
-;;; Yafolding
-(use-package yafolding
-	:ensure t
-	:bind (("C-' M-f a" . yafolding-show-all)
-				 ("C-' M-f A" . yafolding-hide-all)
-				 ("C-' M-f t" . yafolding-toggle-element)))
-
 ;;; Pacman in Emacs
 (use-package arch-packer :ensure t)
 
@@ -411,5 +408,10 @@
 	:bind (("C-' R" . elfeed))
 	:config
 	(setq elfeed-feeds '("https://www.archlinux.org/feeds/news/")))
+
+;;; Vc Message
+(use-package vc-msg
+	:ensure t
+	:bind (("C-' s" . vc-msg-show)))
 
 (provide 'init-packages)
