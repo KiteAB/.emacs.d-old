@@ -35,13 +35,6 @@
 ;	:hook (eaf-mode-hook . (lambda () (evil-emacs-state)))
 	)
 
-;;; English Teacher
-(use-package english-teacher
-	:load-path "~/.emacs.d/site-lisp/english-teacher.el"
-	:config (setq english-teacher-backend 'google
-								english-teacher-show-result-function 'english-teacher-eldoc-show-result-function)
-	:hook ((Info-mode-hook eww-mode-hook help-mode-hook) . english-teacher-follow-mode))
-
 ;;; Company English Helper
 (use-package company-english-helper
 	:load-path "~/.emacs.d/site-lisp/company-english-helper"
@@ -54,8 +47,14 @@
 	:load-path "~/.emacs.d/site-lisp/awesome-tray"
 	:hook (after-init-hook . awesome-tray-mode)
 	:config
-	(add-to-list 'awesome-tray-active-modules "buffer-name")
-	(add-to-list 'awesome-tray-active-modules "git"))
+	(setq awesome-tray-active-modules '("circe"
+;																			"file-path"
+																			"git"
+																			"parent-dir"
+																			"location"
+																			"mode-name"
+																			"buffer-name"
+																			"date")))
 
 ;;; Insert Translated Name
 (use-package insert-translated-name
