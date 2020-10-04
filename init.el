@@ -47,7 +47,9 @@
 		(progn
 			(load-file "~/.emacs.d/token.el")
 			(require 'gh-token))
-	(message "token.el not found. Please check it or ignore this message."))
+	(switch-to-buffer "*Warning*")
+	(insert "token.el not found. Please check it or ignore this message at init.el")
+	(switch-to-buffer-other-window "*Warning*"))
 
 ;;; Basic Things
 (require 'init-basic)
