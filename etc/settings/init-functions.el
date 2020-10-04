@@ -20,6 +20,22 @@
 																			(delete "." (directory-files path)))))
 		(find-file (concat path filename))))
 
+(defun window-move (way)
+	"Move the buffer window position by WAY."
+	(interactive "cEnter the way(n-e-u-i): ")
+	(let ((current-window-buffer (window-buffer))
+				(current-window (get-buffer-window)))
+		(pcase way
+			(110 (windmove-left))
+			(101 (windmove-down))
+			(117 (windmove-up))
+			(105 (windmove-right)))
+		(setq another-window-buffer (get-buffer-window))
+		(if (not (eql current-window-buffer another-window-buffer))
+				(progn
+					(set-window-buffer current-window (window-buffer))
+					(set-window-buffer (get-buffer-window) current-window-buffer))))) ; Move the window
+
 (defun open-vterm (&optional dir)
 	"Open the vterm by DIR"
 	(interactive "DInput the directory: ")
