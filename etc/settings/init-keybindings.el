@@ -46,4 +46,4 @@
 (global-set-key (kbd "C-q C-k r") 'replace-placeholder) ; Replace Placeholder
 (global-set-key (kbd "C-q C-k s") 'search-todo-in-code) ; Search the todo thing in code
 
-(provide 'init-keymaps)
+(provide 'init-keybindings)
