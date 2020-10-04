@@ -46,7 +46,7 @@
 (define-key evil-insert-state-map (kbd "C-p") 'evil-normal-state)
 
 ;;; Leader
-(setq evil-leader/leader ",")
+(setq evil-leader/leader "'")
 (evil-leader/set-key
 	;; Window
 	"0" 'delete-window
@@ -75,8 +75,6 @@
 	"m" 'magit-status
 	"k" 'kiteab/open-or-close-command-log-mode
 	"K" 'clm/command-log-clear
-	"s" 'vc-msg-show
-	;; Others
-	"xe" 'eval-last-sexp)
+	"s" 'vc-msg-show)
 
 (provide 'init-evil)
