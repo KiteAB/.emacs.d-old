@@ -66,6 +66,11 @@
 (use-package lazycat-theme
 	:load-path "~/.emacs.d/site-lisp/lazycat-theme")
 
+;;; Awesome Shell
+(use-package aweshell
+	:load-path "~/.emacs.d/site-lisp/aweshell")
+
+
 ;;; Spacemacs Theme
 (use-package spacemacs-common
 	:ensure spacemacs-theme
