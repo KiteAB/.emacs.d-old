@@ -6,7 +6,7 @@
 ;;; Completing
 (use-package lsp-pyright
 	:ensure t
-	:hook '(python-mode-hook . (lambda () (require 'lsp-pyright) (lsp))))
+	:hook (python-mode-hook . (lambda () (require 'lsp-pyright) (lsp))))
 
 ;;; Folding
 (add-hook 'python-mode-hook #'(lambda () (outline-minor-mode t)))
