@@ -31,9 +31,7 @@
 	(eaf-setq eaf-browser-remember-history "true")
 	(eaf-setq eaf-browser-default-zoom "1.5")
 	(defalias 'browse-web #'eaf-open-browser)
-	(eaf-setq eaf-browser-dark-mode "true")
-;	:hook (eaf-mode-hook . (lambda () (evil-emacs-state)))
-	)
+	(eaf-setq eaf-browser-dark-mode "true"))
 
 ;;; Company English Helper
 (use-package company-english-helper
@@ -47,7 +45,7 @@
 	:load-path "~/.emacs.d/site-lisp/awesome-tray"
 	:hook (after-init-hook . awesome-tray-mode)
 	:config
-	(setq awesome-tray-active-modules '("circe" "git" "parent-dir" "location" "mode-name" "buffer-name" "date")))
+	(setq awesome-tray-active-modules '("git" "location" "mode-name" "parent-dir" "buffer-name" "date")))
 
 ;;; Insert Translated Name
 (use-package insert-translated-name
@@ -245,9 +243,6 @@
 				lsp-enable-folding nil
 				lsp-enable-snippet nil
 				lsp-prefer-flymake :none))
-
-;;; Evil Mode
-;(require 'init-evil)
 
 ;;; Emmet Mode
 (use-package emmet-mode
