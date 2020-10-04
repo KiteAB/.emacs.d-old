@@ -258,7 +258,7 @@
 	:config
 	(use-package yasnippet-snippets :ensure t)
 	(setq yas-snippet-dirs '("~/.emacs.d/snippets"
-													 "~/.emacs.d/elpa/yasnippet-snippets-20200802.1658/snippets")))
+													 "~/.emacs.d/var/elpa/yasnippet-snippets-20200909.1058/snippets")))
 
 ;;; FlyMake
 (use-package flymake
