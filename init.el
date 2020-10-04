@@ -22,10 +22,10 @@
                              (makunbound 'file-name-handler-alist-original)))
 
 ;;;; Config Files
-(defun add-subdirs-to-load-path(dir) 
+(defun add-subdirs-to-load-path(dir)
   "Recursive add directories to `load-path`."
-  (let ((default-directory (file-name-as-directory dir))) 
-    (add-to-list 'load-path dir) 
+  (let ((default-directory (file-name-as-directory dir)))
+    (add-to-list 'load-path dir)
     (normal-top-level-add-subdirs-to-load-path)))
 
 (let ((gc-cons-threshold most-positive-fixnum)
