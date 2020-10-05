@@ -3,7 +3,6 @@
 (define-prefix-command 'more-functions)
 (global-set-key (kbd "C-q") 'ctl-z-map) ; Set the ctl-z-map
 (global-set-key (kbd "C-=") 'more-functions)
-(global-set-key (kbd "C-q i") 'open-config-file) ; Open the init.el
 (global-set-key (kbd "C-q p") 'package-list-packages) ; Open the package interface
 (global-set-key (kbd "C-q C-b") 'buffer-menu) ; Open the buffer menu
 (global-set-key (kbd "C-q C-i") 'kiteab/open-erc) ; Open the erc
@@ -33,7 +32,6 @@
 (global-set-key (kbd "C-q C-r") 'revert-buffer) ; Revert current buffer
 (global-set-key (kbd "C-q M-c") 'kiteab/downcase-word-first-letter) ; Downcase the first letter in the word at point
 (global-set-key (kbd "C-q A") 'kiteab/add-todo-in-code)	; Add the todo in code
-(global-set-key (kbd "C-q C-f") 'kiteab/find-file) ; Search file use FZF
 (global-set-key (kbd "C-q P") 'list-processes) ; Show the processes buffer
 (global-set-key (kbd "C-q K") 'kiteab/kill-unwanted-buffers) ; Kill unwanted buffers
 (global-set-key (kbd "C-q R") 'query-replace) ; Replace
