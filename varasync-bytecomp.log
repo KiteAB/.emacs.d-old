@@ -1,4 +1,0 @@
-
-In company-tabnine--construct-candidate-generic:
-company-tabnine.el:556:49:Warning: assignment to free variable ‘type’
-company-tabnine.el:556:49:Warning: reference to free variable ‘type’
