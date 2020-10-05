@@ -1,13 +1,8 @@
 ;;;; This file is used for the useful functions
-(defun open-config-file ()
-	"Open the init.el file."
-	(interactive)
-	(find-file "~/.emacs.d/init.el"))
-
 (defun open-etc-config ()
 	"Open the config file in the etc directory."
 	(interactive)
-	(counsel-find-file "~/.emacs.d/etc"))
+	(counsel-find-file "~/.emacs.d"))
 
 (defun window-move (way)
 	"Move the buffer window position by WAY."
@@ -146,11 +141,6 @@
 	(comment-dwim nil)
 	(let ((todo-content (read-string "Enter your todo content: ")))
 		(insert (format "<TODO(KiteAB)> %s [%s]" todo-content (current-time-string)))))
-
-(defun kiteab/find-file (&optional dir)
-	"Search file use fuzzy file finder"
-	(interactive "DInput the directory: ")
-	(counsel-fzf nil dir))
 
 (defun kiteab/kill-magit (&optional dir)
 	"Kill the buffer about Magit"

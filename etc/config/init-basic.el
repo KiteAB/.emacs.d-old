@@ -37,7 +37,6 @@
       scroll-down-aggressively 0.01
       scroll-preserve-screen-position 'always) ; Scroll
 (setq mouse-yank-at-point nil)
-(setq counsel-fzf-cmd "fd --type f | fzf -f \"%s\" --algo=v1") ; Fuzzy File Finder
 
 (add-hook 'markdown-mode-hook #'markdown-table-keymap) ; Add the markdown table align keymap
 (add-hook 'erc-mode-hook #'(lambda () (display-line-numbers-mode -1))) ; Disable line numbers in ERC
