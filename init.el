@@ -9,7 +9,7 @@
 ;; E-Mail			: kiteabpl@outlook.com								 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;;; Auto opzimization
+;;; Automatic Optimization
 (setq gc-cons-threshold-original gc-cons-threshold)
 (setq gc-cons-threshold (* 1024 1024 100))
 (setq file-name-handler-alist-original file-name-handler-alist)
@@ -21,7 +21,7 @@
                              (makunbound 'gc-cons-threshold-original)
                              (makunbound 'file-name-handler-alist-original)))
 
-;;;; Config Files
+;;;; Traverse Load Configuration Folder
 (defun add-subdirs-to-load-path(dir)
   "Recursive add directories to `load-path`."
   (let ((default-directory (file-name-as-directory dir)))
