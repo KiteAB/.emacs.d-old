@@ -1,4 +1,6 @@
 ;;; This file is used for require the configuration files
+;;; Package Settings
+(require 'init-packages)
 ;;; User Interface
 (require 'init-ui)
 ;;; Functions
@@ -9,10 +11,14 @@
 (require 'init-modes)
 ;;; Macros
 (require 'init-macros)
-;;; Plugin requires
-(require 'init-packages)
+;;; Completion Settings
+(require 'init-complete)
 ;;; Org Mode
 (require 'init-org)
+;;; Program Settings
+(require 'init-prog)
+;;; Tools Settings
+(require 'init-tools)
 ;;; GitHub (Markdown Preview)
 (if (file-exists-p "~/.emacs.d/token.el")
 		(progn

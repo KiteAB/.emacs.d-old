@@ -3,4 +3,4 @@
 	:ensure t
 	:hook (go-mode-hook . lsp))
 
-(provide 'kiteab-go)
+(provide 'init-go)

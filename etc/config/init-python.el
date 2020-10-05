@@ -11,4 +11,4 @@
 ;;; Folding
 (add-hook 'python-mode-hook #'(lambda () (outline-minor-mode t)))
 
-(provide 'kiteab-python)
+(provide 'init-python)

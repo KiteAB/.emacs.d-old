@@ -23,4 +23,109 @@
 				 (expand-file-name (locate-user-emacs-file "not-alpha")))
 	(set-frame-parameter nil 'alpha '(90 . 100)))
 
+;;; Awesome Tray
+(use-package awesome-tray
+	:load-path "~/.emacs.d/site-lisp/awesome-tray"
+	:hook (after-init-hook . awesome-tray-mode)
+	:config
+	(setq awesome-tray-active-modules '("git" "location" "mode-name" "parent-dir" "buffer-name" "date")))
+
+;;; Lazycat Themes
+(use-package lazycat-theme
+	:load-path "~/.emacs.d/site-lisp/lazycat-theme")
+
+;;; Spacemacs Themes
+(use-package spacemacs-common
+	:ensure spacemacs-theme
+	:defer
+;	:config
+;	(setq-default cursor-type '(bar . 1))
+;	(set-cursor-color "white")
+	)
+
+;;; Circadian - Switch Theme
+(use-package circadian
+	:ensure t
+	:config
+	(setq calendar-latitude 27.831940
+				calendar-longitude 113.148087)
+	(setq circadian-themes '((:sunrise . lazycat-light)
+													 (:sunset . lazycat-dark)))
+	(circadian-setup)
+	(setq-default cursor-type '(bar . 1)))
+
+;;; Dashboard
+(use-package dashboard
+	:ensure t
+	:disabled
+	:config
+	(dashboard-setup-startup-hook)
+	(setq dashboard-banner-logo-title "KiteAB's Emacs - Vim Defector No.114514"
+				dashboard-startup-banner 'logo
+				dashboard-center-content t
+				dashboard-set-heading-icons t
+				dashboard-set-file-icons t
+				dashboard-set-navigator t))
+
+;;; Icons
+(use-package all-the-icons
+	:ensure t
+	:bind (("C-' C-i" . all-the-icons-insert)))
+
+;;; Rainbow Delimiters
+(use-package rainbow-delimiters
+	:ensure t
+	:hook ((lisp-mode-hook emacs-lisp-mode-hook org-mode-hooke eshell-mode-hook) . rainbow-delimiters-mode)
+	:config
+  (set-face-foreground 'rainbow-delimiters-depth-1-face "chartreuse3")
+  (set-face-foreground 'rainbow-delimiters-depth-2-face "DodgerBlue1")
+  (set-face-foreground 'rainbow-delimiters-depth-3-face "DarkOrange2")
+  (set-face-foreground 'rainbow-delimiters-depth-4-face "deep pink")
+  (set-face-foreground 'rainbow-delimiters-depth-5-face "medium orchid")
+  (set-face-foreground 'rainbow-delimiters-depth-6-face "turquoise")
+  (set-face-foreground 'rainbow-delimiters-depth-7-face "lime green")
+  (set-face-foreground 'rainbow-delimiters-depth-8-face "gold")
+  (set-face-foreground 'rainbow-delimiters-depth-9-face "cyan")
+  (set-face-bold 'rainbow-delimiters-depth-1-face "t")
+  (set-face-bold 'rainbow-delimiters-depth-2-face "t")
+  (set-face-bold 'rainbow-delimiters-depth-3-face "t") 
+  (set-face-bold 'rainbow-delimiters-depth-4-face "t")
+  (set-face-bold 'rainbow-delimiters-depth-5-face "t")
+  (set-face-bold 'rainbow-delimiters-depth-6-face "t")
+  (set-face-bold 'rainbow-delimiters-depth-7-face "t")
+  (set-face-bold 'rainbow-delimiters-depth-8-face "t")
+  (set-face-bold 'rainbow-delimiters-depth-9-face "t"))
+
+;;; Indent Guide
+(use-package indent-guide
+	:ensure t
+	:hook (after-init-hook . indent-guide-global-mode))
+
+;;; Doom Modeline
+(use-package doom-modeline
+	:ensure t
+	:disabled
+	:hook (after-init-hook . doom-modeline-mode)
+	:config
+	(setq-default doom-modeline-height 13)
+	(setq-default doom-modeline-bar-width 3))
+
+;;; Info Colors
+(use-package info-colors
+  :ensure t
+  :hook ('Info-selection-hook . 'info-colors-fontify-node))
+
+;;; NyanCat Mode
+(use-package nyan-mode
+  :ensure t
+	:disabled
+  :hook (after-init-hook . nyan-mode)
+	:config (setq nyan-wavy-trail t
+								nyan-animate-nyancat t))
+
+;;; Page Break Lines
+(use-package page-break-lines
+  :ensure t
+  :hook (prog-mode-hook . page-break-lines-mode))
+
 (provide 'init-ui)

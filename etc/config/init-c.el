@@ -7,4 +7,4 @@
 
 (add-hook 'c-mode-hook #'(lambda () (outline-minor-mode t)))
 
-(provide 'kiteab-c)
+(provide 'init-c)
