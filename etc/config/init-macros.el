@@ -4,6 +4,6 @@
 (fset 'replace-placeholder
 			(kmacro-lambda-form [?\M-% ?< ?+ ?+ ?+ ?> return return ?.] 0 "%d"))
 (fset 'search-todo-in-code
-   (kmacro-lambda-form [?\C-s ?T ?O ?D ?O ?\C-a] 0 "%d"))
+			(kmacro-lambda-form [?\C-s ?T ?O ?D ?O ?\C-a] 0 "%d"))
 
 (provide 'init-macros)
