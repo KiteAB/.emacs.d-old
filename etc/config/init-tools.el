@@ -127,14 +127,14 @@
 (use-package git-gutter
 	:ensure t
 	:disabled
+    :custom
+    (git-gutter:update-interval 1)
+	(git-gutter:added-sign "+")
+    (git-gutter:deleted-sign "_")
+	(git-gutter:modified-sign "~")
+	(git-gutter:hide-gutter t)
 	:config
 	(global-git-gutter-mode +1)
-	(custom-set-variables
-	 '(git-gutter:update-interval 1)
-	 '(git-gutter:added-sign "+")
-   '(git-gutter:deleted-sign "_")
-	 '(git-gutter:modified-sign "~")
-	 '(git-gutter:hide-gutter t))
 	(set-face-foreground 'git-gutter:added "#8CFF88")
 	(set-face-foreground 'git-gutter:modified "#8CFF88")
 	(set-face-foreground 'git-gutter:deleted "#FF2323"))
