@@ -41,11 +41,6 @@
 	:hook ((lisp-mode-hook emacs-lisp-mode-hook eshell-mode-hook lisp-interaction-mode-hook) . paredit-mode)
 	:bind (("C-' f" . paredit-focus-on-defun)))
 
-;;; FlyMake
-(use-package flymake
-	:ensure t
-	:bind (("C-' C-f" . flymake-mode)))
-
 ;;; Dap Mode
 (use-package dap-mode
 	:ensure t

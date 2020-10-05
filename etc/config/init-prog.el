@@ -33,4 +33,9 @@
 	:hook (web-mode-hook . emmet-mode)
 	:config (setq emmet-self-closing-tag-style " /"))
 
+;;; FlyMake
+(use-package flymake
+	:ensure t
+	:bind (("C-' C-f" . flymake-mode)))
+
 (provide 'init-prog)
