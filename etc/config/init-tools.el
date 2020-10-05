@@ -31,7 +31,7 @@
 ;;; Counsel
 (use-package counsel
 	:ensure t
-	:bind (;("M-x" . counsel-M-x)
+	:bind (("M-x" . counsel-M-x)
 				 ("C-x C-f" . counsel-find-file)
 				 ("C-q a" . counsel-linux-app)
 				 ("C-x b" . counsel-switch-buffer)))
@@ -252,6 +252,6 @@
 ;;; Smex
 (use-package smex
 	:ensure t
-	:bind (("M-x" . smex)))
+	:bind (("M-X" . smex)))
 
 (provide 'init-tools)
