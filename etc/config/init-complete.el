@@ -2,6 +2,7 @@
 ;;; Company (Complete Anything)
 (use-package company
 	:ensure t
+	:defer 1
 	:hook (after-init-hook . global-company-mode)
 	:config
 	(setq company-idle-delay 2
@@ -23,6 +24,8 @@
 
 ;;; Lsp Mode
 (use-package lsp-mode
+	:ensure t
+	:defer 1
 	:hook ((c-mode-hook c++-mode-hook lisp-mode-hook js-mode-hook web-mode-hook) . lsp)
 	:bind (("C-' F" . lsp-format-buffer))
 	:config
@@ -38,12 +41,14 @@
 ;;; Paredit Mode
 (use-package paredit
 	:ensure t
+	:defer 1
 	:hook ((lisp-mode-hook emacs-lisp-mode-hook eshell-mode-hook lisp-interaction-mode-hook) . paredit-mode)
 	:bind (("C-' f" . paredit-focus-on-defun)))
 
 ;;; Dap Mode
 (use-package dap-mode
 	:ensure t
+	:defer 1
 	:bind (("C-' d" . dap-debug)
 			   ("<f5>" . dap-breakpoint-toggle)
 				 ("<f6>" . dap-continue)))
@@ -51,6 +56,7 @@
 ;;; Snippets
 (use-package yasnippet
 	:ensure t
+	:defer 1
 	:bind (("C-' C-y" . yas-expand-from-trigger-key))
 	:hook (after-init-hook . yas-global-mode)
 	:config

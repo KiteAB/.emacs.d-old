@@ -2,6 +2,7 @@
 ;;; Insert Translated Name
 (use-package insert-translated-name
 	:load-path "~/.emacs.d/site-lisp/insert-translated-name"
+	:defer 1
 	:bind (("C-' C-l i" . insert-translated-name-insert)
 				 ("C-' C-l u" . insert-translated-name-insert-with-underline)
 				 ("C-' C-l c" . insert-translated-name-insert-with-camel)
@@ -15,11 +16,13 @@
 ;;; JS2 Mode
 (use-package js2-mode
 	:ensure t
+	:defer 1
 	:hook (js-mode . js2-mode))
 
 ;;; Web Mode
 (use-package web-mode
 	:ensure t
+	:defer 1
 	:config
 	(setq auto-mode-alist
 				(append '(("\\.html\\'" . web-mode)) auto-mode-alist))
@@ -30,12 +33,14 @@
 ;;; Emmet Mode
 (use-package emmet-mode
 	:ensure t
+	:defer 1
 	:hook (web-mode-hook . emmet-mode)
 	:config (setq emmet-self-closing-tag-style " /"))
 
 ;;; FlyMake
 (use-package flymake
 	:ensure t
+	:defer 1
 	:bind (("C-' C-f" . flymake-mode)))
 
 (provide 'init-prog)

@@ -75,6 +75,7 @@
 ;;; Rainbow Delimiters
 (use-package rainbow-delimiters
 	:ensure t
+	:defer 1
 	:hook ((lisp-mode-hook emacs-lisp-mode-hook org-mode-hooke eshell-mode-hook) . rainbow-delimiters-mode)
 	:config
   (set-face-foreground 'rainbow-delimiters-depth-1-face "chartreuse3")
@@ -99,6 +100,7 @@
 ;;; Indent Guide
 (use-package indent-guide
 	:ensure t
+	:defer 1
 	:hook (after-init-hook . indent-guide-global-mode))
 
 ;;; Doom Modeline
@@ -113,6 +115,7 @@
 ;;; Info Colors
 (use-package info-colors
   :ensure t
+	:defer 1
   :hook ('Info-selection-hook . 'info-colors-fontify-node))
 
 ;;; NyanCat Mode
@@ -126,6 +129,7 @@
 ;;; Page Break Lines
 (use-package page-break-lines
   :ensure t
+	:defer 1
   :hook (prog-mode-hook . page-break-lines-mode))
 
 (provide 'init-ui)

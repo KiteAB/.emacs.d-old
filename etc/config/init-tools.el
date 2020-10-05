@@ -2,6 +2,7 @@
 ;;; Emacs Application Framework
 (use-package eaf
 	:load-path "~/.emacs.d/site-lisp/emacs-application-framework"
+	:defer 1
 	:bind (("C-q C-w l" . eaf-open-browser))
 	:config
 	(eaf-setq eaf-browser-remember-history "true")
@@ -18,11 +19,13 @@
 
 ;;; Awesome Shell
 (use-package aweshell
+	:defer 1
 	:load-path "~/.emacs.d/site-lisp/aweshell")
 
 ;;; VTerm
 (use-package vterm
 	:ensure t
+	:defer 1
 	:bind (("C-' C-t" . open-vterm))
 	:config
 	(define-key vterm-mode-map (kbd "C-c p") 'previous-buffer)
@@ -31,6 +34,7 @@
 ;;; Counsel
 (use-package counsel
 	:ensure t
+	:defer 1
 	:bind (("M-x" . counsel-M-x)
 				 ("C-x C-f" . counsel-find-file)
 				 ("C-q a" . counsel-linux-app)
@@ -39,13 +43,16 @@
 ;;; Ivy
 (use-package ivy
 	:ensure t
+	:defer 1
 	:hook (after-init-hook . ivy-mode))
 ;;; Child Packages
 (use-package posframe
 	:ensure t
+	:defer 1
 	:config (setq posframe-mouse-banish nil))
 (use-package ivy-posframe
 	:ensure t
+	:defer 1
 	:hook (ivy-mode-hook . ivy-posframe-mode)
 	:config
 	(setq ivy-posframe-display-functions-alist
@@ -59,21 +66,25 @@
 ;;; Which Key
 (use-package which-key
 	:ensure t
+	:defer 1
 	:hook (after-init-hook . which-key-mode))
 
 ;;; Ace Window
 (use-package ace-window
 	:ensure t
+	:defer 1
 	:bind (("C-' C-c" . ace-window)))
 
 ;;; Iedit
 (use-package iedit
 	:ensure t
+	:defer 1
 	:bind (("C-' C-e" . iedit-mode)))
 
 ;;; Hungry Delete
 (use-package hungry-delete
 	:ensure t
+	:defer 1
 	:bind (("C-' C-h" . hungry-delete-mode)
 			   ("C-' DEL" . hungry-delete-backward))
 	:hook ((emacs-lisp-mode-hook lisp-mode-hook) . hungry-delete-mode))
@@ -86,11 +97,13 @@
 ;;; Window Resize
 (use-package windresize
 	:ensure t
+	:defer 1
 	:bind (("C-' C-r" . windresize)))
 
 ;;; Multiple Cursor
 (use-package multiple-cursors
 	:ensure t
+	:defer 1
 	:bind (("C-M-l" . mc/edit-lines)
 				 ("C->" . mc/mark-next-like-this)
 				 ("C-<" . mc/mark-previous-like-this)
@@ -99,14 +112,16 @@
 ;;; Youdao Translate
 (use-package youdao-dictionary
 	:ensure t
+	:defer 1
 	:bind (("C-' t" . youdao-dictionary-search-at-point)))
 
 ;;; Treemacs - File Explore
 (use-package treemacs
 	:ensure t
+	:defer 1
 	:bind (("C-' e" . treemacs)))
 ;;; Child Package
-(use-package treemacs-all-the-icons :ensure t)
+(use-package treemacs-all-the-icons :ensure t :defer 1)
 
 ;;; Git Gutter
 (use-package git-gutter
@@ -127,24 +142,28 @@
 ;;; Diff Highlight
 (use-package diff-hl
 	:ensure t
+	:defer 1
 	:hook (prog-mode-hook . diff-hl-mode))
 
 ;;; Pacman in Emacs
-(use-package arch-packer :ensure t)
+(use-package arch-packer :ensure t :defer 1)
 
 ;;; Figlet
 (use-package figlet
 	:ensure t
+	:defer 1
 	:bind (("C-' F" . figlet)))
 
 ;;; Vc Message
 (use-package vc-msg
 	:ensure t
+	:defer 1
 	:bind (("C-' s" . vc-msg-show)))
 
 ;;; Dired - File Operations
 (use-package dired
 	:ensure nil
+	:defer 1
 	:config
 	(define-advice dired-do-print (:override (&optional _))
     "Show/hide dotfiles."
@@ -187,16 +206,18 @@
 
   (define-key dired-mode-map "Y" 'ora-dired-rsync))
 ;;; Child Package
-(use-package all-the-icons-dired :ensure t)
+(use-package all-the-icons-dired :ensure t :defer 1)
 
 ;;; Auto Revert
 (use-package autorevert
   :ensure nil
+	:defer 1
   :hook (after-init-hook . global-auto-revert-mode))
 
 ;;; Command Log
 (use-package command-log-mode
 	:ensure nil
+	:defer 1
 	:config
 	(defun kiteab/open-or-close-command-log-mode ()
 		"Open the command-log-mode."
@@ -209,6 +230,7 @@
 ;;; Align
 (use-package align
 	:ensure nil
+	:defer 1
 	:bind (("C-' A" . align-regexp)))
 
 ;;; I-search
@@ -222,6 +244,7 @@
 ;;; New Comment
 (use-package newcomment
 	:ensure nil
+	:defer 1
 	:bind (("C-' c d" . comment-dwin)
 				 ("C-' c l" . comment-line)
 				 ("C-' c b" . comment-box)))
@@ -229,22 +252,26 @@
 ;;; Winner Mode
 (use-package winner-mode
 	:ensure nil
+	:defer 1
 	:hook (after-init-hook . winner-mode))
 
 ;;; Recentf
 (use-package recentf
 	:ensure nil
+	:defer 1
 	:hook (after-init-hook . recentf-mode)
 	:bind (("C-' r" . recentf-open-files)))
 
 ;;; Frog Jump Buffer
 (use-package frog-jump-buffer
 	:ensure t
+	:defer 1
 	:bind (("C-' b" . frog-jump-buffer)))
 
 ;;; Helpful
 (use-package helpful
 	:ensure t
+	:defer 1
 	:bind (("C-h f" . helpful-function)
 				 ("C-h v" . helpful-variable)
 				 ("C-h k" . helpful-key)))
@@ -252,6 +279,7 @@
 ;;; Smex
 (use-package smex
 	:ensure t
+	:defer 1
 	:bind (("M-X" . smex)))
 
 (provide 'init-tools)
