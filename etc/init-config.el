@@ -11,6 +11,8 @@
 (require 'init-modes)
 ;;; Macros
 (require 'init-macros)
+;;; Aliases
+(require 'init-aliases)
 ;;; Completion Settings
 (require 'init-complete)
 ;;; Org Mode
