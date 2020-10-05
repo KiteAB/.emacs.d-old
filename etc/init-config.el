@@ -28,7 +28,7 @@
 (require 'init-enable-disabled-commands)
 (enable-commands-init)
 ;;; Languages settings
-(require 'kiteab-python)
-(require 'kiteab-c)
+(require 'init-python)
+(require 'init-c)
 
 (provide 'init-config)

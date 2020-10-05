@@ -231,7 +231,7 @@
 	:hook (after-init-hook . yas-global-mode)
 	:config
 	(use-package yasnippet-snippets :ensure t)
-	(setq yas-snippet-dirs '("~/.emacs.d/snippets"
+	(setq yas-snippet-dirs '("~/.emacs.d/etc/snippets"
 													 "~/.emacs.d/var/elpa/yasnippet-snippets-20200909.1058/snippets")))
 
 ;;; FlyMake
