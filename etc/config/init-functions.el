@@ -31,7 +31,7 @@
 	(find-file dir)
 	(let ((current-buffer-name (buffer-name)))
 		(vterm)
-		(linum-mode -1)
+		(display-line-numbers-mode -1)
 		(kill-buffer current-buffer-name)))
 
 (defun set-alpha (var)
