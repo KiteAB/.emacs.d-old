@@ -15,6 +15,7 @@
       )
 (setq initial-scratch-message
 			";; KiteAB's Emacs
+;; This is the scratch buffer for startup page and test Emacs Lisp code
 
 ")
 (setq-default tab-width 2) ; The tab width
