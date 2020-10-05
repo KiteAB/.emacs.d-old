@@ -7,18 +7,7 @@
 (defun open-etc-config ()
 	"Open the config file in the etc directory."
 	(interactive)
-	(let (path filename)
-		(while (or (null filename)
-							 (string= filename ".."))
-			(setq path (pcase (completing-read
-												 "Enter the index of config: "
-												 '("settings" "languages" "tools"))
-									 ("settings" "~/.emacs.d/etc/settings/")
-									 ("languages" "~/.emacs.d/etc/languages/")
-									 ("tools" "~/.emacs.d/etc/tools/")))
-			(setq filename (completing-read "Enter the filename: "
-																			(delete "." (directory-files path)))))
-		(find-file (concat path filename))))
+	(counsel-find-file "~/.emacs.d/etc"))
 
 (defun window-move (way)
 	"Move the buffer window position by WAY."
