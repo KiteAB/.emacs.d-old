@@ -237,4 +237,16 @@
 	:hook (after-init-hook . recentf-mode)
 	:bind (("C-' r" . recentf-open-files)))
 
+;;; Frog Jump Buffer
+(use-package frog-jump-buffer
+	:ensure t
+	:bind (("C-' b" . frog-jump-buffer)))
+
+;;; Helpful
+(use-package helpful
+	:ensure t
+	:bind (("C-h f" . helpful-function)
+				 ("C-h v" . helpful-variable)
+				 ("C-h k" . helpful-key)))
+
 (provide 'init-tools)
