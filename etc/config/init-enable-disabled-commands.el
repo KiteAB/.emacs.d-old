@@ -31,7 +31,7 @@
 				(progn
 					(setq y-or-n
 								(read-minibuffer
-								 "Do you want to enable some disabled commands?It's a little dangerous!(y/n)"
+								 "Do you want to enable some disabled commands? It's a little dangerous! (y/n)"
 								 "n"))
 					(if (string= y-or-n "y")
 							(progn

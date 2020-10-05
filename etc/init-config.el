@@ -5,9 +5,9 @@
 (require 'init-ui)
 ;;; Functions
 (require 'init-functions)
-;;; Keymaps
+;;; Keybindings
 (require 'init-keybindings)
-;;; Other mode settings
+;;; Other Mode Settings
 (require 'init-modes)
 ;;; Macros
 (require 'init-macros)
@@ -25,7 +25,7 @@
 			(load-file "~/.emacs.d/token.el")
 			(require 'gh-token))
 	(switch-to-buffer "*Warning*")
-	(insert "token.el not found. Please check it or ignore this message at init.el")
+	(insert "token.el not found. Please check it or ignore this message at init-config.el")
 	(switch-to-buffer-other-window "*Warning*"))
 ;;; Basic Things
 (require 'init-basic)
@@ -35,6 +35,6 @@
 (enable-commands-init)
 ;;; Languages settings
 (require 'init-python)
-(require 'init-c)
+(require 'init-cc)
 
 (provide 'init-config)
