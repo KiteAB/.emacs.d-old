@@ -19,7 +19,7 @@
 
 ")
 (setq-default tab-width 2) ; The tab width
-(setq-default indent-tabs-mode t) ; Use tab indent
+(setq-default indent-tabs-mode nil) ; Use space indent
 (setq-default css-indent-offset 2) ; Set css indent width
 (setq display-time-24hr-format t) ; Display the time and date on modeline
 (display-time-mode t) ; Display the time
