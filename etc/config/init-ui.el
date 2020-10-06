@@ -7,8 +7,8 @@
 (global-hl-line-mode t) ; Highlight current line
 (setq tab-bar-show nil) ; Always not display tab bar
 (progn
-	(setq display-line-numbers-type 'relative) ; Relative numbers for display numbers mode
-	(global-display-line-numbers-mode t)) ; Set the line numbers
+  (setq display-line-numbers-type 'relative) ; Relative numbers for display numbers mode
+  (global-display-line-numbers-mode t)) ; Set the line numbers
 (global-hl-line-mode t) ; Highlight the current line
 (toggle-frame-fullscreen) ; Set fullscreen
 (setq inhibit-splash-screen t) ; Close the start flash
@@ -20,64 +20,64 @@
  :width 'normal) ; Set the font size
 ;; Set backgroup alpha
 (unless (file-exists-p
-				 (expand-file-name (locate-user-emacs-file "not-alpha")))
-	(set-frame-parameter nil 'alpha '(90 . 100)))
+         (expand-file-name (locate-user-emacs-file "not-alpha")))
+  (set-frame-parameter nil 'alpha '(90 . 100)))
 
 ;;; Awesome Tray
 (use-package awesome-tray
-	:load-path "~/.emacs.d/site-lisp/awesome-tray"
-	:hook (after-init-hook . awesome-tray-mode)
-	:config
-	(setq awesome-tray-active-modules '("git" "location" "mode-name" "parent-dir" "buffer-name" "date")))
+  :load-path "~/.emacs.d/site-lisp/awesome-tray"
+  :hook (after-init-hook . awesome-tray-mode)
+  :config
+  (setq awesome-tray-active-modules '("git" "location" "mode-name" "parent-dir" "buffer-name" "date")))
 
 ;;; Lazycat Themes
 (use-package lazycat-theme
-	:load-path "~/.emacs.d/site-lisp/lazycat-theme")
+  :load-path "~/.emacs.d/site-lisp/lazycat-theme")
 
 ;;; Spacemacs Themes
 (use-package spacemacs-common
-	:ensure spacemacs-theme
-	:defer
-;	:config
-;	(setq-default cursor-type '(bar . 1))
-;	(set-cursor-color "white")
-	)
+  :ensure spacemacs-theme
+  :defer
+; :config
+; (setq-default cursor-type '(bar . 1))
+; (set-cursor-color "white")
+  )
 
 ;;; Circadian - Switch Theme
 (use-package circadian
-	:ensure t
-	:config
-	(setq calendar-latitude 27.831940
-				calendar-longitude 113.148087)
-	(setq circadian-themes '((:sunrise . lazycat-light)
-													 (:sunset . lazycat-dark)))
-	(circadian-setup)
-	(setq-default cursor-type '(bar . 1)))
+  :ensure t
+  :config
+  (setq calendar-latitude 27.831940
+        calendar-longitude 113.148087)
+  (setq circadian-themes '((:sunrise . lazycat-light)
+                           (:sunset . lazycat-dark)))
+  (circadian-setup)
+  (setq-default cursor-type '(bar . 1)))
 
 ;;; Dashboard
 (use-package dashboard
-	:ensure t
-	:disabled
-	:config
-	(dashboard-setup-startup-hook)
-	(setq dashboard-banner-logo-title "KiteAB's Emacs - Vim Defector No.114514"
-				dashboard-startup-banner 'logo
-				dashboard-center-content t
-				dashboard-set-heading-icons t
-				dashboard-set-file-icons t
-				dashboard-set-navigator t))
+  :ensure t
+  :disabled
+  :config
+  (dashboard-setup-startup-hook)
+  (setq dashboard-banner-logo-title "KiteAB's Emacs - Vim Defector No.114514"
+        dashboard-startup-banner 'logo
+        dashboard-center-content t
+        dashboard-set-heading-icons t
+        dashboard-set-file-icons t
+        dashboard-set-navigator t))
 
 ;;; Icons
 (use-package all-the-icons
-	:ensure t
-	:bind (("C-' C-i" . all-the-icons-insert)))
+  :ensure t
+  :bind (("C-' C-i" . all-the-icons-insert)))
 
 ;;; Rainbow Delimiters
 (use-package rainbow-delimiters
-	:ensure t
-	:defer 1
-	:hook ((lisp-mode-hook emacs-lisp-mode-hook org-mode-hooke eshell-mode-hook) . rainbow-delimiters-mode)
-	:config
+  :ensure t
+  :defer 1
+  :hook ((lisp-mode-hook emacs-lisp-mode-hook org-mode-hooke eshell-mode-hook) . rainbow-delimiters-mode)
+  :config
   (set-face-attribute 'rainbow-delimiters-depth-1-face nil :foreground "chartreuse3"   :bold "t")
   (set-face-attribute 'rainbow-delimiters-depth-2-face nil :foreground "DodgerBlue1"   :bold "t")
   (set-face-attribute 'rainbow-delimiters-depth-3-face nil :foreground "DarkOrange2"   :bold "t")
@@ -90,37 +90,37 @@
 
 ;;; Indent Guide
 (use-package indent-guide
-	:ensure t
-	:defer 1
-	:hook (after-init-hook . indent-guide-global-mode))
+  :ensure t
+  :defer 1
+  :hook (after-init-hook . indent-guide-global-mode))
 
 ;;; Doom Modeline
 (use-package doom-modeline
-	:ensure t
-	:disabled
-	:hook (after-init-hook . doom-modeline-mode)
-	:config
-	(setq-default doom-modeline-height 13)
-	(setq-default doom-modeline-bar-width 3))
+  :ensure t
+  :disabled
+  :hook (after-init-hook . doom-modeline-mode)
+  :config
+  (setq-default doom-modeline-height 13)
+  (setq-default doom-modeline-bar-width 3))
 
 ;;; Info Colors
 (use-package info-colors
   :ensure t
-	:defer 1
+  :defer 1
   :hook ('Info-selection-hook . 'info-colors-fontify-node))
 
 ;;; NyanCat Mode
 (use-package nyan-mode
   :ensure t
-	:disabled
+  :disabled
   :hook (after-init-hook . nyan-mode)
-	:config (setq nyan-wavy-trail t
-								nyan-animate-nyancat t))
+  :config (setq nyan-wavy-trail t
+                nyan-animate-nyancat t))
 
 ;;; Page Break Lines
 (use-package page-break-lines
   :ensure t
-	:defer 1
+  :defer 1
   :hook (prog-mode-hook . page-break-lines-mode))
 
 (provide 'init-ui)

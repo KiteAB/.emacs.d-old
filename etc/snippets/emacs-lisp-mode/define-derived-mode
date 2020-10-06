@@ -4,5 +4,5 @@
 # key: dmm
 # --
 (define-derived-mode ${1:mode-name} ${2:parent-mode} ${3:name}
-										 "${4:DOC}"
-										 $0)
+                     "${4:DOC}"
+                     $0)

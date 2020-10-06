@@ -12,11 +12,11 @@
 (require 'package)
 (require 'cl-lib) ; Common Lisp
 (setq package-archives '(("gnu" . "http://mirrors.bfsu.edu.cn/elpa/gnu/")
-												 ("melpa" . "http://mirrors.bfsu.edu.cn/elpa/melpa/")))
+                         ("melpa" . "http://mirrors.bfsu.edu.cn/elpa/melpa/")))
 ;;; Init Use-package
 (unless (package-installed-p 'use-package)
-	(package-refresh-contents)
-	(package-install 'use-package))
+  (package-refresh-contents)
+  (package-install 'use-package))
 (setq use-package-hook-name-suffix nil)
 
 (provide 'init-packages)

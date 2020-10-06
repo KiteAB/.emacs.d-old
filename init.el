@@ -1,12 +1,12 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;  _  ___ _         _   ___   ___									 ;;
+;;  _  ___ _         _   ___   ___                   ;;
 ;; | |/ (_) |_ ___  /_\ | _ ) | __|_ __  __ _ __ ___ ;;
 ;; | ' <| |  _/ -_)/ _ \| _ \ | _|| '  \/ _` / _(_-< ;;
 ;; |_|\_\_|\__\___/_/ \_\___/ |___|_|_|_\__,_\__/__/ ;;
-;; 																									 ;;
-;; Author			: KiteAB (https://github.com/KiteAB)	 ;;
-;; Repository	: https://github.com/KiteAB/.emacs.d	 ;;
-;; E-Mail			: kiteabpl@outlook.com								 ;;
+;;                                                   ;;
+;; Repository: https://github.com/KiteAB/.emacs.d    ;;
+;; Author: KiteAB <https://github.com/KiteAB>        ;;
+;; E-Mail: <kiteabpl@outlook.com>                    ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;; Automatic Optimization
@@ -16,7 +16,7 @@
 (setq inhibit-compacting-font-caches nil)
 (setq file-name-handler-alist nil)
 (run-with-idle-timer 5 nil (lambda ()
-														 (setq gc-cons-threshold gc-cons-threshold-original)
+                             (setq gc-cons-threshold gc-cons-threshold-original)
                              (setq file-name-handler-alist file-name-handler-alist-original)
                              (makunbound 'gc-cons-threshold-original)
                              (makunbound 'file-name-handler-alist-original)))
@@ -37,8 +37,8 @@
 
 ;;; Display Startup Time
 (add-hook 'emacs-startup-hook (lambda ()
-																(message "Emacs ready in %s with %d garbage collections."
-																				 (format "%.2f seconds"
-																								 (float-time
-																									(time-subtract after-init-time before-init-time)))
-																				 gcs-done)))
+                                (message "Emacs ready in %s with %d garbage collections."
+                                         (format "%.2f seconds"
+                                                 (float-time
+                                                  (time-subtract after-init-time before-init-time)))
+                                         gcs-done)))

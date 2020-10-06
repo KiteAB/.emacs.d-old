@@ -5,16 +5,16 @@
 (show-paren-mode t) ; Highlight the ()
 (electric-pair-mode t) ; Auto complete the ()
 (setq electric-pair-pairs
-			'((?\" . ?\")
-  			(?\( . ?\))
-				(?\< . ?\>)
-				(?\{ . ?\}))) ; Set the electric-pair-mode's pair keywords
+      '((?\" . ?\")
+        (?\( . ?\))
+        (?\< . ?\>)
+        (?\{ . ?\}))) ; Set the electric-pair-mode's pair keywords
 (setq make-backup-files nil ; Don't let Emacs make up backup file
       create-lockfiles nil ;Don't make lockfile
       auto-save-default nil ; Don't auto save the file
       )
 (setq initial-scratch-message
-			";; KiteAB's Emacs
+      ";; KiteAB's Emacs
 ;; This is the scratch buffer for startup page and test Emacs Lisp code
 
 ")

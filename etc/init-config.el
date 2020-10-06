@@ -23,12 +23,12 @@
 (require 'init-tools)
 ;;; GitHub (Markdown Preview)
 (if (file-exists-p "~/.emacs.d/token.el")
-		(progn
-			(load-file "~/.emacs.d/token.el")
-			(require 'gh-token))
-	(switch-to-buffer "*Warning*")
-	(insert "token.el not found. Please check it or ignore this message at init-config.el")
-	(switch-to-buffer-other-window "*Warning*"))
+    (progn
+      (load-file "~/.emacs.d/token.el")
+      (require 'gh-token))
+  (switch-to-buffer "*Warning*")
+  (insert "token.el not found. Please check it or ignore this message at init-config.el")
+  (switch-to-buffer-other-window "*Warning*"))
 ;;; Basic Things
 (require 'init-basic)
 ;;; Enable Disbaled command
