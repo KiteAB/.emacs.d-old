@@ -38,12 +38,11 @@
         lsp-enable-snippet nil
         lsp-prefer-flymake :none))
 
-;;; Paredit Mode
-(use-package paredit
+;;; Lispy
+(use-package lispy
   :ensure t
   :defer 1
-  :hook ((lisp-mode-hook emacs-lisp-mode-hook eshell-mode-hook lisp-interaction-mode-hook) . paredit-mode)
-  :bind (("C-' f" . paredit-focus-on-defun)))
+  :hook ((lisp-mode-hook emacs-lisp-mode-hook eshell-mode-hook lisp-interaction-mode-hook) . lispy-mode))
 
 ;;; Dap Mode
 (use-package dap-mode
