@@ -10,6 +10,7 @@
   * [[#shortcuts][Shortcuts]]
   * [[#token][Token]]
   * [[#screenshots][Screenshots]]
+  * [[#contributors][Contributors]]
 
 ** Dependencies
    You need some dependencies at below:
@@ -65,12 +66,12 @@
    - ~touch ~/.emacs.d/token.el~
    - Edit the ~token.el~ file and add somethings below:
    #+begin_src emacs-lisp
-     (setq eaf-grip-token "yourtoken")
+     (setq eaf-grip-token "yourghtoken")
      (provide 'gh-token)
    #+end_src
    And go to the [[https://github.com/settings/tokens/new?scopes=][GitHub Personal access token site]] to create your personal token.
 
-   Then replace ~yourtoken~ to your personal token.
+   Then replace ~yourghtoken~ to your personal token.
 
 ** Screenshots
    [[./screenshots/dark.png]]
@@ -78,3 +79,11 @@
    [[./screenshots/light.png]]
 
    *Note:* You need to go to [[https://www.latlong.net][LatLong]] and replace latitude & longitude at ~init-packages.el~!
+
+** Contributors
+   - *[[https://github.com/KiteAB][David Zhang]]*: The original creator of this repository.
+   - *[[https://github.com/JimMoen][JimMoen]]*: Cleaned up and improved the codes, See [[https://github.com/KiteAB/.emacs.d/pull/1][#1]] for details.
+   - *[[https://github.com/SpringHan][SpringHan]]*: Codes part provided, One of my Emacs guides.
+   - *[[https://github.com/EvanMeek][EvanMeek]]*: Codes part provided, One of my Emacs guides.
+   - *[[https://github.com/manateelazycat][Andy Stewart]]*: Multiple packages provided, One of my Emacs guides.
+   - *[[https://github.com/redguardtoo][Chen Bin]]*: Encouragement and support provided, One of my Emacs guides.
