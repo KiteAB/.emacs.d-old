@@ -3,6 +3,8 @@
 
   I'm new in Emacs, welcome to submit an issue or a pull request.
 
+  You can find the Emacs Guides at [[https://github.com/KitPixel/emacs-guides][this repository]].
+
   * [[#dependencies][Dependencies]]
   * [[#installation][Installation]]
     - [[#update-site-lisp][Update Site Lisp]]
