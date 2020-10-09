@@ -17,11 +17,6 @@
   (load-file "~/.emacs.d/site-lisp/company-english-helper/company-english-helper-data.el")
   :bind (("C-' C-l s" . company-english-helper-search)))
 
-;;; Awesome Shell
-(use-package aweshell
-  :defer 1
-  :load-path "~/.emacs.d/site-lisp/aweshell")
-
 ;;; VTerm
 (use-package vterm
   :ensure t
@@ -304,5 +299,10 @@
   (set-face-attribute 'whitespace-tab      nil :foreground "#444444" :background "#686868")
   (set-face-attribute 'whitespace-empty    nil :foreground "#cd8c95" :background "#8b5f65")
   (set-face-attribute 'whitespace-trailing nil :foreground "#79cdcd" :background "#668b8b"))
+
+;;; Perspective
+(use-package perspective
+  :ensure t
+  :config)
 
 (provide 'init-tools)
