@@ -211,7 +211,7 @@
 
 ;;; Command Log
 (use-package command-log-mode
-  :ensure nil
+  :ensure t
   :defer 1
   :config
   (defun kiteab/open-or-close-command-log-mode ()
