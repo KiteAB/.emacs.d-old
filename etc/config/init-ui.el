@@ -24,12 +24,8 @@
       kiteab/font-style "Regular"
       kiteab/font-size 22)
 (if (fontp (font-spec
-            ;; :name "Fira Code Nerd Font"
-            ;; :style "Retina"
             :name kiteab/font-name
             :style kiteab/font-style
-            ;; :name "Sarasa Mono SC"
-            ;; :style "Regular"
             :size kiteab/font-size))
     (progn
       (set-face-attribute 'default nil
