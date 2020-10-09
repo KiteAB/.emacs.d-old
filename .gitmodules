@@ -13,9 +13,6 @@
 [submodule "site-lisp/lazycat-theme"]
 	path = site-lisp/lazycat-theme
 	url = https://github.com/manateelazycat/lazycat-theme
-[submodule "site-lisp/aweshell"]
-	path = site-lisp/aweshell
-	url = https://github.com/manateelazycat/aweshell
 [submodule "doc/emacs-document"]
 	path = doc/emacs-document
 	url = https://github.com/lujun9972/emacs-document
