@@ -70,10 +70,4 @@
   :hook (org-mode-hook . (lambda () (org-bullets-mode t)))
   :custom (org-bullets-bullet-list '("☰" "☷" "✿" "☭")))
 
-;;; Toc Org
-(use-package toc-org
-  :ensure t
-  :hook (org-mode-hook . toc-org-mode)
-  :bind (("C-' C-t" . toc-org-insert-toc)))
-
 (provide 'init-org)
