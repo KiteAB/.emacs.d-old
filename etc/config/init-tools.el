@@ -25,8 +25,8 @@
 ;;; VTerm
 (use-package vterm
   :ensure t
+  :disabled
   :defer 1
-  :bind (("C-' C-t" . open-vterm))
   :config
   (define-key vterm-mode-map (kbd "C-c p") 'previous-buffer)
   (define-key vterm-mode-map (kbd "C-c n") 'next-buffer))

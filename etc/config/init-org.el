@@ -64,9 +64,16 @@
 (setq org-image-actual-width '(300))
 (setq org-export-with-sub-superscripts nil)
 
+;;; Org Bullets
 (use-package org-bullets
   :ensure t
   :hook (org-mode-hook . (lambda () (org-bullets-mode t)))
   :custom (org-bullets-bullet-list '("☰" "☷" "✿" "☭")))
+
+;;; Toc Org
+(use-package toc-org
+  :ensure t
+  :hook (org-mode-hook . toc-org-mode)
+  :bind (("C-' C-t" . toc-org-insert-toc)))
 
 (provide 'init-org)
