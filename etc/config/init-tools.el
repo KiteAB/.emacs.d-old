@@ -300,9 +300,4 @@
   (set-face-attribute 'whitespace-empty    nil :foreground "#cd8c95" :background "#8b5f65")
   (set-face-attribute 'whitespace-trailing nil :foreground "#79cdcd" :background "#668b8b"))
 
-;;; Perspective
-(use-package perspective
-  :ensure t
-  :config)
-
 (provide 'init-tools)
