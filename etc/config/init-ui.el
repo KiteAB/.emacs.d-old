@@ -49,7 +49,10 @@
   :load-path "~/.emacs.d/site-lisp/awesome-tray"
   :hook (after-init-hook . awesome-tray-mode)
   :config
-  (setq awesome-tray-active-modules '("git" "location" "mode-name" "parent-dir" "buffer-name" "date")))
+  ;;; Custom Modules
+  (add-to-list 'awesome-tray-module-alist '("persp-current-name" . (persp-current-name)))
+  ;;; Set Modules
+  (setq awesome-tray-active-modules '("git" "persp-current-name" "location" "mode-name" "parent-dir" "buffer-name" "date")))
 
 ;;; Lazycat Themes
 (use-package lazycat-theme
