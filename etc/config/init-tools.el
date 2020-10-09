@@ -285,7 +285,7 @@
 ;;; WhiteSpace
 (use-package whitespace
   :ensure nil
-  :defer t
+  :defer 1
   :hook
   ('after-init . 'global-whitespace-mode)
   :config
