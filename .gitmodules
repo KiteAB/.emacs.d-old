@@ -16,3 +16,6 @@
 [submodule "doc/emacs-document"]
 	path = doc/emacs-document
 	url = https://github.com/lujun9972/emacs-document
+[submodule "site-lisp/hydra-posframe"]
+	path = site-lisp/hydra-posframe
+	url = https://github.com/Ladicle/hydra-posframe
