@@ -15,6 +15,7 @@
 
 (setq org-log-mode 'note) ; Set the log mode type
 (setq org-src-fontify-natively t)
+(setq org-startup-folded nil) ; Don't fold contents by normal
 (setq org-todo-keywords
       '((sequence "TODO(t)" "STUDY(s)" "WAIT(w@/!)" "|" "DONE(d@/!)" "CANCEL(c@/!)")
         (sequence "BUG(b)" "KNOWN(k)" "|" "FINISHED(f@/!)"))) ; Set the todo's keywords
