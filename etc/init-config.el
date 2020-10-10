@@ -7,6 +7,8 @@
 (require 'init-functions)
 ;;; Keybindings
 (require 'init-keybindings)
+;;; Hydra
+(require 'init-hydra)
 ;;; Other Mode Settings
 (require 'init-modes)
 ;;; Macros
