@@ -8,7 +8,9 @@
   (eaf-setq eaf-browser-remember-history "true")
   (eaf-setq eaf-browser-default-zoom "1.5")
   (defalias 'browse-web #'eaf-open-browser)
-  (eaf-setq eaf-browser-dark-mode "true"))
+  (if (and (< 18 (car (circadian-now-time))) (> 8 (car (circadian-now-time))))
+      (eaf-setq eaf-browser-dark-mode "true")
+    (eaf-setq eaf-browser-dark-mode "false")))
 
 ;;; Company English Helper
 (use-package company-english-helper
@@ -32,7 +34,6 @@
   :defer 1
   :bind (("M-x" . counsel-M-x)
          ("C-x C-f" . counsel-find-file)
-         ("C-q a" . counsel-linux-app)
          ("C-x b" . counsel-switch-buffer)))
 
 ;;; Ivy
@@ -316,8 +317,8 @@
   (use-package pyim-basedict
     :ensure t
     :config (pyim-basedict-enable))
-  (setq-default default-input-method "pyim")
-  (setq pyim-default-scheme 'quanpin
+  (setq default-input-method 'pyim
+        pyim-default-scheme 'quanpin
         pyim-page-tooltip 'posframe
         pyim-page-length 5
         pyim-page-style 'one-line
