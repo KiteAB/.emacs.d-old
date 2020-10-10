@@ -310,6 +310,7 @@
 ;;; PYIM
 (use-package pyim
   :ensure t
+  :defer 1
   :bind (("C-SPC" . toggle-input-method))
   :config
   (use-package pyim-basedict
