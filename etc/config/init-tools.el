@@ -281,8 +281,7 @@
 (use-package whitespace
   :ensure nil
   :defer 1
-  :hook
-  ('after-init . 'global-whitespace-mode)
+  :hook (after-init-hook . global-whitespace-mode)
   :config
   (setq whitespace-style
         '(face tabs                     tab-mark
@@ -299,5 +298,12 @@
   (set-face-attribute 'whitespace-tab      nil :foreground "#444444" :background "#686868")
   (set-face-attribute 'whitespace-empty    nil :foreground "#cd8c95" :background "#8b5f65")
   (set-face-attribute 'whitespace-trailing nil :foreground "#79cdcd" :background "#668b8b"))
+
+;;; Rotate Window
+(use-package rotate
+  :ensure t
+  :defer 1
+  :bind (("C-' l r" . rotate-window)
+         ("C-' l l" . rotate-layout)))
 
 (provide 'init-tools)
