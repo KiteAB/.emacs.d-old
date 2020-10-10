@@ -37,6 +37,7 @@
 (global-set-key (kbd "C-q R") 'query-replace)                          ; Replace
 (global-set-key (kbd "C-q C-s") 'kiteab/search-engine)                 ; Open search engine by eaf-browser
 (global-set-key (kbd "C-q E") 'kiteab/edit-snippets)
+(global-set-key (kbd "C-q l") 'goto-line)
 (global-set-key (kbd "C-= SPC") 'kiteab/change-indent-type)
 
 ;; Key Macros
