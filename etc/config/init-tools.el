@@ -314,8 +314,8 @@
   (use-package pyim-basedict
     :ensure t
     :config (pyim-basedict-enable))
-  (setq default-input-method "pyim"
-        pyim-default-scheme 'quanpin
+  (setq-default default-input-method "pyim")
+  (setq pyim-default-scheme 'quanpin
         pyim-page-tooltip 'posframe
         pyim-page-length 5
         pyim-page-style 'one-line
