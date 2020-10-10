@@ -39,10 +39,4 @@
       scroll-preserve-screen-position 'always) ; Scroll
 (setq mouse-yank-at-point nil)
 
-(add-hook 'markdown-mode-hook #'markdown-table-keymap) ; Add the markdown table align keymap
-(add-hook 'erc-mode-hook #'(lambda () (display-line-numbers-mode -1))) ; Disable line numbers in ERC
-(add-hook 'magit-mode-hook #'(lambda () (define-key magit-mode-map "q" 'kiteab/kill-magit))) ; Clear buffer about Magit
-(add-hook 'emacs-lisp-mode-hook #'(lambda () (outline-minor-mode t)))
-(add-hook 'web-mode-hook #'(lambda () (outline-minor-mode t)))
-
 (provide 'init-basic)
