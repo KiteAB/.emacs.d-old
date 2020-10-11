@@ -191,4 +191,10 @@
       ("delete"
        (delete-file (concat path snippet-name))))))
 
+(defun kiteab/provide-feature-name ()
+  "Provide feature name automaticly."
+  (interactive)
+  (if (string= major-mode "emacs-lisp-mode")
+      (insert (format "(provide '%s)" (car (split-string (buffer-name) ".el"))))))
+
 (provide 'init-functions)

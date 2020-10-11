@@ -3,7 +3,6 @@
 (define-prefix-command 'more-functions)
 (global-set-key (kbd "C-q") 'ctl-z-map)                                ; Set the ctl-z-map
 (global-set-key (kbd "C-=") 'more-functions)
-(global-set-key (kbd "C-q p") 'package-list-packages)                  ; Open the package interface
 (global-set-key (kbd "C-q C-b") 'buffer-menu)                          ; Open the buffer menu
 (global-set-key (kbd "C-q C-i") 'kiteab/open-erc)                      ; Open the erc
 (global-set-key (kbd "C-q C-p") 'previous-buffer)                      ; Goto previous buffer
@@ -38,6 +37,7 @@
 (global-set-key (kbd "C-q C-s") 'kiteab/search-engine)                 ; Open search engine by eaf-browser
 (global-set-key (kbd "C-q E") 'kiteab/edit-snippets)
 (global-set-key (kbd "C-q l") 'goto-line)
+(global-set-key (kbd "C-q p") 'kiteab/provide-feature-name)
 (global-set-key (kbd "C-= SPC") 'kiteab/change-indent-type)
 
 ;; Key Macros
