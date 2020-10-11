@@ -8,7 +8,11 @@
   (eaf-setq eaf-browser-remember-history "true")
   (eaf-setq eaf-browser-default-zoom "1.5")
   (defalias 'browse-web #'eaf-open-browser)
-  (if (and (< (car (circadian-sunrise)) (car (circadian-now-time))) (> (car (circadian-sunset)) (car (circadian-now-time))))
+  (if (and
+       (< (car (circadian-sunrise))
+          (car (circadian-now-time)))
+       (> (car (circadian-sunset))
+          (car (circadian-now-time))))
       (eaf-setq eaf-browser-dark-mode "false")
     (eaf-setq eaf-browser-dark-mode "true")))
 
