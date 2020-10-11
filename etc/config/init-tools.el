@@ -64,7 +64,7 @@
   :ensure t
   :defer 1
   :hook (after-init-hook . which-key-mode)
-  :config (setq which-key-idle-delay 0.01))
+  :config (setq which-key-idle-delay 0.65))
 
 ;;; Ace Window
 (use-package ace-window
