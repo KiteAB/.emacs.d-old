@@ -27,7 +27,6 @@
   (let ((default-directory (file-name-as-directory dir)))
     (add-to-list 'load-path dir)
     (normal-top-level-add-subdirs-to-load-path)))
-
 (let ((gc-cons-threshold most-positive-fixnum)
       (file-name-handler-alist nil))
   (add-subdirs-to-load-path "~/.emacs.d/etc/"))
@@ -37,7 +36,7 @@
 
 ;;; Display Startup Time
 (add-hook 'emacs-startup-hook (lambda ()
-                                (message "Emacs ready in %s with %d garbage collections."
+                                (message "Emacs started in %s with %d garbage collections."
                                          (format "%.2f seconds"
                                                  (float-time
                                                   (time-subtract after-init-time before-init-time)))
