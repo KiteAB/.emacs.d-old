@@ -1,8 +1,6 @@
 ;;; This file is used for Hydra configuration
 ;; <TODO(KiteAB)> https://github.com/EvanMeek/.emacs.d/blob/master/etc/config/init-keybind.el [Sat Oct 10 18:59:41 2020]
 (define-prefix-command 'leader-key)
-;(which-key-add-key-based-replacements
-;  )
 (global-set-key (kbd "M-SPC") 'leader-key)
 
 (use-package hydra :ensure t)
