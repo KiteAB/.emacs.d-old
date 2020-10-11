@@ -287,7 +287,7 @@
 (use-package whitespace
   :ensure nil
   :defer 1
-  :hook (after-init-hook . global-whitespace-mode)
+  :hook (prog-mode-hook . whitespace-mode)
   :config
   (setq whitespace-style
         '(face tabs                     tab-mark
