@@ -74,7 +74,7 @@
   (setq circadian-themes '((:sunrise . lazycat-light)
                            (:sunset . lazycat-dark)))
   (circadian-setup)
-  (setq-default cursor-type '(bar . 1)))
+  (setq-default cursor-type '(bar . 2)))
 
 ;;; Dashboard
 (use-package dashboard
