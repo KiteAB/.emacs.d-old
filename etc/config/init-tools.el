@@ -360,6 +360,7 @@
 ;;; Helpful
 (use-package helpful
   :ensure t
+  :disabled
   :defer 1
   :bind (("C-h f" . helpful-function)
          ("C-h v" . helpful-variable)
