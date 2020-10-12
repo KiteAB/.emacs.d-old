@@ -9,7 +9,6 @@
 (progn
   (setq display-line-numbers-type 'relative) ; Relative numbers for display numbers mode
   (global-display-line-numbers-mode t)) ; Set the line numbers
-(global-hl-line-mode t) ; Highlight the current line
 (toggle-frame-fullscreen) ; Set fullscreen
 (setq inhibit-splash-screen t) ; Close the start flash
 
