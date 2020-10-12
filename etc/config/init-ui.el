@@ -48,8 +48,15 @@
   :load-path "~/.emacs.d/site-lisp/awesome-tray"
   :hook (after-init-hook . awesome-tray-mode)
   :config
-  ;;; Set Modules
-  (setq awesome-tray-active-modules '("git" "location" "mode-name" "parent-dir" "buffer-name" "date")))
+  ;; Custom Modules
+  (defun kiteab/current-input-method ()
+    "Display current input method at awesome tray."
+    (if (eq current-input-method nil)
+        (concat "EN")
+      (concat "ZH")))
+  (add-to-list 'awesome-tray-module-alist '("current-input-method" . (kiteab/current-input-method kiteab/current-input-method-face)))
+  ;; Set Modules
+  (setq awesome-tray-active-modules '("git" "location" "current-input-method" "mode-name" "parent-dir" "buffer-name" "date")))
 
 ;;; Lazycat Themes
 (use-package lazycat-theme
