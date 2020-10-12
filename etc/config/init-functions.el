@@ -20,15 +20,6 @@
           (set-window-buffer current-window (window-buffer))
           (set-window-buffer (get-buffer-window) current-window-buffer))))) ; Move the window
 
-(defun open-vterm (&optional dir)
-  "Open the vterm by DIR"
-  (interactive "DInput the directory: ")
-  (find-file dir)
-  (let ((current-buffer-name (buffer-name)))
-    (vterm)
-    (display-line-numbers-mode -1)
-    (kill-buffer current-buffer-name)))
-
 (defun set-alpha (var)
   "Set the backgroud alpha by VAR."
   (interactive "sAlpha or not(y-or-n): ")
@@ -42,28 +33,6 @@
   (if (not buffer-file-name)
       (write-file (concat "/sudo:root@localhost:" (ido-read-file-name "File:")))
     (write-file (concat "/sudo:root@localhost:" buffer-file-name))))
-
-(defun markdown-table-keymap ()
-  "Add table map in markdown mode."
-  (define-key markdown-mode-map (kbd "C-c C-c TAB") 'markdown-table-align))
-
-(defun tab-bar-new-with-buffer (buffer-name)
-  "Create a new tab then select a buffer."
-  (interactive "bBuffer Name: ")
-  (tab-bar-new-tab)
-  (switch-to-buffer buffer-name))
-
-(defun kiteab/tab-bar-new-scratch ()
-  "Create a new tab then select the *Scratch* buffer."
-  (interactive)
-  (tab-bar-new-tab)
-  (switch-to-buffer "*scratch*"))
-
-(defun kiteab/tab-bar-close-tab-kill-buffer ()
-  "Kill the current buffer and close the current tab."
-  (interactive)
-  (kill-buffer)
-  (tab-bar-close-tab))
 
 (defun kiteab/copy-license (license-name)
   "Copy the license file to current directory."
@@ -86,11 +55,6 @@
   (unless (get-buffer "*scratch*")
     (insert initial-scratch-message)
     (message "Open the scratch action done.")))
-
-(defun kiteab/use-space-indent ()
-  "Use the space indent in org-mode."
-  (interactive)
-  (setq indent-tabs-mode nil))
 
 (defun kiteab/touch-not-alpha ()
   "Make the not-alpha file."
@@ -127,13 +91,6 @@
               (insert (format "%s\n" user-name))
               (insert (format "%s" user-password))))
           (erc :nick user-name :password user-password))))))
-
-(defun kiteab/downcase-word-first-letter ()
-  "Downcase the first letter in the word at point."
-  (interactive)
-  (let ((letter (cl-subseq (thing-at-point 'word t) 0 1)))
-    (delete-char 1)
-    (insert (downcase letter))))
 
 (defun kiteab/add-todo-in-code ()
   "Add todo content in code."
