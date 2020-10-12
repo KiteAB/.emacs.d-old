@@ -31,9 +31,6 @@
 (global-set-key (kbd "C-q M-p") 'list-processes)
 (global-set-key (kbd "C-q g") 'goto-line)
 
-;; Other
-(define-key markdown-mode-map (kbd "C-c C-c TAB") 'markdown-table-align)
-
 ;; Key Macros
 (global-set-key (kbd "C-q C-k i") 'insert-placeholder)  ; Insert Placeholder
 (global-set-key (kbd "C-q C-k r") 'replace-placeholder) ; Replace Placeholder

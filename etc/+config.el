@@ -1,4 +1,4 @@
-;;;; This file is used for the useful functions
+;;; This file is used for the functions
 (defun open-etc-config ()
   "Open the config file in the etc directory."
   (interactive)
@@ -154,4 +154,4 @@
   (if (string= major-mode "emacs-lisp-mode")
       (insert (format "(provide '%s)" (car (split-string (buffer-name) ".el"))))))
 
-(provide 'init-functions)
+(provide '+config)

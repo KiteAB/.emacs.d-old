@@ -4,7 +4,7 @@
 ;;; User Interface
 (require 'init-ui)
 ;;; Functions
-(require 'init-functions)
+(require '+config)
 ;;; Keybindings
 (require 'init-keybindings)
 ;;; Hydra
