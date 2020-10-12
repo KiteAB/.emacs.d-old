@@ -17,8 +17,8 @@
 ;;  :height 160
 ;;  :family "Fira Code Nerd Font"
 ;;  :weight 'normal
-;;  :width 'normal)
-                                        ; Set the font size
+;;  :width 'normal) ; Set the font size
+
 (setq kiteab/font-name "Sarasa Mono Slab SC Semibold"
       kiteab/font-style "Regular"
       kiteab/font-size 22)

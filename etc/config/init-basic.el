@@ -2,8 +2,8 @@
 ;;; Functions
 (fset 'yes-or-no-p 'y-or-n-p) ; Change the asking's answer way
 (delete-selection-mode t) ; Delete the seleceted text
-(show-paren-mode t) ; Highlight the ()
-(electric-pair-mode t) ; Auto complete the ()
+(show-paren-mode t) ; Highlight the "()"
+(electric-pair-mode t) ; Auto complete the "()"
 (setq electric-pair-pairs
       '((?\" . ?\")
         (?\( . ?\))
