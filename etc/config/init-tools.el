@@ -23,6 +23,19 @@
   (load-file "~/.emacs.d/site-lisp/company-english-helper/company-english-helper-data.el")
   :bind (("C-' C-l s" . company-english-helper-search)))
 
+;;; Auto Save
+(use-package auto-save
+  :load-path "~/.emacs.d/site-lisp/auto-save"
+  :config
+  (auto-save-enable)
+  (setq auto-save-silent t
+        auto-save-delete-trailing-whitespace t)
+  (setq auto-save-disable-predicates
+      '((lambda ()
+      (string-suffix-p
+      "gpg"
+      (file-name-extension (buffer-name)) t)))))
+
 ;;; VTerm
 (use-package vterm
   :ensure t

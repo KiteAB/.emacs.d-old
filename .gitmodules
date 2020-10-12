@@ -19,3 +19,6 @@
 [submodule "site-lisp/hydra-posframe"]
 	path = site-lisp/hydra-posframe
 	url = https://github.com/Ladicle/hydra-posframe
+[submodule "site-lisp/auto-save"]
+	path = site-lisp/auto-save
+	url = https://github.com/manateelazycat/auto-save
