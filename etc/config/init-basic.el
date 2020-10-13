@@ -1,9 +1,23 @@
 ;;;; This file is used for set the basic things
 ;;; Functions
 (fset 'yes-or-no-p 'y-or-n-p) ; Change the asking's answer way
+(add-hook 'after-change-major-mode-hook (lambda ()
+                                          (modify-syntax-entry ?_ "w")))
+(add-hook 'after-change-major-mode-hook (lambda ()
+                                          (modify-syntax-entry ?- "w")))
 (delete-selection-mode t) ; Delete the seleceted text
 (show-paren-mode t) ; Highlight the "()"
 (electric-pair-mode t) ; Auto complete the "()"
+
+;; UTF-8
+(set-charset-priority 'unicode)
+(setq locale-coding-system   'utf-8)    ; pretty
+(set-terminal-coding-system  'utf-8)    ; pretty
+(set-keyboard-coding-system  'utf-8)    ; pretty
+(set-selection-coding-system 'utf-8)    ; please
+(prefer-coding-system        'utf-8)    ; with sugar on top
+(setq default-process-coding-system '(utf-8-unix . utf-8-unix))
+
 (setq electric-pair-pairs
       '((?\" . ?\")
         (?\( . ?\))
@@ -27,8 +41,10 @@
 (setq backward-delete-char-untabify-method nil) ; Delete the tab by once
 (setq user-emacs-directory "~/.emacs.d/var") ;;; The Cache Directory
 (setq user-init-file "~/.emacs.d/var/user-init.el")
+(setq load-prefer-newer t)
 (save-place-mode t) ; Save the point position
 (setq ring-bell-function 'ignore blink-cursor-mode nil) ; Disable Infos
+(setq inhibit-compacting-font-caches nil) ; Disable font cache
 (setq scroll-step 2
       scroll-margin 2
       hscroll-step 2
