@@ -419,4 +419,23 @@
         pyim-enable-shortcode nil)
   (pyim-isearch-mode t))
 
+;;; Telega
+(use-package telega
+  :ensure t
+  :commands telega
+  :defer 1
+  :init (setq telega-proxies
+              '((:server "localhost"
+                         :port 1089
+                         :enable t
+                         :type (:@type "proxyTypeSocks5"
+                                       ))))
+  (setq telega-chat-fill-column 65))
+;;; Child Package
+(use-package emojify
+  :ensure t
+  :defer 1
+  :custom (emojify-emojis-dir "~/.emacs.d/var/emojis")
+  :hook telega-mode)
+
 (provide 'init-tools)
