@@ -59,7 +59,7 @@
 ** Shortcuts
    I binded the ~C-q~ key to be the user defined key.
 
-   ~C-q~ key bind the functions in ~etc/init-functions.el~
+   ~C-q~ key bind the functions in ~etc/+config.el~
 
    You can view this file and change somethings.
 
