@@ -3,10 +3,10 @@
 (require '+config)
 ;;; Package Settings
 (require 'init-packages)
-;;; Basic Things
-(require 'init-basic)
 ;;; User Interface
 (require 'init-ui)
+;;; Basic Things
+(require 'init-basic)
 ;;; Keybindings
 (require 'init-keybindings)
 ;;; Tools Settings
