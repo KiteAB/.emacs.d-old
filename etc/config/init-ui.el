@@ -59,8 +59,7 @@
   (setq awesome-tray-active-modules '("git" "location" "current-input-method" "mode-name" "parent-dir" "buffer-name" "date")))
 
 ;;; Lazycat Themes
-(use-package lazycat-theme
-  :load-path "~/.emacs.d/site-lisp/lazycat-theme")
+(use-package lazycat-theme :load-path "~/.emacs.d/site-lisp/lazycat-theme")
 
 ;;; Spacemacs Themes
 (use-package spacemacs-common
@@ -81,6 +80,12 @@
                            (:sunset . lazycat-dark)))
   (circadian-setup)
   (setq-default cursor-type '(bar . 2)))
+
+;;; Valign
+(use-package valign
+  :load-path "~/.emacs.d/site-lisp/valign"
+  :defer 1
+  :hook (org-mode-hook . valign-mode))
 
 ;;; Dashboard
 (use-package dashboard

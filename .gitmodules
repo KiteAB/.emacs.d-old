@@ -22,3 +22,6 @@
 [submodule "site-lisp/auto-save"]
 	path = site-lisp/auto-save
 	url = https://github.com/manateelazycat/auto-save
+[submodule "site-lisp/valign"]
+	path = site-lisp/valign
+	url = https://github.com/casouri/valign
