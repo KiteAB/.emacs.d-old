@@ -51,9 +51,11 @@
   ;; Custom Modules
   (defun kiteab/current-input-method ()
     "Display current input method at awesome tray."
+    (setq kiteab/current-input-method-en "EN")
+    (setq kiteab/current-input-method-zh "ZH")
     (if (eq current-input-method nil)
-        (concat "EN")
-      (concat "ZH")))
+        (concat kiteab/current-input-method-en)
+      (concat kiteab/current-input-method-zh)))
   (add-to-list 'awesome-tray-module-alist '("current-input-method" . (kiteab/current-input-method kiteab/current-input-method-face)))
   ;; Set Modules
   (setq awesome-tray-active-modules '("git" "location" "current-input-method" "mode-name" "parent-dir" "buffer-name" "date")))
