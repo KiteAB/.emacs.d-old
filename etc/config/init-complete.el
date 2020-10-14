@@ -42,7 +42,7 @@
 (use-package lispy
   :ensure t
   :defer 1
-  :hook ((lisp-mode-hook emacs-lisp-mode-hook eshell-mode-hook lisp-interaction-mode-hook) . lispy-mode))
+  :hook ((lisp-mode-hook emacs-lisp-mode-hook lisp-interaction-mode-hook) . lispy-mode))
 
 ;;; Dap Mode
 (use-package dap-mode
