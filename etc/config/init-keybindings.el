@@ -16,6 +16,7 @@
 (global-set-key (kbd "C-q i") 'kiteab/change-indent-type)
 (global-set-key (kbd "C-q C-e s") 'kiteab/edit-snippets)
 (global-set-key (kbd "C-q p") 'kiteab/provide-feature-name)
+(global-set-key (kbd "C-q I") 'kiteab/indent-one-time)
 
 ;;; Built-in Functions -> Keybindings
 (global-set-key (kbd "C-q C-p") 'previous-buffer)

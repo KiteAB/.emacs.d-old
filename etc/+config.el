@@ -154,4 +154,13 @@
   (if (string= major-mode "emacs-lisp-mode")
       (insert (format "(provide '%s)" (car (split-string (buffer-name) ".el"))))))
 
+(defun kiteab/indent-one-time ()
+  "Indent one time."
+  (interactive)
+  (if (or (eq major-mode 'lisp-interaction-mode) (eq major-mode 'emacs-lisp-mode))
+      (progn
+        (beginning-of-line)
+        (indent-for-tab-command)
+        (next-line))))
+
 (provide '+config)
