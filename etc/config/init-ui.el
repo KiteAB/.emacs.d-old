@@ -56,6 +56,13 @@
     (if (eq current-input-method nil)
         (concat kiteab/current-input-method-en)
       (concat kiteab/current-input-method-zh)))
+  (defface kiteab/current-input-method-face
+    '((((background light))
+       :foreground "#cc2444" :bold t)
+      (t
+       :foreground "#ff2d55" :bold t))
+    "Git face."
+    :group 'awesome-tray)
   (add-to-list 'awesome-tray-module-alist '("current-input-method" . (kiteab/current-input-method kiteab/current-input-method-face)))
   ;; Set Modules
   (setq awesome-tray-active-modules '("git" "location" "current-input-method" "mode-name" "parent-dir" "buffer-name" "date")))

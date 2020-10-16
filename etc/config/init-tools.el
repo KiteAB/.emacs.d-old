@@ -417,7 +417,8 @@
         pyim-page-style 'one-line
         pyim-punctuation-translate-p '(no yes auto)
         pyim-enable-shortcode nil)
-  (pyim-isearch-mode t))
+  (pyim-isearch-mode t)
+  (message "PYIM started."))
 
 ;;; Telega
 (use-package telega
