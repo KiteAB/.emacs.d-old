@@ -43,7 +43,7 @@
 (setq user-init-file "~/.emacs.d/var/user-init.el")
 (setq load-prefer-newer t)
 (save-place-mode t) ; Save the point position
-(setq ring-bell-function 'ignore blink-cursor-mode nil) ; Disable Infos
+(setq ring-bell-function 'ignore) ; Disable Infos
 (setq inhibit-compacting-font-caches nil) ; Disable font cache
 (setq scroll-step 2
       scroll-margin 2
