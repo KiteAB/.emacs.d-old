@@ -15,10 +15,10 @@
 (require 'init-complete)
 ;;; Program Settings
 (require 'init-prog)
+;;; Emacs Lisp Mode
+(require 'init-emacs-lisp)
 ;;; Org Mode
 (require 'init-org)
-;;; Hydra
-(require 'init-hydra)
 ;;; Other Mode Settings
 (require 'init-modes)
 ;;; Macros
