@@ -1,24 +1,19 @@
 ;;;; This file is used for emacs UI
+;;; Basics
 (menu-bar-mode -1) ; Close the menu bar
 (tool-bar-mode -1) ; Close the tool bar
 (scroll-bar-mode -1) ; Close Scroll bar
 (tab-bar-mode -1) ; Set tab bar not display
-;; (display-battery-mode t) ; Display battery status
 (global-hl-line-mode t) ; Highlight current line
 (setq tab-bar-show nil) ; Always not display tab bar
-(progn
-  (setq display-line-numbers-type 'relative) ; Relative numbers for display numbers mode
-  (global-display-line-numbers-mode t)) ; Set the line numbers
+
+;;; Relative Line Numbers
+(setq display-line-numbers-type 'relative)
+(global-display-line-numbers-mode t)
 (toggle-frame-fullscreen) ; Set fullscreen
 (setq inhibit-splash-screen t) ; Close the startup screen
 
-;; (set-face-attribute
-;;  'default nil
-;;  :height 160
-;;  :family "Fira Code Nerd Font"
-;;  :weight 'normal
-;;  :width 'normal) ; Set the font size
-
+;;; Font
 (setq kiteab/font-name "Sarasa Mono Slab SC Semibold"
       kiteab/font-style "Regular"
       kiteab/font-size 22)
@@ -38,10 +33,11 @@
                                :size kiteab/font-size)))
   (message "Can't find %s font. You can install it or ignore this message at init-ui.el" kiteab/font-name))
 
-;; Set backgroup alpha
+;;; Background Alpha
 (unless (file-exists-p
          (expand-file-name (locate-user-emacs-file "not-alpha")))
   (set-frame-parameter nil 'alpha '(90 . 100)))
+
 
 ;;; Awesome Tray
 (use-package awesome-tray
