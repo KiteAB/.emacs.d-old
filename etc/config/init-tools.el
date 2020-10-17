@@ -103,11 +103,6 @@
          ("C-' DEL" . hungry-delete-backward))
   :hook ((emacs-lisp-mode-hook lisp-mode-hook) . hungry-delete-mode))
 
-;;; Magit
-(use-package magit
-  :ensure t
-  :bind (("C-' m" . magit-status)))
-
 ;;; Window Resize
 (use-package windresize
   :ensure t
@@ -228,12 +223,6 @@
   (set-face-foreground 'git-gutter:modified "#8CFF88")
   (set-face-foreground 'git-gutter:deleted "#FF2323"))
 
-;;; Diff Highlight
-(use-package diff-hl
-  :ensure t
-  :defer 1
-  :hook (prog-mode-hook . diff-hl-mode))
-
 ;;; Pacman in Emacs
 (use-package arch-packer :ensure t :defer 1)
 
@@ -242,12 +231,6 @@
   :ensure t
   :defer 1
   :bind (("C-' F" . figlet)))
-
-;;; Vc Message
-(use-package vc-msg
-  :ensure t
-  :defer 1
-  :bind (("C-' s" . vc-msg-show)))
 
 ;;; Dired - File Operations
 (use-package dired
