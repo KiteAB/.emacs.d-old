@@ -2,7 +2,8 @@
 ;;; Configuration of Function
 (require '+config)
 ;;; Package Settings
-(require 'init-packages)
+(require 'init-elpa)
+
 ;;; User Interface
 (require 'init-ui)
 ;;; Basic Things
@@ -17,6 +18,8 @@
 (require 'init-prog)
 ;;; Emacs Lisp Mode
 (require 'init-emacs-lisp)
+;;; Git
+(require 'init-git)
 ;;; Org Mode
 (require 'init-org)
 ;;; Other Mode Settings
