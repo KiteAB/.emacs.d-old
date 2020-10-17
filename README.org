@@ -25,6 +25,7 @@
    - The dependencies in [[https://github.com/manateelazycat/emacs-application-framework][Emacs Application Framework]]. (To use EAF)
    - The dependencies in [[https://github.com/loyalpartner/english-teacher.el][English Teacher]]. (To use English Teacher)
    - The dependencies in [[https://github.com/zevlg/telega.el][Telega]]. (To use Telega)
+   - ~ttf-symbola~ font. (Optional. Telega icons)
 
 ** Installation
    You need to install the dependencies and run command below:
