@@ -161,6 +161,7 @@
       (progn
         (beginning-of-line)
         (indent-for-tab-command)
-        (next-line))))
+        (next-line)))
+  (message "Not in lisp-interaction-mode or emacs-lisp-mode. Exiting."))
 
 (provide '+config)
