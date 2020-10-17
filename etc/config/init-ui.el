@@ -49,6 +49,7 @@
   :hook (after-init-hook . awesome-tray-mode)
   :config
   ;; Custom Modules
+                                        ; Current Input Method
   (defun kiteab/current-input-method ()
     "Display current input method at awesome tray."
     (setq kiteab/current-input-method-en "EN")
