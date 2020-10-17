@@ -1,7 +1,7 @@
 /*
 /*/
 !/.gitignore
-!/.gitsubmodules
+!/.gitmodules
 !/doc/
 !/etc/
 !/license/
