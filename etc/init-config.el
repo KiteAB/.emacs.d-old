@@ -10,6 +10,8 @@
 (require 'init-basic)
 ;;; Keybindings
 (require 'init-keybindings)
+;;; Ivy
+(require 'init-ivy)
 ;;; Tools Settings
 (require 'init-tools)
 ;;; Completion Settings
@@ -22,6 +24,8 @@
 (require 'init-git)
 ;;; Org Mode
 (require 'init-org)
+;;; Treemacs
+(require 'init-treemacs)
 ;;; Other Mode Settings
 (require 'init-modes)
 ;;; Macros
@@ -37,11 +41,6 @@
   (switch-to-buffer "*Warning*")
   (insert "token.el not found. Please check it or ignore this message at init-config.el")
   (switch-to-buffer-other-window "*Warning*"))
-
-;;; Enable Disbaled command
-(require 'novice)
-(require 'init-enable-disabled-commands)
-(enable-commands-init)
 
 ;;; Languages settings
 (require 'init-python)
