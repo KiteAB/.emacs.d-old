@@ -95,7 +95,7 @@
          ("C-<" . mc/mark-previous-like-this)
          ("M-m" . newline)))
 
-;;; Youdao Translate
+;;; Youdao Dictionary
 (use-package youdao-dictionary
   :ensure t
   :defer 1
