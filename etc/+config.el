@@ -151,8 +151,9 @@
 (defun kiteab/provide-feature-name ()
   "Provide feature name automaticly."
   (interactive)
-  (if (string= major-mode "emacs-lisp-mode")
-      (insert (format "(provide '%s)" (car (split-string (buffer-name) ".el"))))))
+  (if (eq major-mode 'emacs-lisp-mode)
+      (insert (format "(provide '%s)" (car (split-string (buffer-name) ".el"))))
+    (message "Not in emacs-lisp-mode. Exiting.")))
 
 (defun kiteab/indent-one-time ()
   "Indent one time."
@@ -161,7 +162,7 @@
       (progn
         (beginning-of-line)
         (indent-for-tab-command)
-        (next-line)))
-  (message "Not in lisp-interaction-mode or emacs-lisp-mode. Exiting."))
+        (next-line))
+    (message "Not in lisp-interaction-mode or emacs-lisp-mode. Exiting.")))
 
 (provide '+config)
