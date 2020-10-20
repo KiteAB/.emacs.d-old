@@ -146,7 +146,7 @@
 (use-package info-colors
   :ensure t
   :defer 1
-  :hook ('Info-selection-hook . 'info-colors-fontify-node))
+  :hook (Info-selection-hook . 'info-colors-fontify-node))
 
 ;;; NyanCat Mode
 (use-package nyan-mode
