@@ -28,7 +28,7 @@
       auto-save-default nil ; Don't auto save the file
       )
 (setq initial-scratch-message
-      ";; KiteAB's Emacs
+      ";; KiteAB Emacs
 ;; This is the scratch buffer for startup page and test Emacs Lisp code
 
 ")
