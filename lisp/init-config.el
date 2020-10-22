@@ -38,9 +38,9 @@
     (progn
       (load-file "~/.emacs.d/token.el")
       (require 'gh-token))
-  (switch-to-buffer "*Warning*")
-  (insert "token.el not found. Please check it or ignore this message at init-config.el")
-  (switch-to-buffer-other-window "*Warning*"))
+  (switch-to-buffer "*KiteAB Emacs*")
+  (insert "[KiteAB Emacs] token.el not found. Please check it or ignore this message at init-config.el")
+  (switch-to-buffer-other-window "*KiteAB Emacs*"))
 
 ;;; Languages settings
 (require 'init-python)

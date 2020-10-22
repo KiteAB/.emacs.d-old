@@ -6,7 +6,7 @@
 
 (defun window-move (way)
   "Move the buffer window position by WAY."
-  (interactive "cEnter the way(n-e-u-i): ")
+  (interactive "c[KiteAB Emacs] Enter the way(n-e-u-i): ")
   (let ((current-window-buffer (window-buffer))
         (current-window (get-buffer-window)))
     (pcase way
@@ -37,16 +37,16 @@
 (defun kiteab/copy-license (license-name)
   "Copy the license file to current directory."
   (interactive (list
-                (completing-read "sLincense name: "
+                (completing-read "s[KiteAB Emacs] Lincense name: "
                                  '("MIT" "GPL-3.0"))))
   (pcase license-name
     ("MIT"
      (copy-file "~/.emacs.d/license/MIT" "./LICENSE")
-     (message "Copy license action done."))
+     (message "[KiteAB Emacs] Copy license action done."))
     ("GPL-3.0"
      (copy-file "~/.emacs.d/license/GPL-3.0" "./LICENSE")
      (find-file "./LICENSE")
-     (message "Copy license action done."))))
+     (message "[KiteAB Emacs]Copy license action done."))))
 
 (defun kiteab/open-scratch ()
   "Open the scratch buffer after closing it."
@@ -54,7 +54,7 @@
   (switch-to-buffer "*scratch*")
   (unless (get-buffer "*scratch*")
     (insert initial-scratch-message)
-    (message "Open the scratch action done.")))
+    (message "[KiteAB Emacs] Open the scratch action done.")))
 
 (defun kiteab/touch-not-alpha ()
   "Make the not-alpha file."
@@ -77,14 +77,14 @@
                                  (split-string (buffer-string)
                                                "\n" t))))
           (erc :nick (car user-info) :password (nth 1 user-info)))
-      (let ((user-name (read-string "ERC Nick: "))
-            (user-password (read-passwd "ERC Password: "))
+      (let ((user-name (read-string "[KiteAB Emacs] ERC Nick: "))
+            (user-password (read-passwd "[KiteAB Emacs]ERC Password: "))
             save-y-or-n)
         (if (or (string= user-name "")
                 (string= user-password ""))
-            (error "The user name or password can't be null!")
+            (error "[KiteAB Emacs] The user name or password can't be null!")
           (setq save-y-or-n (read-minibuffer
-                             "Do you want to save your ERC user info?(y/n)"
+                             "[KiteAB Emacs] Do you want to save your ERC user info?(y/n)"
                              "y"))
           (when (string= save-y-or-n "y")
             (with-temp-file erc-file-path
@@ -96,7 +96,7 @@
   "Add todo content in code."
   (interactive)
   (comment-dwim nil)
-  (let ((todo-content (read-string "Enter your todo content: ")))
+  (let ((todo-content (read-string "[KiteAB Emacs] Enter your todo content: ")))
     (insert (format "<TODO(KiteAB)> %s [%s]" todo-content (current-time-string)))))
 
 (defun kiteab/kill-magit (&optional dir)
@@ -117,12 +117,12 @@
 
 (defun kiteab/search-engine ()
   "Open search page by eaf-browser."
-  (interactive "MThe text you want to search: ")
+  (interactive "M[KiteAB Emacs]The text you want to search: ")
   (eaf-open-browser (concat "https://cn.bing.com/search?q=" content)))
 
 (defun kiteab/change-indent-type (type)
   "Change the indent type."
-  (interactive (list (completing-read "Enter the indent type: "
+  (interactive (list (completing-read "[KiteAB Emacs] Enter the indent type: "
                                       '("tab" "space"))))
   (pcase type
     ("tab" (setq-local indent-tabs-mode t))
@@ -130,13 +130,13 @@
 
 (defun kiteab/edit-snippets (type)
   "Edit the snippets in current mode."
-  (interactive (list (completing-read "Enter the edit type: "
+  (interactive (list (completing-read "[KiteAB Emacs] Enter the edit type: "
                                       '("add" "edit" "delete"))))
   (let ((path (format "~/.emacs.d/snippets/%S/" major-mode))
         snippet-name)
     (if (string= type "add")
-        (setq snippet-name (read-string "Snippet name: "))
-      (setq snippet-name (completing-read "Snippet name: "
+        (setq snippet-name (read-string "[KiteAB Emacs] Snippet name: "))
+      (setq snippet-name (completing-read "[KiteAB Emacs] Snippet name: "
                                           (delete "."
                                                   (delete ".."
                                                           (directory-files path))))))
@@ -153,7 +153,7 @@
   (interactive)
   (if (eq major-mode 'emacs-lisp-mode)
       (insert (format "(provide '%s)" (car (split-string (buffer-name) ".el"))))
-    (message "Not in emacs-lisp-mode. Exiting.")))
+    (message "[KiteAB Emacs] Not in emacs-lisp-mode. Exiting.")))
 
 (defun kiteab/indent-one-time ()
   "Indent one time."
@@ -163,6 +163,6 @@
         (beginning-of-line)
         (indent-for-tab-command)
         (next-line))
-    (message "Not in lisp-interaction-mode or emacs-lisp-mode. Exiting.")))
+    (message "[KiteAB Emacs] Not in lisp-interaction-mode or emacs-lisp-mode. Exiting.")))
 
 (provide '+config)
