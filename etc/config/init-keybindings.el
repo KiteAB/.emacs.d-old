@@ -24,7 +24,7 @@
 (global-set-key (kbd "C-q m") 'set-mark-command)
 (global-set-key (kbd "C-q f") 'mark-defun)
 (global-set-key (kbd "C-q u") 'undo-only)
-;; (global-set-key (kbd "C-q r") 'undo-redo) ; Emacs 28 only
+(global-set-key (kbd "C-q R") 'undo-redo) ; Emacs 28 only
 (global-set-key (kbd "C-q r") 'query-replace)
 (global-set-key (kbd "C-q C-f") 'make-empty-file)
 (global-set-key (kbd "C-q e") 'eshell)
