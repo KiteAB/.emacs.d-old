@@ -3,7 +3,7 @@
 ;; Author: KiteAB <kiteabpl@outlook.com>
 ;; Maintainer: KiteAB <kiteabpl@outlook.com>
 ;; Copyright (C) 2020, KiteAB, all rights reserved.
-;; Last-Updated: 2020-10-20 21:25:34
+;; Last-Updated: 2020-10-22 19:24:33
 ;;           By: KiteAB
 ;; URL: http://github.com/KiteAB/.emacs.d
 ;; Keywords:
@@ -29,7 +29,7 @@
 ;; Floor, Boston, MA 02110-1301, USA.
 
 ;;; TODO
-;; Re-write this configuration file.
+;;
 ;;
 ;;
 
@@ -53,7 +53,7 @@
     (normal-top-level-add-subdirs-to-load-path)))
 (let ((gc-cons-threshold most-positive-fixnum)
       (file-name-handler-alist nil))
-  (add-subdirs-to-load-path "~/.emacs.d/etc/"))
+  (add-subdirs-to-load-path "~/.emacs.d/lisp/"))
 
 ;;; Require Configuration Files
 (require 'init-config)

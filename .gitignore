@@ -3,7 +3,7 @@
 !/.gitignore
 !/.gitmodules
 !/doc/
-!/etc/
+!/lisp/
 !/license/
 !/screenshots/
 !/site-lisp/
