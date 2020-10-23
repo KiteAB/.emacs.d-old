@@ -17,6 +17,7 @@
 (global-set-key (kbd "C-q C-e s") 'kiteab/edit-snippets)
 (global-set-key (kbd "C-q p") 'kiteab/provide-feature-name)
 (global-set-key (kbd "C-q I") 'kiteab/indent-one-time)
+(global-set-key (kbd "C-q t") 'kiteab/insert-current-date-time)
 
 ;;; Built-in Functions -> Keybindings
 (global-set-key (kbd "C-q C-p") 'previous-buffer)

@@ -165,4 +165,9 @@
         (next-line))
     (message "[KiteAB Emacs] Not in lisp-interaction-mode or emacs-lisp-mode. Exiting.")))
 
+(defun kiteab/insert-current-date-time ()
+  "Insert current date time at point."
+  (interactive)
+  (insert (format-time-string "%Y-%m-%d %H:%M:%S")))
+
 (provide '+config)
