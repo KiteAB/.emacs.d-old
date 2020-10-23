@@ -1,8 +1,6 @@
 * My Emacs Configuration
   Hello everyone, this repository saved my personal emacs configuration file.
 
-  I'm new in Emacs, welcome to submit an issue or a pull request.
-
   You can find the Emacs Guides at [[https://github.com/KitPixel/emacs-guides][this repository]].
 
   * [[#dependencies][Dependencies]]
@@ -71,7 +69,7 @@
    (setq eaf-grip-token "yourghtoken")
    (provide 'gh-token)
    #+end_src
-   And go to the [[https://github.com/settings/tokens/new?scopes=][GitHub Personal access token site]] to create your personal token.
+   And go to the [[https://github.com/settings/tokens/new?scopes=][GitHub Personal Access Token Site]] to create your personal token.
 
    Then replace ~yourghtoken~ to your personal token.
 
