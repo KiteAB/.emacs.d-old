@@ -1,9 +1,7 @@
 ;;;; This file is used for packages configuration and more
 ;;; Set the plugin keybinding
 (define-prefix-command 'plugin-key)
-(define-prefix-command 'plugin-key-2)
 (global-set-key (kbd "C-'") 'plugin-key)
-(global-set-key (kbd "C--") 'plugin-key-2)
 
 ;;; Init Packages
 (package-initialize)

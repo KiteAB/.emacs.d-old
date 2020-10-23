@@ -1,37 +1,41 @@
-;;; This file is used for require the configuration files
+;;; This file is used for require features
+;;; Autoload
+(require '+autoload)
 ;;; Configuration of Function
 (require '+config)
-;;; Package Settings
-(require 'init-elpa)
 
+;;; Basic Settings About Packages
+(require 'init-elpa)
 ;;; User Interface
 (require 'init-ui)
 ;;; Basic Things
 (require 'init-basic)
 ;;; Keybindings
 (require 'init-keybindings)
-;;; Ivy
-(require 'init-ivy)
-;;; Tools Settings
-(require 'init-tools)
-;;; Completion Settings
+;;; Complete
 (require 'init-complete)
-;;; Program Settings
-(require 'init-prog)
-;;; Emacs Lisp Mode
+(require 'init-lsp)
+;;; Emacs Lisp
 (require 'init-emacs-lisp)
+;;; Tools
+(require 'init-tools)
 ;;; Git
 (require 'init-git)
-;;; Org Mode
-(require 'init-org)
 ;;; Treemacs
 (require 'init-treemacs)
+;;; Yasnippet
+(require 'init-yasnippet)
+;;; Other Programming Language's Settings
+(require 'init-prog)
+;;; Packages
+(require 'init-packages)
+;;; Org Mode
+(require 'init-org)
+
 ;;; Other Mode Settings
 (require 'init-modes)
 ;;; Macros
 (require 'init-macros)
-;;; Aliases
-(require 'init-aliases)
 
 ;;; GitHub (Markdown Preview)
 (if (file-exists-p "~/.emacs.d/token.el")
@@ -42,7 +46,7 @@
   (insert "[KiteAB Emacs] token.el not found. Please check it or ignore this message at init-config.el")
   (switch-to-buffer-other-window "*KiteAB Emacs*"))
 
-;;; Languages settings
+;;; Languages Settings
 (require 'init-python)
 (require 'init-cc)
 

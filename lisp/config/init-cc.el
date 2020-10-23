@@ -1,4 +1,4 @@
-;;;; This file is the configuration about C/C++.
+;;; This file is the configuration about C/C++.
 
 (setq-default c-default-style '((java-mode . "java")
                                 (awk-mode . "awk")

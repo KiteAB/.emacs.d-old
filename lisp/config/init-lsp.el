@@ -1,4 +1,18 @@
-;;;; This file is used for Lsp Mode settings
+;;; This file is used for Lsp Mode settings
+;;; Lsp Mode
+(use-package lsp-mode
+  :ensure t
+  :hook ((c-mode-hook c++-mode-hook lisp-mode-hook js-mode-hook web-mode-hook) . lsp)
+  :bind (("C-' F" . lsp-format-buffer))
+  :config
+  (setq lsp-idle-delay 1200
+        lsp-auto-guess-root nil
+        lsp-file-watch-threshold 2000
+        lsp-eldoc-hook nil
+        lsp-log-io nil
+        lsp-enable-folding nil
+        lsp-enable-snippet nil
+        lsp-prefer-flymake :none))
 
 (defvar lsp-on-touch-time 0
   "The lsp-on-change's time.")
@@ -13,7 +27,7 @@
          (setq lsp-on-touch-time (float-time (current-time)))
          ad-do-it))))
 
-;;;; Lsp User Interface
+;;; Lsp User Interface
 (use-package lsp-ui
   :ensure t
   :after lsp-mode

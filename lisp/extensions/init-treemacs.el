@@ -1,4 +1,4 @@
-;;; This file is used for Treemacs Settings
+;;; This file is used for treemacs configuration
 (use-package treemacs
   :ensure t
   :defer 1
@@ -72,12 +72,6 @@
 (use-package treemacs-projectile
   :after treemacs projectile
   :ensure t)
-
-(use-package treemacs-icons-dired
-  :disabled
-  :after treemacs
-  :ensure t
-  :config (treemacs-icons-dired-mode))
 
 (use-package treemacs-magit
   :after treemacs magit
