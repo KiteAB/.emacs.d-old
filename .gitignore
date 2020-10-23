@@ -2,6 +2,7 @@
 /*/
 !/.gitignore
 !/.gitmodules
+!/.gitattributes
 !/doc/
 !/lisp/
 !/license/
