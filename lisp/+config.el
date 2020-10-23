@@ -132,7 +132,7 @@
   "Edit the snippets in current mode."
   (interactive (list (completing-read "[KiteAB Emacs] Enter the edit type: "
                                       '("add" "edit" "delete"))))
-  (let ((path (format "~/.emacs.d/snippets/%S/" major-mode))
+  (let ((path (format "~/.emacs.d/lisp/snippets/%S/" major-mode))
         snippet-name)
     (if (string= type "add")
         (setq snippet-name (read-string "[KiteAB Emacs] Snippet name: "))
