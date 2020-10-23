@@ -3,12 +3,8 @@
 !/.gitignore
 !/.gitmodules
 !/.gitattributes
-!/doc/
 !/lisp/
-!/license/
 !/screenshots/
 !/site-lisp/
-!/bookmarks
-!/eshell-aliases
 !/init.el
 !/README.org

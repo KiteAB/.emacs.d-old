@@ -41,12 +41,12 @@
                                  '("MIT" "GPL-3.0"))))
   (pcase license-name
     ("MIT"
-     (copy-file "~/.emacs.d/license/MIT" "./LICENSE")
+     (copy-file "~/.emacs.d/site-lisp/licenses/MIT" "./LICENSE")
      (message "[KiteAB Emacs] Copy license action done."))
     ("GPL-3.0"
-     (copy-file "~/.emacs.d/license/GPL-3.0" "./LICENSE")
+     (copy-file "~/.emacs.d/site-lisp/licenses/GPL-3.0" "./LICENSE")
      (find-file "./LICENSE")
-     (message "[KiteAB Emacs]Copy license action done."))))
+     (message "[KiteAB Emacs] Copy license action done."))))
 
 (defun kiteab/open-scratch ()
   "Open the scratch buffer after closing it."
