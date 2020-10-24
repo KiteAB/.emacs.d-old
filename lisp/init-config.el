@@ -1,4 +1,4 @@
-;;; This file is used for require features
+;;; This file is used for Require Features
 ;;; Autoload
 (require '+autoload)
 ;;; Configuration of Function
@@ -12,6 +12,7 @@
 (require 'init-basic)
 ;;; Keybindings
 (require 'init-keybindings)
+
 ;;; Complete
 (require 'init-complete)
 (require 'init-lsp)
@@ -25,10 +26,18 @@
 (require 'init-treemacs)
 ;;; Yasnippet
 (require 'init-yasnippet)
+;;; Ivy
+(require 'init-ivy)
+;;; WhiteSpace
+(require 'init-whitespace)
 ;;; Other Programming Language's Settings
 (require 'init-prog)
-;;; Packages
-(require 'init-packages)
+;;; English
+(require 'init-english)
+;;; Dired
+(require 'init-dired)
+;;; PYIM
+(require 'init-pyim)
 ;;; Org Mode
 (require 'init-org)
 

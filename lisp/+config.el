@@ -1,4 +1,4 @@
-;;; This file is used for the configuration of function
+;;; This file is used for the Configuration of Function
 (defun open-etc-config ()
   "Open the config file in the etc directory."
   (interactive)

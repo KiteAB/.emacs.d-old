@@ -1,8 +1,8 @@
-;;; This file is used for complete settings
+;;; This file is used for Complete Settings
 ;;; Company (Complete Anything)
 (use-package company
   :ensure t
-  :hook (after-init-hook . global-company-mode)
+  :hook (prog-mode-hook . company-mode)
   :config
   (setq company-idle-delay 10
         company-minimum-prefix-length 1)
@@ -12,7 +12,7 @@
     (define-key company-active-map (kbd "C-n") #'company-select-next)
     (define-key company-active-map (kbd "C-p") #'company-select-previous))
   (push 'company-capf company-backends)
-  :bind (("C-' C-y" . yas-expand-from-trigger-key)))
+  :bind ("C-' C-y" . yas-expand-from-trigger-key))
 
 ;;; C Headers Support for Company
 (use-package company-c-headers

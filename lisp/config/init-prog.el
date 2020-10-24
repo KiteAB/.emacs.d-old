@@ -1,4 +1,4 @@
-;;; This file is used for other programming language's settings
+;;; This file is used for Other Programming Language's Settings
 ;;; JS2 Mode
 (use-package js2-mode
   :ensure t
@@ -19,5 +19,11 @@
   :ensure t
   :hook (web-mode-hook . emmet-mode)
   :config (setq emmet-self-closing-tag-style " /"))
+
+;;; Indent Guide
+(use-package indent-guide
+  :ensure t
+  :defer 1
+  :hook (after-init-hook . indent-guide-global-mode))
 
 (provide 'init-prog)

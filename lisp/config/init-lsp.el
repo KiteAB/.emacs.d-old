@@ -1,9 +1,9 @@
-;;; This file is used for Lsp Mode settings
+;;; This file is used for Lsp Mode Settings
 ;;; Lsp Mode
 (use-package lsp-mode
   :ensure t
   :hook ((c-mode-hook c++-mode-hook lisp-mode-hook js-mode-hook web-mode-hook) . lsp)
-  :bind (("C-' F" . lsp-format-buffer))
+  :bind ("C-' F" . lsp-format-buffer)
   :config
   (setq lsp-idle-delay 1200
         lsp-auto-guess-root nil

@@ -1,4 +1,4 @@
-;;;; This file is used for the user's macros
+;;; This file is used for User Macros
 (fset 'insert-placeholder
       (kmacro-lambda-form [?< ?+ ?+ ?+ ?>] 0 "%d"))
 (fset 'replace-placeholder

@@ -1,4 +1,4 @@
-;;;; This file is about Org Mode settings
+;;; This file is used for Org Mode Settings
 (use-package org
   :ensure t
   :init

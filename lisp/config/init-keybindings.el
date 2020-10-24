@@ -1,4 +1,4 @@
-;;;; This file is used for the keybindings
+;;; This file is used for Keybinding Settings
 ;;; User Functions -> Keybindings
 (define-prefix-command 'ctl-z-map)
 (global-set-key (kbd "C-q") 'ctl-z-map)

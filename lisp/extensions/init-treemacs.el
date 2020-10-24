@@ -1,7 +1,6 @@
-;;; This file is used for treemacs configuration
+;;; This file is used for Treemacs Settings
 (use-package treemacs
   :ensure t
-  :defer 1
   :init
   (with-eval-after-load 'winum
     (define-key winum-keymap (kbd "M-0") #'treemacs-select-window))

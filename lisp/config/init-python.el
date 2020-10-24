@@ -1,4 +1,4 @@
-;;; This file is used for python configuration
+;;; This file is used for Python Configuration
 ;;; Indent
 (setq-default python-indent-offset 2)
 

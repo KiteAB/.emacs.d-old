@@ -1,4 +1,4 @@
-;;; This file is used for git settings
+;;; This file is used for Git Settings
 ;;; Vc Message
 (use-package vc-msg
   :ensure t

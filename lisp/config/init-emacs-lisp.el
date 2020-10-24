@@ -1,4 +1,4 @@
-;;; This file is used for emacs lisp settings
+;;; This file is used for Emacs Lisp Settings
 ;;; Symbol Overlay
 (use-package symbol-overlay
   :ensure t

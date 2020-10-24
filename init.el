@@ -36,7 +36,6 @@
 ;;; Traverse Load Configuration Folder
 (defvar path-need-load "~/.emacs.d/lisp/"
   "Path need to load.")
-
 (defun add-subdirs-to-load-path(dir)
   "Recursive add directories to `load-path`."
   (let ((default-directory (file-name-as-directory dir)))

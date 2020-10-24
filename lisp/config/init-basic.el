@@ -1,4 +1,4 @@
-;;;; This file is used for set the basic things
+;;; This file is used for Basic Settings
 ;;; Functions
 (fset 'yes-or-no-p 'y-or-n-p) ; Change the asking's answer way
 (add-hook 'after-change-major-mode-hook (lambda ()

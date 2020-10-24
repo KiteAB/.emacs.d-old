@@ -1,4 +1,4 @@
-;;;; This file is used for emacs UI
+;;; This file is used for User Interface
 ;;; Basics
 (menu-bar-mode -1) ; Close the menu bar
 (tool-bar-mode -1) ; Close the tool bar
@@ -67,15 +67,6 @@
 ;;; Lazycat Themes
 (use-package lazycat-theme :load-path "~/.emacs.d/site-lisp/lazycat-theme")
 
-;;; Spacemacs Themes
-(use-package spacemacs-common
-  :ensure spacemacs-theme
-  :defer
-; :config
-; (setq-default cursor-type '(bar . 1))
-; (set-cursor-color "white")
-  )
-
 ;;; Circadian - Switch Theme
 (use-package circadian
   :ensure t
@@ -88,8 +79,26 @@
   (setq-default cursor-type '(bar . 2)))
 
 ;;; Icons
-(use-package all-the-icons
+(use-package all-the-icons :ensure t)
+
+;;; Info Colors
+(use-package info-colors
   :ensure t
-  :bind (("C-' C-i" . all-the-icons-insert)))
+  :defer 1
+  :hook (Info-selection-hook . 'info-colors-fontify-node))
+
+;;; NyanCat Mode
+(use-package nyan-mode
+  :ensure t
+  :disabled
+  :hook (after-init-hook . nyan-mode)
+  :config (setq nyan-wavy-trail t
+                nyan-animate-nyancat t))
+
+;;; Page Break Lines
+(use-package page-break-lines
+  :ensure t
+  :defer 1
+  :hook (prog-mode-hook . page-break-lines-mode))
 
 (provide 'init-ui)
