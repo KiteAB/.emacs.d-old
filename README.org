@@ -18,7 +18,7 @@
    - Git
    - libvterm (To use VTerm)
    - CMake (To compile the VTerm)
-   - Fira Code Nerd Font (Optional. You can edit the font use ~C-z C-c settings RET init-ui.el RET~)
+   - Fira Code Nerd Font (Optional. You can edit the font use ~C-q c lisp TAB config TAB init-ui.el RET~)
    - The dependencies in [[https://github.com/manateelazycat/emacs-application-framework][Emacs Application Framework]]. (To use EAF)
    - The dependencies in [[https://github.com/loyalpartner/english-teacher.el][English Teacher]]. (To use English Teacher)
    - ~ttf-symbola~ font. (Optional. Telega icons)
