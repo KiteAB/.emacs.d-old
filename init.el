@@ -29,7 +29,7 @@
 ;; Floor, Boston, MA 02110-1301, USA.
 
 ;;; TODO
-;; make this config file better than before
+;;
 ;;
 ;;
 
