@@ -3,7 +3,7 @@
 ;; Author: KiteAB <kiteabpl@outlook.com>
 ;; Maintainer: KiteAB <kiteabpl@outlook.com>
 ;; Copyright (C) 2020, KiteAB, all rights reserved.
-;; Last-Updated: 2020-10-24 11:36:33
+;; Last-Updated: 2020-10-24 18:12:26
 ;;           By: KiteAB
 ;; URL: http://github.com/KiteAB/.emacs.d
 ;; Keywords:
@@ -34,8 +34,7 @@
 ;;
 
 ;;; Traverse Load Configuration Folder
-(defvar path-need-load "~/.emacs.d/lisp/"
-  "Path need to load.")
+(defvar path-need-load "~/.emacs.d/lisp/" "Path need to load.")
 (defun add-subdirs-to-load-path(dir)
   "Recursive add directories to `load-path`."
   (let ((default-directory (file-name-as-directory dir)))
