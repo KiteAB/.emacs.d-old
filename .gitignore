@@ -4,6 +4,7 @@
 !/.gitmodules
 !/.gitattributes
 !/lisp/
+/lisp/config/init-token.el
 !/screenshots/
 !/site-lisp/
 !/init.el
