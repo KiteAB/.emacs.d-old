@@ -23,10 +23,10 @@
         (?\( . ?\))
         (?\< . ?\>)
         (?\{ . ?\}))) ; Set the electric-pair-mode's pair keywords
-(setq make-backup-files nil ; Don't let Emacs make up backup file
-      create-lockfiles nil ;Don't make lockfile
-      auto-save-default nil ; Don't auto save the file
-      )
+(setq make-backup-files nil           ; Don't let Emacs make up backup file
+      create-lockfiles nil            ; Don't make lockfile
+      auto-save-default nil           ; Don't auto save the file
+      auto-save-list-file-prefix nil) ; Don't make auto-save-list folder
 (setq initial-scratch-message
       ";; KiteAB Emacs
 ;; This is the scratch buffer for startup page and test Emacs Lisp code
