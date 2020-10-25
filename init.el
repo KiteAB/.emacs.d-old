@@ -29,8 +29,8 @@
 ;; Floor, Boston, MA 02110-1301, USA.
 
 ;;; TODO
-;;
-;;
+;; https://github.com/ch11ng/exwm
+;; https://github.com/redguardtoo/elpa-mirror
 ;;
 
 ;;; Variables
