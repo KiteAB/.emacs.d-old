@@ -10,5 +10,3 @@
                              (setq file-name-handler-alist file-name-handler-alist-original)
                              (makunbound 'gc-cons-threshold-original)
                              (makunbound 'file-name-handler-alist-original)))
-
-(provide '+autoload)
