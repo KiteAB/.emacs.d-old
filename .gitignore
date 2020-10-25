@@ -7,4 +7,5 @@
 !/screenshots/
 !/site-lisp/
 !/init.el
+!/early-init.el
 !/README.org

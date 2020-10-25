@@ -1,5 +1,5 @@
-;;; This file is used for Things Need to Autoload
-;; Automatic Optimization
+;;; This file is used for Things Need Early Init
+;;; Automatic Optimization
 (setq gc-cons-threshold-original gc-cons-threshold)
 (setq gc-cons-threshold (* 1024 1024 100))
 (setq file-name-handler-alist-original file-name-handler-alist)
