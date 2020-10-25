@@ -1,8 +1,8 @@
-;;; This file is used for the Configuration of Function
+;;; This file is used for Function Definition
 (defun open-etc-config ()
   "Open the config file in the etc directory."
   (interactive)
-  (counsel-find-file kiteab/emacs-root-dir))
+  (counsel-find-file "~/.emacs.d"))
 
 (defun window-move (way)
   "Move the buffer window position by WAY."
@@ -170,4 +170,4 @@
   (interactive)
   (insert (format-time-string "%Y-%m-%d %H:%M:%S")))
 
-(provide '+config)
+(provide 'init-functions)
