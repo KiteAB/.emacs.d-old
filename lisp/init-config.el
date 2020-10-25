@@ -8,6 +8,8 @@
 (require 'init-elpa)
 ;;; User Interface
 (require 'init-ui)
+;;; Awesome Tray
+(require 'init-awetray)
 ;;; Basic Things
 (require 'init-basic)
 ;;; Keybindings

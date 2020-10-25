@@ -38,32 +38,6 @@
          (expand-file-name (locate-user-emacs-file "not-alpha")))
   (set-frame-parameter nil 'alpha '(90 . 100)))
 
-
-;;; Awesome Tray
-(use-package awesome-tray
-  :load-path "~/.emacs.d/site-lisp/awesome-tray"
-  :hook (after-init-hook . awesome-tray-mode)
-  :config
-  ;; Custom Modules
-                                        ; Current Input Method
-  (defun kiteab/current-input-method ()
-    "Display current input method at awesome tray."
-    (setq kiteab/current-input-method-en "EN")
-    (setq kiteab/current-input-method-zh "ZH")
-    (if (eq current-input-method nil)
-        (concat kiteab/current-input-method-en)
-      (concat kiteab/current-input-method-zh)))
-  (defface kiteab/current-input-method-face
-    '((((background light))
-       :foreground "#cc2444" :bold t)
-      (t
-       :foreground "#ff2d55" :bold t))
-    "Git face."
-    :group 'awesome-tray)
-  (add-to-list 'awesome-tray-module-alist '("current-input-method" . (kiteab/current-input-method kiteab/current-input-method-face)))
-  ;; Set Modules
-  (setq awesome-tray-active-modules '("git" "location" "current-input-method" "mode-name" "parent-dir" "buffer-name" "date")))
-
 ;;; Lazycat Themes
 (use-package lazycat-theme :load-path "~/.emacs.d/site-lisp/lazycat-theme")
 
