@@ -10,7 +10,7 @@
   (add-to-list 'awesome-tray-module-alist '("current-input-method" . (kiteab/awetray-current-input-method awesome-tray-module-battery-face)))
 
   (defun kiteab/awetray-buffer-read-only ()
-    (if (eq buffer-read-only t)
+    (if (and (eq buffer-read-only t) (not (eq buffer-file-name nil)))
         "R-O"))
   (add-to-list 'awesome-tray-module-alist '("buffer-read-only" . (kiteab/awetray-buffer-read-only awesome-tray-module-git-face)))
 
