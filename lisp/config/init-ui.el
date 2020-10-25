@@ -58,7 +58,6 @@
 ;;; Info Colors
 (use-package info-colors
   :ensure t
-  :defer 1
   :hook (Info-selection-hook . 'info-colors-fontify-node))
 
 ;;; NyanCat Mode
@@ -72,7 +71,11 @@
 ;;; Page Break Lines
 (use-package page-break-lines
   :ensure t
-  :defer 1
   :hook (prog-mode-hook . page-break-lines-mode))
+
+;;; Rainbow Mode
+(use-package rainbow-mode
+  :ensure t
+  :hook (prog-mode-hook . rainbow-mode))
 
 (provide 'init-ui)
