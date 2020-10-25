@@ -34,10 +34,6 @@
 ;; new dir structure: https://github.com/manateelazycat/lazycat-emacs like, put lisp folder to site-lisp folder, reduce the number of the first layer file
 ;;
 
-;;; Variables
-(defvar kiteab/emacs-root-dir (file-truename "~/.emacs.d"))
-(defvar kiteab/emacs-lisp-dir (concat kiteab/emacs-root-dir "/lisp"))
-
 ;;; Traverse Load Configuration Folder
 (defun add-subdirs-to-load-path(dir)
   "Recursive add directories to `load-path`."
@@ -46,7 +42,7 @@
     (normal-top-level-add-subdirs-to-load-path)))
 (let ((gc-cons-threshold most-positive-fixnum)
       (file-name-handler-alist nil))
-  (add-subdirs-to-load-path kiteab/emacs-lisp-dir))
+  (add-subdirs-to-load-path "~/.emacs.d/lisp"))
 
 ;;; Require Configuration Files
 (require 'init-config)
