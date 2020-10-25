@@ -57,15 +57,16 @@
 ** Shortcuts
    I binded the ~C-q~ key to be the user defined key.
 
-   ~C-q~ key bind the functions in ~lisp/+config.el~
+   ~C-q~ key bind the functions in ~lisp/config/init-functions.el~
 
    You can view this file and change somethings.
 
 ** Token
    You need to do the following to make markdown preview work properly:
-   - ~touch ~/.emacs.d/token.el~
+   - ~touch ~/.emacs.d/lisp/config/init-token.el~
    - Edit the ~token.el~ file and add somethings below:
    #+begin_src emacs-lisp
+   ;;; This file is used for Store GitHub Personal Access Token
    (setq eaf-grip-token "yourghtoken")
    (provide 'gh-token)
    #+end_src
