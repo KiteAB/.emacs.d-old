@@ -1,9 +1,6 @@
 ;;; This file is used for Require Features
-;;; Autoload
-(require '+autoload)
-;;; Configuration of Function
-(require '+config)
-
+;;; Functions
+(require 'init-functions)
 ;;; Basic Settings About Packages
 (require 'init-elpa)
 ;;; User Interface
@@ -50,9 +47,9 @@
 (require 'init-macros)
 
 ;;; GitHub (Markdown Preview)
-(if (file-exists-p "~/.emacs.d/token.el")
+(if (file-exists-p "~/.emacs.d/lisp/config/init-token.el")
     (progn
-      (load-file "~/.emacs.d/token.el")
+      (load-file "~/.emacs.d/lisp/config/init-token.el")
       (require 'gh-token))
   (switch-to-buffer "*KiteAB Emacs*")
   (insert "[KiteAB Emacs] token.el not found. Please read README.org's \"Token\" part or ignore this message at init-config.el")
