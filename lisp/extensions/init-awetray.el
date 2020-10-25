@@ -15,7 +15,7 @@
   (add-to-list 'awesome-tray-module-alist '("buffer-read-only" . (kiteab/awetray-buffer-read-only awesome-tray-module-git-face)))
 
   (defun kiteab/awetray-buffer-name ()
-    (if (buffer-modified-p)
+    (if (and (buffer-modified-p) (not (eq buffer-file-name nil)))
         (concat (buffer-name) "*")
       (buffer-name)))
   (add-to-list 'awesome-tray-module-alist '("buffer-name-plus" . (kiteab/awetray-buffer-name awesome-tray-module-buffer-name-face)))
