@@ -24,6 +24,11 @@
 (use-package indent-guide
   :ensure t
   :defer 1
-  :hook (after-init-hook . indent-guide-global-mode))
+  :hook (prog-mode-hook . indent-guide-global-mode))
+
+;;; Smartparens
+(use-package smartparens
+  :ensure t
+  :hook (prog-mode-hook . smartparens-mode))
 
 (provide 'init-prog)
