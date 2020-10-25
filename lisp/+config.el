@@ -2,7 +2,7 @@
 (defun open-etc-config ()
   "Open the config file in the etc directory."
   (interactive)
-  (counsel-find-file "~/.emacs.d"))
+  (counsel-find-file kiteab/emacs-root-dir))
 
 (defun window-move (way)
   "Move the buffer window position by WAY."
@@ -84,7 +84,7 @@
                 (string= user-password ""))
             (error "[KiteAB Emacs] The user name or password can't be null!")
           (setq save-y-or-n (read-minibuffer
-                             "[KiteAB Emacs] Do you want to save your ERC user info?(y/n)"
+                             "[KiteAB Emacs] Do you want to save your ERC user info? (y/n)"
                              "y"))
           (when (string= save-y-or-n "y")
             (with-temp-file erc-file-path

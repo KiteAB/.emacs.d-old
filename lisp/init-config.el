@@ -10,6 +10,7 @@
 (require 'init-ui)
 ;;; Awesome Tray
 (require 'init-awetray)
+
 ;;; Basic Things
 (require 'init-basic)
 ;;; Keybindings
@@ -30,6 +31,8 @@
 (require 'init-yasnippet)
 ;;; Ivy
 (require 'init-ivy)
+;;; PYIM
+(require 'init-pyim)
 ;;; WhiteSpace
 (require 'init-whitespace)
 ;;; Other Programming Language's Settings
@@ -38,8 +41,6 @@
 (require 'init-english)
 ;;; Dired
 (require 'init-dired)
-;;; PYIM
-(require 'init-pyim)
 ;;; Org Mode
 (require 'init-org)
 
@@ -54,7 +55,7 @@
       (load-file "~/.emacs.d/token.el")
       (require 'gh-token))
   (switch-to-buffer "*KiteAB Emacs*")
-  (insert "[KiteAB Emacs] token.el not found. Please check it or ignore this message at init-config.el")
+  (insert "[KiteAB Emacs] token.el not found. Please read README.org's \"Token\" part or ignore this message at init-config.el")
   (switch-to-buffer-other-window "*KiteAB Emacs*"))
 
 ;;; Languages Settings

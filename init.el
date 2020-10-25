@@ -33,8 +33,11 @@
 ;;
 ;;
 
+;;; Variables
+(defvar kiteab/emacs-root-dir (file-truename "~/.emacs.d"))
+(defvar kiteab/emacs-lisp-dir (concat kiteab/emacs-root-dir "/lisp"))
+
 ;;; Traverse Load Configuration Folder
-(defvar path-need-load "~/.emacs.d/lisp/" "Path need to load.")
 (defun add-subdirs-to-load-path(dir)
   "Recursive add directories to `load-path`."
   (let ((default-directory (file-name-as-directory dir)))
@@ -42,7 +45,7 @@
     (normal-top-level-add-subdirs-to-load-path)))
 (let ((gc-cons-threshold most-positive-fixnum)
       (file-name-handler-alist nil))
-  (add-subdirs-to-load-path path-need-load))
+  (add-subdirs-to-load-path kiteab/emacs-lisp-dir))
 
 ;;; Require Configuration Files
 (require 'init-config)
