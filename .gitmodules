@@ -1,0 +1,21 @@
+[submodule "site-lisp/extensions/auto-save"]
+	path = site-lisp/extensions/auto-save
+	url = https://github.com/manateelazycat/auto-save
+[submodule "site-lisp/extensions/awesome-tray"]
+	path = site-lisp/extensions/awesome-tray
+	url = https://github.com/manateelazycat/awesome-tray
+[submodule "site-lisp/extensions/company-english-helper"]
+	path = site-lisp/extensions/company-english-helper
+	url = https://github.com/manateelazycat/company-english-helper
+[submodule "site-lisp/extensions/emacs-application-framework"]
+	path = site-lisp/extensions/emacs-application-framework
+	url = https://gitee.com/KiteAB/emacs-application-framework
+[submodule "site-lisp/extensions/insert-translated-name"]
+	path = site-lisp/extensions/insert-translated-name
+	url = https://github.com/manateelazycat/insert-translated-name
+[submodule "site-lisp/extensions/lazycat-theme"]
+	path = site-lisp/extensions/lazycat-theme
+	url = https://github.com/manateelazycat/lazycat-theme
+[submodule "site-lisp/extensions/valign"]
+	path = site-lisp/extensions/valign
+	url = https://github.com/casouri/valign
