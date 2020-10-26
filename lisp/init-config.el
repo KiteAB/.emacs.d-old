@@ -58,5 +58,6 @@
 ;;; Languages Settings
 (require 'init-python)
 (require 'init-cc)
+(require 'init-go)
 
 (provide 'init-config)
