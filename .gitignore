@@ -3,7 +3,6 @@
 !/.gitignore
 !/.gitmodules
 !/.gitattributes
-!/screenshots/
 !/site-lisp/
 /site-lisp/config/init-token.el
 !/init.el
