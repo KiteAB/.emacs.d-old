@@ -84,7 +84,7 @@
                 (string= user-password ""))
             (error "[KiteAB Emacs] The user name or password can't be null!")
           (setq save-y-or-n (read-minibuffer
-                             "[KiteAB Emacs] Do you want to save your ERC user info? (y-or-n)"
+                             "[KiteAB Emacs] Do you want to save your ERC user info? (y-or-n): "
                              "y"))
           (when (string= save-y-or-n "y")
             (with-temp-file erc-file-path
