@@ -39,7 +39,7 @@
   (set-frame-parameter nil 'alpha '(90 . 100)))
 
 ;;; Lazycat Themes
-(use-package lazycat-theme :load-path "~/.emacs.d/site-lisp/lazycat-theme")
+(use-package lazycat-theme :load-path "~/.emacs.d/site-lisp/extensions/lazycat-theme")
 
 ;;; Circadian - Switch Theme
 (use-package circadian

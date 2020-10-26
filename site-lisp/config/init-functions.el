@@ -84,7 +84,7 @@
                 (string= user-password ""))
             (error "[KiteAB Emacs] The user name or password can't be null!")
           (setq save-y-or-n (read-minibuffer
-                             "[KiteAB Emacs] Do you want to save your ERC user info? (y/n)"
+                             "[KiteAB Emacs] Do you want to save your ERC user info? (y-or-n)"
                              "y"))
           (when (string= save-y-or-n "y")
             (with-temp-file erc-file-path
@@ -132,7 +132,7 @@
   "Edit the snippets in current mode."
   (interactive (list (completing-read "[KiteAB Emacs] Enter the edit type: "
                                       '("add" "edit" "delete"))))
-  (let ((path (format "~/.emacs.d/lisp/snippets/%S/" major-mode))
+  (let ((path (format "~/.emacs.d/site-lisp/snippets/%S/" major-mode))
         snippet-name)
     (if (string= type "add")
         (setq snippet-name (read-string "[KiteAB Emacs] Snippet name: "))

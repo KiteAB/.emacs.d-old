@@ -1,7 +1,7 @@
 ;;; This file is used for Tools Settings
 ;;; Auto Save
 (use-package auto-save
-  :load-path "~/.emacs.d/site-lisp/auto-save"
+  :load-path "~/.emacs.d/site-lisp/extensions/auto-save"
   :config
   (auto-save-enable)
   (setq auto-save-silent t
@@ -14,7 +14,7 @@
 
 ;;; Emacs Application Framework
 (use-package eaf
-  :load-path "~/.emacs.d/site-lisp/emacs-application-framework"
+  :load-path "~/.emacs.d/site-lisp/extensions/emacs-application-framework"
   :bind ("C-q C-w l" . eaf-open-browser)
   :config
   (eaf-setq eaf-browser-remember-history "true")

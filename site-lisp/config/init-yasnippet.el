@@ -6,7 +6,7 @@
   :hook (after-init-hook . yas-global-mode)
   :config
   (use-package yasnippet-snippets :ensure t)
-  (setq yas-snippet-dirs '("~/.emacs.d/lisp/snippets"
+  (setq yas-snippet-dirs '("~/.emacs.d/site-lisp/snippets"
                            "~/.emacs.d/var/elpa/yasnippet-snippets-20200909.1058/snippets")))
 
 (provide 'init-yasnippet)

@@ -1,6 +1,6 @@
 ;;; This file is used for Awesome Tray Settings
 (use-package awesome-tray
-  :load-path "~/.emacs.d/site-lisp/awesome-tray"
+  :load-path "~/.emacs.d/site-lisp/extensions/awesome-tray"
   :hook (after-init-hook . awesome-tray-mode)
   :config
   (defun kiteab/awetray-current-input-method ()

@@ -1,14 +1,14 @@
 ;;; This file is used for Packages Settings About English
 ;;; Company English Helper
 (use-package company-english-helper
-  :load-path "~/.emacs.d/site-lisp/company-english-helper"
+  :load-path "~/.emacs.d/site-lisp/extensions/company-english-helper"
   :config
-  (load-file "~/.emacs.d/site-lisp/company-english-helper/company-english-helper-data.el")
+  (load-file "~/.emacs.d/site-lisp/extensions/company-english-helper/company-english-helper-data.el")
   :bind ("C-' C-l s" . company-english-helper-search))
 
 ;;; Insert Translated Name
 (use-package insert-translated-name
-  :load-path "~/.emacs.d/site-lisp/insert-translated-name"
+  :load-path "~/.emacs.d/site-lisp/extensions/insert-translated-name"
   :bind (("C-' C-l i" . insert-translated-name-insert)
          ("C-' C-l u" . insert-translated-name-insert-with-underline)
          ("C-' C-l c" . insert-translated-name-insert-with-camel)

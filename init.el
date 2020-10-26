@@ -42,7 +42,7 @@
     (normal-top-level-add-subdirs-to-load-path)))
 (let ((gc-cons-threshold most-positive-fixnum)
       (file-name-handler-alist nil))
-  (add-subdirs-to-load-path "~/.emacs.d/lisp"))
+  (add-subdirs-to-load-path "~/.emacs.d/site-lisp/config"))
 
 ;;; Require Configuration Files
 (require 'init-config)
