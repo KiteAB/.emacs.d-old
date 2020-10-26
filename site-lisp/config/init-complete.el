@@ -2,7 +2,7 @@
 ;;; Company (Complete Anything)
 (use-package company
   :ensure t
-  :hook (prog-mode-hook . company-mode)
+  :hook (after-init-hook . global-company-mode)
   :config
   (setq company-idle-delay 10
         company-minimum-prefix-length 1)

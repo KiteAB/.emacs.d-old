@@ -68,12 +68,12 @@
 ;;; Org Bullets
 (use-package org-bullets
   :ensure t
-  :hook (org-mode-hook . (lambda () (org-bullets-mode t)))
+  :hook (org-mode-hook . org-bullets-mode)
   :custom (org-bullets-bullet-list '("☰" "☷" "✿" "☭")))
 
 ;;; Valign
 (use-package valign
-  :load-path "~/.emacs.d/site-lisp/valign"
+  :load-path "~/.emacs.d/site-lisp/extensions/valign"
   :hook (org-mode-hook . valign-mode))
 
 (provide 'init-org)
