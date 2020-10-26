@@ -22,4 +22,4 @@
 
   (setq awesome-tray-active-modules '("git" "location" "current-input-method" "mode-name" "parent-dir" "buffer-name-plus" "buffer-read-only" "date")))
 
-(provide 'init-awetray)
+(provide 'init-awesome-tray)

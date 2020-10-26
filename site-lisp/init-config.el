@@ -6,7 +6,7 @@
 ;;; User Interface
 (require 'init-ui)
 ;;; Awesome Tray
-(require 'init-awetray)
+(require 'init-awesome-tray)
 
 ;;; Basic Things
 (require 'init-basic)
@@ -47,9 +47,9 @@
 (require 'init-macros)
 
 ;;; GitHub (Markdown Preview)
-(if (file-exists-p "~/.emacs.d/lisp/config/init-token.el")
+(if (file-exists-p "~/.emacs.d/site-lisp/config/init-token.el")
     (progn
-      (load-file "~/.emacs.d/lisp/config/init-token.el")
+      (load-file "~/.emacs.d/site-lisp/config/init-token.el")
       (require 'gh-token))
   (switch-to-buffer "*KiteAB Emacs*")
   (insert "[KiteAB Emacs] token.el not found. Please read README.org's \"Token\" part or ignore this message at init-config.el"))
