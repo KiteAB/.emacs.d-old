@@ -14,7 +14,7 @@
   (push 'company-capf company-backends)
   :bind ("C-' C-y" . yas-expand-from-trigger-key))
 
-;;; C Headers Support for Company
+;;; C Headers Support
 (use-package company-c-headers
   :ensure t
   :config (add-to-list 'company-backends 'company-c-headers))
