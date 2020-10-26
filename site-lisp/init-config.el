@@ -52,8 +52,7 @@
       (load-file "~/.emacs.d/lisp/config/init-token.el")
       (require 'gh-token))
   (switch-to-buffer "*KiteAB Emacs*")
-  (insert "[KiteAB Emacs] token.el not found. Please read README.org's \"Token\" part or ignore this message at init-config.el")
-  (switch-to-buffer-other-window "*KiteAB Emacs*"))
+  (insert "[KiteAB Emacs] token.el not found. Please read README.org's \"Token\" part or ignore this message at init-config.el"))
 
 ;;; Languages Settings
 (require 'init-python)

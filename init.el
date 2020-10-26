@@ -43,6 +43,7 @@
 (let ((gc-cons-threshold most-positive-fixnum)
       (file-name-handler-alist nil))
   (add-subdirs-to-load-path "~/.emacs.d/site-lisp/config"))
+(load-file "~/.emacs.d/site-lisp/init-config.el")
 
 ;;; Require Configuration Files
 (require 'init-config)
