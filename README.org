@@ -9,7 +9,7 @@
     - [[#add-more-site-lisp][Add More Site Lisp]]
   * [[#shortcuts][Shortcuts]]
   * [[#token][Token]]
-  * [[#screenshots][Screenshots]]
+  * [[#notes][Notes]]
   * [[#contributors][Contributors]]
 
 ** Dependencies
@@ -74,12 +74,8 @@
 
    Then replace ~yourghtoken~ to your personal token.
 
-** Screenshots
-   [[./screenshots/dark.png]]
-
-   [[./screenshots/light.png]]
-
-   *Note:* You need to go to [[https://www.latlong.net][LatLong]] and replace latitude & longitude at ~init-packages.el~!
+** Notes
+   - You need to go to [[https://www.latlong.net][LatLong]] and replace the latitude and longitude values in ~init-ui.el~, otherwise you can't change themes automatically!
 
 ** Contributors
    - *[[https://github.com/KiteAB][David Zhang]]*: The original creator of this repository.
