@@ -6,5 +6,4 @@
 !/site-lisp/
 /site-lisp/config/init-token.el
 !/init.el
-!/early-init.el
 !/README.org
