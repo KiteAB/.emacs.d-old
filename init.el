@@ -29,9 +29,8 @@
 ;; Floor, Boston, MA 02110-1301, USA.
 
 ;;; TODO
-;; exwm - https://github.com/ch11ng/exwm
-;; elpa - https://github.com/redguardtoo/elpa-mirror
-;; new dir structure: https://github.com/manateelazycat/lazycat-emacs like, put lisp folder to site-lisp folder, reduce the number of the first layer file
+;;
+;;
 ;;
 
 ;;; Traverse Load Configuration Folder
