@@ -19,3 +19,6 @@
 [submodule "site-lisp/extensions/valign"]
 	path = site-lisp/extensions/valign
 	url = https://github.com/casouri/valign
+[submodule "site-lisp/extensions/awesome-tab"]
+	path = site-lisp/extensions/awesome-tab
+	url = https://github.com/manateelazycat/awesome-tab
