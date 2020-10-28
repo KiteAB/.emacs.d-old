@@ -1,15 +1,18 @@
 ;;; This file is used for Awesome Tab Settings
+(define-prefix-command 'awetab-key)
+(global-set-key (kbd "C-;") 'awetab-key)
 (use-package awesome-tab
   :load-path "~/.emacs.d/site-lisp/extensions/awesome-tab"
-  :disabled
   :hook (after-init-hook . awesome-tab-mode)
-  :bind (("C-' C-t g" . awesome-tab-switch-group)
-         ("C-' C-t B" . awesome-tab-select-beg-tab)
-         ("C-' C-t f" . awesome-tab-forward-group)
-         ("C-' C-t E" . awesome-tab-select-end-tab)
-         ("C-' C-t b" . awesome-tab-backward-group)
-         ("C-' C-t n" . awesome-tab-backward-tab)
-         ("C-' C-t i" . awesome-tab-forward-tab)
-         ("C-' C-t a" . awesome-tab-ace-jump)))
+  :bind (("C-; g" . awesome-tab-switch-group)
+         ("C-; N" . awesome-tab-select-beg-tab)
+         ("C-; I" . awesome-tab-select-end-tab)
+         ("C-; e" . awesome-tab-forward-group)
+         ("C-; u" . awesome-tab-backward-group)
+         ("C-; n" . awesome-tab-backward-tab)
+         ("C-; i" . awesome-tab-forward-tab)
+         ("C-; j" . awesome-tab-ace-jump)
+         ("C-; C-m n" . awesome-tab-move-current-tab-to-left)
+         ("C-; C-m i" . awesome-tab-move-current-tab-to-right)))
 
 (provide 'init-awesome-tab)
