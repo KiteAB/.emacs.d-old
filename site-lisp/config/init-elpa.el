@@ -2,6 +2,8 @@
 ;;; Set Parent Key for Packages
 (define-prefix-command 'plugin-key)
 (global-set-key (kbd "C-'") 'plugin-key)
+(define-prefix-command 'awetab-key)
+(global-set-key (kbd "C-;") 'awetab-key)
 
 ;;; Init Packages
 (package-initialize)

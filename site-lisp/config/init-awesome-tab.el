@@ -1,6 +1,4 @@
 ;;; This file is used for Awesome Tab Settings
-(define-prefix-command 'awetab-key)
-(global-set-key (kbd "C-;") 'awetab-key)
 (use-package awesome-tab
   :load-path "~/.emacs.d/site-lisp/extensions/awesome-tab"
   :hook (after-init-hook . awesome-tab-mode)
