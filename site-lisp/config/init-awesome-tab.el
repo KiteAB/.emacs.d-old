@@ -1,6 +1,7 @@
 ;;; This file is used for Awesome Tab Settings
 (use-package awesome-tab
   :load-path "~/.emacs.d/site-lisp/extensions/awesome-tab"
+  :disabled
   :hook (after-init-hook . awesome-tab-mode)
   :bind (("C-; g" . awesome-tab-switch-group)
          ("C-; N" . awesome-tab-select-beg-tab)
