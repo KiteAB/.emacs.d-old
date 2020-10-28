@@ -8,7 +8,7 @@
   (pyim-page-tooltip 'posframe)
   (pyim-page-length 5)
   (pyim-page-style 'one-line)
-  (pyim-punctuation-translate-p '(no yes auto))
+  (pyim-punctuation-translate-p '(yes no auto))
   (pyim-enable-shortcode nil)
   :config
   (use-package pyim-basedict
