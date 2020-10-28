@@ -1,7 +1,7 @@
 ;;; This file is used for WhiteSpace Settings
 (use-package whitespace
   :ensure nil
-  :hook (prog-mode-hook . whitespace-mode)
+  :hook (emacs-lisp-mode-hook . whitespace-mode)
   :config
   (setq whitespace-style
         '(face tabs                     tab-mark

@@ -42,4 +42,7 @@
   ;; Documents
   (setq lsp-ui-doc-enable t))
 
+;;; Lsp Treemacs
+(use-package lsp-treemacs :ensure t)
+
 (provide 'init-lsp)
