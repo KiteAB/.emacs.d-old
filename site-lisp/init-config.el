@@ -34,6 +34,8 @@
 (require 'init-pyim)
 ;;; WhiteSpace
 (require 'init-whitespace)
+;;; Emacs Application Framework
+(require 'init-eaf)
 ;;; Other Programming Language's Settings
 (require 'init-prog)
 ;;; English

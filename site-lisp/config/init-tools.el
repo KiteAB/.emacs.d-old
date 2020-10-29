@@ -1,21 +1,4 @@
 ;;; This file is used for Tools Settings
-;;; Emacs Application Framework
-(use-package eaf
-  :load-path "~/.emacs.d/site-lisp/extensions/emacs-application-framework"
-  :demand
-  :bind ("C-q C-w l" . eaf-open-browser)
-  :config
-  (eaf-setq eaf-browser-remember-history "true")
-  (eaf-setq eaf-browser-default-zoom "1.5")
-  (defalias 'browse-web #'eaf-open-browser)
-  (if (and
-       (< (car (circadian-sunrise))
-          (car (circadian-now-time)))
-       (> (car (circadian-sunset))
-          (car (circadian-now-time))))
-      (eaf-setq eaf-browser-dark-mode "false")
-    (eaf-setq eaf-browser-dark-mode "true")))
-
 ;;; Auto Save
 (use-package auto-save
   :load-path "~/.emacs.d/site-lisp/extensions/auto-save"
@@ -24,10 +7,10 @@
   (setq auto-save-silent t
         auto-save-delete-trailing-whitespace t)
   (setq auto-save-disable-predicates
-      '((lambda ()
-      (string-suffix-p
-      "gpg"
-      (file-name-extension (buffer-name)) t)))))
+        '((lambda ()
+            (string-suffix-p
+             "gpg"
+             (file-name-extension (buffer-name)) t)))))
 
 ;;; FlyMake
 (use-package flymake
