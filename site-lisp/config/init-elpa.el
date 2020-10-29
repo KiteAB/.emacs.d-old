@@ -5,9 +5,6 @@
 (define-prefix-command 'awetab-key)
 (global-set-key (kbd "C-;") 'awetab-key)
 
-;;; Init Packages
-(package-initialize)
-
 ;;; Mirror Source
 (require 'package)
 (require 'cl-lib) ; Common Lisp
