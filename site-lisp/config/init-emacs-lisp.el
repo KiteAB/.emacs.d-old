@@ -2,7 +2,7 @@
 ;;; Symbol Overlay
 (use-package symbol-overlay
   :ensure t
-  :hook (emacs-lisp-mode . symbol-overlay-mode))
+  :hook (emacs-lisp-mode-hook . symbol-overlay-mode))
 
 ;;; Lispy
 (use-package lispy
