@@ -29,7 +29,7 @@
       auto-save-list-file-prefix nil) ; Don't make auto-save-list folder
 (setq initial-scratch-message
       ";; KiteAB Emacs
-;; This is the scratch buffer for startup page and test Emacs Lisp code
+;; This is the scratch buffer for startup page and test Emacs Lisp code.
 
 ")
 (setq-default tab-width 2) ; The tab width

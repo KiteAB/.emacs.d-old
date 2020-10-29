@@ -2,7 +2,7 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("Member of Bilibili"
+(("Creator Center of Bilibili"
  (handler . eaf--bookmark-restore)
  (eaf-app . "browser")
  (filename . "https://member.bilibili.com/platform/home"))
