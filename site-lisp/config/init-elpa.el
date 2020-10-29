@@ -2,8 +2,6 @@
 ;;; Set Parent Key for Packages
 (define-prefix-command 'plugin-key)
 (global-set-key (kbd "C-'") 'plugin-key)
-(define-prefix-command 'awetab-key)
-(global-set-key (kbd "C-;") 'awetab-key)
 
 ;;; Mirror Source
 (require 'package)

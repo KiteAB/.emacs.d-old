@@ -7,8 +7,6 @@
 (require 'init-ui)
 ;;; Awesome Tray
 (require 'init-awesome-tray)
-;;; Awesome Tab
-(require 'init-awesome-tab)
 
 ;;; Basic Things
 (require 'init-basic)
