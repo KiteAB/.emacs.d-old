@@ -32,6 +32,10 @@
 (global-set-key (kbd "C-q C-d") 'delete-char)
 (global-set-key (kbd "C-q M-p") 'list-processes)
 (global-set-key (kbd "C-q g") 'goto-line)
+(global-set-key (kbd "C-q C-b j") 'bookmark-jump)
+(global-set-key (kbd "C-q C-b s") 'bookmark-set)
+(global-set-key (kbd "C-q C-b S") 'bookmark-save)
+(global-set-key (kbd "C-q C-b r") 'bookmark-rename)
 
 ;; Key Macros
 (global-set-key (kbd "C-q C-k i") 'insert-placeholder)  ; Insert Placeholder

@@ -45,6 +45,7 @@
 (save-place-mode t) ; Save the point position
 (setq ring-bell-function 'ignore) ; Disable Infos
 (setq inhibit-compacting-font-caches nil) ; Disable font cache
+(setq bookmark-default-file "~/.emacs.d/site-lisp/bookmarks.el") ; Bookmarks File
 (setq scroll-step 2
       scroll-margin 2
       hscroll-step 2
