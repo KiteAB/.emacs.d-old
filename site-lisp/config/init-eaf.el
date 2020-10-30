@@ -2,7 +2,7 @@
 (use-package eaf
   :load-path "~/.emacs.d/site-lisp/extensions/emacs-application-framework"
   :demand
-  :bind ("C-q C-w l" . eaf-open-browser)
+  :bind ("C-q C-b o" . eaf-open-browser)
   :config
   (eaf-setq eaf-browser-remember-history "true")
   (eaf-setq eaf-browser-default-zoom "1.5")
