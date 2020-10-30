@@ -81,7 +81,7 @@
 ** Contributors
    - *[[https://github.com/KiteAB][David Zhang]]*: The original creator of this repository.
    - *[[https://github.com/JimMoen][JimMoen]]*: Cleaned up and improved the codes, See [[https://github.com/KiteAB/.emacs.d-old/pull/1][#1]] for details.
-   - *[[https://github.com/SpringHan][SpringHan]]*: Codes part provided, One of my Emacs guides.
-   - *[[https://github.com/EvanMeek][EvanMeek]]*: Codes part provided, One of my Emacs guides.
-   - *[[https://github.com/manateelazycat][Andy Stewart]]*: Multiple packages provided, One of my Emacs guides.
-   - *[[https://github.com/redguardtoo][Chen Bin]]*: Encouragement and support provided, One of my Emacs guides.
+   - *[[https://github.com/SpringHan][SpringHan]]*: Codes part provided.
+   - *[[https://github.com/EvanMeek][EvanMeek]]*: Codes part provided.
+   - *[[https://github.com/manateelazycat][Andy Stewart]]*: Multiple packages provided.
+   - *[[https://github.com/redguardtoo][Chen Bin]]*: Encouragement and support provided.
