@@ -55,5 +55,6 @@
       scroll-down-aggressively 0.01
       scroll-preserve-screen-position 'always) ; Scroll
 (setq mouse-yank-at-point nil)
+(advice-add 'display-startup-echo-area-message :override 'ignore) ; Disable messages when startup
 
 (provide 'init-basic)
