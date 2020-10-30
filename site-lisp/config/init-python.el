@@ -8,6 +8,6 @@
   :hook (python-mode-hook . (lambda () (require 'lsp-pyright) (lsp))))
 
 ;;; Folding
-(add-hook 'python-mode-hook #'(lambda () (outline-minor-mode t)))
+(add-hook 'python-mode-hook '(lambda () (outline-minor-mode t)))
 
 (provide 'init-python)

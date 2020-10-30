@@ -17,7 +17,7 @@
   (setq ivy-posframe-display-functions-alist
         '((t . ivy-posframe-display-at-frame-center)))
   (setq ivy-posframe-parameters '((left-fringe . 8)
-                                  (add-hook 'ivy-mode-hook #'ivy-posframe-mode)))
+                                  (add-hook 'ivy-mode-hook 'ivy-posframe-mode)))
   :bind (("C-s" . swiper)
          ("C-r" . swiper-backward)))
 

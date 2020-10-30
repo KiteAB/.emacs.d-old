@@ -3,18 +3,18 @@
   :ensure t
   :init
   (with-eval-after-load 'winum
-    (define-key winum-keymap (kbd "M-0") #'treemacs-select-window))
+    (define-key winum-keymap (kbd "M-0") 'treemacs-select-window))
   :config
   (progn
     (setq treemacs-collapse-dirs                 (if treemacs-python-executable 3 0)
           treemacs-deferred-git-apply-delay      0.5
-          treemacs-directory-name-transformer    #'identity
+          treemacs-directory-name-transformer    'identity
           treemacs-display-in-side-window        t
           treemacs-eldoc-display                 t
           treemacs-file-event-delay              5000
           treemacs-file-extension-regex          treemacs-last-period-regex-value
           treemacs-file-follow-delay             0.2
-          treemacs-file-name-transformer         #'identity
+          treemacs-file-name-transformer         'identity
           treemacs-follow-after-init             t
           treemacs-git-command-pipe              ""
           treemacs-goto-tag-strategy             'refetch-index

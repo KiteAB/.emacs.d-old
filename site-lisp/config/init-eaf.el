@@ -9,7 +9,7 @@
   (setq eaf-browser-search-engines '(("Baidu" . "https://www.baidu.com/s?wd=%s")
                                      ("Bing" . "https://cn.bing.com/search?q=%s")))
   (setq eaf-browser-default-search-engine "Bing")
-  (defalias 'browse-web #'eaf-open-browser)
+  (defalias 'browse-web 'eaf-open-browser)
   (if (and
        (< (car (circadian-sunrise))
           (car (circadian-now-time)))
