@@ -29,6 +29,7 @@
 ;;; Smartparens
 (use-package smartparens
   :ensure t
+  :disabled
   :hook ((c-mode-hook c++-mode-hook python-mode-hook) . smartparens-mode))
 
 (provide 'init-prog)

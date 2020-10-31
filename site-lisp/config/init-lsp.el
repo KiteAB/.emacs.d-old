@@ -30,7 +30,7 @@
 ;;; Nox
 (use-package nox
   :load-path "~/.emacs.d/site-lisp/extensions/nox"
-  :hook (lsp-mode-hook . nox-ensure))
+  :after lsp-mode)
 
 ;;; Lsp Treemacs
 (use-package lsp-treemacs :ensure t)

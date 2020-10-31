@@ -4,8 +4,10 @@
   :ensure t
   :hook (after-init-hook . global-company-mode)
   :config
-  (setq company-idle-delay 30
-        company-minimum-prefix-length 1)
+  (setq company-minimum-prefix-length 1)
+  (if (eq major-mode 'emacs-lisp-mode)
+      (setq company-idle-delay 30)
+    (setq company-idle-delay 0))
   (with-eval-after-load 'company
     (define-key company-active-map (kbd "M-p") nil)
     (define-key company-active-map (kbd "M-n") nil)
