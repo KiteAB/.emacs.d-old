@@ -39,11 +39,16 @@
   (set-frame-parameter nil 'alpha '(90 . 100)))
 
 ;;; Lazycat Themes
-(use-package lazycat-theme :load-path "~/.emacs.d/site-lisp/extensions/lazycat-theme")
+(use-package lazycat-theme
+  :load-path "~/.emacs.d/site-lisp/extensions/lazycat-theme"
+  :config
+  (lazycat-theme-load-dark)
+  (setq-default cursor-type '(bar . 2)))
 
 ;;; Circadian - Switch Theme
 (use-package circadian
   :ensure t
+  :disabled
   :config
   (setq calendar-latitude 27.831940
         calendar-longitude 113.148087)

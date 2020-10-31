@@ -10,12 +10,13 @@
                                      ("Bing" . "https://cn.bing.com/search?q=%s")))
   (setq eaf-browser-default-search-engine "Bing")
   (defalias 'browse-web 'eaf-open-browser)
-  (if (and
-       (< (car (circadian-sunrise))
-          (car (circadian-now-time)))
-       (> (car (circadian-sunset))
-          (car (circadian-now-time))))
-      (eaf-setq eaf-browser-dark-mode "false")
-    (eaf-setq eaf-browser-dark-mode "true")))
+  ;; (if (and
+  ;;      (< (car (circadian-sunrise))
+  ;;         (car (circadian-now-time)))
+  ;;      (> (car (circadian-sunset))
+  ;;         (car (circadian-now-time))))
+  ;;     (eaf-setq eaf-browser-dark-mode "false")
+  ;;   (eaf-setq eaf-browser-dark-mode "true"))
+  (eaf-setq eaf-browser-dark-mode "true"))
 
 (provide 'init-eaf)
