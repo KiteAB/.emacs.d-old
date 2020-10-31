@@ -29,6 +29,7 @@
                                       "parent-dir"
                                       "buffer-name-plus"
                                       "buffer-read-only"
-                                      "date")))
+                                      "date"))
+  (setq awesome-tray-refresh-idle-delay 0.01))
 
 (provide 'init-awesome-tray)
