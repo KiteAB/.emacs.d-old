@@ -42,4 +42,4 @@
   (require 'init-go)
   )
 
-(provide 'init)
+(provide 'site-start)
