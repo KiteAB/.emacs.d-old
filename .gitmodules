@@ -19,3 +19,6 @@
 [submodule "site-lisp/extensions/valign"]
 	path = site-lisp/extensions/valign
 	url = https://github.com/casouri/valign
+[submodule "site-lisp/extensions/nox"]
+	path = site-lisp/extensions/nox
+	url = https://github.com/manateelazycat/nox
