@@ -5,5 +5,5 @@
 !/.gitattributes
 !/site-lisp/
 /site-lisp/config/init-token.el
-!/site-start.el
+!/init.el
 !/README.org
