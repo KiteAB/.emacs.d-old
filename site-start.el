@@ -3,7 +3,7 @@
 ;; Author: KiteAB <kiteabpl@outlook.com>
 ;; Maintainer: KiteAB <kiteabpl@outlook.com>
 ;; Copyright (C) 2020, KiteAB, all rights reserved.
-;; Last-Updated: 2020-10-29 22:26:48
+;; Last-Updated: 2020-10-31 15:15:10
 ;;           By: KiteAB
 ;; URL: http://github.com/KiteAB/.emacs.d
 ;; Keywords:
@@ -33,18 +33,6 @@
 ;;
 ;;
 
-;;; Automatic Optimization
-(setq gc-cons-threshold-original gc-cons-threshold)
-(setq gc-cons-threshold (* 1024 1024 100))
-(setq file-name-handler-alist-original file-name-handler-alist)
-(setq inhibit-compacting-font-caches nil)
-(setq file-name-handler-alist nil)
-(run-with-idle-timer 5 nil (lambda ()
-                             (setq gc-cons-threshold gc-cons-threshold-original)
-                             (setq file-name-handler-alist file-name-handler-alist-original)
-                             (makunbound 'gc-cons-threshold-original)
-                             (makunbound 'file-name-handler-alist-original)))
-
 ;;; Traverse Load Configuration Folder
 (defun add-subdirs-to-load-path(dir)
   "Recursive add directories to `load-path`."
@@ -54,7 +42,6 @@
 (let ((gc-cons-threshold most-positive-fixnum)
       (file-name-handler-alist nil))
   (add-subdirs-to-load-path "~/.emacs.d/site-lisp/config"))
-(load-file "~/.emacs.d/site-lisp/init-config.el")
 
 ;;; Require Configuration Files
-(require 'init-config)
+(require 'init)
