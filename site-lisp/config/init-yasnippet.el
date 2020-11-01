@@ -1,7 +1,6 @@
-;;; This file is used for yasnippet settings
+;;; This file is used for Yasnippet Settings
 (use-package yasnippet
   :ensure t
-  :defer 1
   :bind ("C-' C-y" . yas-expand-from-trigger-key)
   :hook (after-init-hook . yas-global-mode)
   :config
