@@ -27,11 +27,15 @@
       create-lockfiles nil            ; Don't make lockfile
       auto-save-default nil           ; Don't auto save the file
       auto-save-list-file-prefix nil) ; Don't make auto-save-list folder
-(setq initial-scratch-message
-      ";; KiteAB Emacs
-;; This is the scratch buffer for startup page and test Emacs Lisp code.
 
-")
+(setq initial-scratch-message (format ";; KiteAB Emacs
+;; Emacs Startup Time: %.2fs
+;; %s Packages Loaded, %s Features Required
+
+" (float-time (time-subtract after-init-time before-init-time))
+(length package-activated-list)
+(length features)))
+
 (setq-default tab-width 2) ; The tab width
 (setq-default indent-tabs-mode nil) ; Use space indent
 (setq-default css-indent-offset 2) ; Set css indent width
