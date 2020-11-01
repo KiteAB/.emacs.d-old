@@ -62,8 +62,8 @@
    You can view this file and change somethings.
 
 ** Token
-   You need to do the following to make markdown preview work properly:
-   - ~touch ~/.emacs.d/lisp/config/init-token.el~
+   You need to do the following to make markdown/org preview work properly:
+   - ~touch ~/.emacs.d/site-lisp/config/init-eaf.el~
    - Edit the ~token.el~ file and add somethings below:
    #+begin_src emacs-lisp
    ;;; This file is used for Store GitHub Personal Access Token

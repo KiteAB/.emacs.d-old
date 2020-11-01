@@ -32,13 +32,6 @@
     (require 'init-modes)
     (require 'init-macros)
 
-    (if (file-exists-p "~/.emacs.d/site-lisp/config/init-token.el")
-        (progn
-          (load-file "~/.emacs.d/site-lisp/config/init-token.el")
-          (require 'gh-token))
-      (switch-to-buffer "*KiteAB Emacs*")
-      (insert "[WARNING] token.el not found. Please read README.org's \"Token\" part or ignore this message at init-config.el"))
-
     (require 'init-python)
     (require 'init-cc)
     (require 'init-go)
