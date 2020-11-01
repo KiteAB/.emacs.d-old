@@ -1,4 +1,4 @@
-;;; This file is used for Other Programming Language's Settings
+;;; This file is used for Store Packages for Programming Help
 ;;; JS2 Mode
 (use-package js2-mode
   :ensure t
@@ -23,7 +23,6 @@
 ;;; Indent Guide
 (use-package indent-guide
   :ensure t
-  :defer 1
   :hook (prog-mode-hook . indent-guide-global-mode))
 
 ;;; Smartparens
@@ -31,5 +30,10 @@
   :ensure t
   :disabled
   :hook ((c-mode-hook c++-mode-hook python-mode-hook) . smartparens-mode))
+
+;;; Aggressive Indent
+(use-package aggressive-indent
+  :ensure t
+  :hook (prog-mode-hook . aggressive-indent-mode))
 
 (provide 'init-prog)
