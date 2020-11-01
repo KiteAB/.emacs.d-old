@@ -52,9 +52,8 @@
   "Open the scratch buffer after closing it."
   (interactive)
   (switch-to-buffer "*scratch*")
-  (unless (get-buffer "*scratch*")
-    (insert initial-scratch-message)
-    (message "[KiteAB Emacs] Open the scratch action done.")))
+  (insert initial-scratch-message)
+  (message "[KiteAB Emacs] Open the scratch action done."))
 
 (defun kiteab/touch-not-alpha ()
   "Make the not-alpha file."
