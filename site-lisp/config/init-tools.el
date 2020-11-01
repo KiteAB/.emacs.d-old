@@ -137,4 +137,14 @@
          ("C-' C-a w" . ace-jump-word-mode)
          ("C-' C-a c" . ace-jump-char-mode)))
 
+;;; Disable Mouse
+(use-package disable-mouse
+  :ensure t
+  :hook (after-init-hook . global-disable-mouse-mode))
+
+;;; Kill Ring Search
+(use-package kill-ring-search
+  :ensure t
+  :bind ("C-' y" . kill-ring-search))
+
 (provide 'init-tools)
