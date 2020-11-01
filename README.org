@@ -64,15 +64,13 @@
 ** Token
    You need to do the following to make markdown/org preview work properly:
    - ~touch ~/.emacs.d/site-lisp/config/init-eaf.el~
-   - Edit the ~token.el~ file and add somethings below:
+   - Edit the ~init-eaf.el~ file and edit somethings below:
    #+begin_src emacs-lisp
-   ;;; This file is used for Store GitHub Personal Access Token
-   (setq eaf-grip-token "yourghtoken")
-   (provide 'gh-token)
+   (setq eaf-grip-token "token")
    #+end_src
    And go to the [[https://github.com/settings/tokens/new?scopes=][GitHub Personal Access Token Site]] to create your personal token.
 
-   Then replace ~yourghtoken~ to your personal token.
+   Then replace ~token~ to your personal token.
 
 ** Notes
    - You need to go to [[https://www.latlong.net][LatLong]] and replace the latitude and longitude values in ~init-ui.el~, otherwise you can't change themes automatically!
