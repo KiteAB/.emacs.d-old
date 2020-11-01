@@ -80,7 +80,7 @@
 
 ** Contributors
    - *[[https://github.com/KiteAB][David Zhang]]*: The original creator of this repository.
-   - *[[https://github.com/JimMoen][JimMoen]]*: Cleaned up and improved the codes, See #1 for details.
+   - *[[https://github.com/JimMoen][JimMoen]]*: Cleaned up and improved the codes, See [[https://github.com/KiteAB/.emacs.d/pull/1][#1]] for details.
    - *[[https://github.com/SpringHan][SpringHan]]*: Codes part provided.
    - *[[https://github.com/EvanMeek][EvanMeek]]*: Codes part provided.
    - *[[https://github.com/manateelazycat][Andy Stewart]]*: Multiple packages provided.
