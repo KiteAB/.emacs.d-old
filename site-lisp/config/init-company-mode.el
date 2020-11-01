@@ -1,5 +1,4 @@
-;;; This file is used for Complete Settings
-;;; Company (Complete Anything)
+;;; This file is used for Company Mode Settings
 (use-package company
   :ensure t
   :hook (after-init-hook . global-company-mode)
@@ -19,9 +18,9 @@
   :ensure t
   :config (add-to-list 'company-backends 'company-c-headers))
 
-;;; Beautify for Company
+;;; Beautify
 (use-package company-box
   :ensure t
   :hook (company-mode-hook . company-box-mode))
 
-(provide 'init-complete)
+(provide 'init-company-mode)

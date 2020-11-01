@@ -14,4 +14,4 @@
   (package-install 'use-package))
 (setq use-package-hook-name-suffix nil)
 
-(provide 'init-elpa)
+(provide 'init-package)

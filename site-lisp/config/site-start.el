@@ -5,14 +5,15 @@
       (file-name-handler-alist nil))
   (with-temp-message ""
     (require 'init-functions)
-    (require 'init-elpa)
+    (require 'init-package)
     (require 'init-ui)
+    (require 'init-theme)
     (require 'init-awesome-tray)
 
     (require 'init-basic)
     (require 'init-keybindings)
 
-    (require 'init-complete)
+    (require 'init-company-mode)
     (require 'init-lsp)
     (require 'init-emacs-lisp)
     (require 'init-tools)
