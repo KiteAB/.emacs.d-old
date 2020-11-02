@@ -75,7 +75,7 @@
 ** Notes
    - You need to go to [[https://www.latlong.net][LatLong]] and replace the latitude and longitude values in ~init-ui.el~, otherwise you can't change themes automatically!
    - This configuration file is best run on GNU/Linux Emacs 27.1, Windows may have some problems such as [[https://github.com/KiteAB/.emacs.d/issues/1][this issue]].
-   - Emacs can't search ~site-start.el~, so you need create a ~.emacs~ file in your home directory and write them in:
+   - Emacs can't search and autoload ~site-start.el~, so you need create an ~.emacs~ file in your home directory and write them in:
      #+begin_src emacs-lisp
        (load-file "path/to/site-start.el")
      #+end_src
