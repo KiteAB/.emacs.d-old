@@ -44,4 +44,4 @@
   (add-subdirs-to-load-path "~/.emacs.d/site-lisp/config"))
 
 ;;; Require Configuration Files
-(require 'site-start)
+(require 'init)

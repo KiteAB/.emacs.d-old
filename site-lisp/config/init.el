@@ -63,4 +63,4 @@
     (require 'init-go-mode)
     ))
 
-(provide 'site-start)
+(provide 'init)

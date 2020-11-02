@@ -4,5 +4,5 @@
 !/.gitmodules
 !/.gitattributes
 !/site-lisp/
-!/init.el
+!/site-start.el
 !/README.org
