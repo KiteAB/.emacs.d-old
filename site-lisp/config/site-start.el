@@ -11,7 +11,7 @@
     (require 'init-theme)
     (require 'init-awesome-tray)
 
-    (require 'init-basic)
+    (require 'init-generic)
     (require 'init-keybindings)
 
     (require 'init-company-mode)

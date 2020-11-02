@@ -1,4 +1,4 @@
-;;; This file is used for Basic Settings
+;;; This file is used for Generic Settings
 ;;; Functions
 (fset 'yes-or-no-p 'y-or-n-p) ; Change the asking's answer way
 (add-hook 'after-change-major-mode-hook (lambda ()
@@ -56,6 +56,9 @@
 ;;       scroll-preserve-screen-position 'always)
                                         ; Scroll
 (setq mouse-yank-at-point nil)
-(advice-add 'display-startup-echo-area-message :override 'ignore) ; Disable messages when startup
 
-(provide 'init-basic)
+(setq kill-buffer-query-functions
+      (remq 'process-kill-buffer-query-function
+            kill-buffer-query-functions))
+
+(provide 'init-generic)
