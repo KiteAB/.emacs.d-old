@@ -46,6 +46,7 @@
 (setq ring-bell-function 'ignore) ; Disable Infos
 (setq inhibit-compacting-font-caches nil) ; Disable font cache
 (setq bookmark-default-file "~/.emacs.d/site-lisp/config/init-bookmarks.el") ; Bookmarks File
+(global-auto-revert-mode t)
 ;; (setq scroll-step 2
 ;;       scroll-margin 2
 ;;       hscroll-step 2
