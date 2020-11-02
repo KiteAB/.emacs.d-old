@@ -4,7 +4,8 @@
   :load-path "~/.emacs.d/site-lisp/extensions/lazycat-theme"
   :config
   (lazycat-theme-load-dark)
-  (setq-default cursor-type '(bar . 2)))
+  ;; (setq-default cursor-type '(bar . 2))
+  )
 
 ;;; Circadian - Switch Theme
 (use-package circadian
@@ -15,7 +16,6 @@
         calendar-longitude 113.148087)
   (setq circadian-themes '((:sunrise . lazycat-light)
                            (:sunset . lazycat-dark)))
-  (circadian-setup)
-  (setq-default cursor-type '(bar . 2)))
+  (circadian-setup))
 
 (provide 'init-theme)

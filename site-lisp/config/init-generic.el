@@ -35,6 +35,7 @@
 (setq-default tab-width 2) ; The tab width
 (setq-default indent-tabs-mode nil) ; Use space indent
 (setq-default css-indent-offset 2) ; Set css indent width
+(setq eshell-history-file-name "~/.emacs/var/eshell/history")
 (setq display-time-24hr-format t) ; Display the time and date on modeline
 (display-time-mode t) ; Display the time
 ;; (column-number-mode t) ; Show the column number in the modeline
@@ -43,10 +44,12 @@
 (setq user-init-file "~/.emacs.d/var/user-init.el")
 (setq load-prefer-newer t)
 (save-place-mode t) ; Save the point position
-(setq ring-bell-function 'ignore) ; Disable Infos
+(setq ring-bell-function 'ignore
+      blink-cursor-mode nil) ; Disable Infos
 (setq inhibit-compacting-font-caches nil) ; Disable font cache
 (setq bookmark-default-file "~/.emacs.d/site-lisp/config/init-bookmarks.el") ; Bookmarks File
 (global-auto-revert-mode t)
+(setq load-prefer-newer t)
 ;; (setq scroll-step 2
 ;;       scroll-margin 2
 ;;       hscroll-step 2
