@@ -36,6 +36,7 @@
 (global-set-key (kbd "C-q C-b s") 'bookmark-set)
 (global-set-key (kbd "C-q C-b S") 'bookmark-save)
 (global-set-key (kbd "C-q C-b r") 'bookmark-rename)
+(global-set-key (kbd "C-q C-a") 'align-regexp)
 
 ;; Key Macros
 (global-set-key (kbd "C-q C-k i") 'insert-placeholder)  ; Insert Placeholder

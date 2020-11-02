@@ -27,6 +27,11 @@
          (setq lsp-on-touch-time (float-time (current-time)))
          ad-do-it))))
 
+;;; Lsp Pyright
+(use-package lsp-pyright
+  :ensure t
+  :hook (python-mode-hook . (lambda () (require 'lsp-pyright) (lsp))))
+
 ;;; Nox
 (use-package nox
   :load-path "~/.emacs.d/site-lisp/extensions/nox"

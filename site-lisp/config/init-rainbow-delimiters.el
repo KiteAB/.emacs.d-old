@@ -1,16 +1,4 @@
-;;; This file is used for Emacs Lisp Settings
-;;; Symbol Overlay
-(use-package symbol-overlay
-  :ensure t
-  :hook (emacs-lisp-mode-hook . symbol-overlay-mode))
-
-;;; Lispy
-(use-package lispy
-  :ensure t
-  :hook ((lisp-mode-hook emacs-lisp-mode-hook lisp-interaction-mode-hook) . lispy-mode)
-  :bind ("C-' L" . lispy-mode))
-
-;;; Rainbow Delimiters
+;;; This file is used for Rainbow Delimiters Settings
 (use-package rainbow-delimiters
   :ensure t
   :hook ((lisp-mode-hook emacs-lisp-mode-hook org-mode-hooke eshell-mode-hook) . rainbow-delimiters-mode)
@@ -25,4 +13,4 @@
   (set-face-attribute 'rainbow-delimiters-depth-8-face nil :foreground "gold"          :bold "t")
   (set-face-attribute 'rainbow-delimiters-depth-9-face nil :foreground "cyan"          :bold "t"))
 
-(provide 'init-emacs-lisp)
+(provide 'init-rainbow-delimiters)

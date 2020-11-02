@@ -23,10 +23,6 @@
         (?\( . ?\))
         (?\< . ?\>)
         (?\{ . ?\}))) ; Set the electric-pair-mode's pair keywords
-(setq make-backup-files nil           ; Don't let Emacs make up backup file
-      create-lockfiles nil            ; Don't make lockfile
-      auto-save-default nil           ; Don't auto save the file
-      auto-save-list-file-prefix nil) ; Don't make auto-save-list folder
 
 (setq initial-scratch-message (format ";; KiteAB Emacs
 ;; Emacs Startup Time: %.2fs
@@ -50,14 +46,15 @@
 (setq ring-bell-function 'ignore) ; Disable Infos
 (setq inhibit-compacting-font-caches nil) ; Disable font cache
 (setq bookmark-default-file "~/.emacs.d/site-lisp/config/init-bookmarks.el") ; Bookmarks File
-(setq scroll-step 2
-      scroll-margin 2
-      hscroll-step 2
-      hscroll-margin 2
-      scroll-conservatively 101
-      scroll-up-aggressively 0.01
-      scroll-down-aggressively 0.01
-      scroll-preserve-screen-position 'always) ; Scroll
+;; (setq scroll-step 2
+;;       scroll-margin 2
+;;       hscroll-step 2
+;;       hscroll-margin 2
+;;       scroll-conservatively 101
+;;       scroll-up-aggressively 0.01
+;;       scroll-down-aggressively 0.01
+;;       scroll-preserve-screen-position 'always)
+                                        ; Scroll
 (setq mouse-yank-at-point nil)
 (advice-add 'display-startup-echo-area-message :override 'ignore) ; Disable messages when startup
 

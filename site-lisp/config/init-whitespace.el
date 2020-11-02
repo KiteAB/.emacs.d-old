@@ -1,6 +1,5 @@
 ;;; This file is used for WhiteSpace Settings
 (use-package whitespace
-  :ensure nil
   :hook (emacs-lisp-mode-hook . whitespace-mode)
   :config
   (setq whitespace-style

@@ -1,12 +1,4 @@
-;;; This file is used for Packages Settings About English
-;;; Company English Helper
-(use-package company-english-helper
-  :load-path "~/.emacs.d/site-lisp/extensions/company-english-helper"
-  :config
-  (load-file "~/.emacs.d/site-lisp/extensions/company-english-helper/company-english-helper-data.el")
-  :bind ("C-' C-l s" . company-english-helper-search))
-
-;;; Insert Translated Name
+;;; This file is used for Insert Translated Name Settings
 (use-package insert-translated-name
   :load-path "~/.emacs.d/site-lisp/extensions/insert-translated-name"
   :bind (("C-' C-l i" . insert-translated-name-insert)
@@ -19,9 +11,4 @@
          ("C-' C-l C" . insert-translated-name-replace-with-camel)
          ("C-' C-l L" . insert-translated-name-replace-with-line)))
 
-;;; Youdao Dictionary
-(use-package youdao-dictionary
-  :ensure t
-  :bind ("C-' t" . youdao-dictionary-search-at-point))
-
-(provide 'init-english)
+(provide 'init-insert-translated-name)

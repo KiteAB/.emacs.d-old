@@ -1,6 +1,5 @@
 ;;; This file is used for Dired Settings
 (use-package dired
-  :ensure nil
   :config
   (define-advice dired-do-print (:override (&optional _))
     "Show/hide dotfiles."
