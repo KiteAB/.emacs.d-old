@@ -1,7 +1,6 @@
 ;;; This file is used for Emacs Application Framework Settings
 (use-package eaf
   :load-path "~/.emacs.d/site-lisp/extensions/emacs-application-framework"
-  :demand
   :bind ("C-q C-b o" . eaf-open-browser)
   :config
   (setq eaf-grip-token "c9a51aa390cd3bce36a7d307d404d2aeb030f707")

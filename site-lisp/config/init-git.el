@@ -7,7 +7,9 @@
 ;;; Magit
 (use-package magit
   :ensure t
-  :bind ("C-' m" . magit-status))
+  :bind (("C-' m" . magit-status)
+         :map magit-mode-map
+         ("q" . kiteab/kill-magit)))
 
 ;;; Diff Highlight
 (use-package diff-hl

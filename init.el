@@ -3,7 +3,7 @@
 ;; Author: KiteAB <kiteabpl@outlook.com>
 ;; Maintainer: KiteAB <kiteabpl@outlook.com>
 ;; Copyright (C) 2020, KiteAB, all rights reserved.
-;; Last-Updated: 2020-11-01 21:01:57
+;; Last-Updated: 2020-11-02 17:12:29
 ;;           By: KiteAB
 ;; URL: http://github.com/KiteAB/.emacs.d
 ;; Keywords:
@@ -29,8 +29,8 @@
 ;; Floor, Boston, MA 02110-1301, USA.
 
 ;;; TODO
-;; https://github.com/conao3/leaf.el
-;; modular like lazycat-emacs
+;;
+;;
 ;;
 
 ;;; Traverse Load Configuration Folder
