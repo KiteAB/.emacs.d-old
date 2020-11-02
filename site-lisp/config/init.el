@@ -28,7 +28,6 @@
     (require 'init-windresize)
     (require 'init-smooth-scrolling)
     (require 'init-multiple-cursors)
-    (require 'init-autorevert)
     (require 'init-clm)
     (require 'init-isearch)
     (require 'init-comment)
@@ -36,6 +35,7 @@
     (require 'init-recentf)
     (require 'init-ace-jump)
     (require 'init-disable-mouse)
+    (require 'init-popwin)
     (require 'init-git)
     (require 'init-treemacs)
     (require 'init-yasnippet)
@@ -60,7 +60,7 @@
 
     (require 'init-python)
     (require 'init-cc)
-    (require 'init-go-mode)
+    (require 'init-golang)
     ))
 
 (provide 'init)
