@@ -27,7 +27,7 @@
 (setq initial-scratch-message (format ";; KiteAB Emacs
 ;; Emacs Startup Time: %.2fs, With %s Garbage Collects
 ;; %s Packages Loaded, %s Features Required
-
+
 " (float-time (time-subtract after-init-time before-init-time))
 gcs-done
 (length package-activated-list)
