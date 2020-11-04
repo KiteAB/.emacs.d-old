@@ -1,4 +1,4 @@
-;;; This file is used for Packages Configuration and More
+;;; This file is used for Packages Configuration
 ;;; Set Parent Key for Packages
 (define-prefix-command 'plugin-key)
 (global-set-key (kbd "C-'") 'plugin-key)
@@ -13,5 +13,10 @@
   (package-refresh-contents)
   (package-install 'use-package))
 (setq use-package-hook-name-suffix nil)
+
+;;; Init Leaf.el
+;; (unless (package-installed-p 'leaf)
+;;   (package-refresh-contents)
+;;   (package-install 'leaf))
 
 (provide 'init-package)
