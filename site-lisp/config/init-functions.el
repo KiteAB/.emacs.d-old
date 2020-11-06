@@ -77,7 +77,7 @@
                                                "\n" t))))
           (erc :nick (car user-info) :password (nth 1 user-info)))
       (let ((user-name (read-string "[KiteAB Emacs] ERC Nick: "))
-            (user-password (read-passwd "[KiteAB Emacs]ERC Password: "))
+            (user-password (read-passwd "[KiteAB Emacs] ERC Password: "))
             save-y-or-n)
         (if (or (string= user-name "")
                 (string= user-password ""))
