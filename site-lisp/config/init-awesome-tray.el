@@ -7,7 +7,6 @@
 
   (setq awesome-tray-active-modules '("git"
                                       "location"
-                                      "input-method"
                                       "mode-name"
                                       "parent-dir"
                                       "buffer-name"
