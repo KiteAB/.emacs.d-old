@@ -3,8 +3,7 @@
   :load-path "~/.emacs.d/site-lisp/extensions/awesome-tray"
   :hook (after-init-hook . awesome-tray-mode)
   :config
-  (setq awesome-tray-refresh-idle-delay 0.01
-        awesome-tray-buffer-name-buffer-changed t)
+  (setq awesome-tray-refresh-idle-delay 0.01)
 
   (setq awesome-tray-active-modules '("git"
                                       "location"
