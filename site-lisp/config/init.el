@@ -40,7 +40,6 @@
     (require 'init-treemacs)
     (require 'init-yasnippet)
     (require 'init-ivy)
-    (require 'init-pyim)
     (require 'init-whitespace)
     (require 'init-eaf)
     (require 'init-web-mode)
