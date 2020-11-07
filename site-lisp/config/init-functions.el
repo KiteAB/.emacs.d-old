@@ -116,7 +116,7 @@
 
 (defun kiteab/search-engine ()
   "Open search page by eaf-browser."
-  (interactive "M[KiteAB Emacs]The text you want to search: ")
+  (interactive "M[KiteAB Emacs] The text you want to search: ")
   (eaf-open-browser (concat "https://cn.bing.com/search?q=" content)))
 
 (defun kiteab/change-indent-type (type)
