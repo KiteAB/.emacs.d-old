@@ -3,7 +3,7 @@
 ;; Author: KiteAB <kiteabpl@outlook.com>
 ;; Maintainer: KiteAB <kiteabpl@outlook.com>
 ;; Copyright (C) 2020, KiteAB, all rights reserved.
-;; Last-Updated: 2020-11-04 19:47:42
+;; Last-Updated: 2020-11-09 17:46:12
 ;;           By: KiteAB
 ;; URL: http://github.com/KiteAB/.emacs.d
 ;; Keywords:
@@ -33,15 +33,11 @@
 ;;
 ;;
 
-;;; Traverse Load Configuration Folder
 (defun add-subdirs-to-load-path(dir)
-  "Recursive add directories to `load-path`."
+  "Recursive add directories to `load-path'."
   (let ((default-directory (file-name-as-directory dir)))
     (add-to-list 'load-path dir)
     (normal-top-level-add-subdirs-to-load-path)))
-(let ((gc-cons-threshold most-positive-fixnum)
-      (file-name-handler-alist nil))
-  (add-subdirs-to-load-path "~/.emacs.d/site-lisp/config"))
+(add-subdirs-to-load-path "~/.emacs.d/site-lisp/config")
 
-;;; Require Configuration Files
 (require 'init)
