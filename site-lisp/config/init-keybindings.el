@@ -10,7 +10,7 @@
 (global-set-key (kbd "C-q s") 'kiteab/open-scratch)
 (global-set-key (kbd "C-q A") 'kiteab/touch-not-alpha)
 (global-set-key (kbd "C-q TAB") 'kiteab/open-erc)
-(global-set-key (kbd "C-q t") 'kiteab/add-todo-in-code)
+(global-set-key (kbd "C-q T") 'kiteab/add-todo-in-code)
 (global-set-key (kbd "C-q k") 'kiteab/kill-unwanted-buffers)
 (global-set-key (kbd "C-q C-s") 'kiteab/search-engine)
 (global-set-key (kbd "C-q i") 'kiteab/change-indent-type)
