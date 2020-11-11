@@ -19,6 +19,8 @@
     (require 'init-symbol-overlay)
     (require 'init-lispy)
     (require 'init-rainbow-delimiters)
+    (require 'init-highlight-defined)
+    (require 'init-highlight-quoted)
     (require 'init-auto-save)
     (require 'init-flycheck)
     (require 'init-vterm)

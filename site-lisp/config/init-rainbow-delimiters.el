@@ -1,7 +1,7 @@
 ;;; This file is used for Rainbow Delimiters Settings
 (use-package rainbow-delimiters
   :ensure t
-  :hook ((lisp-mode-hook emacs-lisp-mode-hook org-mode-hooke eshell-mode-hook) . rainbow-delimiters-mode)
+  :hook ((lisp-mode-hook emacs-lisp-mode-hook org-mode-hook eshell-mode-hook) . rainbow-delimiters-mode)
   :config
   (set-face-attribute 'rainbow-delimiters-depth-1-face nil :foreground "chartreuse3"   :bold "t")
   (set-face-attribute 'rainbow-delimiters-depth-2-face nil :foreground "DodgerBlue1"   :bold "t")
