@@ -42,6 +42,7 @@
     (require 'init-treemacs)
     (require 'init-yasnippet)
     (require 'init-ivy)
+    (require 'init-snails)
     (require 'init-whitespace)
     (require 'init-eaf)
     (require 'init-web-mode)

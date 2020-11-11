@@ -25,3 +25,6 @@
 [submodule "site-lisp/extensions/awesome-pair"]
 	path = site-lisp/extensions/awesome-pair
 	url = https://github.com/manateelazycat/awesome-pair
+[submodule "site-lisp/extensions/snails"]
+	path = site-lisp/extensions/snails
+	url = https://github.com/manateelazycat/snails
