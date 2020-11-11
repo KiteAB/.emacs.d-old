@@ -47,7 +47,6 @@
     (require 'init-indent-guide)
     (require 'init-info-colors)
     (require 'init-dired)
-    (require 'init-page-break-lines)
     (require 'init-rainbow-mode)
     (require 'init-company-english-helper)
     (require 'init-insert-translated-name)
