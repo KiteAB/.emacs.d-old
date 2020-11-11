@@ -22,3 +22,6 @@
 [submodule "site-lisp/extensions/nox"]
 	path = site-lisp/extensions/nox
 	url = https://github.com/manateelazycat/nox
+[submodule "site-lisp/extensions/awesome-pair"]
+	path = site-lisp/extensions/awesome-pair
+	url = https://github.com/manateelazycat/awesome-pair
