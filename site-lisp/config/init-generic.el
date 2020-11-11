@@ -24,15 +24,15 @@
         (?\< . ?\>)
         (?\{ . ?\}))) ; Set the electric-pair-mode's pair keywords
 
-(setq kiteab/system-type (if (equal system-type 'gnu\/linux)
+(setq kiteab/system-type (if (eq system-type 'gnu/linux)
                              "GNU/Linux"
-                           (if (equal system-type 'gnu)
+                           (if (eq system-type 'gnu)
                                "GNU Hurd System"
-                             (if (equal system-type 'gnu\/kfreebsd)
+                             (if (eq system-type 'gnu/kfreebsd)
                                  "FreeBSD"
-                               (if (equal system-type 'darwin)
-                                   "Darwin"
-                                 (if (or (equal system-type 'windows-nt) (equal system-type 'cygwin))
+                               (if (eq system-type 'darwin)
+                                   "macOS"
+                                 (if (or (eq system-type 'windows-nt) (eq system-type 'cygwin))
                                      "Windows"))))))
 (setq initial-scratch-message (format ";; KiteAB Emacs on %s
 ;; Emacs Startup Time: %.2fs, With %s Garbage Collects
