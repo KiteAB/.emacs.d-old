@@ -17,7 +17,6 @@
     (require 'init-company-mode)
     (require 'init-lsp)
     (require 'init-symbol-overlay)
-    (require 'init-lispy)
     (require 'init-awesome-pair)
     (require 'init-rainbow-delimiters)
     (require 'init-highlight-defined)
