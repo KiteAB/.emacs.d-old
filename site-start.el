@@ -33,6 +33,7 @@
 ;;
 ;;
 
+;;; Code:
 (defun add-subdirs-to-load-path(dir)
   "Recursive add directories to `load-path'."
   (let ((default-directory (file-name-as-directory dir)))
@@ -41,3 +42,5 @@
 (add-subdirs-to-load-path "~/.emacs.d/site-lisp/config")
 
 (require 'init)
+
+;;; site-start.el ends here

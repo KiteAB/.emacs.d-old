@@ -1,4 +1,5 @@
-;;; This file is used for User Macros
+;;; init-macros.el --- Settings for Macros
+;;; Code:
 (fset 'insert-placeholder
       (kmacro-lambda-form [?< ?+ ?+ ?+ ?>] 0 "%d"))
 (fset 'replace-placeholder
@@ -7,3 +8,5 @@
       (kmacro-lambda-form [?\C-s ?T ?O ?D ?O ?\C-a] 0 "%d"))
 
 (provide 'init-macros)
+
+;;; init-macros.el ends here

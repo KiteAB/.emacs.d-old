@@ -1,11 +1,13 @@
-;;; This file is used for Auto Save Settings
-(setq make-backup-files nil           ; Don't let Emacs make up backup file
-      create-lockfiles nil            ; Don't make lockfile
-      auto-save-default nil           ; Don't auto save the file
+;;; init-auto-save.el --- Settings for Auto Save
+;;; Code:
+(setq make-backup-files nil      ; Don't let Emacs make up backup file
+      create-lockfiles nil       ; Don't make lockfile
+      auto-save-default nil      ; Don't auto save the file
       auto-save-list-file-prefix nil) ; Don't make auto-save-list folder
 
-(use-package auto-save
-  :load-path "~/.emacs.d/site-lisp/extensions/auto-save"
+(leaf auto-save
+  :load-path "~/.emacs.d/site-lisp/extensions/auto-save/"
+  :require t
   :config
   (auto-save-enable)
   (setq auto-save-silent t
@@ -17,3 +19,5 @@
              (file-name-extension (buffer-name)) t)))))
 
 (provide 'init-auto-save)
+
+;;; init-auto-save.el ends here

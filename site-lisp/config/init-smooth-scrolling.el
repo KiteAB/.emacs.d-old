@@ -1,7 +1,13 @@
-;;; This file is used for Smooth Scrolling Settings
-(use-package smooth-scrolling
+;;; init-smooth-scrolling.el --- Settings for Smooth Scrolling
+;;; Code:
+(leaf smooth-scrolling
   :ensure t
-  :hook (after-init-hook . smooth-scrolling-mode)
-  :config (setq smooth-scroll-margin 3))
+  :hook after-init-hook
+  :config
+  (smooth-scrolling-mode)
+  :custom
+  (smooth-scroll-margin . 3))
 
 (provide 'init-smooth-scrolling)
+
+;;; init-smooth-scrolling.el ends here

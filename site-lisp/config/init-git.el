@@ -1,19 +1,26 @@
-;;; This file is used for Git Settings
+;;; init-git.el --- Settings for Git
+;;; Code:
 ;;; Vc Message
-(use-package vc-msg
+(leaf vc-msg
   :ensure t
-  :bind ("C-' s" . vc-msg-show))
+  :bind
+  ("C-' s" . vc-msg-show))
 
 ;;; Magit
-(use-package magit
+(leaf magit
   :ensure t
-  :bind (("C-' m" . magit-status)
-         :map magit-mode-map
-         ("q" . kiteab/kill-magit)))
+  :bind
+  ("C-' m" . magit-status)
+  (:magit-mode-map
+   ("q" . kiteab/kill-magit)))
 
 ;;; Diff Highlight
-(use-package diff-hl
+(leaf diff-hl
   :ensure t
-  :hook (prog-mode-hook . diff-hl-mode))
+  :hook prog-mode-hook
+  :config
+  (diff-hl-mode))
 
 (provide 'init-git)
+
+;;; init-git.el ends here

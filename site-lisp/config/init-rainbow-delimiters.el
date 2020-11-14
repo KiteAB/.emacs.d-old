@@ -1,8 +1,10 @@
-;;; This file is used for Rainbow Delimiters Settings
-(use-package rainbow-delimiters
+;;; init-rainbow-delimiters.el --- Settings for Rainbow Delimiters
+;;; Code:
+(leaf rainbow-delimiters
   :ensure t
-  :hook ((lisp-mode-hook emacs-lisp-mode-hook org-mode-hook eshell-mode-hook) . rainbow-delimiters-mode)
+  :hook (lisp-mode-hook emacs-lisp-mode-hook org-mode-hook eshell-mode-hook)
   :config
+  (rainbow-delimiters-mode)
   (set-face-attribute 'rainbow-delimiters-depth-1-face nil :foreground "chartreuse3"   :bold "t")
   (set-face-attribute 'rainbow-delimiters-depth-2-face nil :foreground "DodgerBlue1"   :bold "t")
   (set-face-attribute 'rainbow-delimiters-depth-3-face nil :foreground "DarkOrange2"   :bold "t")
@@ -14,3 +16,5 @@
   (set-face-attribute 'rainbow-delimiters-depth-9-face nil :foreground "cyan"          :bold "t"))
 
 (provide 'init-rainbow-delimiters)
+
+;;; init-rainbow-delimiters.el ends here

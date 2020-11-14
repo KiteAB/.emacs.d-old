@@ -1,7 +1,13 @@
-;;; This file is used for Lispy Settings
-(use-package lispy
+;;; init-lispy.el --- Settings for Lispy
+;;; Code:
+(leaf lispy
   :ensure t
-  :hook (emacs-lisp-mode-hook . lispy-mode)
-  :bind ("C-' l" . lispy-mode))
+  :hook emacs-lisp-mode-hook
+  :config
+  (lispy-mode)
+  :bind
+  ("C-' l" . lispy-mode))
 
 (provide 'init-lispy)
+
+;;; init-lispy.el ends here
