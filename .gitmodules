@@ -25,3 +25,6 @@
 [submodule "site-lisp/extensions/awesome-pair"]
 	path = site-lisp/extensions/awesome-pair
 	url = https://github.com/manateelazycat/awesome-pair
+[submodule "site-lisp/extensions/pacarch.el"]
+	path = site-lisp/extensions/pacarch.el
+	url = https://github.com/KitPixel/pacarch.el

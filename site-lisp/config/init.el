@@ -54,6 +54,7 @@
     (require 'init-company-english-helper)
     (require 'init-insert-translated-name)
     (require 'init-youdao-dictionary)
+    (require 'init-pacarch)
     (require 'init-org)
 
     (require 'init-modes)
