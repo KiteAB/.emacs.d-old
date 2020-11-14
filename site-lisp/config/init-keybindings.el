@@ -1,5 +1,4 @@
-;;; init-keybindings.el --- Settings for Keybindings
-;;; Code:
+;;; This file is used for Keybinding Settings
 ;;; User Functions -> Keybindings
 (define-prefix-command 'ctl-z-map)
 (global-set-key (kbd "C-q") 'ctl-z-map)
@@ -46,5 +45,3 @@
 (global-set-key (kbd "C-q C-k s") 'search-todo-in-code) ; Search the todo thing in code
 
 (provide 'init-keybindings)
-
-;;; init-keybindings ends here

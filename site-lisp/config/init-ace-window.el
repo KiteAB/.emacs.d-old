@@ -1,10 +1,6 @@
-;;; init-ace-window.el --- Settings for Ace Window
-;;; Code:
-(leaf ace-window
+;;; This file is used for Ace Window Settings
+(use-package ace-window
   :ensure t
-  :bind
-  ("C-' a" . ace-window))
+  :bind ("C-' a" . ace-window))
 
 (provide 'init-ace-window)
-
-;;; init-ace-window.el ends here

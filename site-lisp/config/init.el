@@ -1,4 +1,4 @@
-;;; init.el --- Require Features
+;;; This file is used for Require Features
 (let (
       (gc-cons-threshold most-positive-fixnum)
       (gc-cons-percentage 0.6)
@@ -66,5 +66,3 @@
     ))
 
 (provide 'init)
-
-;;; init.el ends here

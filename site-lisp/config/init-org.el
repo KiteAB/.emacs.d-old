@@ -1,22 +1,17 @@
-;;; init-org.el --- Settings for Org Mode
-;;; Code:
-(leaf org
+;;; This file is used for Org Mode Settings
+(use-package org
   :ensure t
   :init
   (define-prefix-command 'org-key-map)
   (global-set-key (kbd "C-q C-c") 'org-key-map)
-  :bind
-  ("C-q C-c g" . org-agenda)
-  ("C-q C-c c" . org-capture)
-  ("C-q C-c s" . org-timer-start)
-  ("C-q C-c S" . org-timer-set-timer)
-  ("C-q C-c e" . org-timer-stop)
-  ("C-q C-c SPC" . org-timer-pause-or-continue)
-  ("C-q C-c C-i" . kiteab/use-space-indent)
-  (:org-mode-map
-   ("C-'" . nil))
-  :custom
-  (indent-tabs-mode . nil))
+  :bind (("C-q C-c g" . org-agenda)
+         ("C-q C-c c" . org-capture)
+         ("C-q C-c s" . org-timer-start)
+         ("C-q C-c S" . org-timer-set-timer)
+         ("C-q C-c e" . org-timer-stop)
+         ("C-q C-c SPC" . org-timer-pause-or-continue)
+         ("C-q C-c C-i" . kiteab/use-space-indent))
+  :hook (org-mode-hook . (lambda () (setq indent-tabs-mode nil) (define-key org-mode-map (kbd "C-'") nil))))
 
 (setq org-log-mode 'note) ; Set the log mode type
 (setq org-src-fontify-natively t)
@@ -71,21 +66,14 @@
 (setq org-export-with-sub-superscripts nil)
 
 ;;; Org Bullets
-(leaf org-bullets
+(use-package org-bullets
   :ensure t
-  :hook org-mode-hook
-  :config
-  (org-bullets-mode)
-  :custom
-  (org-bullets-bullet-list . '("☰" "☷" "✿" "☭")))
+  :hook (org-mode-hook . org-bullets-mode)
+  :custom (org-bullets-bullet-list '("☰" "☷" "✿" "☭")))
 
 ;;; Valign
 (use-package valign
-  :load-path "~/.emacs.d/site-lisp/extensions/valign/"
-  :hook org-mode-hook
-  :config
-  (valign-mode))
+  :load-path "~/.emacs.d/site-lisp/extensions/valign"
+  :hook (org-mode-hook . valign-mode))
 
 (provide 'init-org)
-
-;;; init-org.el ends here

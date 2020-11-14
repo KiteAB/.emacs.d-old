@@ -1,11 +1,6 @@
-;;; init-info-colors.el --- Settings for Info Colors
-;;; Code:
-(leaf info-colors
+;;; This file is used for Info Color Settings
+(use-package info-colors
   :ensure t
-  :hook Info-selection-hook
-  :config
-  (info-colors-fontify-node))
+  :hook (Info-selection-hook . info-colors-fontify-node))
 
 (provide 'init-info-colors)
-
-;;; init-info-colors ends here

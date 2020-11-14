@@ -1,11 +1,6 @@
-;;; init-popwin.el --- Settings for Popwin
-;;; Code:
-(leaf popwin
+;;; This file is used for Popwin Settings
+(use-package popwin
   :ensure t
-  :hook after-init-hook
-  :config
-  (popwin-mode))
+  :hook (after-init-hook . popwin-mode))
 
 (provide 'init-popwin)
-
-;;; init-popwin.el ends here

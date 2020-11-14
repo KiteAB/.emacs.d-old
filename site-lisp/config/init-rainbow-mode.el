@@ -1,11 +1,6 @@
-;;; init-rainbow-mode.el --- Settings for Rainbow Mode
-;;; Code:
-(leaf rainbow-mode
+;;; This file is used for Rainbow Mode Settings
+(use-package rainbow-mode
   :ensure t
-  :hook prog-mode-hook
-  :config
-  (rainbow-mode))
+  :hook (prog-mode-hook . rainbow-mode))
 
 (provide 'init-rainbow-mode)
-
-;;; init-rainbow-mode.el ends here

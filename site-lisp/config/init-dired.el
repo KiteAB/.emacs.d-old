@@ -1,6 +1,5 @@
-;;; init-dired.el --- Settings for Dired
-;;; Code:
-(leaf dired
+;;; This file is used for Dired Settings
+(use-package dired
   :config
   (define-advice dired-do-print (:override (&optional _))
     "Show/hide dotfiles."
@@ -41,12 +40,6 @@
       ;; finally, switch to that window
       (other-window 1)))
 
-  (require 'dired-x) ; Use dired-x to add the `C-x C-j` keymap
-  (put 'dired-find-alternate-file 'disabled nil) ; Don't let dired-mode create a new buffer for the dir
-  :bind (:dired-mode-map
-         ("Y" . ora-dired-rsync)
-         ("RET" . dired-find-alternate-file)))
+  (define-key dired-mode-map "Y" 'ora-dired-rsync))
 
 (provide 'init-dired)
-
-;;; init-dired.el ends here

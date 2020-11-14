@@ -1,5 +1,4 @@
-;;; init-package.el --- Settings for Package
-;;; Code:
+;;; This file is used for Packages Configuration
 ;;; Set Parent Key for Packages
 (define-prefix-command 'plugin-key)
 (global-set-key (kbd "C-'") 'plugin-key)
@@ -16,11 +15,9 @@
 (setq use-package-hook-name-suffix nil)
 
 ;;; Init Leaf.el
-(unless (and (package-installed-p 'leaf) (package-installed-p 'leaf-keywords))
-  (package-refresh-contents)
-  (package-install 'leaf)
-  (package-install 'leaf-keywords))
+;; (unless (and (package-installed-p 'leaf) (package-installed-p 'leaf-keywords))
+;;   (package-refresh-contents)
+;;   (package-install 'leaf)
+;;   (package-install 'leaf-keywords))
 
 (provide 'init-package)
-
-;;; init-package.el ends here

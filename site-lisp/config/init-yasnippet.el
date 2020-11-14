@@ -1,17 +1,11 @@
-;;; init-yasnippet.el --- Settings for Yasnippet
-;;; Code:
-(leaf yasnippet
+;;; This file is used for Yasnippet Settings
+(use-package yasnippet
   :ensure t
-  :bind
-  ("C-' C-y" . yas-expand-from-trigger-key)
-  :hook after-init-hook
+  :bind ("C-' C-y" . yas-expand-from-trigger-key)
+  :hook (after-init-hook . yas-global-mode)
   :config
-  (yas-global-mode)
-  (leaf yasnippet-snippets :ensure t)
-  :custom
-  (yas-snippet-dirs . '("~/.emacs.d/site-lisp/snippets"
-                        "~/.emacs.d/elpa/yasnippet-snippets-20201025.1809/snippets")))
+  (use-package yasnippet-snippets :ensure t)
+  (setq yas-snippet-dirs '("~/.emacs.d/site-lisp/snippets"
+                           "~/.emacs.d/elpa/yasnippet-snippets-20201025.1809/snippets")))
 
 (provide 'init-yasnippet)
-
-;;; init-yasnippet.el ends here

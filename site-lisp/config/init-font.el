@@ -1,5 +1,4 @@
-;;; init-font.el --- Settings for Font
-;;; Code:
+;;; This file is used for Font Settings
 (setq kiteab/font-name "Sarasa Mono Slab SC Semibold"
       kiteab/font-style "Regular"
       kiteab/font-size 22)
@@ -20,5 +19,3 @@
   (message "Can't find %s font. You can install it or ignore this message at init-ui.el" kiteab/font-name))
 
 (provide 'init-font)
-
-;;; init-font.el ends here

@@ -1,24 +1,19 @@
-;;; init-theme.el --- Settings for Theme
-;;; Code:
-;;; Lazycat Theme
-(leaf lazycat-theme
-  :load-path "~/.emacs.d/site-lisp/extensions/lazycat-theme/"
-  :require t
+;;; This file is used for Theme Settings
+;;; Lazycat Themes
+(use-package lazycat-theme
+  :load-path "~/.emacs.d/site-lisp/extensions/lazycat-theme"
   :config
   (load-theme 'lazycat-dark t))
 
 ;;; Circadian - Switch Theme
-(leaf circadian
+(use-package circadian
   :ensure t
-  :disabled t
+  :disabled
   :config
-  (circadian-setup)
-  :custom
-  (calendar-latitude . 27.831940)
-  (calendar-longitude . 113.148087)
-  (circadian-themes . '((:sunrise . lazycat-light)
-                        (:sunset . lazycat-dark))))
+  (setq calendar-latitude 27.831940
+        calendar-longitude 113.148087)
+  (setq circadian-themes '((:sunrise . lazycat-light)
+                           (:sunset . lazycat-dark)))
+  (circadian-setup))
 
 (provide 'init-theme)
-
-;;; init-theme.el ends here

@@ -1,11 +1,6 @@
-;;; init-disable-mouse.el --- Settings for Disable Mouse
-;;; Code:
-(leaf disable-mouse
+;;; This file is used for Disable Mouse Settings
+(use-package disable-mouse
   :ensure t
-  :hook after-init-hook
-  :config
-  (disable-mouse-global-mode))
+  :hook (after-init-hook . global-disable-mouse-mode))
 
 (provide 'init-disable-mouse)
-
-;;; init-disable-mouse.el ends here

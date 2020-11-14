@@ -1,21 +1,23 @@
-;;; init-eaf.el --- Settings for Emacs Application Framework
-;;; Code:
-(leaf eaf
-  :load-path "~/.emacs.d/site-lisp/extensions/emacs-application-framework/"
-  :require t
-  :bind
-  ("C-q C-b o" . eaf-open-browser)
+;;; This file is used for Emacs Application Framework Settings
+(use-package eaf
+  :load-path "~/.emacs.d/site-lisp/extensions/emacs-application-framework"
+  :bind ("C-q C-b o" . eaf-open-browser)
   :config
+  (setq eaf-grip-token "c9a51aa390cd3bce36a7d307d404d2aeb030f707")
   (eaf-setq eaf-browser-remember-history "true")
   (eaf-setq eaf-browser-default-zoom "1.5")
   (eaf-setq eaf-terminal-font-family "Sarasa Mono Slab SC Semibold")
-  (eaf-setq eaf-browser-dark-mode "true")
-  :custom
-  (eaf-grip-token . "c9a51aa390cd3bce36a7d307d404d2aeb030f707")
-  (eaf-browser-search-engines . '(("Baidu" . "https://www.baidu.com/s?wd=%s")
-                                  ("Bing" . "https://cn.bing.com/search?q=%s")))
-  (eaf-browser-default-search-engine . "Bing"))
+  (setq eaf-browser-search-engines '(("Baidu" . "https://www.baidu.com/s?wd=%s")
+                                     ("Bing" . "https://cn.bing.com/search?q=%s")))
+  (setq eaf-browser-default-search-engine "Bing")
+  (defalias 'browse-web 'eaf-open-browser)
+  ;; (if (and
+  ;;      (< (car (circadian-sunrise))
+  ;;         (car (circadian-now-time)))
+  ;;      (> (car (circadian-sunset))
+  ;;         (car (circadian-now-time))))
+  ;;     (eaf-setq eaf-browser-dark-mode "false")
+  ;;   (eaf-setq eaf-browser-dark-mode "true"))
+  (eaf-setq eaf-browser-dark-mode "true"))
 
 (provide 'init-eaf)
-
-;;; init-eaf.el ends here

@@ -1,11 +1,6 @@
-;;; init-golang.el --- Settings for Golang
-;;; Code:
-(leaf go-mode
+;;; This file is used for Golang Settings
+(use-package go-mode
   :ensure t
-  :hook lsp-mode-hook
-  :config
-  (go-mode))
+  :hook (lsp-hook . go-mode))
 
 (provide 'init-golang)
-
-;;; init-golang.el ends here

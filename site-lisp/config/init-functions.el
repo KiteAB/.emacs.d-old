@@ -1,5 +1,4 @@
-;;; init-functions.el --- Settings for Functions
-;;; Code:
+;;; This file is used for Function Definition
 (defun open-etc-config ()
   "Open the config file in the etc directory."
   (interactive)
@@ -171,5 +170,3 @@
   (insert (format-time-string "%Y-%m-%d %H:%M:%S")))
 
 (provide 'init-functions)
-
-;;; init-functions.el ends here

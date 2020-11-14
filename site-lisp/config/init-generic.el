@@ -1,5 +1,4 @@
-;;; init-generic.el --- Generic Settings
-;;; Code:
+;;; This file is used for Generic Settings
 ;;; Functions
 (fset 'yes-or-no-p 'y-or-n-p) ; Change the asking's answer way
 (add-hook 'after-change-major-mode-hook (lambda ()
@@ -79,5 +78,3 @@ gcs-done
             kill-buffer-query-functions))
 
 (provide 'init-generic)
-
-;;; init-generic.el ends here
