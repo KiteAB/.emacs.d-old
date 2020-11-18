@@ -169,4 +169,9 @@
   (interactive)
   (insert (format-time-string "%Y-%m-%d %H:%M:%S")))
 
+(defun kiteab/upgrade-modules ()
+  "Upgrade modules in ~/.emacs.d git repository."
+  (interactive)
+  (async-shell-command "cd ~/.emacs.d && git submodule foreach git pull"))
+
 (provide 'init-functions)
