@@ -8,14 +8,13 @@
       (gc-cons-percentage 0.6)
       (file-name-handler-alist nil))
   (with-temp-message ""
+    (require 'init-generic)
     (require 'init-ui)
     (require 'init-functions)
+    (require 'init-keybindings)
     (require 'init-package)
     (require 'init-theme)
     (require 'init-awesome-tray)
-
-    (require 'init-generic)
-    (require 'init-keybindings)
 
     (require 'init-company-mode)
     (require 'init-lsp)
