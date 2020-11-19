@@ -1,4 +1,5 @@
-;;; This file is used for Counsel Settings
+;;; init-counsel.el --- Settings for counsel
+;;; Code:
 (use-package counsel
   :ensure t
   :bind (("M-x" . counsel-M-x)
@@ -8,3 +9,5 @@
 (use-package smex :ensure t) ; History remember for counsel-M-x
 
 (provide 'init-counsel)
+
+;;; init-counsel.el ends here

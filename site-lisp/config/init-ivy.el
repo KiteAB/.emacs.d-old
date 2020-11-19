@@ -1,4 +1,5 @@
-;;; This file is used for Ivy Settings
+;;; init-ivy.el --- Settings for ivy
+;;; Code:
 ;;; Ivy
 (use-package ivy
   :ensure t
@@ -22,3 +23,5 @@
          ("C-r" . swiper-backward)))
 
 (provide 'init-ivy)
+
+;;; init-ivy.el ends here

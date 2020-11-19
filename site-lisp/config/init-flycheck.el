@@ -1,4 +1,5 @@
-;;; This file is used for FlyCheck Settings
+;;; init-flycheck.el --- Settings for flycheck
+;;; Code:
 (use-package flycheck
   :ensure t
   :hook (lsp-mode-hook . flycheck-mode)
@@ -9,3 +10,5 @@
   :hook (flycheck-mode-hook . flycheck-posframe-mode))
 
 (provide 'init-flycheck)
+
+;;; init-flycheck.el ends here

@@ -1,4 +1,5 @@
-;;; This file is used for Require Features
+;;; init.el --- Require features
+;;; Code:
 (require 'init-accelerate)
 (require 'init-font)
 
@@ -7,9 +8,9 @@
       (gc-cons-percentage 0.6)
       (file-name-handler-alist nil))
   (with-temp-message ""
+    (require 'init-ui)
     (require 'init-functions)
     (require 'init-package)
-    (require 'init-ui)
     (require 'init-theme)
     (require 'init-awesome-tray)
 
@@ -69,3 +70,5 @@
     ))
 
 (provide 'init)
+
+;;; init.el ends here

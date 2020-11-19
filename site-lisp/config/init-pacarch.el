@@ -1,4 +1,5 @@
-;;; This file is used for PacArch Settings
+;;; init-pacarch.el --- Settings for pacarch
+;;; Code:
 (use-package pacarch
   :load-path "~/.emacs.d/site-lisp/extensions/pacarch.el"
   :bind (("C-' C-p u" . pacarch-upgrade-srcs-and-pkgs)
@@ -7,3 +8,5 @@
   (setq pacarch-enforce-upgrade-srcs t))
 
 (provide 'init-pacarch)
+
+;;; init-pacarch.el ends here

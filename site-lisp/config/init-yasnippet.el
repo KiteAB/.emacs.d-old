@@ -1,4 +1,5 @@
-;;; This file is used for Yasnippet Settings
+;;; init-yasnippet.el --- Settings for yasnippet
+;;; Code:
 (use-package yasnippet
   :ensure t
   :bind ("C-' C-y" . yas-expand-from-trigger-key)
@@ -9,3 +10,5 @@
                            "~/.emacs.d/elpa/yasnippet-snippets-20201025.1809/snippets")))
 
 (provide 'init-yasnippet)
+
+;;; init-yasnippet.el ends here

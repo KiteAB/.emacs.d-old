@@ -1,4 +1,5 @@
-;;; This file is used for Emacs Application Framework Settings
+;;; init-eaf.el --- Settings for emacs application framework
+;;; Code:
 (use-package eaf
   :load-path "~/.emacs.d/site-lisp/extensions/emacs-application-framework"
   :bind ("C-q C-b o" . eaf-open-browser)
@@ -21,3 +22,5 @@
   (eaf-setq eaf-browser-dark-mode "true"))
 
 (provide 'init-eaf)
+
+;;; init-eaf.el ends here

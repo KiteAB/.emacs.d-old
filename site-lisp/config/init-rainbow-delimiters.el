@@ -1,4 +1,5 @@
-;;; This file is used for Rainbow Delimiters Settings
+;;; init-rainbow-delimiters.el --- Settings for rainbow delimiters
+;;; Code:
 (use-package rainbow-delimiters
   :ensure t
   :disabled
@@ -15,3 +16,5 @@
   (set-face-attribute 'rainbow-delimiters-depth-9-face nil :foreground "cyan"          :bold "t"))
 
 (provide 'init-rainbow-delimiters)
+
+;;; init-rainbow-delimiters.el ends here

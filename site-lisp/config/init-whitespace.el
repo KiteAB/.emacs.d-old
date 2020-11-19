@@ -1,4 +1,5 @@
-;;; This file is used for WhiteSpace Settings
+;;; init-whitespace.el --- Settings for whitespace
+;;; Code:
 (use-package whitespace
   :hook (emacs-lisp-mode-hook . whitespace-mode)
   :config
@@ -19,3 +20,5 @@
   (set-face-attribute 'whitespace-trailing nil :foreground "#79cdcd" :background "#668b8b"))
 
 (provide 'init-whitespace)
+
+;;; init-whitespace.el ends here

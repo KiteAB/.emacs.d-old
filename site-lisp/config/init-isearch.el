@@ -1,4 +1,5 @@
-;;; This file is used for I-Search Settings
+;;; init-isearch.el --- Settings for i-search
+;;; Code:
 (use-package isearch
   :config
   (setq isearch-lazy-count t
@@ -7,3 +8,5 @@
          ("C-R" . isearch-backward)))
 
 (provide 'init-isearch)
+
+;;; init-isearch.el ends here

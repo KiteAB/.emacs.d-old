@@ -1,4 +1,5 @@
-;;; This file is used for Lsp Mode Settings
+;;; init-lsp.el --- Settings for lsp
+;;; Code:
 ;;; Lsp Mode
 (use-package lsp-mode
   :ensure t
@@ -41,3 +42,5 @@
 (use-package lsp-treemacs :ensure t)
 
 (provide 'init-lsp)
+
+;;; init-lsp.el ends here

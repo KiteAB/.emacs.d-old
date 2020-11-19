@@ -1,4 +1,5 @@
-;;; This file is used for User Interface
+;;; init-ui.el --- Settings for user interface
+;;; Code:
 ;;; Basics
 (menu-bar-mode -1) ; Close the menu bar
 (tool-bar-mode -1) ; Close the tool bar
@@ -16,3 +17,5 @@
 (set-frame-parameter nil 'alpha '(90 . 100))
 
 (provide 'init-ui)
+
+;;; init-ui.el ends here

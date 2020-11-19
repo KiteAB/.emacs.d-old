@@ -1,4 +1,5 @@
-;;; This file is used for VTerm Settings
+;;; init-vterm.el --- Settings for vterm
+;;; Code:
 (use-package vterm
   :ensure t
   :disabled
@@ -7,3 +8,5 @@
   (define-key vterm-mode-map (kbd "C-c n") 'next-buffer))
 
 (provide 'init-vterm)
+
+;;; init-vterm.el ends here

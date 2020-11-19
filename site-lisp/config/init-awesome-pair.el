@@ -1,4 +1,5 @@
-;;; This file is used for Awesome Pair Settings
+;;; init-awesome-pair.el --- Settings for awesome pair
+;;; Code:
 (use-package awesome-pair
   :load-path "~/.emacs.d/site-lisp/extensions/awesome-pair"
   :hook (emacs-lisp-mode-hook . awesome-pair-mode)
@@ -31,3 +32,5 @@
   (define-key awesome-pair-mode-map (kbd "M-:") 'awesome-pair-jump-out-pair-and-newline))
 
 (provide 'init-awesome-pair)
+
+;;; init-awesome-pair.el ends here

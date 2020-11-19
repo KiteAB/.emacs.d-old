@@ -1,4 +1,5 @@
-;;; This file is used for Function Definition
+;;; init-functions.el --- Settings for functions
+;;; Code:
 (defun open-etc-config ()
   "Open the config file in the etc directory."
   (interactive)
@@ -175,3 +176,5 @@
   (async-shell-command "cd ~/.emacs.d && git submodule foreach git pull"))
 
 (provide 'init-functions)
+
+;;; init-functions.el ends here

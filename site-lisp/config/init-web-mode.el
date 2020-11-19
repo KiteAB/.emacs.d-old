@@ -1,4 +1,5 @@
-;;; This file is used for Web Mode Settings
+;;; init-web-mode.el --- Settings for web mode
+;;; Code:
 (use-package web-mode
   :ensure t
   :config
@@ -15,3 +16,5 @@
   :config (setq emmet-self-closing-tag-style " /"))
 
 (provide 'init-web-mode)
+
+;;; init-web-mode.el ends here

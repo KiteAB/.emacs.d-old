@@ -1,4 +1,5 @@
-;;; This file is used for Git Settings
+;;; init-git.el --- Settings for git
+;;; Code:
 ;;; Vc Message
 (use-package vc-msg
   :ensure t
@@ -17,3 +18,5 @@
   :hook (prog-mode-hook . diff-hl-mode))
 
 (provide 'init-git)
+
+;;; init-git.el ends here

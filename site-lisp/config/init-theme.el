@@ -1,4 +1,5 @@
-;;; This file is used for Theme Settings
+;;; init-theme.el --- Settings for theme
+;;; Code:
 ;;; Lazycat Themes
 (use-package lazycat-theme
   :load-path "~/.emacs.d/site-lisp/extensions/lazycat-theme"
@@ -17,3 +18,5 @@
   (circadian-setup))
 
 (provide 'init-theme)
+
+;;; init-theme.el ends here

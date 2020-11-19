@@ -1,4 +1,5 @@
-;;; This file is used for Treemacs Settings
+;;; init-treemacs.el --- Settings for treemacs
+;;; Code:
 (use-package treemacs
   :ensure t
   :init
@@ -77,3 +78,5 @@
   :ensure t)
 
 (provide 'init-treemacs)
+
+;;; init-treemacs.el ends here

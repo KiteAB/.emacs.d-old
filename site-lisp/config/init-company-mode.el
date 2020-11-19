@@ -1,4 +1,5 @@
-;;; This file is used for Company Mode Settings
+;;; init-company-mode.el --- Settings for company mode
+;;; Code:
 (use-package company
   :ensure t
   :hook (after-init-hook . global-company-mode)
@@ -24,3 +25,5 @@
   :hook (company-mode-hook . company-box-mode))
 
 (provide 'init-company-mode)
+
+;;; init-company-mode.el ends here

@@ -1,10 +1,5 @@
-;;; This file is used for other modes
-;;; Dired Mode
-(require 'dired-x) ; Use dired-x to add the `C-x C-j` keymap
-(put 'dired-find-alternate-file 'disabled nil) ; Don't let dired-mode create a new buffer for the dir
-(with-eval-after-load 'dired
-  (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
-
+;;; init-modes.el --- Settings for other special modes
+;;; Code:
 ;;; Hooks
 (add-hook 'markdown-mode-hook 'markdown-table-keymap) ; Add the markdown table align keymap
 (add-hook 'erc-mode-hook '(lambda () (display-line-numbers-mode -1) (whitespace-mode -1))) ; Disable line numbers and whitespace in ERC
@@ -20,3 +15,5 @@
     ("copyr" "Copyright (C) <+++> KiteAB")))
 
 (provide 'init-modes)
+
+;;; init-modes.el ends here

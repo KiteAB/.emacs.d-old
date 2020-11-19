@@ -1,4 +1,5 @@
-;;; This file is used for Dired Settings
+;;; init-dired.el --- Settings for dired
+;;; Code:
 (use-package dired
   :config
   (define-advice dired-do-print (:override (&optional _))
@@ -40,6 +41,12 @@
       ;; finally, switch to that window
       (other-window 1)))
 
-  (define-key dired-mode-map "Y" 'ora-dired-rsync))
+  (require 'dired-x)
+  (put 'dired-find-alternate-file 'disabled nil)
+  :bind (:map dired-mode-map
+              ("Y" . ora-dired-rsync)
+              ("RET" . dired-find-alternate-file)))
 
 (provide 'init-dired)
+
+;;; init-dired.el ends here

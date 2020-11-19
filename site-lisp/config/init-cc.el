@@ -1,4 +1,5 @@
-;;; This file is the Configuration About C/C++.
+;;; init-cc.el --- Settings for C/C++
+;;; Code:
 
 (setq-default c-default-style '((java-mode . "java")
                                 (awk-mode . "awk")
@@ -8,3 +9,5 @@
 (add-hook 'c-mode-hook '(lambda () (outline-minor-mode t)))
 
 (provide 'init-cc)
+
+;;; init-cc.el ends here

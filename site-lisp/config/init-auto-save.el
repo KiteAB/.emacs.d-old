@@ -1,4 +1,5 @@
-;;; This file is used for Auto Save Settings
+;;; init-auto-save.el --- Settings for auto save
+;;; Code:
 (setq make-backup-files nil           ; Don't let Emacs make up backup file
       create-lockfiles nil            ; Don't make lockfile
       auto-save-default nil           ; Don't auto save the file
@@ -17,3 +18,5 @@
              (file-name-extension (buffer-name)) t)))))
 
 (provide 'init-auto-save)
+
+;;; init-auto-save.el ends here

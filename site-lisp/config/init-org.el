@@ -1,4 +1,5 @@
-;;; This file is used for Org Mode Settings
+;;; init-org.el --- Settings for org mode
+;;; Code:
 (use-package org
   :ensure t
   :init
@@ -77,3 +78,5 @@
   :hook (org-mode-hook . valign-mode))
 
 (provide 'init-org)
+
+;;; init-org.el ends here

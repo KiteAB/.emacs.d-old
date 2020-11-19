@@ -1,4 +1,5 @@
-;;; This file is used for Insert Translated Name Settings
+;;; init-insert-translated-name.el --- Settings for insert translated name
+;;; Code:
 (use-package insert-translated-name
   :load-path "~/.emacs.d/site-lisp/extensions/insert-translated-name"
   :bind (("C-' C-l i" . insert-translated-name-insert)
@@ -12,3 +13,5 @@
          ("C-' C-l L" . insert-translated-name-replace-with-line)))
 
 (provide 'init-insert-translated-name)
+
+;;; init-insert-translated-name.el ends here

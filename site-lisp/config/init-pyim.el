@@ -1,4 +1,5 @@
-;;; This file is used for PYIM settings
+;;; init-pyim.el --- Settings for pyim
+;;; Code:
 (use-package pyim
   :ensure t
   :bind ("C-SPC" . toggle-input-method)
@@ -18,3 +19,5 @@
   (message ""))
 
 (provide 'init-pyim)
+
+;;; init-pyim.el ends here

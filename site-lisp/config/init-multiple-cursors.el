@@ -1,4 +1,5 @@
-;;; This file is used for Multiple Cursors Settings
+;;; init-multiple-cursors.el --- Settings for multiple cursors
+;;; Code:
 (use-package multiple-cursors
   :ensure t
   :bind (("C-M-l" . mc/edit-lines)
@@ -7,3 +8,5 @@
          ("M-m" . newline)))
 
 (provide 'init-multiple-cursors)
+
+;;; init-multiple-cursors.el ends here
