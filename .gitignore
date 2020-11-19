@@ -4,5 +4,6 @@
 !/.gitmodules
 !/.gitattributes
 !/site-lisp/
+/site-lisp/config/init-bookmarks.el
 !/site-start.el
 !/README.org
