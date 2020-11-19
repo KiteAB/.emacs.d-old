@@ -3,7 +3,7 @@
 ;; Author: KiteAB <kiteabpl@outlook.com>
 ;; Maintainer: KiteAB <kiteabpl@outlook.com>
 ;; Copyright (C) 2020, KiteAB, all rights reserved.
-;; Last-Updated: 2020-11-19 17:56:22
+;; Last-Updated: 2020-11-19 19:48:02
 ;;           By: KiteAB
 ;; URL: http://github.com/KiteAB/.emacs.d
 ;; Keywords:
@@ -29,15 +29,15 @@
 ;; Floor, Boston, MA 02110-1301, USA.
 
 ;;; TODO
-;; https://github.com/manateelazycat/lazycat-emacs/tree/master/site-lisp/extensions/lazycat
+;;
 ;;
 ;;
 
-(defun add-subdirs-to-load-path(dir)
+(defun add-subdirs-to-load-path (dir)
   "Recursive add directories to `load-path'."
   (let ((default-directory (file-name-as-directory dir)))
     (add-to-list 'load-path dir)
     (normal-top-level-add-subdirs-to-load-path)))
-(add-subdirs-to-load-path "~/.emacs.d/site-lisp/config")
+(add-subdirs-to-load-path "~/.emacs.d/site-lisp/config/")
 
 (require 'init)

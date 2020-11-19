@@ -3,6 +3,9 @@
 (define-prefix-command 'plugin-key)
 (global-set-key (kbd "C-'") 'plugin-key)
 
+;;; Init Packages
+(package-initialize)
+
 ;;; Mirror Source
 (require 'package)
 (require 'cl-lib) ; Common Lisp

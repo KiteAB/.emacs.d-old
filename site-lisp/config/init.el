@@ -1,4 +1,7 @@
 ;;; This file is used for Require Features
+(require 'init-accelerate)
+(require 'init-font)
+
 (let (
       (gc-cons-threshold most-positive-fixnum)
       (gc-cons-percentage 0.6)
@@ -7,7 +10,6 @@
     (require 'init-functions)
     (require 'init-package)
     (require 'init-ui)
-    (require 'init-font)
     (require 'init-theme)
     (require 'init-awesome-tray)
 
