@@ -19,6 +19,7 @@
     (require 'init-symbol-overlay)
     (require 'init-awesome-pair)
     (require 'init-lispy)
+    (require 'init-paren-face)
     (require 'init-rainbow-delimiters)
     (require 'init-highlight-defined)
     (require 'init-highlight-quoted)
