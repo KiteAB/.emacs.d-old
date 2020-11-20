@@ -30,6 +30,7 @@
     (require 'init-vterm)
     (require 'init-counsel)
     (require 'init-which-key)
+    (require 'init-auto-sudoedit)
     (require 'init-ace-window)
     (require 'init-windresize)
     (require 'init-smooth-scrolling)
