@@ -2,8 +2,7 @@
 ;;; Code:
 (use-package aggressive-indent
   :ensure t
-  ;; :hook (prog-mode-hook . aggressive-indent-mode)
-  )
+  :hook (emacs-lisp-mode-hook . aggressive-indent-mode))
 
 (provide 'init-aggressive-indent)
 
