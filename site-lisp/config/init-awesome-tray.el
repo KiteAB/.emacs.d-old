@@ -10,6 +10,7 @@
                                       "location"
                                       "mode-name"
                                       "parent-dir"
+                                      "battery"
                                       "buffer-name"
                                       "buffer-read-only"
                                       "date")))
