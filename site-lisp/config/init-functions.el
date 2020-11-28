@@ -192,8 +192,8 @@
                                   "): "
                                   kiteab/git-commit-content))
   (insert kiteab/git-commit-concat)
-  (setq kiteab/git-commit-ctn (read-from-minibuffer "[KiteAB Emacs] This is the current commit content. Insert or cancel? "))
-  (if (string= kiteab/git-commit-ctn "y")
+  (setq kiteab/git-commit-ctn (y-or-n-p "[KiteAB Emacs] This is the current commit content. Insert or cancel? "))
+  (if kiteab/git-commit-ctn
       (progn
         (kill-current-buffer)
         (insert kiteab/git-commit-concat))
