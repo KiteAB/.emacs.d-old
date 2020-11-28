@@ -192,7 +192,7 @@
                                   "): "
                                   kiteab/git-commit-content))
   (insert kiteab/git-commit-concat)
-  (setq kiteab/git-commit-ctn (y-or-n-p "[KiteAB Emacs] This is the current commit content. Insert or cancel? "))
+  (setq kiteab/git-commit-ctn (y-or-n-p "[KiteAB Emacs] This is the current commit content. Insert now? "))
   (if kiteab/git-commit-ctn
       (progn
         (kill-current-buffer)
