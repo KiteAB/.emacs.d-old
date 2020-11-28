@@ -1,6 +1,6 @@
 ;;; init-generic.el --- Basic settings
 ;;; Code:
-;;; Functions
+;; Functions
 (fset 'yes-or-no-p 'y-or-n-p) ; Change the asking's answer way
 (add-hook 'after-change-major-mode-hook (lambda ()
                                           (modify-syntax-entry ?_ "w")))
@@ -25,6 +25,7 @@
         (?\< . ?\>)
         (?\{ . ?\}))) ; Set the electric-pair-mode's pair keywords
 
+;; Scratch
 (setq kiteab/system-type (if (eq system-type 'gnu/linux)
                              "GNU/Linux"
                            (if (eq system-type 'gnu)
@@ -63,15 +64,6 @@ gcs-done
 (setq inhibit-compacting-font-caches t) ; Enable font cache
 (global-auto-revert-mode t)
 (setq load-prefer-newer t)
-;; (setq scroll-step 2
-;;       scroll-margin 2
-;;       hscroll-step 2
-;;       hscroll-margin 2
-;;       scroll-conservatively 101
-;;       scroll-up-aggressively 0.01
-;;       scroll-down-aggressively 0.01
-;;       scroll-preserve-screen-position 'always)
-                                        ; Scroll
 (setq mouse-yank-at-point nil)
 
 (setq kill-buffer-query-functions
