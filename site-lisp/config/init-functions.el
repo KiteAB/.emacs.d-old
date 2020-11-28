@@ -177,4 +177,26 @@
 
 (provide 'init-functions)
 
+(defun kiteab/format-commit ()
+  "Git commit with formatted text."
+  (interactive)
+  (setq kiteab/git-commit-type (completing-read "[KiteAB Emacs] Commit Type: "
+                                                '("docs" "file" "modify" "feat" "style" "fix")))
+  (setq kiteab/git-commit-files (read-from-minibuffer "[KiteAB Emacs] Commit Files: "))
+  (setq kiteab/git-commit-content (read-from-minibuffer "[KiteAB Emacs] Commit Content: "))
+  (switch-to-buffer "*KiteAB Emacs*")
+  (setq kiteab/git-commit-concat (concat
+                                  kiteab/git-commit-type
+                                  "("
+                                  kiteab/git-commit-files
+                                  "): "
+                                  kiteab/git-commit-content))
+  (insert kiteab/git-commit-concat)
+  (setq kiteab/git-commit-ctn (read-from-minibuffer "[KiteAB Emacs] This is the current commit content. Insert or cancel? "))
+  (if (string= kiteab/git-commit-ctn "y")
+      (progn
+        (kill-current-buffer)
+        (insert kiteab/git-commit-concat))
+    (kill-current-buffer)))
+
 ;;; init-functions.el ends here
