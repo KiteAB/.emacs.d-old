@@ -1,10 +1,7 @@
 ;;; init-python.el --- Settings for python
 ;;; Code:
-;;; Indent
+;; Indent
 (setq-default python-indent-offset 2)
-
-;;; Folding
-(add-hook 'python-mode-hook '(lambda () (outline-minor-mode t)))
 
 (provide 'init-python)
 
