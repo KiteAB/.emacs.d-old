@@ -1,6 +1,6 @@
 ;;; init-lsp.el --- Settings for lsp
 ;;; Code:
-;;; Lsp Mode
+;; Lsp Mode
 (use-package lsp-mode
   :ensure t
   :hook ((c-mode-hook c++-mode-hook lisp-mode-hook js-mode-hook web-mode-hook python-mode-hook) . lsp)
@@ -28,17 +28,17 @@
          (setq lsp-on-touch-time (float-time (current-time)))
          ad-do-it))))
 
-;;; Lsp Pyright
+;; Lsp Pyright
 (use-package lsp-pyright
   :ensure t
   :hook (python-mode-hook . (lambda () (require 'lsp-pyright) (lsp))))
 
-;;; Nox
+;; Nox
 (use-package nox
   :load-path "~/.emacs.d/site-lisp/extensions/nox"
   :hook (lsp-mode-hook . nox))
 
-;;; Lsp Treemacs
+;; Lsp Treemacs
 (use-package lsp-treemacs :ensure t)
 
 (provide 'init-lsp)
