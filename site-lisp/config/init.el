@@ -18,6 +18,7 @@
 
     (require 'init-company-mode)
     (require 'init-lsp)
+    (require 'init-elpy)
     (require 'init-symbol-overlay)
     (require 'init-awesome-pair)
     (require 'init-lispy)
