@@ -39,7 +39,6 @@
 (setq initial-scratch-message (format ";;; KiteAB Emacs on %s
 ;; Emacs Startup Time: %.2fs, With %s Garbage Collects
 ;; %s Packages Installed, %s Features Required
-;; Happy Hacking!
 
 " kiteab/system-type
 (float-time (time-subtract after-init-time before-init-time))
