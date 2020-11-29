@@ -175,8 +175,6 @@
   (interactive)
   (async-shell-command "cd ~/.emacs.d && git submodule foreach git pull"))
 
-(provide 'init-functions)
-
 (defun kiteab/format-commit ()
   "Git commit with formatted text."
   (interactive)
@@ -192,11 +190,13 @@
                                   "): "
                                   kiteab/git-commit-content))
   (insert kiteab/git-commit-concat)
-  (setq kiteab/git-commit-ctn (y-or-n-p "[KiteAB Emacs] This is the current commit content. Insert now? "))
+  (setq kiteab/git-commit-ctn (y-or-n-p "[KiteAB Emacs] Type y to finish, or n to cancel"))
   (if kiteab/git-commit-ctn
       (progn
         (kill-current-buffer)
         (insert kiteab/git-commit-concat))
     (kill-current-buffer)))
+
+(provide 'init-functions)
 
 ;;; init-functions.el ends here
