@@ -71,6 +71,8 @@
     (require 'init-python)
     (require 'init-cc)
     (require 'init-golang)
+
+    (require 'init-scratch)
     ))
 
 (provide 'init)
