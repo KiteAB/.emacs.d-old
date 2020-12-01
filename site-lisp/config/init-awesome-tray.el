@@ -13,6 +13,7 @@
                                       "battery"
                                       "buffer-name"
                                       "buffer-read-only"
+                                      "evil"
                                       "date")))
 
 (provide 'init-awesome-tray)

@@ -15,6 +15,9 @@
     (require 'init-theme)
     (require 'init-awesome-tray)
 
+    (require 'init-keybind)
+    (require 'init-evil)
+
     (require 'init-company-mode)
     (require 'init-lsp)
     (require 'init-elpy)
@@ -70,9 +73,6 @@
     (require 'init-python)
     (require 'init-cc)
     (require 'init-golang)
-
-    (require 'init-keybind)
-    (require 'init-evil)
 
     (require 'init-scratch)
     ))
