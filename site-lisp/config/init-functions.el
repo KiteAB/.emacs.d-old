@@ -5,35 +5,12 @@
   (interactive)
   (counsel-find-file "~/.emacs.d"))
 
-(defun window-move (way)
-  "Move the buffer window position by WAY."
-  (interactive "c[KiteAB Emacs] Enter the way(n-e-u-i): ")
-  (let ((current-window-buffer (window-buffer))
-        (current-window (get-buffer-window)))
-    (pcase way
-      (110 (windmove-left))
-      (101 (windmove-down))
-      (117 (windmove-up))
-      (105 (windmove-right)))
-    (setq another-window-buffer (get-buffer-window))
-    (if (not (eql current-window-buffer another-window-buffer))
-        (progn
-          (set-window-buffer current-window (window-buffer))
-          (set-window-buffer (get-buffer-window) current-window-buffer))))) ; Move the window
-
 (defun set-alpha (var)
   "Set the backgroud alpha by VAR."
   (interactive "sAlpha or not(y-or-n): ")
   (pcase var
     ("y" (set-frame-parameter nil 'alpha '(90 . 100)))
     ("n" (set-frame-parameter nil 'alpha '(100 . 100)))))
-
-(defun sudo-save ()
-  "Save the current buffer file with sudo."
-  (interactive)
-  (if (not buffer-file-name)
-      (write-file (concat "/sudo:root@localhost:" (ido-read-file-name "File:")))
-    (write-file (concat "/sudo:root@localhost:" buffer-file-name))))
 
 (defun kiteab/copy-license (license-name)
   "Copy the license file to current directory."

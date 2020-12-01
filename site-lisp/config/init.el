@@ -11,7 +11,6 @@
     (require 'init-generic)
     (require 'init-ui)
     (require 'init-functions)
-    (require 'init-keybindings)
     (require 'init-package)
     (require 'init-theme)
     (require 'init-awesome-tray)
@@ -71,6 +70,9 @@
     (require 'init-python)
     (require 'init-cc)
     (require 'init-golang)
+
+    (require 'init-keybindings)
+    (require 'init-evil)
 
     (require 'init-scratch)
     ))
