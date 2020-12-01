@@ -2,7 +2,9 @@
 ;;; Code:
 (use-package recentf
   :hook (after-init-hook . recentf-mode)
-  :bind ("C-' r" . recentf-open-files))
+  :bind ("C-' r" . recentf-open-files)
+  :config
+  (add-to-list 'recentf-filename-handlers 'abbreviate-file-name))
 
 (provide 'init-recentf)
 
