@@ -1,4 +1,4 @@
-;;; init-keybindings.el --- Settings for keybindings
+;;; init-keybind.el --- Settings for keybindings
 ;;; Code:
 (define-prefix-command 'ctl-z-map)
 (global-set-key (kbd "C-q") 'ctl-z-map)
@@ -46,6 +46,6 @@
 (global-set-key (kbd "C-q C-k r") 'replace-placeholder) ; Replace Placeholder
 (global-set-key (kbd "C-q C-k s") 'search-todo-in-code) ; Search the todo thing in code
 
-(provide 'init-keybindings)
+(provide 'init-keybind)
 
-;;; init-keybindings.el ends here
+;;; init-keybind.el ends here
