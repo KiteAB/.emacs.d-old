@@ -156,7 +156,7 @@
   "Git commit with formatted text."
   (interactive)
   (setq kiteab/git-commit-type (completing-read "[KiteAB Emacs] Commit Type: "
-                                                '("add" "modify" "feat" "style" "fix" "module")))
+                                                '("add" "modify" "feat" "style" "fix" "module" "rename")))
   (setq kiteab/git-commit-files (read-from-minibuffer "[KiteAB Emacs] Commit Files: "))
   (setq kiteab/git-commit-content (read-from-minibuffer "[KiteAB Emacs] Commit Content: "))
   (switch-to-buffer "*KiteAB Emacs*")
