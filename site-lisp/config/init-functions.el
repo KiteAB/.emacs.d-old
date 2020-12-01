@@ -159,20 +159,12 @@
                                                 '("add" "modify" "feat" "style" "fix" "module" "rename")))
   (setq kiteab/git-commit-files (read-from-minibuffer "[KiteAB Emacs] Commit Files: "))
   (setq kiteab/git-commit-content (read-from-minibuffer "[KiteAB Emacs] Commit Content: "))
-  (switch-to-buffer "*KiteAB Emacs*")
-  (setq kiteab/git-commit-concat (concat
-                                  kiteab/git-commit-type
-                                  "("
-                                  kiteab/git-commit-files
-                                  "): "
-                                  kiteab/git-commit-content))
-  (insert kiteab/git-commit-concat)
-  (setq kiteab/git-commit-ctn (y-or-n-p "[KiteAB Emacs] Type y to finish, or n to cancel"))
-  (if kiteab/git-commit-ctn
-      (progn
-        (kill-current-buffer)
-        (insert kiteab/git-commit-concat))
-    (kill-current-buffer)))
+  (insert (concat kiteab/git-commit-type
+                  "("
+                  kiteab/git-commit-files
+                  "): "
+                  kiteab/git-commit-content))
+  (message "[KiteAB Emacs] Action done."))
 
 (provide 'init-functions)
 
