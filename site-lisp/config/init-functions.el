@@ -33,14 +33,6 @@
   (insert initial-scratch-message)
   (message "[KiteAB Emacs] Open the scratch action done."))
 
-(defun kiteab/touch-not-alpha ()
-  "Make the not-alpha file."
-  (interactive)
-  (let ((file-name
-         (expand-file-name (locate-user-emacs-file "not-alpha"))))
-    (unless (file-exists-p file-name)
-      (make-empty-file file-name))))
-
 (defun kiteab/open-erc ()
   "Open the erc with only one time."
   (interactive)
@@ -88,7 +80,6 @@
   "Kill unwanted buffers for me."
   (interactive)
   (progn
-    (kill-buffer "tasks.org")
     (kill-buffer "*Help*")
     (kill-buffer "*Backtrace*")))
 
@@ -131,16 +122,6 @@
   (if (eq major-mode 'emacs-lisp-mode)
       (insert (format "(provide '%s)" (car (split-string (buffer-name) ".el"))))
     (message "[KiteAB Emacs] Not in emacs-lisp-mode. Exiting.")))
-
-(defun kiteab/indent-one-time ()
-  "Indent one time."
-  (interactive)
-  (if (or (eq major-mode 'lisp-interaction-mode) (eq major-mode 'emacs-lisp-mode))
-      (progn
-        (beginning-of-line)
-        (indent-for-tab-command)
-        (next-line))
-    (message "[KiteAB Emacs] Not in lisp-interaction-mode or emacs-lisp-mode. Exiting.")))
 
 (defun kiteab/insert-current-date-time ()
   "Insert current date time at point."

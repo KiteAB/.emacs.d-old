@@ -1,7 +1,7 @@
 ;;; init-keybind.el --- Settings for keybindings
 ;;; Code:
-(define-prefix-command 'ctl-z-map)
-(global-set-key (kbd "C-q") 'ctl-z-map)
+(define-prefix-command 'ctl-q-map)
+(global-set-key (kbd "C-q") 'ctl-q-map)
 
 ;;; User Functions -> Keybindings
 (global-set-key (kbd "C-q c") 'open-etc-config)

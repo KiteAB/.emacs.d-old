@@ -8,16 +8,12 @@
 (use-package evil
   :ensure t
   :demand
-  :config
-  (defun evil-change-to-emacs-state ()
-    "Change current state to Emacs state."
-    (interactive)
-    (evil-change-state 'emacs))
   :hook ((global-evil-leader-mode-hook . evil-mode)
-         (Info-selection-hook . evil-change-to-emacs-state)))
+         (Info-selection-hook . (lambda () (interactive) (evil-change-state 'emacs)))))
 
 (use-package evil-nerd-commenter
-  :ensure t)
+  :ensure t
+  :demand)
 
 ;; Functions
 (defun set-movement-evil-states-keys (key def)
@@ -58,24 +54,58 @@
 (evil-global-set-key 'normal "S" 'save-buffer)
 (evil-global-set-key 'normal "Q" 'kill-current-buffer)
 (evil-global-set-key 'normal "l" 'undo)
+(evil-global-set-key 'insert (kbd "C-e") 'eval-last-sexp)
 (set-movement-evil-states-keys "-" 'evil-search-previous)
 (set-movement-evil-states-keys "=" 'evil-search-next)
-(set-movement-evil-states-keys "s" 'eval-last-sexp)
 
 (evil-global-set-key 'normal "/" 'swiper)
 (evil-global-set-key 'insert (kbd "M-p") 'previous-line)
 (evil-global-set-key 'insert (kbd "M-n") 'next-line)
+(evil-global-set-key 'insert (kbd "M-f") 'forward-char)
+(evil-global-set-key 'insert (kbd "M-b") 'backward-char)
+(evil-global-set-key 'insert (kbd "M-a") 'beginning-of-line)
+(evil-global-set-key 'insert (kbd "M-e") 'end-of-line)
 (evil-global-set-key 'insert (kbd "C-p") 'evil-normal-state)
 (evil-global-set-key 'replace (kbd "C-p") 'evil-normal-state)
 
 ;; Leader key
 (evil-leader/set-leader "<SPC>")
 (evil-leader/set-key
+  ;; Basic
   ;; File
-  "xf" 'find-file
+  "ff" 'find-file
+
+  ;; Buffer
+  "tk" 'kill-buffer
+  "ts" 'switch-to-buffer
+  "te" 'switch-to-next-buffer
+  "tu" 'switch-to-prev-buffer
+
+  ;; Window
+  "wk" 'delete-window
+  "wo" 'other-window
+  "wh" 'split-window-below
+  "wv" 'split-window-right
+
+  ;; Function
+  "qc" 'open-etc-config
+  "qa" 'set-alpha
+  "ql" 'kiteab/copy-license
+  ;; "qs" 'kiteab/open-scratch
+  "qe" 'kiteab/open-erc
+  "qt" 'kiteab/add-todo-in-code
+  "qk" 'kiteab/kill-unwanted-buffers
+  "qs" 'kiteab/search-engine
+  "qi" 'kiteab/change-indent-type
+  "qp" 'kiteab/provide-feature-name
+  "qd" 'kiteab/insert-current-date-time
+  "c" 'kiteab/format-commit
 
   ;; Packages keys
-  "g" 'magit-status)
+  ;; Magit
+  "g" 'magit-status
+  ;; Nerd Commenter
+  "nc" 'evilnc-comment-or-uncomment-lines)
 
 (provide 'init-evil)
 
