@@ -16,7 +16,7 @@
     (require 'init-awesome-tray)
 
     (require 'init-keybind)
-    (require 'init-evil)
+    ;; (require 'init-evil)
 
     (require 'init-company-mode)
     (require 'init-lsp)

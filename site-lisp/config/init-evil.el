@@ -75,6 +75,9 @@
   ;; File
   "ff" 'find-file
 
+  ;; Exit Emacs
+  "xc" 'save-buffers-kill-terminal
+
   ;; Buffer
   "tk" 'kill-buffer
   "ts" 'switch-to-buffer
