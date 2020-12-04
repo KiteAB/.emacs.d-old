@@ -16,6 +16,7 @@
     (require 'init-awesome-tray)
 
     (require 'init-keybind)
+    (require 'init-hydra)
     ;; (require 'init-evil)
 
     (require 'init-company-mode)

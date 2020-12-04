@@ -28,3 +28,6 @@
 [submodule "site-lisp/extensions/pacarch"]
 	path = site-lisp/extensions/pacarch
 	url = https://github.com/KitPixel/pacarch
+[submodule "site-lisp/extensions/hydra-posframe"]
+	path = site-lisp/extensions/hydra-posframe
+	url = https://github.com/Ladicle/hydra-posframe
