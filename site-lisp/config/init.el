@@ -16,7 +16,8 @@
     (require 'init-awesome-tray)
 
     (require 'init-keybind)
-    (require 'init-hydra)
+    (require 'init-meow)
+    ;; (require 'init-hydra)
     ;; (require 'init-evil)
 
     (require 'init-company-mode)
@@ -25,7 +26,7 @@
     (require 'init-projectile)
     (require 'init-symbol-overlay)
     (require 'init-awesome-pair)
-    (require 'init-lispy)
+    ;; (require 'init-lispy)
     (require 'init-paren-face)
     (require 'init-rainbow-delimiters)
     (require 'init-highlight-defined)
