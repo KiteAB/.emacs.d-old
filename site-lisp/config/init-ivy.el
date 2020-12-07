@@ -13,6 +13,7 @@
 ;;; Ivy Posframe
 (use-package ivy-posframe
   :ensure t
+  :disabled
   :hook (ivy-mode-hook . ivy-posframe-mode)
   :config
   (setq ivy-posframe-display-functions-alist
