@@ -6,6 +6,10 @@
   :config
   (setq awesome-tray-refresh-idle-delay 0.01)
 
+  (defun kiteab/awesome-tray-meow-info ()
+    (meow-indicator))
+  (add-to-list 'awesome-tray-module-alist '("meow" . (kiteab/awesome-tray-meow-info)))
+
   (setq awesome-tray-active-modules '("git"
                                       "location"
                                       "mode-name"
@@ -13,7 +17,7 @@
                                       "battery"
                                       "buffer-name"
                                       "buffer-read-only"
-                                      "evil"
+                                      "meow"
                                       "date")))
 
 (provide 'init-awesome-tray)
