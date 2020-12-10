@@ -31,3 +31,6 @@
 [submodule "site-lisp/extensions/hydra-posframe"]
 	path = site-lisp/extensions/hydra-posframe
 	url = https://github.com/Ladicle/hydra-posframe
+[submodule "site-lisp/extensions/awesome-tab"]
+	path = site-lisp/extensions/awesome-tab
+	url = https://github.com/manateelazycat/awesome-tab
