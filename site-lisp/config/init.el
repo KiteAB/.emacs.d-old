@@ -16,7 +16,7 @@
     (require 'init-awesome-tray)
 
     (require 'init-keybind)
-    (require 'init-meow)
+    ;; (require 'init-meow)
     ;; (require 'init-hydra)
     ;; (require 'init-evil)
 
