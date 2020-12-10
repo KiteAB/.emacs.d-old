@@ -20,6 +20,8 @@ gcs-done
 (length package-activated-list)
 (length features)))
 
+(advice-add #'display-startup-echo-area-message :override #'(lambda () (interactive) (message "Welcome to KiteAB Emacs!")))
+
 (provide 'init-scratch)
 
 ;;; init-scratch.el ends here
