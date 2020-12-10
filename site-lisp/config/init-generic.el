@@ -1,7 +1,7 @@
 ;;; init-generic.el --- Basic settings
 ;;; Code:
 ;; Functions
-(fset 'yes-or-no-p 'y-or-n-p) ; Change the asking's answer way
+(fset #'yes-or-no-p #'y-or-n-p) ; Change the asking's answer way
 (add-hook 'after-change-major-mode-hook (lambda ()
                                           (modify-syntax-entry ?_ "w")))
 (add-hook 'after-change-major-mode-hook (lambda ()
