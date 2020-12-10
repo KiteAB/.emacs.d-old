@@ -39,7 +39,7 @@
     (require 'init-auto-sudoedit)
     (require 'init-ace-window)
     (require 'init-windresize)
-    (require 'init-pyim)
+    ;; (require 'init-pyim)
     (require 'init-smooth-scrolling)
     (require 'init-multiple-cursors)
     (require 'init-clm)
