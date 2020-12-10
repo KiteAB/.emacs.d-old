@@ -19,10 +19,10 @@
 (setq use-package-hook-name-suffix nil)
 
 ;;; Init Leaf.el
-(unless (and (package-installed-p 'leaf) (package-installed-p 'leaf-keywords))
-  (package-refresh-contents)
-  (package-install 'leaf)
-  (package-install 'leaf-keywords))
+;; (unless (and (package-installed-p 'leaf) (package-installed-p 'leaf-keywords))
+;;   (package-refresh-contents)
+;;   (package-install 'leaf)
+;;   (package-install 'leaf-keywords))
 
 (provide 'init-package)
 
