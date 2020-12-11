@@ -17,6 +17,7 @@
   (package-refresh-contents)
   (package-install 'use-package))
 (setq use-package-hook-name-suffix nil)
+(setq use-package-always-defer t)
 
 ;;; Init Leaf.el
 ;; (unless (and (package-installed-p 'leaf) (package-installed-p 'leaf-keywords))

@@ -1,12 +1,13 @@
 ;;; init-theme.el --- Settings for theme
 ;;; Code:
-;;; Lazycat Themes
+;; Lazycat Themes
 (use-package lazycat-theme
   :load-path "~/.emacs.d/site-lisp/extensions/lazycat-theme"
+  :demand
   :config
   (load-theme 'lazycat-dark t))
 
-;;; Circadian - Switch Theme
+;; Circadian
 (use-package circadian
   :ensure t
   :disabled
