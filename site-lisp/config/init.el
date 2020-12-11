@@ -26,7 +26,6 @@
     (require 'init-projectile)
     (require 'init-symbol-overlay)
     (require 'init-awesome-pair)
-    (require 'init-awesome-tab)
     ;; (require 'init-lispy)
     (require 'init-paren-face)
     (require 'init-rainbow-delimiters)
