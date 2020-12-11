@@ -20,7 +20,7 @@ gcs-done
 (length package-activated-list)
 (length features)))
 
-(advice-add #'display-startup-echo-area-message :override #'(lambda () (interactive) (message "Emacs loaded.")))
+(advice-add #'display-startup-echo-area-message :override #'(lambda () (interactive) (message "Emacs Loaded.")))
 
 (provide 'init-scratch)
 

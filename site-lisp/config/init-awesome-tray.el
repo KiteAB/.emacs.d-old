@@ -10,9 +10,9 @@
     (meow-indicator))
   (add-to-list 'awesome-tray-module-alist '("meow" . (kiteab/awesome-tray-meow-info)))
 
-  (defun kiteab/awesome-tray-emacs-ver ()
+  (defun kiteab/awesome-tray-emacs-info ()
     (concat "KiteAB Emacs"))
-  (add-to-list 'awesome-tray-module-alist '("emacs" . (kiteab/awesome-tray-emacs-ver awesome-tray-module-battery-face)))
+  (add-to-list 'awesome-tray-module-alist '("emacs" . (kiteab/awesome-tray-emacs-info awesome-tray-module-battery-face)))
 
   (setq awesome-tray-active-modules '("git"
                                       "location"
