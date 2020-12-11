@@ -29,7 +29,7 @@
 ;; Floor, Boston, MA 02110-1301, USA.
 
 ;;; TODO
-;;
+;; https://github.com/manateelazycat/awesome-tab --- init-awesome-tab.el
 ;;
 ;;
 
