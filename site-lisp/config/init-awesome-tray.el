@@ -10,15 +10,19 @@
     (meow-indicator))
   (add-to-list 'awesome-tray-module-alist '("meow" . (kiteab/awesome-tray-meow-info)))
 
+  (defun kiteab/awesome-tray-emacs-ver ()
+    (concat "KiteAB Emacs"))
+  (add-to-list 'awesome-tray-module-alist '("emacs" . (kiteab/awesome-tray-emacs-ver awesome-tray-module-battery-face)))
+
   (setq awesome-tray-active-modules '("git"
                                       "location"
                                       "mode-name"
                                       "parent-dir"
-                                      "battery"
                                       "buffer-name"
                                       "buffer-read-only"
                                       "meow"
-                                      "date")))
+                                      "date"
+                                      "emacs")))
 
 (provide 'init-awesome-tray)
 
