@@ -3,7 +3,7 @@
 ;; Author: KiteAB <kiteabpl@outlook.com>
 ;; Maintainer: KiteAB <kiteabpl@outlook.com>
 ;; Copyright (C) 2020, KiteAB, all rights reserved.
-;; Last-Updated: 2020-12-10 22:46:20
+;; Last-Updated: 2020-12-12 12:14:39
 ;;           By: KiteAB
 ;; URL: http://github.com/KiteAB/.emacs.d
 ;; Keywords:
@@ -29,7 +29,7 @@
 ;; Floor, Boston, MA 02110-1301, USA.
 
 ;;; TODO
-;; https://github.com/manateelazycat/awesome-tab --- init-awesome-tab.el
+;;
 ;;
 ;;
 
