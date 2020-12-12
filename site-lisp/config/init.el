@@ -16,9 +16,8 @@
     (require 'init-awesome-tray)
 
     (require 'init-keybind)
+    (require 'init-xah-fly-keys)
     ;; (require 'init-meow)
-    ;; (require 'init-hydra)
-    ;; (require 'init-evil)
 
     (require 'init-company-mode)
     (require 'init-lsp)
