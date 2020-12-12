@@ -55,11 +55,15 @@
     Then you can manage your third party packages by ~git submodule~!
 
 ** Shortcuts
-   I binded the ~C-q~ key to be the user defined key.
+*** Default
+    I binded the ~C-q~ key to be the user defined key.
 
-   ~C-q~ key bind the functions in ~lisp/config/init-functions.el~
+    ~C-q~ key bind the functions in ~site-lisp/config/init-functions.el~
 
-   You can view this file and change somethings.
+    You can view this file and change somethings.
+
+*** Xah Fly Keys
+    I'm learning to use xah fly keys, and if you don't like it, you can go to ~site-lisp/config/init.el~ file and comment ~(require 'init-xah-fly-keys)~ use ~;;~.
 
 ** Token
    You need to do the following to make markdown/org preview work properly:
