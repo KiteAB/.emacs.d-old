@@ -5,9 +5,12 @@
   :hook (after-init-hook . xah-fly-keys)
   :config
   (xah-fly-keys-set-layout "colemak")
+
   (add-hook 'magit-mode-hook #'(lambda () (interactive) (xah-fly-keys -1)))
+
   (define-key xah-fly-insert-map  [escape]     #'xah-fly-command-mode-activate)
   (define-key xah-fly-insert-map  (kbd "C-n") #'(lambda () (interactive) (next-line)))
+
   (define-key xah-fly-command-map (kbd "U")   #'(lambda () (interactive) (previous-line 5)))
   (define-key xah-fly-command-map (kbd "E")   #'(lambda () (interactive) (next-line 5)))
   (define-key xah-fly-command-map (kbd "N")   #'(lambda () (interactive) (beginning-of-line)))
