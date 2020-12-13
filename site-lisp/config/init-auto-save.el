@@ -7,6 +7,7 @@
 
 (use-package auto-save
   :load-path "~/.emacs.d/site-lisp/extensions/auto-save"
+  :demand
   :config
   (auto-save-enable)
   (setq auto-save-silent t
