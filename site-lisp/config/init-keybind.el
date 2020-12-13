@@ -7,7 +7,6 @@
 (global-set-key (kbd "C-q c") #'open-etc-config)
 (global-set-key (kbd "C-q a") #'set-alpha)
 
-(global-set-key (kbd "C-q l") #'kiteab/copy-license)
 (global-set-key (kbd "C-q s") #'kiteab/open-scratch)
 (global-set-key (kbd "C-q A") #'kiteab/touch-not-alpha)
 (global-set-key (kbd "C-q TAB") #'kiteab/open-erc)

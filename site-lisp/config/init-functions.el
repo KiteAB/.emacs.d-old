@@ -12,20 +12,6 @@
     ("y" (set-frame-parameter nil 'alpha '(90 . 100)))
     ("n" (set-frame-parameter nil 'alpha '(100 . 100)))))
 
-(defun kiteab/copy-license (license-name)
-  "Copy the license file to current directory."
-  (interactive (list
-                (completing-read "s[KiteAB Emacs] Lincense name: "
-                                 '("MIT" "GPL-3.0"))))
-  (pcase license-name
-    ("MIT"
-     (copy-file "~/.emacs.d/site-lisp/licenses/MIT" "./LICENSE")
-     (message "[KiteAB Emacs] Copy license action done."))
-    ("GPL-3.0"
-     (copy-file "~/.emacs.d/site-lisp/licenses/GPL-3.0" "./LICENSE")
-     (find-file "./LICENSE")
-     (message "[KiteAB Emacs] Copy license action done."))))
-
 (defun kiteab/open-scratch ()
   "Open the scratch buffer after closing it."
   (interactive)
