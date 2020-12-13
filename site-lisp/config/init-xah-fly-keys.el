@@ -6,7 +6,6 @@
   :config
   (xah-fly-keys-set-layout "colemak")
   (add-hook 'magit-mode-hook #'(lambda () (interactive) (xah-fly-keys -1)))
-  (add-hook 'minibuffer-inactive-hook #'(lambda () ) (interactive) (xah-fly-keys 1))
   (define-key xah-fly-insert-map [escape]     #'xah-fly-command-mode-activate)
   (define-key xah-fly-command-map (kbd "U")   #'(lambda () (interactive) (previous-line 5)))
   (define-key xah-fly-command-map (kbd "E")   #'(lambda () (interactive) (next-line 5)))
