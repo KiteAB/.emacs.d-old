@@ -60,7 +60,8 @@
   (magit-mode-bury-buffer)
   (unless (null (magit-mode-get-buffers))
     (dolist (buffer (magit-mode-get-buffers))
-      (kill-buffer buffer))))
+      (kill-buffer buffer)))
+  (xah-fly-keys 1))
 
 (defun kiteab/kill-unwanted-buffers ()
   "Kill unwanted buffers for me."
