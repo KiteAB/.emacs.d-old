@@ -1,9 +1,8 @@
 ;;; init-xah-fly-keys.el --- Settings for xah fly keys
 ;;; Code:
-(use-package xah-fly-keys
-  :ensure t
-  :demand
-  :hook (after-init-hook . xah-fly-keys))
+(require 'xah-fly-keys)
+
+(xah-fly-keys 1)
 
 (defun xfk-define-in-all-modes (key def)
   (define-key xah-fly-command-map (kbd key) def)
