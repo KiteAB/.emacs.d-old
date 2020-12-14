@@ -6,10 +6,6 @@
   :config
   (setq awesome-tray-refresh-idle-delay 0.01)
 
-  (defun kiteab/awesome-tray-meow-info ()
-    (meow-indicator))
-  (add-to-list 'awesome-tray-module-alist '("meow" . (kiteab/awesome-tray-meow-info)))
-
   (defun kiteab/awesome-tray-emacs-info ()
     (concat "KiteAB Emacs"))
   (add-to-list 'awesome-tray-module-alist '("emacs" . (kiteab/awesome-tray-emacs-info awesome-tray-module-battery-face)))
@@ -20,7 +16,6 @@
                                       "parent-dir"
                                       "buffer-name"
                                       "buffer-read-only"
-                                      "meow"
                                       "date"
                                       "emacs")))
 
