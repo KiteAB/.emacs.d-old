@@ -98,7 +98,7 @@
 ;; Beginning/End of buffer
 (xfk-define-prefix-key 'xfk-g-command "g")
 (xfk-define-command-key "gg" #'beginning-of-buffer)
-(xfk-define-command-key "G" #'end-of-buffer)
+(xfk-define-command-key "G"  #'end-of-buffer)
 
 ;; With leader key
 ;; Magit
