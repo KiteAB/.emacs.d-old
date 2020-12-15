@@ -6,7 +6,7 @@
 
 (defun xfk-define-in-all-modes (key def)
   (define-key xah-fly-command-map (kbd key) def)
-  (define-key xah-fly-insert-map (kbd key) def))
+  (define-key xah-fly-insert-map  (kbd key) def))
 
 (defun xfk-last-buffer (arg)
   (interactive "P")
