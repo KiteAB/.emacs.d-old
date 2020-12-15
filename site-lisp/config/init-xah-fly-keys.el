@@ -33,6 +33,16 @@
   (end-of-line)
   (xah-fly-insert-mode-activate))
 
+(defun xfk-forward-char-and-insert ()
+  (interactive)
+  (forward-char)
+  (xah-fly-insert-mode-activate))
+
+(defun xfk-backward-char-and-command ()
+  (interactive)
+  (backward-char)
+  (xah-fly-command-mode-activate))
+
 (xah-fly-keys-set-layout "colemak")
 
 (add-hook 'magit-mode-hook #'(lambda () (interactive) (xah-fly-keys -1)))
@@ -41,7 +51,7 @@
 (xfk-define-in-all-modes "C-n" #'next-line)
 (xfk-define-in-all-modes "C-a" #'beginning-of-line)
 
-(define-key xah-fly-insert-map  [escape]    #'xah-fly-command-mode-activate)
+(define-key xah-fly-insert-map  [escape]    #'xfk-backward-char-and-command)
 (define-key xah-fly-command-map [escape]    #'xfk-last-buffer)
 (define-key xah-fly-command-map (kbd "N")   #'beginning-of-line)
 (define-key xah-fly-command-map (kbd "I")   #'end-of-line)
@@ -52,6 +62,7 @@
 (define-key xah-fly-command-map (kbd "E")   #'xfk-down-5-lines)
 (define-key xah-fly-command-map (kbd "K")   #'xfk-insert-at-beginning)
 (define-key xah-fly-command-map (kbd "A")   #'xfk-insert-at-end)
+(define-key xah-fly-command-map (kbd "a")   #'xfk-forward-char-and-insert)
 
 (provide 'init-xah-fly-keys)
 
