@@ -44,6 +44,7 @@
     (require 'init-clm)
     (require 'init-isearch)
     (require 'init-comment)
+    (require 'init-evil-nerd-commenter)
     (require 'init-winner-mode)
     (require 'init-recentf)
     (require 'init-acejump)
