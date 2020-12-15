@@ -14,6 +14,10 @@
 (defun xfk-define-insert-key (key func)
   (define-key xah-fly-insert-map (kbd key) func))
 
+(defun xfk-define-prefix-key (prefix key)
+  (define-prefix-command prefix)
+  (xfk-define-command-key key prefix))
+
 ;; Motions
 (defun xfk-up-5-lines ()
   (interactive)
@@ -57,6 +61,7 @@
 
 (add-hook 'magit-mode-hook #'(lambda () (interactive) (xah-fly-keys -1)))
 
+;; Basics
 (xfk-define-in-all-modes "<f11>" #'toggle-frame-fullscreen)
 (xfk-define-in-all-modes "C-n"   #'next-line)
 (xfk-define-in-all-modes "C-a"   #'beginning-of-line)
@@ -65,6 +70,7 @@
 (define-key xah-fly-command-map [escape] #'mode-line-other-buffer)
 
 (xfk-define-command-key "t"     nil)
+(xfk-define-command-key "g"     nil)
 (xfk-define-command-key "M-SPC" nil)
 
 (xfk-define-command-key "n" #'xfk-backward-char)
@@ -81,8 +87,19 @@
 (xfk-define-command-key "A" #'xfk-insert-at-end)
 (xfk-define-command-key "a" #'xfk-forward-char-and-insert)
 (xfk-define-command-key "v" #'set-mark-command)
+(xfk-define-command-key "/" #'swiper)
 
 (xfk-define-command-key "?" 'help-command)
+
+;; With prefix
+;; Beginning/End of buffer
+(xfk-define-prefix-key 'xfk-g-command "g")
+(xfk-define-command-key "gg" #'beginning-of-buffer)
+(xfk-define-command-key "G" #'end-of-buffer)
+
+;; With leader key
+;; Magit
+(xfk-define-command-key "SPC g" #'magit)
 
 (provide 'init-xah-fly-keys)
 
