@@ -18,6 +18,9 @@
   (define-prefix-command prefix)
   (xfk-define-command-key key prefix))
 
+(defun xfk-define-leader-key (key func)
+  (define-key xah-fly-command-map (kbd (concat "SPC " key)) func))
+
 ;; Motions
 (defun xfk-up-5-lines ()
   (interactive)
@@ -99,7 +102,10 @@
 
 ;; With leader key
 ;; Magit
-(xfk-define-command-key "SPC g" #'magit)
+(xfk-define-leader-key "g" #'magit)
+
+;; Evil Nerd Commenter
+(xfk-define-leader-key "c" #'evilnc-comment-or-uncomment-lines)
 
 (provide 'init-xah-fly-keys)
 
