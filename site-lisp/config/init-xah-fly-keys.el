@@ -4,6 +4,8 @@
 
 (xah-fly-keys 1)
 
+(xah-fly-keys-set-layout "colemak")
+
 (defun xfk-define-in-all-modes (key def)
   (define-key xah-fly-command-map (kbd key) def)
   (define-key xah-fly-insert-map  (kbd key) def))
@@ -59,8 +61,6 @@
   (interactive)
   (xfk-backward-char)
   (xah-fly-command-mode-activate))
-
-(xah-fly-keys-set-layout "colemak")
 
 (add-hook 'magit-mode-hook #'(lambda () (interactive) (xah-fly-keys -1)))
 
