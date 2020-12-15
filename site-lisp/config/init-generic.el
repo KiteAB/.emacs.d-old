@@ -2,10 +2,10 @@
 ;;; Code:
 ;; Functions
 (fset #'yes-or-no-p #'y-or-n-p) ; Change the asking's answer way
-(add-hook 'after-change-major-mode-hook (lambda ()
-                                          (modify-syntax-entry ?_ "w")))
-(add-hook 'after-change-major-mode-hook (lambda ()
-                                          (modify-syntax-entry ?- "w")))
+;; (add-hook 'after-change-major-mode-hook (lambda ()
+;;                                          (modify-syntax-entry ?_ "w")))
+;; (add-hook 'after-change-major-mode-hook (lambda ()
+;;                                           (modify-syntax-entry ?- "w")))
 (delete-selection-mode t) ; Delete the seleceted text
 (show-paren-mode t) ; Highlight the "()"
 (electric-pair-mode t) ; Auto complete the "()"
