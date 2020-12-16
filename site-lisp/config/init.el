@@ -17,7 +17,6 @@
 
     (require 'init-keybind)
     (require 'init-xfk)
-    ;; (require 'init-meow)
 
     (require 'init-company-mode)
     (require 'init-lsp)
