@@ -1,4 +1,4 @@
-;;; init-xah-fly-keys.el --- Settings for xah fly keys
+;;; init-xfk.el --- Settings for xah fly keys
 ;;; Code:
 (require 'xah-fly-keys)
 
@@ -142,6 +142,9 @@
 (xfk-define-prefix-key-with-leader 'xfk-leader-f-command "f")
 (xfk-define-leader-key "ff" #'find-file)
 
+;; Save buffers kill terminal
+(xfk-define-leader-key "Q" #'save-buffers-kill-terminal)
+
 ;; init-functions.el
 
 ;; Package keys
@@ -151,6 +154,6 @@
 ;; Evil Nerd Commenter
 (xfk-define-leader-key "c" #'evilnc-comment-or-uncomment-lines)
 
-(provide 'init-xah-fly-keys)
+(provide 'init-xfk)
 
-;;; init-xah-fly-keys.el ends here
+;;; init-xfk.el ends here

@@ -16,7 +16,7 @@
     (require 'init-awesome-tray)
 
     (require 'init-keybind)
-    (require 'init-xah-fly-keys)
+    (require 'init-xfk)
     ;; (require 'init-meow)
 
     (require 'init-company-mode)
