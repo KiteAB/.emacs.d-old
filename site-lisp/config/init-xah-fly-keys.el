@@ -62,6 +62,26 @@
   (xfk-backward-char)
   (xah-fly-command-mode-activate))
 
+(defun xfk-newline-below-and-insert ()
+  (interactive)
+  (end-of-line)
+  (newline-and-indent)
+  (xah-fly-insert-mode-activate)
+  (indent-for-tab-command))
+
+(defun xfk-newline-top-and-insert ()
+  (interactive)
+  (beginning-of-line)
+  (newline-and-indent)
+  (previous-line)
+  (xah-fly-insert-mode-activate)
+  (indent-for-tab-command))
+
+(defun xfk-next-word ()
+  (interactive)
+  (right-word)
+  (forward-char))
+
 (add-hook 'magit-mode-hook #'(lambda () (interactive) (xah-fly-keys -1)))
 
 ;; Basics
@@ -73,7 +93,7 @@
 (define-key xah-fly-command-map [escape] #'mode-line-other-buffer)
 
 (xfk-define-command-key "t"     nil)
-(xfk-define-command-key "g"     nil)
+(xfk-define-command-key "C-w"   nil)
 (xfk-define-command-key "M-SPC" nil)
 
 (xfk-define-command-key "n" #'xfk-backward-char)
@@ -92,13 +112,25 @@
 (xfk-define-command-key "v" #'set-mark-command)
 (xfk-define-command-key "/" #'swiper)
 
-(xfk-define-command-key "?" 'help-command)
+(xfk-define-command-key "h" 'help-command)
 
 ;; With prefix
 ;; Beginning/End of buffer
 (xfk-define-prefix-key 'xfk-g-command "g")
 (xfk-define-command-key "gg" #'beginning-of-buffer)
 (xfk-define-command-key "G"  #'end-of-buffer)
+
+;; New line
+(xfk-define-command-key "o" #'xfk-newline-below-and-insert)
+(xfk-define-command-key "O" #'xfk-newline-top-and-insert)
+
+;; Cut/Copy/Paste
+(xfk-define-command-key "p" #'yank)
+(xfk-define-command-key "y" #'kill-ring-save)
+(xfk-define-command-key "d" #'kill-region)
+
+;; Word move
+(xfk-define-command-key "w" #'xfk-next-word)
 
 ;; With leader key
 ;; Magit
