@@ -18,7 +18,11 @@
 
 (defun xfk-define-prefix-key (prefix key)
   (define-prefix-command prefix)
-  (xfk-define-command-key key prefix))
+  (xfk-define-command-key (kbd key) prefix))
+
+(defun xfk-define-prefix-key-with-leader (prefix key)
+  (define-prefix-command prefix)
+  (xfk-define-command-key (kbd (concat "SPC " key)) prefix))
 
 (defun xfk-define-leader-key (key func)
   (define-key xah-fly-command-map (kbd (concat "SPC " key)) func))
@@ -133,6 +137,14 @@
 (xfk-define-command-key "w" #'xfk-next-word)
 
 ;; With leader key
+;; Built-in function keys
+;; File
+(xfk-define-prefix-key-with-leader 'xfk-leader-f-command "f")
+(xfk-define-leader-key "ff" #'find-file)
+
+;; init-functions.el
+
+;; Package keys
 ;; Magit
 (xfk-define-leader-key "g" #'magit)
 
