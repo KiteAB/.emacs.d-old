@@ -1,5 +1,9 @@
 ;;; init-xfk.el --- Settings for xah fly keys
 ;;; Code:
+(unless (package-installed-p 'xah-fly-keys)
+  (package-refresh-contents)
+  (package-install 'xah-fly-keys))
+
 (require 'xah-fly-keys)
 
 (xah-fly-keys 1)
@@ -30,11 +34,19 @@
 ;; Motions
 (defun xfk-up-5-lines ()
   (interactive)
-  (previous-line 5))
+  (previous-line)
+  (previous-line)
+  (previous-line)
+  (previous-line)
+  (previous-line))
 
 (defun xfk-down-5-lines ()
   (interactive)
-  (next-line 5))
+  (next-line)
+  (next-line)
+  (next-line)
+  (next-line)
+  (next-line))
 
 (defun xfk-insert-at-beginning ()
   (interactive)
@@ -97,6 +109,7 @@
 (define-key xah-fly-command-map [escape] #'mode-line-other-buffer)
 
 (xfk-define-command-key "t"     nil)
+(xfk-define-command-key "j"     nil)
 (xfk-define-command-key "C-w"   nil)
 (xfk-define-command-key "M-SPC" nil)
 
@@ -114,6 +127,8 @@
 (xfk-define-command-key "A" #'xfk-insert-at-end)
 (xfk-define-command-key "a" #'xfk-forward-char-and-insert)
 (xfk-define-command-key "v" #'set-mark-command)
+(xfk-define-command-key "x" #'delete-char)
+(xfk-define-command-key "l" #'undo-only)
 (xfk-define-command-key "/" #'swiper)
 
 (xfk-define-command-key "h" 'help-command)
