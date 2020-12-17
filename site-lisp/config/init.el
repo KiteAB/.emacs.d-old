@@ -13,6 +13,7 @@
     (require 'init-generic)
     (require 'init-package)
     (require 'init-macros)
+    (require 'init-time)
     (require 'init-modes)
     (require 'init-functions)
 
@@ -88,11 +89,23 @@
     (require 'init-winner-mode)
     (require 'init-yasnippet)
     (require 'init-youdao-dict)
+    (require 'init-tempbuf)
     ;; (require 'init-vterm)
 
     ;; Scratch
     (require 'init-scratch)
-    ))
+
+    ;; Can be delayed features
+    (run-with-idle-timer
+     1 nil
+     #'(lambda ()
+         ;; Session
+         (require 'init-session)
+         (emacs-session-restore)
+
+         ;; Server
+         (server-start)
+         ))))
 
 (provide 'init)
 
