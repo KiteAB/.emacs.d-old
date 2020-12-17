@@ -1,4 +1,4 @@
-;;; init-acejump.el --- Settings for acejump
+;;; init-ace-jump.el --- Settings for ace jump
 ;;; Code:
 (use-package ace-jump-mode
   :ensure t
@@ -6,6 +6,6 @@
          ("C-' C-a w" . ace-jump-word-mode)
          ("C-' C-a c" . ace-jump-char-mode)))
 
-(provide 'init-acejump)
+(provide 'init-ace-jump)
 
-;;; init-acejump.el ends here
+;;; init-ace-jump.el ends here
