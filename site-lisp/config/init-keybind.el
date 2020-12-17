@@ -19,6 +19,7 @@
 (global-set-key (kbd "C-q I")     #'kiteab/indent-one-time)
 (global-set-key (kbd "C-q t")     #'kiteab/insert-current-date-time)
 (global-set-key (kbd "C-q SPC")   #'kiteab/format-commit)
+(global-set-key (kbd "C-x C-c")   #'emacs-session-save)
 
 ;;; Built-in Functions -> Keybindings
 (global-set-key (kbd "C-q C-p")   #'previous-buffer)
