@@ -2,7 +2,6 @@
 ;;; Code:
 (use-package rainbow-delimiters
   :ensure t
-  :disabled
   :hook ((lisp-mode-hook emacs-lisp-mode-hook org-mode-hook eshell-mode-hook) . rainbow-delimiters-mode)
   :config
   (set-face-attribute 'rainbow-delimiters-depth-1-face nil :foreground "chartreuse3"   :bold "t")
