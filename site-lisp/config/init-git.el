@@ -8,6 +8,15 @@
 ;;; Magit
 (use-package magit
   :ensure t
+  :config
+  (defun kiteab/kill-magit (&optional dir)
+    "Kill the buffer about Magit"
+    (interactive)
+    (magit-mode-bury-buffer)
+    (unless (null (magit-mode-get-buffers))
+      (dolist (buffer (magit-mode-get-buffers))
+        (kill-buffer buffer)))
+    (xah-fly-keys 1))
   :bind (("C-' m" . magit-status)
          :map magit-mode-map
          ("q" . kiteab/kill-magit)))

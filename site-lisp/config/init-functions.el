@@ -1,7 +1,7 @@
 ;;; init-functions.el --- Settings for functions
 ;;; Code:
-(defun open-etc-config ()
-  "Open the config file in the etc directory."
+(defun open-config-folder ()
+  "Open the config file in the site-lisp/config folder."
   (interactive)
   (counsel-find-file "~/.emacs.d"))
 
@@ -55,18 +55,12 @@
 (defun kiteab/add-todo-in-code ()
   "Add todo content in code."
   (interactive)
-  (comment-dwim nil)
-  (let ((todo-content (read-string "[KiteAB Emacs] Enter your todo content: ")))
-    (insert (format "<TODO(KiteAB)> %s [%s]" todo-content (current-time-string)))))
-
-(defun kiteab/kill-magit (&optional dir)
-  "Kill the buffer about Magit"
-  (interactive)
-  (magit-mode-bury-buffer)
-  (unless (null (magit-mode-get-buffers))
-    (dolist (buffer (magit-mode-get-buffers))
-      (kill-buffer buffer)))
-  (xah-fly-keys 1))
+  (if (eq (major-mode) 'emacs-lisp-mode)
+      (progn
+        (comment-dwim nil)
+        (let ((todo-content (read-string "[KiteAB Emacs] Enter your todo content: ")))
+          (insert (format "<TODO(KiteAB)> %s [%s]" todo-content (current-time-string)))))
+    (message "[KiteAB Emacs] Not in emacs-lisp-mode.")))
 
 (defun kiteab/kill-unwanted-buffers ()
   "Kill unwanted buffers for me."
