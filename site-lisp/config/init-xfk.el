@@ -186,7 +186,7 @@
 
 ;; Package keys
 ;; Magit
-(xfk-define-leader-key "g" #'magit)
+(xfk-define-leader-key "m" #'magit)
 
 ;; Evil Nerd Commenter
 (xfk-define-leader-key "c" #'evilnc-comment-or-uncomment-lines)
