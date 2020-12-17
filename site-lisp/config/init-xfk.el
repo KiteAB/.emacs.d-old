@@ -34,19 +34,11 @@
 ;; Motions
 (defun xfk-up-5-lines ()
   (interactive)
-  (previous-line)
-  (previous-line)
-  (previous-line)
-  (previous-line)
-  (previous-line))
+  (previous-line 5))
 
 (defun xfk-down-5-lines ()
   (interactive)
-  (next-line)
-  (next-line)
-  (next-line)
-  (next-line)
-  (next-line))
+  (next-line 5))
 
 (defun xfk-insert-at-beginning ()
   (interactive)
@@ -108,10 +100,11 @@
 (define-key xah-fly-insert-map  [escape] #'xfk-backward-char-and-command)
 (define-key xah-fly-command-map [escape] #'mode-line-other-buffer)
 
-(xfk-define-command-key "t"     nil)
-(xfk-define-command-key "j"     nil)
-(xfk-define-command-key "C-w"   nil)
-(xfk-define-command-key "M-SPC" nil)
+(xfk-define-command-key  "t"     nil)
+(xfk-define-command-key  "j"     nil)
+(xfk-define-in-all-modes "C-s"   nil)
+(xfk-define-in-all-modes "C-w"   nil)
+(xfk-define-command-key  "M-SPC" nil)
 
 (xfk-define-command-key "n" #'xfk-backward-char)
 (xfk-define-command-key "i" #'xfk-forward-char)
