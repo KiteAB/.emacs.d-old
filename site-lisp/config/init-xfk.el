@@ -123,6 +123,8 @@
 (xfk-define-command-key "x" #'delete-char)
 (xfk-define-command-key "l" #'undo-only)
 (xfk-define-command-key "/" #'swiper)
+(xfk-define-command-key ";" #'counsel-M-x)
+(xfk-define-command-key ":" #'counsel-M-x)
 
 (xfk-define-command-key "h" 'help-command)
 
@@ -149,11 +151,38 @@
 ;; File
 (xfk-define-prefix-key-with-leader 'xfk-leader-f-command "f")
 (xfk-define-leader-key "ff" #'find-file)
+;; Window
+
+
+;; Buffer
+
+
+;; Useful
+(xfk-define-prefix-key-with-leader 'xfk-leader-z-command "z")
+(xfk-define-leader-key "zf" #'mark-defun)
+(xfk-define-leader-key "zl" #'undo)
+(xfk-define-leader-key "zr" #'query-replace)
+(xfk-define-leader-key "ze" #'eshell)
+(xfk-define-leader-key "zp" #'list-processes)
+(xfk-define-leader-key "zg" #'goto-line)
+(xfk-define-leader-key "za" #'align-regexp)
 
 ;; Save buffers kill terminal
 (xfk-define-leader-key "Q" #'save-buffers-kill-terminal)
 
 ;; init-functions.el
+(xfk-define-prefix-key-with-leader 'xfk-leader-q-command "q")
+(xfk-define-leader-key "c"   #'open-config-folder)
+(xfk-define-leader-key "C"   #'open-require-file)
+(xfk-define-leader-key "a"   #'set-alpha)
+(xfk-define-leader-key "s"   #'kiteab/open-scratch)
+(xfk-define-leader-key "T"   #'kiteab/add-todo-in-code)
+(xfk-define-leader-key "i"   #'kiteab/change-indent-type)
+(xfk-define-leader-key "p"   #'kiteab/provide-feature-name)
+(xfk-define-leader-key "t"   #'kiteab/insert-current-date-time)
+(xfk-define-leader-key "u"   #'kiteab/upgrade-modules)
+(xfk-define-leader-key "TAB" #'kiteab/open-erc)
+(xfk-define-leader-key "SPC" #'kiteab/format-commit)
 
 ;; Package keys
 ;; Magit
