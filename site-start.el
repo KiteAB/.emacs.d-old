@@ -3,7 +3,7 @@
 ;; Author: KiteAB <kiteabpl@outlook.com>
 ;; Maintainer: KiteAB <kiteabpl@outlook.com>
 ;; Copyright (C) 2020, KiteAB, all rights reserved.
-;; Last-Updated: 2020-12-12 21:33:56
+;; Last-Updated: 2020-12-17 21:41:13
 ;;           By: KiteAB
 ;; URL: http://github.com/KiteAB/.emacs.d
 ;; Keywords:
@@ -39,5 +39,6 @@
     (add-to-list 'load-path dir)
     (normal-top-level-add-subdirs-to-load-path)))
 (add-subdirs-to-load-path "~/.emacs.d/site-lisp/config/")
+(add-subdirs-to-load-path "~/.emacs.d/site-lisp/extensions/kiteab/")
 
 (require 'init)
