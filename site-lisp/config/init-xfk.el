@@ -167,22 +167,23 @@
 (xfk-define-leader-key "zg" #'goto-line)
 (xfk-define-leader-key "za" #'align-regexp)
 
-;; Save buffers kill terminal
-(xfk-define-leader-key "Q" #'save-buffers-kill-terminal)
+;; Save session and quit emacs
+(xfk-define-leader-key "Q" #'emacs-session-save)
 
 ;; init-functions.el
 (xfk-define-prefix-key-with-leader 'xfk-leader-q-command "q")
-(xfk-define-leader-key "c"   #'open-config-folder)
-(xfk-define-leader-key "C"   #'open-require-file)
-(xfk-define-leader-key "a"   #'set-alpha)
-(xfk-define-leader-key "s"   #'kiteab/open-scratch)
-(xfk-define-leader-key "T"   #'kiteab/add-todo-in-code)
-(xfk-define-leader-key "i"   #'kiteab/change-indent-type)
-(xfk-define-leader-key "p"   #'kiteab/provide-feature-name)
-(xfk-define-leader-key "t"   #'kiteab/insert-current-date-time)
-(xfk-define-leader-key "u"   #'kiteab/upgrade-modules)
-(xfk-define-leader-key "TAB" #'kiteab/open-erc)
-(xfk-define-leader-key "SPC" #'kiteab/format-commit)
+(xfk-define-command-key "SPC q" 'xfk-leader-q-command)
+(xfk-define-leader-key "qc"    #'open-config-folder)
+(xfk-define-leader-key "qC"    #'open-require-file)
+(xfk-define-leader-key "qa"    #'set-alpha)
+(xfk-define-leader-key "qs"    #'kiteab/open-scratch)
+(xfk-define-leader-key "qT"    #'kiteab/add-todo-in-code)
+(xfk-define-leader-key "qi"    #'kiteab/change-indent-type)
+(xfk-define-leader-key "qp"    #'kiteab/provide-feature-name)
+(xfk-define-leader-key "qt"    #'kiteab/insert-current-date-time)
+(xfk-define-leader-key "qu"    #'kiteab/upgrade-modules)
+(xfk-define-leader-key "q TAB" #'kiteab/open-erc)
+(xfk-define-leader-key "q SPC" #'kiteab/format-commit)
 
 ;; Package keys
 ;; Magit
