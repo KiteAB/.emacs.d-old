@@ -5,6 +5,11 @@
   (interactive)
   (counsel-find-file "~/.emacs.d"))
 
+(defun open-require-file ()
+  "Open init.el"
+  (interactive)
+  (find-file "~/.emacs.d/site-lisp/config/init.el"))
+
 (defun set-alpha (var)
   "Set the backgroud alpha by VAR."
   (interactive "sAlpha or not(y-or-n): ")
@@ -124,7 +129,7 @@
   "Git commit with formatted text."
   (interactive)
   (setq kiteab/git-commit-type (completing-read "[KiteAB Emacs] Commit Type: "
-                                                '("add" "modify" "feat" "style" "fix" "module" "rename")))
+                                                '("add" "modify" "remove" "feat" "style" "fix" "module" "rename")))
   (setq kiteab/git-commit-files (read-from-minibuffer "[KiteAB Emacs] Commit Files: "))
   (setq kiteab/git-commit-content (read-from-minibuffer "[KiteAB Emacs] Commit Content: "))
   (insert (concat kiteab/git-commit-type

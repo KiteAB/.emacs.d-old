@@ -5,6 +5,7 @@
 
 ;;; User Functions -> Keybindings
 (global-set-key (kbd "C-q c")     #'open-etc-config)
+(global-set-key (kbd "C-q C")     #'open-require-file)
 (global-set-key (kbd "C-q a")     #'set-alpha)
 (global-set-key (kbd "C-q s")     #'kiteab/open-scratch)
 (global-set-key (kbd "C-q A")     #'kiteab/touch-not-alpha)
