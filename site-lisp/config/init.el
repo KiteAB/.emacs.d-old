@@ -89,7 +89,6 @@
     (require 'init-winner-mode)
     (require 'init-yasnippet)
     (require 'init-youdao-dict)
-    (require 'init-tempbuf)
     ;; (require 'init-vterm)
 
     ;; Scratch
