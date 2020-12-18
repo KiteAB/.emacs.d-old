@@ -28,3 +28,6 @@
 [submodule "site-lisp/extensions/pacarch"]
 	path = site-lisp/extensions/pacarch
 	url = https://github.com/KitPixel/pacarch
+[submodule "site-lisp/extensions/lazy-load"]
+	path = site-lisp/extensions/lazy-load
+	url = https://github.com/manateelazycat/lazy-load
