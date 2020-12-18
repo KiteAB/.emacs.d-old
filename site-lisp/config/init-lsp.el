@@ -33,11 +33,6 @@
   :ensure t
   :hook (python-mode-hook . (lambda () (require 'lsp-pyright) (lsp))))
 
-;; Nox
-(use-package nox
-  :load-path "~/.emacs.d/site-lisp/extensions/nox"
-  :hook (lsp-mode-hook . nox))
-
 ;; Lsp Treemacs
 (use-package lsp-treemacs :ensure t)
 
