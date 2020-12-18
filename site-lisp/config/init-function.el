@@ -6,7 +6,7 @@
 ;; Maintainer: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
 ;; Copyright (C) 2020, KiteAB, all rights reserved.
 ;; Created: 2020-12-10 20:59:12
-;; Last-Updated: 2020-12-18 20:33:38
+;; Last-Updated: 2020-12-18 21:18:15
 ;;           By: KiteAB
 ;; URL: https://github.com/KiteAB/.emacs.d/blob/master/site-lisp/config/init-function.el
 ;; Keywords:
@@ -68,7 +68,7 @@
   "Set the backgroud alpha by VAR."
   (interactive "sAlpha or not(y-or-n): ")
   (pcase var
-    ("y" (set-frame-parameter nil 'alpha '(90 . 100)))
+    ("y" (set-frame-parameter nil 'alpha '(90  . 100)))
     ("n" (set-frame-parameter nil 'alpha '(100 . 100)))))
 
 (defun kiteab/open-scratch ()
