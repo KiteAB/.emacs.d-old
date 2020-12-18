@@ -1,14 +1,15 @@
-;;; .emacs.d ---  My Personal Emacs Configuration File
+;;; KiteAB Emacs - A Simple and Fast Emacs Configuration
 
-;; Author: KiteAB <kiteabpl@outlook.com>
-;; Maintainer: KiteAB <kiteabpl@outlook.com>
+;; Description: A Simple and Fast Emacs Configuration
+;; Author: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
+;; Maintainer: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
 ;; Copyright (C) 2020, KiteAB, all rights reserved.
-;; Last-Updated: 2020-12-17 21:41:13
-;;           By: KiteAB
+;; Created: 2020-08-30 18:40:22
+;;      By: KiteAB
 ;; URL: http://github.com/KiteAB/.emacs.d
 ;; Keywords:
 ;; Compatibility: GNU Emacs 27.1
-;;
+
 ;;; This file is NOT part of GNU Emacs
 
 ;;; License
@@ -24,14 +25,28 @@
 ;; GNU General Public License for more details.
 
 ;; You should have received a copy of the GNU General Public License
-;; along with this program; see the file LICENSE.  If not, write to
+;; along with this program; see the file COPYING.  If not, write to
 ;; the Free Software Foundation, Inc., 51 Franklin Street, Fifth
 ;; Floor, Boston, MA 02110-1301, USA.
 
+;;; Commentary:
+;;
+;; A Simple and Fast Emacs Configuration
+;;
+
+;;; Acknowledgements:
+;;
+;;
+;;
+
 ;;; TODO
-;; https://github.com/xahlee/xah-fly-keys
 ;;
 ;;
+;;
+
+;;; Require
+
+;;; Code:
 
 (defun add-subdirs-to-load-path (dir)
   "Recursive add directories to `load-path'."
@@ -39,6 +54,8 @@
     (add-to-list 'load-path dir)
     (normal-top-level-add-subdirs-to-load-path)))
 (add-subdirs-to-load-path "~/.emacs.d/site-lisp/config/")
-(add-subdirs-to-load-path "~/.emacs.d/site-lisp/extensions/kiteab/")
+(add-subdirs-to-load-path "~/.emacs.d/site-lisp/extensions/")
 
 (require 'init)
+
+;;; site-start.el ends here
