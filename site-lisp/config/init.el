@@ -6,7 +6,7 @@
 ;; Maintainer: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
 ;; Copyright (C) 2020, KiteAB, all rights reserved.
 ;; Created: 2020-12-10 21:43:50
-;; Last-Updated: 2020-12-18 19:55:23
+;; Last-Updated: 2020-12-18 21:37:12
 ;;           By: KiteAB
 ;; URL: https://github.com/KiteAB/.emacs.d/blob/master/site-lisp/config/init.el
 ;; Keywords:
@@ -61,51 +61,22 @@
       (gc-cons-percentage 0.6)
       (file-name-handler-alist nil))
   (with-temp-message ""
-    ;; Basic
     (require 'init-generic)
     (require 'init-package)
     (require 'init-time)
     (require 'init-modes)
     (require 'init-function)
 
-    ;; Basic User Interface
     (require 'init-ui)
-    (require 'init-awesome-tray)
-    (require 'init-theme)
+    (require 'lazycat-theme)
+    (lazycat-theme-load-dark)
 
-    ;; Keybinding
     (require 'init-key)
     (require 'init-xfk)
 
-    ;; Package
-    ;; Org
-    (require 'init-org)
-
-    ;; Emacs Lisp
-    (require 'init-awesome-pair)
-    (require 'init-symbol-overlay)
-    (require 'init-highlight-defined)
-    (require 'init-highlight-quoted)
-    ;; (require 'init-rainbow-delimiters)
-    ;; (require 'init-lispy)
-
-    ;; Auto Complete
-    (require 'init-company-mode)
-    (require 'init-lsp)
-    (require 'init-elpy)
-
-    ;; Project
-    (require 'init-projectile)
-    (require 'init-treemacs)
-
-    ;; Programming
-    (require 'init-cc)
-    (require 'init-golang)
-    (require 'init-python)
-    (require 'init-web-mode)
-    (require 'init-yaml-mode)
-
-    ;; Tool
+    (require 'basic-toolkit)
+    (require 'lazy-load)
+    (require 'init-performance)
     (require 'init-ace-jump)
     (require 'init-ace-window)
     (require 'init-aggressive-indent)
@@ -140,20 +111,40 @@
     (require 'init-winner-mode)
     (require 'init-yasnippet)
     (require 'init-youdao-dict)
+    (require 'init-awesome-tray)
     ;; (require 'init-vterm)
 
-    ;; Scratch
+    (require 'init-org)
+
+    (require 'init-awesome-pair)
+    (require 'init-symbol-overlay)
+    (require 'init-highlight-defined)
+    (require 'init-highlight-quoted)
+    ;; (require 'init-rainbow-delimiters)
+    ;; (require 'init-lispy)
+
+    (require 'init-company-mode)
+    (require 'init-lsp)
+    (require 'init-nox)
+    (require 'init-elpy)
+
+    (require 'init-projectile)
+    (require 'init-treemacs)
+
+    (require 'init-cc)
+    (require 'init-golang)
+    (require 'init-python)
+    (require 'init-web-mode)
+    (require 'init-yaml-mode)
+
     (require 'init-scratch)
 
-    ;; Can be delayed features
     (run-with-idle-timer
      1 nil
      #'(lambda ()
-         ;; Session
          (require 'init-session)
          (emacs-session-restore)
 
-         ;; Server
          (server-start)
          ))))
 

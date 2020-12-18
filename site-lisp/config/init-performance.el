@@ -1,14 +1,14 @@
-;;; init-awesome-tray.el --- Settings for awesome tray
+;;; init-performance.el --- Improve emacs performance
 
-;; Filename: init-awesome-tray.el
-;; Description: Settings for awesome tray
+;; Filename: init-performance.el
+;; Description: Improve emacs performance
 ;; Author: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
 ;; Maintainer: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
 ;; Copyright (C) 2020, KiteAB, all rights reserved.
-;; Created: 2020-12-18 20:24:18
-;; Last-Updated: 2020-12-18 19:55:59
+;; Created: 2020-12-18 22:22:26
+;; Last-Updated: 2020-12-18 22:22:26
 ;;           By: KiteAB
-;; URL: https://github.com/KiteAB/.emacs.d/blob/master/site-lisp/config/init-awesome-tray.el
+;; URL: https://github.com/KiteAB/.emacs.d/blob/master/site-lisp/config/init-performance.el
 ;; Keywords:
 ;;
 ;; Feature that might be required by this library:
@@ -37,7 +37,7 @@
 
 ;;; Commentary
 ;;
-;; Settings for awesome tray
+;; Improve emacs performance
 ;;
 
 ;;; Acknowledgements:
@@ -51,28 +51,20 @@
 ;;
 
 ;;; Require
-(require 'awesome-tray)
 
 ;;; Code:
 
-(awesome-tray-mode 1)
+(defun max-gc-limit ()
+  (setq gc-cons-threshold most-positive-fixnum))
 
-(setq awesome-tray-refresh-idle-delay 0.01)
+(defun reset-gc-limit ()
+  (setq gc-cons-threshold 800000))
 
-;; Modules
-(defun awesome-tray-module-emacs-info ()
-  (concat "KiteAB Emacs"))
-(add-to-list 'awesome-tray-module-alist '("emacs" . (awesome-tray-module-emacs-info awesome-tray-module-battery-face)))
+(add-hook 'minibuffer-setup-hook #'max-gc-limit)
+(add-hook 'minibuffer-exit-hook  #'reset-gc-limit)
 
-(setq awesome-tray-active-modules '("git"
-                                    "location"
-                                    "mode-name"
-                                    "parent-dir"
-                                    "buffer-name"
-                                    "buffer-read-only"
-                                    "date"
-                                    "emacs"))
+(setq-default bidi-display-reordering nil)
 
-(provide 'init-awesome-tray)
+(provide 'init-performance)
 
-;;; init-awesome-tray.el ends here
+;;; init-performance.el ends here

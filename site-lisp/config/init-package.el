@@ -56,6 +56,15 @@
 
 ;;; Code:
 
+(defun require-pkg (pkg)
+  "If `pkg' doesn't install
+then install it use `package-install'
+last `package-refresh-contents'"
+  (unless (package-installed-p pkg)
+    (package-refresh-contents)
+    (package-install pkg))
+  (require pkg))
+
 ;; Set Parent Key for Packages
 (define-prefix-command 'package-command)
 (global-set-key (kbd "C-'") 'package-command)

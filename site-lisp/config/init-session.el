@@ -1,7 +1,6 @@
 ;;; init-session.el --- Settings for emacs session
 ;;; Code:
 (require 'auto-save)
-(require 'basic-toolkit)
 (require 'tempbuf)
 
 (setq desktop-load-locked-desktop t) ; don't popup dialog ask user, load anyway
