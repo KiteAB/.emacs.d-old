@@ -66,7 +66,7 @@
     (require 'init-package)
     (require 'init-time)
     (require 'init-modes)
-    (require 'init-functions)
+    (require 'init-function)
 
     ;; Basic User Interface
     (require 'init-ui)

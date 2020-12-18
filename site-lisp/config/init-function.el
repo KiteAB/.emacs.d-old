@@ -6,7 +6,7 @@
 ;; Maintainer: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
 ;; Copyright (C) 2020, KiteAB, all rights reserved.
 ;; Created: 2020-12-10 20:59:12
-;; Last-Updated: 2020-12-18 20:12:39
+;; Last-Updated: 2020-12-18 20:33:38
 ;;           By: KiteAB
 ;; URL: https://github.com/KiteAB/.emacs.d/blob/master/site-lisp/config/init-function.el
 ;; Keywords:
@@ -109,7 +109,7 @@
 (defun kiteab/add-todo-in-code ()
   "Add todo content in code."
   (interactive)
-  (if (eq (major-mode) 'emacs-lisp-mode)
+  (if (eq major-mode 'emacs-lisp-mode)
       (progn
         (comment-dwim nil)
         (let ((todo-content (read-string "[KiteAB Emacs] Enter your todo content: ")))
