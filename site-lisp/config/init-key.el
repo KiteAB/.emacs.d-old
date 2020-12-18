@@ -1,4 +1,4 @@
-;;; init-keybind.el --- Settings for keybindings
+;;; init-key.el --- Settings for keybindings
 ;;; Code:
 (define-prefix-command      'function-command)
 (global-set-key (kbd "C-q") 'function-command)
@@ -41,11 +41,6 @@
 (global-set-key (kbd "C-q C-a")   #'align-regexp)
 (global-set-key (kbd "RET")       #'newline-and-indent)
 
-;; Key Macros
-(global-set-key (kbd "C-q C-k i") #'insert-placeholder)  ; Insert Placeholder
-(global-set-key (kbd "C-q C-k r") #'replace-placeholder) ; Replace Placeholder
-(global-set-key (kbd "C-q C-k s") #'search-todo-in-code) ; Search the todo thing in code
+(provide 'init-key)
 
-(provide 'init-keybind)
-
-;;; init-keybind.el ends here
+;;; init-key.el ends here
