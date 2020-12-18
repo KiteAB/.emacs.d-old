@@ -134,6 +134,8 @@
 (xfk-define-command-key "gg" #'beginning-of-buffer)
 (xfk-define-command-key "G"  #'end-of-buffer)
 
+(xfk-define-command-key "gf" #'xref-find-definitions)
+
 ;; New line
 (xfk-define-command-key "o" #'xfk-newline-below-and-insert)
 (xfk-define-command-key "O" #'xfk-newline-top-and-insert)
