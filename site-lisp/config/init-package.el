@@ -56,13 +56,13 @@
 
 ;;; Code:
 
-(defun require-pkg (pkg)
-  "If `pkg' doesn't install
-then install it use `package-install'
-last `package-refresh-contents'"
+(defun install-pkg (pkg)
   (unless (package-installed-p pkg)
     (package-refresh-contents)
-    (package-install pkg))
+    (package-install pkg)))
+
+(defun require-pkg (pkg)
+  (install-pkg pkg)
   (require pkg))
 
 ;; Set Parent Key for Packages
