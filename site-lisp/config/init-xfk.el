@@ -146,8 +146,8 @@
 (xfk-define-in-all-modes "C-n"   #'next-line)
 (xfk-define-in-all-modes "C-a"   #'beginning-of-line)
 
-(define-key xah-fly-insert-map  [escape] #'xfk-backward-char-and-command)
-(define-key xah-fly-command-map [escape] #'mode-line-other-buffer)
+(xfk-define-insert-key  "<escape>" #'xfk-backward-char-and-command)
+(xfk-define-command-key "<escape>" #'mode-line-other-buffer)
 
 (xfk-define-command-key  "t"     nil)
 (xfk-define-command-key  "j"     nil)
