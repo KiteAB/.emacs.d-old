@@ -114,7 +114,7 @@
   (xfk-forward-char)
   (xah-fly-insert-mode-activate))
 
-(defun xfk-backward-char-and-command ()
+(defun xfk-backward-char-and-command-mode ()
   (interactive)
   (xfk-backward-char)
   (xah-fly-command-mode-activate))
@@ -146,7 +146,7 @@
 (xfk-define-in-all-modes "C-n"   #'next-line)
 (xfk-define-in-all-modes "C-a"   #'beginning-of-line)
 
-(xfk-define-insert-key  "<escape>" #'xfk-backward-char-and-command)
+(xfk-define-insert-key  "<escape>" #'xfk-backward-char-and-command-mode)
 (xfk-define-command-key "<escape>" #'mode-line-other-buffer)
 
 (xfk-define-command-key  "t"     nil)
