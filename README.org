@@ -24,11 +24,15 @@
    - ~ttf-symbola~ font. (Optional. Telega icons)
 
 ** Installation
-   You need to install the dependencies and run command below:
+   You need to clone this repository to your ~~/kiteab-emacs~
+
+   And install the [[#dependencies][dependencies]]
+
+   Last, run command below:
    #+begin_src shell
    git submodule update --init --recursive
    #+end_src
-   And see the [[#token][Token]] part to edit ~token.el~
+   And see the [[#token][Token]] part to edit ~eaf-grip-token~
 
    Then enjoy the Emacs!
 
