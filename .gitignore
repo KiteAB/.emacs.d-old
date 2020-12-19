@@ -1,8 +1,0 @@
-/*
-/*/
-!/.gitignore
-!/.gitmodules
-!/.gitattributes
-!/site-lisp/
-!/site-start.el
-!/README.org
