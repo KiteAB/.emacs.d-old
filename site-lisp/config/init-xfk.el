@@ -174,6 +174,7 @@
 (xfk-define-command-key "/" #'swiper)
 (xfk-define-command-key ";" #'counsel-M-x)
 (xfk-define-command-key ":" #'counsel-M-x)
+(xfk-define-command-key "`" #'xah-toggle-letter-case)
 
 (xfk-define-command-key "h" 'help-command)
 
@@ -196,6 +197,7 @@
 
 ;; Word move
 (xfk-define-command-key "w" #'xfk-next-word)
+(xfk-define-command-key "b" #'backward-word)
 
 ;; With leader key
 ;; Built-in function keys
