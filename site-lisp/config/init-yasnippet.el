@@ -7,7 +7,7 @@
   :config
   (use-package yasnippet-snippets :ensure t)
   (setq yas-snippet-dirs '("~/.emacs.d/site-lisp/snippets"
-                           "~/.emacs.d/var/elpa/yasnippet-snippets-20201118.2148/snippets")))
+                           "~/.emacs.d/var/elpa/yasnippet-snippets-20201214.1054/snippets")))
 
 (provide 'init-yasnippet)
 
