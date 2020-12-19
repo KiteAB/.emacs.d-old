@@ -68,7 +68,6 @@
 (global-set-key (kbd "C-q k")     #'kiteab/kill-unwanted-buffers)
 (global-set-key (kbd "C-q C-s")   #'kiteab/search-engine)
 (global-set-key (kbd "C-q i")     #'kiteab/change-indent-type)
-(global-set-key (kbd "C-q C-e s") #'kiteab/edit-snippets)
 (global-set-key (kbd "C-q p")     #'kiteab/provide-feature-name)
 (global-set-key (kbd "C-q I")     #'kiteab/indent-one-time)
 (global-set-key (kbd "C-q t")     #'kiteab/insert-current-date-time)

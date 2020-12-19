@@ -36,11 +36,11 @@
    (shell . t)))
 
 ;; GTD
-(unless (file-exists-p (concat kiteab-emacs-root-dir "/gtd"))
-  (make-directory (concat kiteab-emacs-root-dir "/gtd")))
-(setq org-agenda-files '((concat kiteab-emacs-root-dir "/gtd")))
+(unless (file-exists-p "~/.emacs.d/gtd")
+  (make-directory "~/.emacs.d/gtd"))
+(setq org-agenda-files '("~/.emacs.d/gtd"))
 (defvar org-agenda-dir "" "gtd org files location")
-(setq-default org-agenda-dir (concat kiteab-emacs-root-dir "/gtd"))
+(setq-default org-agenda-dir "~/.emacs.d/gtd")
 ;; org-agenda-dir files
 (setq org-agenda-file-note (expand-file-name "notes.org" org-agenda-dir))
 (setq org-agenda-file-insp (expand-file-name "insps.org" org-agenda-dir))

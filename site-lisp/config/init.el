@@ -61,7 +61,7 @@
       (gc-cons-percentage 0.6)
       (file-name-handler-alist nil))
 
-  (defvar kiteab-emacs-root-dir (file-truename "~/.emacs.d"))
+  (defvar kiteab-emacs-root-dir (file-truename "~/kiteab-emacs"))
   (defvar kiteab-emacs-site-lisp-dir (file-truename (concat kiteab-emacs-root-dir "/site-lisp")))
   (defvar kiteab-emacs-config-dir (concat kiteab-emacs-site-lisp-dir "/config"))
   (defvar kiteab-emacs-extension-dir (concat kiteab-emacs-site-lisp-dir "/extensions"))

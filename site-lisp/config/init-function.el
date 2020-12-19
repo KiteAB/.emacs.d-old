@@ -57,12 +57,12 @@
 (defun open-config-folder ()
   "Open the config file in the site-lisp/config folder."
   (interactive)
-  (counsel-find-file "~/.emacs.d"))
+  (counsel-find-file kiteab-emacs-root-dir))
 
 (defun open-require-file ()
   "Open init.el"
   (interactive)
-  (find-file "~/.emacs.d/site-lisp/config/init.el"))
+  (find-file (concat kiteab-emacs-config-dir "/init.el")))
 
 (defun set-alpha (var)
   "Set the backgroud alpha by VAR."
@@ -136,26 +136,6 @@
     ("tab" (setq-local indent-tabs-mode t))
     ("space" (setq-local indent-tabs-mode nil))))
 
-(defun kiteab/edit-snippets (type)
-  "Edit the snippets in current mode."
-  (interactive (list (completing-read "[KiteAB Emacs] Enter the edit type: "
-                                      '("add" "edit" "delete"))))
-  (let ((path (format "~/.emacs.d/site-lisp/snippets/%S/" major-mode))
-        snippet-name)
-    (if (string= type "add")
-        (setq snippet-name (read-string "[KiteAB Emacs] Snippet name: "))
-      (setq snippet-name (completing-read "[KiteAB Emacs] Snippet name: "
-                                          (delete "."
-                                                  (delete ".."
-                                                          (directory-files path))))))
-    (pcase type
-      ("add"
-       (find-file (concat path snippet-name)))
-      ("edit"
-       (find-file (concat path snippet-name)))
-      ("delete"
-       (delete-file (concat path snippet-name))))))
-
 (defun kiteab/provide-feature-name ()
   "Provide feature name automaticly."
   (interactive)
@@ -169,9 +149,9 @@
   (insert (format-time-string "%Y-%m-%d %H:%M:%S")))
 
 (defun kiteab/upgrade-modules ()
-  "Upgrade modules in ~/.emacs.d git repository."
+  "Upgrade modules in `kiteab-emacs-root-dir' git repository."
   (interactive)
-  (async-shell-command "cd ~/.emacs.d && git submodule foreach git pull"))
+  (async-shell-command (concat "cd " kiteab-emacs-root-dir " && git submodule foreach git pull")))
 
 (defun kiteab/format-commit ()
   "Git commit with formatted text."

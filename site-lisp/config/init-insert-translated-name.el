@@ -1,7 +1,7 @@
 ;;; init-insert-translated-name.el --- Settings for insert translated name
 ;;; Code:
 (use-package insert-translated-name
-  :load-path "~/.emacs.d/site-lisp/extensions/insert-translated-name"
+  :load-path "~/kiteab-emacs/site-lisp/extensions/insert-translated-name"
   :bind (("C-' C-l i" . insert-translated-name-insert)
          ("C-' C-l u" . insert-translated-name-insert-with-underline)
          ("C-' C-l c" . insert-translated-name-insert-with-camel)

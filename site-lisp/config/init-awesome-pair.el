@@ -1,7 +1,7 @@
 ;;; init-awesome-pair.el --- Settings for awesome pair
 ;;; Code:
 (use-package awesome-pair
-  :load-path "~/.emacs.d/site-lisp/extensions/awesome-pair"
+  :load-path "~/kiteab-emacs/site-lisp/extensions/awesome-pair"
   :hook (emacs-lisp-mode-hook . awesome-pair-mode)
   :config
   (define-key awesome-pair-mode-map (kbd "(") 'awesome-pair-open-round)
