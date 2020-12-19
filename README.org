@@ -24,11 +24,11 @@
    - ~ttf-symbola~ font. (Optional. Telega icons)
 
 ** Installation
-   You need to clone this repository to your ~~/kiteab-emacs~
+   You need to clone this repository to your ~$HOME/kiteab-emacs~
 
    And install the [[#dependencies][dependencies]]
 
-   Last, run command below:
+   Then, run command below:
    #+begin_src shell
    git submodule update --init --recursive
    #+end_src
@@ -89,8 +89,9 @@
 
 ** Contributors
    - *[[https://github.com/KiteAB][David Zhang]]*: The original creator of this repository.
-   - *[[https://github.com/JimMoen][JimMoen]]*: Cleaned up and improved the codes, See [[https://github.com/KiteAB/.emacs.d/pull/1][#1]] for details.
+   - *[[https://github.com/JimMoen][JimMoen]]*: Cleaned up and improved the codes, see [[https://github.com/KiteAB/.emacs.d/pull/1][#1]] for details.
    - *[[https://github.com/SpringHan][SpringHan]]*: Codes part provided.
    - *[[https://github.com/EvanMeek][EvanMeek]]*: Codes part provided.
-   - *[[https://github.com/manateelazycat][Andy Stewart]]*: Multiple packages provided.
+   - *[[https://github.com/manateelazycat][Andy Stewart]]*: Multiple packages and codes part provided.
    - *[[https://github.com/redguardtoo][Chen Bin]]*: Encouragement and support provided.
+   - *[[https://github.com/vritser][Vritser]]*: Improved the codes, see [[https://github.com/KiteAB/.emacs.d/pull/5][#5]]
