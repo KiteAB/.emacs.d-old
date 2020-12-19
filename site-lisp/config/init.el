@@ -60,6 +60,11 @@
       (gc-cons-threshold most-positive-fixnum)
       (gc-cons-percentage 0.6)
       (file-name-handler-alist nil))
+
+  (defvar kiteab-emacs-root-dir (file-truename "~/.emacs.d/site-lisp"))
+  (defvar kiteab-emacs-config-dir (concat kiteab-emacs-root-dir "/config"))
+  (defvar kiteab-emacs-extension-dir (concat kiteab-emacs-root-dir "/extensions"))
+
   (with-temp-message ""
     (require 'init-generic)
     (require 'init-package)
