@@ -57,9 +57,8 @@
 (install-pkg 'highlight-defined)
 (add-hook 'emacs-lisp-mode-hook #'(lambda ()
                                     (require 'highlight-defined)
+                                    (set-face-attribute 'highlight-defined-function-name-face nil :foreground "Blue")
                                     (highlight-defined-mode 1)))
-
-(set-face-attribute 'highlight-defined-function-name-face nil :foreground "Blue")
 
 (provide 'init-highlight-defined)
 
