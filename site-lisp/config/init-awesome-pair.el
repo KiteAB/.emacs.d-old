@@ -51,12 +51,11 @@
 ;;
 
 ;;; Require
+(require 'awesome-pair)
 
 ;;; Code:
 
-(add-hook 'emacs-lisp-mode-hook #'(lambda ()
-                                    (require 'awesome-pair)
-                                    (awesome-pair-mode 1)))
+(add-hook 'emacs-lisp-mode-hook #'(lambda () (awesome-pair-mode 1)))
 
 (define-key awesome-pair-mode-map (kbd "(") 'awesome-pair-open-round)
 (define-key awesome-pair-mode-map (kbd "[") 'awesome-pair-open-bracket)
