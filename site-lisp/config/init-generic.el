@@ -85,8 +85,8 @@
 (setq eshell-history-file-name "~/.emacs/var/eshell/history")
 ;; (column-number-mode t) ;; Show the column number in the modeline
 (setq backward-delete-char-untabify-method nil) ;; Delete the tab by once
-(setq user-emacs-directory "~/.emacs.d/var") ;; The Cache Directory
-(setq user-init-file "~/.emacs.d/var/user-init.el")
+;; (setq user-emacs-directory "~/.emacs.d/var") ;; The Cache Directory
+;; (setq user-init-file "~/.emacs.d/var/user-init.el")
 (setq load-prefer-newer t)
 (save-place-mode t) ;; Save the point position
 (setq ring-bell-function 'ignore

@@ -106,6 +106,7 @@
     (require 'init-insert-translated-name)
     (require 'init-isearch)
     (require 'init-ivy)
+    (require 'init-swiper)
     (require 'init-license-templates)
     (require 'init-popwin)
     (require 'init-rainbow-mode)
@@ -114,13 +115,12 @@
     (require 'init-which-key)
     (require 'init-whitespace)
     (require 'init-windresize)
-    (require 'init-winner-mode)
     (require 'init-yasnippet)
     (require 'init-youdao-dict)
     (require 'init-awesome-tray)
-    ;; (require 'init-vterm)
 
     (require 'init-org)
+    (require 'init-valign)
 
     (require 'init-awesome-pair)
     (require 'init-symbol-overlay)

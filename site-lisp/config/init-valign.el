@@ -1,14 +1,14 @@
-;;; init-popwin.el --- Settings for popwin
+;;; init-valign.el --- Settings for valign
 
-;; Filename: init-popwin.el
-;; Description: Settings for popwin
+;; Filename: init-valign.el
+;; Description: Settings for valign
 ;; Author: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
 ;; Maintainer: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
 ;; Copyright (C) 2020, KiteAB, all rights reserved.
-;; Created: 2020-12-10 20:59:12
-;; Last-Updated: 2020-12-20 15:37:03
+;; Created: 2020-12-20 16:33:56
+;; Last-Updated: 2020-12-20 16:33:56
 ;;           By: KiteAB
-;; URL: https://github.com/KiteAB/.emacs.d/blob/master/site-lisp/config/init-popwin.el
+;; URL: https://github.com/KiteAB/.emacs.d/blob/master/site-lisp/config/init-valign.el
 ;; Keywords:
 ;;
 ;; Feature that might be required by this library:
@@ -37,7 +37,7 @@
 
 ;;; Commentary
 ;;
-;; Settings for popwin
+;; Settings for valign
 ;;
 
 ;;; Acknowledgements:
@@ -51,12 +51,13 @@
 ;;
 
 ;;; Require
-(require-pkg 'popwin)
 
 ;;; Code:
 
-(popwin-mode 1)
+(add-hook 'org-mode-hook #'(lambda ()
+                             (require 'valign)
+                             (valign-mode 1)))
 
-(provide 'init-popwin)
+(provide 'init-valign)
 
-;;; init-popwin.el ends here
+;;; init-valign.el ends here

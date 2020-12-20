@@ -1,18 +1,77 @@
 ;;; init-org.el --- Settings for org mode
+
+;; Filename: init-org.el
+;; Description: Settings for org mode
+;; Author: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
+;; Maintainer: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
+;; Copyright (C) 2020, KiteAB, all rights reserved.
+;; Created: 2020-12-10 20:59:12
+;; Last-Updated: 2020-12-20 16:27:05
+;;           By: KiteAB
+;; URL: https://github.com/KiteAB/.emacs.d/blob/master/site-lisp/config/init-org.el
+;; Keywords:
+;;
+;; Feature that might be required by this library:
+;;
+;;
+;;
+
+;;; This file is NOT part of GNU Emacs
+
+;;; License
+;;
+;; This program is free software; you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation; either version 3, or (at your option)
+;; any later version.
+
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with this program; see the file COPYING.  If not, write to
+;; the Free Software Foundation, Inc., 51 Franklin Street, Fifth
+;; Floor, Boston, MA 02110-1301, USA.
+
+;;; Commentary
+;;
+;; Settings for org mode
+;;
+
+;;; Acknowledgements:
+;;
+;;
+;;
+
+;;; TODO
+;;
+;;
+;;
+
+;;; Require
+
 ;;; Code:
-(use-package org
-  :ensure t
-  :init
-  (define-prefix-command 'org-key-map)
-  (global-set-key (kbd "C-q C-c") 'org-key-map)
-  :bind (("C-q C-c g" . org-agenda)
-         ("C-q C-c c" . org-capture)
-         ("C-q C-c s" . org-timer-start)
-         ("C-q C-c S" . org-timer-set-timer)
-         ("C-q C-c e" . org-timer-stop)
-         ("C-q C-c SPC" . org-timer-pause-or-continue)
-         ("C-q C-c C-i" . kiteab/use-space-indent))
-  :hook (org-mode-hook . (lambda () (setq indent-tabs-mode nil) (define-key org-mode-map (kbd "C-'") nil))))
+
+(install-pkg 'org)
+
+(define-prefix-command 'org-key-map)
+(global-set-key (kbd "C-q C-c") 'org-key-map)
+
+(lazy-load-global-keys
+ '(("C-q C-c g"   . org-agenda)
+   ("C-q C-c c"   . org-capture)
+   ("C-q C-c s"   . org-timer-start)
+   ("C-q C-c S"   . org-timer-set-timer)
+   ("C-q C-c e"   . org-timer-stop)
+   ("C-q C-c SPC" . org-timer-pause-or-continue)
+   ("C-q C-c C-i" . kiteab/use-space-indent))
+ "org")
+
+(add-hook 'org-mode-hook #'(lambda ()
+                             (setq indent-tabs-mode nil)
+                             (define-key org-mode-map (kbd "C-'") nil)))
 
 (setq org-log-mode 'note) ; Set the log mode type
 (setq org-src-fontify-natively t)
@@ -66,16 +125,10 @@
 (setq org-image-actual-width '(300))
 (setq org-export-with-sub-superscripts nil)
 
-;;; Org Bullets
-(use-package org-bullets
-  :ensure t
-  :hook (org-mode-hook . org-bullets-mode)
-  :custom (org-bullets-bullet-list '("☰" "☷" "✿" "☭")))
-
-;;; Valign
-(use-package valign
-  :load-path "~/.emacs.d/site-lisp/extensions/valign"
-  :hook (org-mode-hook . valign-mode))
+;; Org Bullets
+(install-pkg 'org-bullets)
+(add-hook 'org-mode-hook #'(lambda () (org-bullets-mode 1)))
+(setq org-bullets-bullet-list '("☰" "☷" "✿" "☭"))
 
 (provide 'init-org)
 

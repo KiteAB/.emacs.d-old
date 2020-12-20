@@ -1,14 +1,14 @@
-;;; init-popwin.el --- Settings for popwin
+;;; init-swiper.el --- Settings for swiper
 
-;; Filename: init-popwin.el
-;; Description: Settings for popwin
+;; Filename: init-swiper.el
+;; Description: Settings for swiper
 ;; Author: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
 ;; Maintainer: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
 ;; Copyright (C) 2020, KiteAB, all rights reserved.
-;; Created: 2020-12-10 20:59:12
-;; Last-Updated: 2020-12-20 15:37:03
+;; Created: 2020-12-20 15:27:44
+;; Last-Updated: 2020-12-20 15:27:44
 ;;           By: KiteAB
-;; URL: https://github.com/KiteAB/.emacs.d/blob/master/site-lisp/config/init-popwin.el
+;; URL: https://github.com/KiteAB/.emacs.d/blob/master/site-lisp/config/init-swiper.el
 ;; Keywords:
 ;;
 ;; Feature that might be required by this library:
@@ -37,7 +37,7 @@
 
 ;;; Commentary
 ;;
-;; Settings for popwin
+;; Settings for swiper
 ;;
 
 ;;; Acknowledgements:
@@ -51,12 +51,15 @@
 ;;
 
 ;;; Require
-(require-pkg 'popwin)
 
 ;;; Code:
 
-(popwin-mode 1)
+(install-pkg 'swiper)
+(lazy-load-global-keys
+ '(("C-s" . swiper)
+   ("C-r" . swiper-backward))
+ "swiper")
 
-(provide 'init-popwin)
+(provide 'init-swiper)
 
-;;; init-popwin.el ends here
+;;; init-swiper.el ends here

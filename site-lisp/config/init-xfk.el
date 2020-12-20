@@ -114,7 +114,7 @@
   (xfk-forward-char)
   (xah-fly-insert-mode-activate))
 
-(defun xfk-backward-char-and-command-mode ()
+(defun xfk-backward-char-and-command ()
   (interactive)
   (xfk-backward-char)
   (xah-fly-command-mode-activate))
@@ -139,6 +139,11 @@
   (right-word)
   (forward-char))
 
+(defun xfk-kill-region-and-insert ()
+  (interactive)
+  (kill-region)
+  (xah-fly-insert-mode-activate))
+
 (add-hook 'magit-mode-hook #'(lambda () (interactive) (xah-fly-keys -1)))
 
 ;; Basics
@@ -146,7 +151,7 @@
 (xfk-define-in-all-modes "C-n"   #'next-line)
 (xfk-define-in-all-modes "C-a"   #'beginning-of-line)
 
-(xfk-define-insert-key  "<escape>" #'xfk-backward-char-and-command-mode)
+(xfk-define-insert-key  "<escape>" #'xfk-backward-char-and-command)
 (xfk-define-command-key "<escape>" #'mode-line-other-buffer)
 
 (xfk-define-command-key  "t"     nil)
@@ -158,23 +163,24 @@
 (xfk-define-command-key "n" #'xfk-backward-char)
 (xfk-define-command-key "i" #'xfk-forward-char)
 
-(xfk-define-command-key "N" #'beginning-of-line)
-(xfk-define-command-key "I" #'end-of-line)
-(xfk-define-command-key "k" #'xah-fly-insert-mode-activate)
-(xfk-define-command-key "S" #'save-buffer)
-(xfk-define-command-key "Q" #'kill-current-buffer)
-(xfk-define-command-key "U" #'xfk-up-5-lines)
-(xfk-define-command-key "E" #'xfk-down-5-lines)
-(xfk-define-command-key "K" #'xfk-insert-at-beginning)
-(xfk-define-command-key "A" #'xfk-insert-at-end)
-(xfk-define-command-key "a" #'xfk-forward-char-and-insert)
-(xfk-define-command-key "v" #'set-mark-command)
-(xfk-define-command-key "x" #'delete-char)
-(xfk-define-command-key "l" #'undo-only)
-(xfk-define-command-key "/" #'swiper)
-(xfk-define-command-key ";" #'counsel-M-x)
-(xfk-define-command-key ":" #'counsel-M-x)
-(xfk-define-command-key "`" #'xah-toggle-letter-case)
+(xfk-define-command-key "N"   #'beginning-of-line)
+(xfk-define-command-key "I"   #'end-of-line)
+(xfk-define-command-key "k"   #'xah-fly-insert-mode-activate)
+(xfk-define-command-key "S"   #'save-buffer)
+(xfk-define-command-key "Q"   #'kill-current-buffer)
+(xfk-define-command-key "U"   #'xfk-up-5-lines)
+(xfk-define-command-key "E"   #'xfk-down-5-lines)
+(xfk-define-command-key "K"   #'xfk-insert-at-beginning)
+(xfk-define-command-key "A"   #'xfk-insert-at-end)
+(xfk-define-command-key "a"   #'xfk-forward-char-and-insert)
+(xfk-define-command-key "v"   #'set-mark-command)
+(xfk-define-command-key "x"   #'delete-char)
+(xfk-define-command-key "l"   #'undo-only)
+(xfk-define-command-key "/"   #'swiper)
+(xfk-define-command-key ";"   #'counsel-M-x)
+(xfk-define-command-key ":"   #'counsel-M-x)
+(xfk-define-command-key "`"   #'xah-toggle-letter-case)
+(xfk-define-command-key "DEL" #'backward-char)
 
 (xfk-define-command-key "h" 'help-command)
 
@@ -194,6 +200,7 @@
 (xfk-define-command-key "p" #'yank)
 (xfk-define-command-key "y" #'kill-ring-save)
 (xfk-define-command-key "d" #'kill-region)
+(xfk-define-command-key "c" #'xfk-kill-region-and-insert)
 
 ;; Word move
 (xfk-define-command-key "w" #'xfk-next-word)
