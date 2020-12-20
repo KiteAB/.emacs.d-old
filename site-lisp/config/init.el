@@ -84,6 +84,7 @@
     (require 'lazy-load)
     (require 'init-performance)
     (require 'init-awesome-tray)
+
     (require 'init-scratch)
 
     (run-with-idle-timer

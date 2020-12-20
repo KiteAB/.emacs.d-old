@@ -12,7 +12,7 @@
                                      "Windows"))))))
 (setq initial-scratch-message (format ";;; KiteAB Emacs on %s
 ;; Emacs Startup Time: %.2fs, %s Packages Installed
-;; Happy Hacking!
+;; DO NOT start using emacs now, emacs will overload in 0.5s...
 
 " kiteab/system-type
 (float-time (time-subtract after-init-time before-init-time))
