@@ -6,7 +6,7 @@
 ;; Maintainer: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
 ;; Copyright (C) 2020, KiteAB, all rights reserved.
 ;; Created: 2020-12-18 22:32:34
-;; Last-Updated: 2020-12-18 22:32:34
+;; Last-Updated: 2020-12-20 18:08:55
 ;;           By: KiteAB
 ;; URL: https://github.com/KiteAB/.emacs.d/blob/master/site-lisp/config/init-nox.el
 ;; Keywords:
@@ -51,11 +51,12 @@
 ;;
 
 ;;; Require
-(require 'nox)
 
 ;;; Code:
 
-(add-hook 'lsp-mode-hook #'nox)
+(add-hook 'lsp-mode-hook #'(lambda ()
+                             (require 'nox)
+                             (nox)))
 
 (provide 'init-nox)
 
