@@ -206,6 +206,9 @@
 (xfk-define-command-key "w" #'xfk-next-word)
 (xfk-define-command-key "b" #'backward-word)
 
+;; Comment
+(xfk-define-insert-key ";" #'lispy-comment)
+
 ;; With leader key
 ;; Built-in function keys
 ;; File
