@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# contributor: KiteAB
-# name: defconst
-# key: defconst
-# --
-(defconst ${1:name} ${2:value}
-  "${3:DOC}")$0

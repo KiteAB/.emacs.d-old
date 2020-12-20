@@ -1,8 +1,0 @@
-# -*- mode: snippet -*-
-# contributor: KiteAB
-# name: defmacro
-# key: defmacro
-# --
-(defmacro ${1:name} (${2:arg})
-  "${3:DOC}"
-  $0)

@@ -1,8 +1,0 @@
-# -*- mode: snippet -*-
-# contributor: KiteAB
-# name: defun
-# key: defun
-# --
-(defun ${1:function-name} (${2:arg})
-  "${3:DOC}"
-  $0)

@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-# contributor: KiteAB
-# name: completing-read
-# key: completing-read
-# --
-(completing-read "${1:Content}" $0)

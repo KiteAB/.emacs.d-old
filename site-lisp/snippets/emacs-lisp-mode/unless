@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# contributor: KiteAB
-# name: unless
-# key: unless
-# --
-(unless ${1:condition}
-        $0)

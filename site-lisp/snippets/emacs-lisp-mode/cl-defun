@@ -1,8 +1,0 @@
-# -*- mode: snippet -*-
-# contributor: KiteAB
-# name: cl-defun
-# key: cdefun
-# --n
-(cl-defun ${1:name} (${2:arg})
-  "${3:DOC}"
-  $0)
