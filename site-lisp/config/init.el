@@ -6,7 +6,7 @@
 ;; Maintainer: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
 ;; Copyright (C) 2020, KiteAB, all rights reserved.
 ;; Created: 2020-12-10 21:43:50
-;; Last-Updated: 2020-12-18 21:37:12
+;; Last-Updated: 2020-12-21 19:55:44
 ;;           By: KiteAB
 ;; URL: https://github.com/KiteAB/.emacs.d/blob/master/site-lisp/config/init.el
 ;; Keywords:
@@ -140,7 +140,7 @@
          (require 'init-elpy)
 
          (require 'init-projectile)
-         (require 'init-treemacs)
+         ;; (require 'init-treemacs)
 
          (require 'init-cc)
          (require 'init-golang)
