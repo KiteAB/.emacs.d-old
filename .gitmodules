@@ -31,3 +31,6 @@
 [submodule "site-lisp/extensions/lazy-load"]
 	path = site-lisp/extensions/lazy-load
 	url = https://github.com/manateelazycat/lazy-load
+[submodule "site-lisp/extensions/snails"]
+	path = site-lisp/extensions/snails
+	url = https://github.com/manateelazycat/snails
