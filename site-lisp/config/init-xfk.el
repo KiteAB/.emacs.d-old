@@ -217,10 +217,11 @@
 (xfk-define-prefix-key-with-leader 'xfk-leader-t-command "t")
 
 ;; Window
-(xfk-define-command-key "1" #'delete-other-windows)
-(xfk-define-command-key "2" #'split-window-below)
-(xfk-define-command-key "3" #'split-window-right)
-(xfk-define-command-key "0" #'delete-window)
+(xfk-define-command-key "1"   #'delete-other-windows)
+(xfk-define-command-key "2"   #'split-window-below)
+(xfk-define-command-key "3"   #'split-window-right)
+(xfk-define-command-key "0"   #'delete-window)
+(xfk-define-command-key "C-o" #'other-window)
 
 ;; Useful
 (xfk-define-prefix-key-with-leader 'xfk-leader-z-command "z")
