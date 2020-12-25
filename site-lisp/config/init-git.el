@@ -65,8 +65,7 @@
   (magit-mode-bury-buffer)
   (unless (null (magit-mode-get-buffers))
     (dolist (buffer (magit-mode-get-buffers))
-      (kill-buffer buffer)))
-  (xah-fly-keys 1))
+      (kill-buffer buffer))))
 (lazy-load-global-keys
  '(("C-' m" . magit-status))
  "magit")

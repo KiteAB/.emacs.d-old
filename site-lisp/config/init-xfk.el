@@ -144,8 +144,6 @@
   (kill-region)
   (xah-fly-insert-mode-activate))
 
-(add-hook 'magit-mode-hook #'(lambda () (interactive) (xah-fly-keys -1)))
-
 ;; Basics
 (xfk-define-in-all-modes "<f11>" #'toggle-frame-fullscreen)
 (xfk-define-in-all-modes "C-n"   #'next-line)
@@ -215,11 +213,14 @@
 (xfk-define-prefix-key-with-leader 'xfk-leader-f-command "f")
 (xfk-define-leader-key "ff" #'find-file)
 
-;; Window
-
-
 ;; Buffer
+(xfk-define-prefix-key-with-leader 'xfk-leader-t-command "t")
 
+;; Window
+(xfk-define-command-key "1" #'delete-other-windows)
+(xfk-define-command-key "2" #'split-window-below)
+(xfk-define-command-key "3" #'split-window-right)
+(xfk-define-command-key "0" #'delete-window)
 
 ;; Useful
 (xfk-define-prefix-key-with-leader 'xfk-leader-z-command "z")
