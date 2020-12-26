@@ -214,7 +214,7 @@
 (xfk-define-leader-key "ff" #'find-file)
 
 ;; Buffer
-(xfk-define-prefix-key-with-leader 'xfk-leader-t-command "t")
+(xfk-define-prefix-key 'xfk-leader-t-command "t")
 
 ;; Window
 (xfk-define-command-key "1"   #'delete-other-windows)
