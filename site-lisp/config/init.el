@@ -145,6 +145,7 @@
          (require 'init-cc)
          (require 'init-golang)
          (require 'init-python)
+         (require 'init-omnisharp)
          (require 'init-web-mode)
          (require 'init-yaml-mode)
 
