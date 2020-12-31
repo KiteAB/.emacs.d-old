@@ -3,7 +3,7 @@
 ;; Description: A Simple and Fast Emacs Configuration
 ;; Author: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
 ;; Maintainer: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
-;; Copyright (C) 2020, KiteAB, all rights reserved.
+;; Copyright (C) 2021, KiteAB, all rights reserved.
 ;; Created: 2020-08-30 18:40:22
 ;;      By: KiteAB
 ;; URL: http://github.com/KiteAB/.emacs.d
