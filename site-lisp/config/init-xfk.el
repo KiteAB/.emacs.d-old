@@ -4,9 +4,9 @@
 ;; Description: Settings for xah fly keys
 ;; Author: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
 ;; Maintainer: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
-;; Copyright (C) 2020, KiteAB, all rights reserved.
+;; Copyright (C) 2021, KiteAB, all rights reserved.
 ;; Created: 2020-12-12 21:29:53
-;; Last-Updated: 2020-12-18 22:38:32
+;; Last-Updated: 2021-01-06 17:14:57
 ;;           By: KiteAB
 ;; URL: https://github.com/KiteAB/.emacs.d/blob/master/site-lisp/config/init-xfk.el
 ;; Keywords:
