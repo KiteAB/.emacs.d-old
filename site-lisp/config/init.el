@@ -79,7 +79,7 @@
 
     (require 'init-key)
     (require 'init-xfk)
-    ;; (require 'init-meow)
+    (require 'init-meow)
 
     (require 'basic-toolkit)
     (require 'lazy-load)

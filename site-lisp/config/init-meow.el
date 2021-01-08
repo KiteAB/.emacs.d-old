@@ -51,10 +51,11 @@
 ;;
 
 ;;; Require
+(require-pkg 'meow)
 
 ;;; Code:
 
-(require-pkg 'meow)
+
 
 (provide 'init-meow)
 

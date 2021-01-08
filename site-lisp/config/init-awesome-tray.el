@@ -64,6 +64,10 @@
   (concat "KiteAB Emacs"))
 (add-to-list 'awesome-tray-module-alist '("emacs" . (awesome-tray-module-emacs-info awesome-tray-module-battery-face)))
 
+(defun awesome-tray-module-meow-info ()
+  (meow-indicator))
+(add-to-list 'awesome-tray-module-alist '("meow" . (awesome-tray-module-meow-info)))
+
 (setq awesome-tray-active-modules '("git"
                                     "location"
                                     "mode-name"
@@ -71,6 +75,7 @@
                                     "buffer-name"
                                     "buffer-read-only"
                                     "date"
+                                    "meow"
                                     "emacs"))
 
 (provide 'init-awesome-tray)
