@@ -55,7 +55,74 @@
 
 ;;; Code:
 
+;; (meow-global-mode 1)
 
+;; Motions
+(defun kiteab/meow-forward-char ()
+  (interactive)
+  (when (< (point) (line-end-position))
+    (forward-char (abs (prefix-numeric-value nil)))))
+
+(defun kiteab/meow-backward-char ()
+  (interactive)
+  (when (> (point) (line-beginning-position))
+    (backward-char (abs (prefix-numeric-value nil)))))
+
+(defun kiteab/meow-forward-char-and-insert ()
+  (interactive)
+  (kiteab/meow-forward-char)
+  (meow-insert))
+
+(defun kiteab/meow-insert-at-end ()
+  (interactive)
+  (end-of-line)
+  (meow-insert))
+
+;; Main Function
+(defun meow-setup ()
+  (setq meow-cheatsheet-layout meow-cheatsheet-layout-colemak)
+  (meow-leader-define-key
+   '("1" . meow-digit-argument)
+   '("2" . meow-digit-argument)
+   '("3" . meow-digit-argument)
+   '("4" . meow-digit-argument)
+   '("5" . meow-digit-argument)
+   '("6" . meow-digit-argument)
+   '("7" . meow-digit-argument)
+   '("8" . meow-digit-argument)
+   '("9" . meow-digit-argument)
+   '("0" . meow-digit-argument))
+
+  (meow-normal-define-key
+   '("1" . meow-expand-1)
+   '("2" . meow-expand-2)
+   '("3" . meow-expand-3)
+   '("4" . meow-expand-4)
+   '("5" . meow-expand-5)
+   '("6" . meow-expand-6)
+   '("7" . meow-expand-7)
+   '("8" . meow-expand-8)
+   '("9" . meow-expand-9)
+   '("0" . meow-expand-0)
+   '("-" . negative-argument)
+   '(";" . counsel-M-x)
+   '("<escape>" . meow-last-buffer)
+   '("a" . kiteab/meow-forward-char-and-insert)
+   '("A" . kiteab/meow-insert-at-end)
+   '("b" . backward-word)
+   '("c")))
+;; https://github.com/DogLooksGood/meow
+;; vim
+;; abcdefg
+;; ar
+;; hijklmn
+;; opq rst
+;;
+;;
+;; uvwxyz
+(setq meow-esc-delay 0.001)
+
+(meow-setup)
 
 (provide 'init-meow)
 

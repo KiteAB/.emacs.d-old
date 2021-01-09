@@ -78,7 +78,7 @@
     (lazycat-theme-load-dark)
 
     (require 'init-key)
-    (require 'init-xfk)
+    ;; (require 'init-xfk)
     (require 'init-meow)
 
     (require 'basic-toolkit)
@@ -129,11 +129,11 @@
          (require 'init-org)
          (require 'init-valign)
 
-         (require 'init-awesome-pair)
+         ;; (require 'init-awesome-pair)
+         (require 'init-lispy)
          (require 'init-symbol-overlay)
          (require 'init-highlight-defined)
          (require 'init-highlight-quoted)
-         (require-pkg 'lispy)
 
          (require 'init-company-mode)
          (require 'init-lsp)

@@ -57,7 +57,7 @@
 
 (awesome-tray-mode 1)
 
-(setq awesome-tray-refresh-idle-delay 0.01)
+(setq awesome-tray-refresh-idle-delay 0.001)
 
 ;; Modules
 (defun awesome-tray-module-emacs-info ()
