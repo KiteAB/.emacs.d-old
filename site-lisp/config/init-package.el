@@ -4,9 +4,9 @@
 ;; Description: Settings for packages
 ;; Author: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
 ;; Maintainer: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
-;; Copyright (C) 2020, KiteAB, all rights reserved.
+;; Copyright (C) 2021, KiteAB, all rights reserved.
 ;; Created: 2020-12-18 17:11:37
-;; Last-Updated: 2020-12-18 20:07:31
+;; Last-Updated: 2021-01-10 14:17:20
 ;;           By: KiteAB
 ;; URL: https://github.com/KiteAB/.emacs.d/blob/master/site-lisp/config/init-package.el
 ;; Keywords:
@@ -65,23 +65,25 @@
   (install-pkg pkg)
   (require pkg))
 
-;; Set Parent Key for Packages
+;;; Set Parent Key for Packages
 (define-prefix-command 'package-command)
 (global-set-key (kbd "C-'") 'package-command)
 
-;; Init Packages
+;;; Init Packages
 (package-initialize)
 
-;; Mirror Source
-(setq package-archives '(("gnu" . "http://mirrors.bfsu.edu.cn/elpa/gnu/")
-                         ("melpa" . "http://mirrors.bfsu.edu.cn/elpa/melpa/")))
+;;; Mirror Source
+(setq package-archives
+      '(("gnu" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+        ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+        ))
 
-;; Init Use Package
-(unless (package-installed-p 'use-package)
-  (package-refresh-contents)
-  (package-install 'use-package))
-(setq use-package-hook-name-suffix nil)
-(setq use-package-always-defer t)
+;;; Init Use Package
+;; (unless (package-installed-p 'use-package)
+;;   (package-refresh-contents)
+;;   (package-install 'use-package))
+;; (setq use-package-hook-name-suffix nil)
+;; (setq use-package-always-defer t)
 
 (provide 'init-package)
 
