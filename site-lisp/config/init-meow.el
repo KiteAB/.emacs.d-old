@@ -78,9 +78,25 @@
   (end-of-line)
   (meow-insert))
 
+(defun kiteab/meow-down-5-lines ()
+  (interactive)
+  (next-line 5))
+
+(defun kiteab/meow-insert-at-beginning ()
+  (interactive)
+  (beginning-of-line)
+  (meow-insert))
+
+(defun kiteab/meow-backward-char-and-normal ()
+  (interactive)
+  (kiteab/meow-backward-char)
+  (meow-normal-mode 1))
+
 ;; Main Function
 (defun meow-setup ()
   (setq meow-cheatsheet-layout meow-cheatsheet-layout-colemak)
+  (define-key meow-insert-state-keymap (kbd "<escape>") #'kiteab/meow-backward-char-and-normal)
+
   (meow-leader-define-key
    '("1" . meow-digit-argument)
    '("2" . meow-digit-argument)
@@ -106,23 +122,30 @@
    '("0" . meow-expand-0)
    '("-" . negative-argument)
    '(";" . counsel-M-x)
+   '("?" . help-command)
    '("<escape>" . meow-last-buffer)
    '("a" . kiteab/meow-forward-char-and-insert)
    '("A" . kiteab/meow-insert-at-end)
    '("b" . backward-word)
-   '("c")))
-;; https://github.com/DogLooksGood/meow
-;; vim
-;; abcdefg
-;; ar
-;; hijklmn
-;; opq rst
-;;
-;;
-;; uvwxyz
+   '("c" . meow-change)
+   '("C" . meow-change-save)
+   '("d" . meow-delete)
+   '("e" . next-line)
+   '("E" . kiteab/meow-down-5-lines)
+   '("f" . meow-find)
+   '("F" . meow-find-expand)
+   '("g" . meow-keyboard-quit)
+   '("G" . goto-line)
+   '("i" . kiteab/meow-forward-char)
+   '("I" . end-of-line)
+   '("k" . meow-insert)
+   '("K" . kiteab/meow-insert-at-beginning)
+   '("l" . undo-only)
+   '("L" . undo-tree-visualize)))
+
 (setq meow-esc-delay 0.001)
 
-(meow-setup)
+;; (meow-setup)
 
 (provide 'init-meow)
 
