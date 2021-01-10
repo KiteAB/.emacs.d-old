@@ -164,6 +164,7 @@
    '("9" . meow-expand-9)
    '("0" . meow-expand-0)
    '("-" . negative-argument)
+   '(":" . counsel-M-x)
    '(";" . counsel-M-x)
    '("/" . swiper)
    '("?" . help-command)
