@@ -125,6 +125,8 @@
          (require 'init-windresize)
          (require 'init-yasnippet)
          (require 'init-youdao-dict)
+         (require-pkg 'undo-tree)
+         (global-undo-tree-mode 1)
 
          (require 'init-org)
          (require 'init-valign)
@@ -146,9 +148,10 @@
          (require 'init-cc)
          (require 'init-golang)
          (require 'init-python)
-         (require 'init-omnisharp)
+
          (require 'init-web-mode)
          (require 'init-yaml-mode)
+         (install-pkg 'omnisharp)
 
          (require 'init-session)
          (emacs-session-restore)
