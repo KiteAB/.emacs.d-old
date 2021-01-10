@@ -55,7 +55,7 @@
 
 ;;; Code:
 
-;; (meow-global-mode 1)
+(meow-global-mode 1)
 
 ;; Motions
 (defun kiteab/meow-forward-char ()
@@ -90,7 +90,46 @@
 (defun kiteab/meow-backward-char-and-normal ()
   (interactive)
   (kiteab/meow-backward-char)
-  (meow-normal-mode 1))
+  (meow-insert-exit))
+
+(defun kiteab/meow-newline-and-insert ()
+  (interactive)
+  (end-of-line)
+  (newline-and-indent)
+  (meow-insert))
+
+(defun kiteab/meow-special-newline ()
+  (interactive)
+  (newline-and-indent)
+  (meow-insert))
+
+(defun kiteab/meow-newline-up-and-insert ()
+  (interactive)
+  (beginning-of-line)
+  (newline-and-indent)
+  (previous-line)
+  (indent-for-tab-command)
+  (meow-insert))
+
+(defun kiteab/meow-forward-word ()
+  (interactive)
+  (forward-word)
+  (forward-char))
+
+(defun kiteab/meow-forward-5-words ()
+  (interactive)
+  (forward-word 5)
+  (forward-char))
+
+(defun kiteab/meow-up-5-lines ()
+  (interactive)
+  (previous-line 5))
+
+(defun kiteab/meow-last-buffer ()
+  (interactive)
+  (if (region-active-p)
+      (deactivate-mark t)
+    (meow-last-buffer nil)))
 
 ;; Main Function
 (defun meow-setup ()
@@ -122,14 +161,15 @@
    '("0" . meow-expand-0)
    '("-" . negative-argument)
    '(";" . counsel-M-x)
+   '("/" . swiper)
    '("?" . help-command)
-   '("<escape>" . meow-last-buffer)
+   '("<escape>" . kiteab/meow-last-buffer)
    '("a" . kiteab/meow-forward-char-and-insert)
    '("A" . kiteab/meow-insert-at-end)
    '("b" . backward-word)
    '("c" . meow-change)
    '("C" . meow-change-save)
-   '("d" . meow-delete)
+   '("d" . meow-kill)
    '("e" . next-line)
    '("E" . kiteab/meow-down-5-lines)
    '("f" . meow-find)
@@ -141,11 +181,38 @@
    '("k" . meow-insert)
    '("K" . kiteab/meow-insert-at-beginning)
    '("l" . undo-only)
-   '("L" . undo-tree-visualize)))
+   '("L" . undo-tree-visualize)
+   '("n" . kiteab/meow-backward-char)
+   '("N" . beginning-of-line)
+   '("o" . kiteab/meow-newline-and-insert)
+   '("O" . kiteab/meow-newline-up-and-insert)
+   '("C-o" . kiteab/meow-special-newline)
+   '("p" . yank)
+   '("q" . kmacro-start-macro)
+   '("Q" . kill-current-buffer)
+   '("C-q" . kmacro-end-or-call-macro)
+   '("r" . query-replace)
+   '("s" . meow-search)
+   '("S" . save-buffer)
+   '("u" . previous-line)
+   '("U" . kiteab/meow-up-5-lines)
+   '("v" . set-mark-command)
+   '("w" . kiteab/meow-forward-word)
+   '("W" . kiteab/meow-forward-5-words)
+   '("x" . meow-delete)
+   '("y" . kill-ring-save))
+
+  (define-prefix-command 'meow-g-command)
+  (meow-leader-define-key
+   '("Q" . emacs-session-save)
+   '("g" . meow-g-command)
+   '("gg" . beginning-of-buffer)
+   '("gf" . xref-find-definitions)
+   '("G" . end-of-buffer)))
 
 (setq meow-esc-delay 0.001)
 
-;; (meow-setup)
+(meow-setup)
 
 (provide 'init-meow)
 
