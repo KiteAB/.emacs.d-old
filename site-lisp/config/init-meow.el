@@ -136,6 +136,10 @@
   (setq meow-cheatsheet-layout meow-cheatsheet-layout-colemak)
   (define-key meow-insert-state-keymap (kbd "<escape>") #'kiteab/meow-backward-char-and-normal)
 
+  (meow-motion-overwrite-define-key
+   '("e" . next-line)
+   '("u" . previous-line))
+
   (meow-leader-define-key
    '("1" . meow-digit-argument)
    '("2" . meow-digit-argument)
