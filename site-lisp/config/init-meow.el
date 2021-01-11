@@ -134,13 +134,19 @@
 ;; Main Function
 (defun meow-setup ()
   (setq meow-cheatsheet-layout meow-cheatsheet-layout-colemak)
+
+  ;; Insert Mode
   (define-key meow-insert-state-keymap (kbd "<escape>") #'kiteab/meow-backward-char-and-normal)
 
+  ;; Motion Mode
   (meow-motion-overwrite-define-key
+   ;; Basic Movement
    '("e" . next-line)
    '("u" . previous-line))
 
-  (meow-leader-define-key
+  ;; Normal Mode
+  (meow-normal-define-key
+   ;; Number Arguments
    '("1" . meow-digit-argument)
    '("2" . meow-digit-argument)
    '("3" . meow-digit-argument)
@@ -150,24 +156,14 @@
    '("7" . meow-digit-argument)
    '("8" . meow-digit-argument)
    '("9" . meow-digit-argument)
-   '("0" . meow-digit-argument))
+   '("0" . meow-digit-argument)
 
-  (meow-normal-define-key
-   '("1" . meow-expand-1)
-   '("2" . meow-expand-2)
-   '("3" . meow-expand-3)
-   '("4" . meow-expand-4)
-   '("5" . meow-expand-5)
-   '("6" . meow-expand-6)
-   '("7" . meow-expand-7)
-   '("8" . meow-expand-8)
-   '("9" . meow-expand-9)
-   '("0" . meow-expand-0)
-   '("-" . negative-argument)
    '(":" . counsel-M-x)
    '(";" . counsel-M-x)
    '("/" . swiper)
    '("?" . help-command)
+   '("RET" . mark-defun)
+   '("DEL" . backward-char)
    '("<escape>" . kiteab/meow-last-buffer)
    '("a" . kiteab/meow-forward-char-and-insert)
    '("A" . kiteab/meow-insert-at-end)
@@ -202,18 +198,25 @@
    '("u" . previous-line)
    '("U" . kiteab/meow-up-5-lines)
    '("v" . set-mark-command)
+   '("V" . mark-line)
    '("w" . kiteab/meow-forward-word)
    '("W" . kiteab/meow-forward-5-words)
    '("x" . meow-delete)
    '("y" . kill-ring-save))
 
+  ;; Leader Key
+  ;; Prefix Commands
   (define-prefix-command 'meow-g-command)
   (meow-leader-define-key
-   '("Q" . emacs-session-save)
+   ;; Basic
    '("g" . meow-g-command)
    '("gg" . beginning-of-buffer)
    '("gf" . xref-find-definitions)
-   '("G" . end-of-buffer)))
+   '("G" . end-of-buffer)
+   '("Q" . emacs-session-save)
+
+   ;; Plugins
+   '("m" . magit-status)))
 
 (setq meow-esc-delay 0.001)
 
