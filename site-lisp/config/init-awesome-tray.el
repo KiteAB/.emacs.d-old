@@ -60,9 +60,9 @@
 (setq awesome-tray-refresh-idle-delay 0.001)
 
 ;; Modules
-(defun awesome-tray-module-emacs-info ()
-  (concat "KiteAB Emacs"))
-(add-to-list 'awesome-tray-module-alist '("emacs" . (awesome-tray-module-emacs-info awesome-tray-module-battery-face)))
+;; (defun awesome-tray-module-emacs-info ()
+;;   (concat "KiteAB Emacs"))
+;; (add-to-list 'awesome-tray-module-alist '("emacs" . (awesome-tray-module-emacs-info awesome-tray-module-battery-face)))
 
 (defun awesome-tray-module-meow-info ()
   (meow-indicator))
@@ -76,7 +76,8 @@
                                     "buffer-read-only"
                                     "date"
                                     "meow"
-                                    "emacs"))
+                                    ;; "emacs"
+                                    ))
 
 (provide 'init-awesome-tray)
 
