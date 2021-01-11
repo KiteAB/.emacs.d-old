@@ -16,11 +16,9 @@
    You need some dependencies at below:
    - Emacs (Details like version and system is in [[#notes][Notes part]])
    - Git
-   - libvterm (To use VTerm)
-   - CMake (To compile the VTerm)
-   - Fira Code Nerd Font (Optional. You can edit the font use ~C-q c lisp TAB config TAB init-ui.el RET~)
-   - The dependencies in [[https://github.com/manateelazycat/emacs-application-framework][Emacs Application Framework]]. (To use EAF)
-   - The dependencies in [[https://github.com/loyalpartner/english-teacher.el][English Teacher]]. (To use English Teacher)
+   - DejaVu Sans (You can edit the font use ~SPC q c site-lisp TAB config TAB init-font.el RET~)
+   - WenQuanYi MicroHei
+   - The dependencies in each submodules. (To use them)
    - ~ttf-symbola~ font. (Optional. Telega icons)
 
 ** Installation
@@ -48,7 +46,7 @@
     #+begin_src shell
     git submodule update --recursive
     #+end_src
-    Info: The EAF package is pull from my [[https://gitee.com/KiteAB/emacs-application-framework][mirror repository]], and I will merge it with the [[https://github.com/manateelazycat/emacs-application-framework][original repository]] every week!
+    Info: The EAF package is pull from my [[https://gitee.com/KiteAB/emacs-application-framework][mirror repository]], and I'll merge it with the [[https://github.com/manateelazycat/emacs-application-framework][original repository]] every week!
 
 *** Add More Site Lisp
     If you want to add more site lisp, you can run commands below:
@@ -67,11 +65,13 @@
     You can view this file and change somethings.
 
 *** Xah Fly Keys
-    I'm learning to use xah fly keys, and if you don't like it, you can go to ~site-lisp/config/init.el~ file and comment ~(require 'init-xah-fly-keys)~ use ~;;~.
+    Stop using. But if you want to use, you can uncomment the ~(require 'init-xfk)~ line and comment the ~(require 'init-meow)~ line.
+
+*** Meow
+    I'm configuring the meow configuration file in ~init-meow.el~
 
 ** Token
    You need to do the following to make markdown/org preview work properly:
-   - ~touch ~/.emacs.d/site-lisp/config/init-eaf.el~
    - Edit the ~init-eaf.el~ file and edit somethings below:
    #+begin_src emacs-lisp
      (setq eaf-grip-token "token")
