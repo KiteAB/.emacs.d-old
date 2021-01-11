@@ -56,7 +56,7 @@
 ;;; Code:
 
 (setq company-minimum-prefix-length 1
-      company-idle-delay 9999)
+      company-idle-delay 0.5)
 (with-eval-after-load 'company
   (define-key company-active-map (kbd "M-p") nil)
   (define-key company-active-map (kbd "M-n") nil)
