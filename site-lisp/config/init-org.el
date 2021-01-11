@@ -126,9 +126,9 @@
 (setq org-export-with-sub-superscripts nil)
 
 ;; Org Bullets
-(install-pkg 'org-bullets)
-(add-hook 'org-mode-hook #'(lambda () (org-bullets-mode 1)))
-(setq org-bullets-bullet-list '("☰" "☷" "✿" "☭"))
+;; (install-pkg 'org-bullets)
+;; (add-hook 'org-mode-hook #'(lambda () (org-bullets-mode 1)))
+;; (setq org-bullets-bullet-list '("☰" "☷" "✿" "☭"))
 
 (provide 'init-org)
 
