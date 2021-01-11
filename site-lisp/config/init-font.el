@@ -54,13 +54,13 @@
 
 ;;; Code:
 
-(setq kiteab/en-font-name "Ubuntu Mono"
+(setq kiteab/en-font-name "DejaVu Sans Mono"
       kiteab/en-font-style "Regular"
-      kiteab/en-font-size 24)
+      kiteab/en-font-size 22)
 
 (setq kiteab/zh-font-name "WenQuanYi MicroHei Mono"
       kiteab/zh-font-style "Regular"
-      kiteab/zh-font-size 24)
+      kiteab/zh-font-size 26)
 
 ;; The Quick Brown Fox Jumps Over The Lazy Dog
 ;; 中英文等宽字体测试 - 敏捷的棕色狐狸跳过懒狗
