@@ -54,25 +54,40 @@
 
 ;;; Code:
 
-(setq kiteab/font-name "Sarasa Mono Slab SC Semibold"
-      kiteab/font-style "Regular"
-      kiteab/font-size 22)
-(if (fontp (font-spec
-            :name kiteab/font-name
-            :style kiteab/font-style
-            :size kiteab/font-size))
-    (progn
-      (set-face-attribute 'default nil
-                          :font (font-spec
-                                 :name kiteab/font-name
-                                 :style kiteab/font-style
-                                 :size kiteab/font-size))
-      (set-fontset-font t ?中 (font-spec
-                               :name kiteab/font-name
-                               :style kiteab/font-style
-                               :size kiteab/font-size)))
-  (message "Can't find %s font. You can install it or ignore this message at init-ui.el" kiteab/font-name))
+(setq kiteab/en-font-name "Ubuntu Mono"
+      kiteab/en-font-style "Regular"
+      kiteab/en-font-size 24)
 
+(setq kiteab/zh-font-name "WenQuanYi MicroHei Mono"
+      kiteab/zh-font-style "Regular"
+      kiteab/zh-font-size 24)
+
+;; The Quick Brown Fox Jumps Over The Lazy Dog
+;; 中英文等宽字体测试 - 敏捷的棕色狐狸跳过懒狗
+
+(progn
+  (if (fontp (font-spec
+              :name kiteab/en-font-name
+              :style kiteab/en-font-style
+              :size kiteab/en-font-size))
+      (progn
+        (set-face-attribute 'default nil
+                            :font (font-spec
+                                   :name kiteab/en-font-name
+                                   :style kiteab/en-font-style
+                                   :size kiteab/en-font-size))
+        (set-fontset-font t 'han (font-spec
+                                  :name kiteab/zh-font-name
+                                  :style kiteab/zh-font-style
+                                  :size kiteab/zh-font-size))
+        (set-fontset-font t ?中 (font-spec
+                                 :name kiteab/zh-font-name
+                                 :style kiteab/zh-font-style
+                                 :size kiteab/zh-font-size))
+        (set-fontset-font "fontset-default" ?༼ (font-spec
+                                                :name "Noto Serif Tibetan"
+                                                :size 0)))
+    (message "Can't find %s font. You can install it or ignore this message at init-font.el" kiteab/en-font-name)))
 (provide 'init-font)
 
 ;;; init-font.el ends here
