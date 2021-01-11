@@ -222,6 +222,10 @@
    ;; Plugins
    '("m" . magit-status)))
 
+(setq meow-cursor-type-insert '(bar . 2))
+(custom-set-faces
+ '(meow-motion-cursor ((t (:background "purple")))))
+
 (setq meow-esc-delay 0.001)
 
 (meow-setup)
