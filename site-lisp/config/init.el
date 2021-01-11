@@ -134,7 +134,7 @@
          ;; (require 'init-awesome-pair)
          (require 'init-lispy)
          (require 'init-symbol-overlay)
-         (require 'init-highlight-defined)
+         ;; (require 'init-highlight-defined)
          (require 'init-highlight-quoted)
 
          (require 'init-company-mode)
