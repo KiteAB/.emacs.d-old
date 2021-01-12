@@ -100,7 +100,7 @@
          (require 'init-nerd-commenter)
          (require 'init-pacarch)
          (require 'init-clm)
-         (require 'init-paren-face)
+         ;; (require 'init-paren-face)
          (require 'init-comment)
          (require 'init-company-eh)
          (require 'init-counsel)
