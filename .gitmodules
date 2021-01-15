@@ -34,3 +34,6 @@
 [submodule "site-lisp/extensions/snails"]
 	path = site-lisp/extensions/snails
 	url = https://github.com/manateelazycat/snails
+[submodule "site-lisp/extensions/joker-theme"]
+	path = site-lisp/extensions/joker-theme
+	url = https://github.com/DogLooksGood/joker-theme
