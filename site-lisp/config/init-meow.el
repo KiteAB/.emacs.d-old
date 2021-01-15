@@ -224,7 +224,8 @@
 
 (setq meow-cursor-type-insert '(bar . 2))
 (custom-set-faces
- '(meow-motion-cursor ((t (:background "purple")))))
+ '(meow-motion-cursor ((t (:background "purple"))))
+ '(meow-insert-cursor ((t (:background "gold")))))
 
 (setq meow-esc-delay 0.001)
 
