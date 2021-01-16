@@ -6,7 +6,7 @@
 ;; Maintainer: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
 ;; Copyright (C) 2020, KiteAB, all rights reserved.
 ;; Created: 2020-12-10 20:50:51
-;; Last-Updated: 2021-01-16 19:16:43
+;; Last-Updated: 2021-01-16 21:18:09
 ;;           By: KiteAB
 ;; URL: https://github.com/KiteAB/.emacs.d/blob/master/site-lisp/config/init-generic.el
 ;; Keywords:
@@ -85,8 +85,9 @@
 (setq eshell-history-file-name "~/.emacs/var/eshell/history")
 ;; (column-number-mode t) ;; Show the column number in the modeline
 (setq backward-delete-char-untabify-method nil) ;; Delete the tab by once
-;; (setq user-emacs-directory "~/.emacs.d/var") ;; The Cache Directory
-;; (setq user-init-file "~/.emacs.d/var/user-init.el")
+(setq user-emacs-directory "~/.emacs.d")
+(setq user-init-file (expand-file-name "user-init.el" user-emacs-directory))
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (setq load-prefer-newer t)
 (save-place-mode t) ;; Save the point position
 (setq ring-bell-function 'ignore
