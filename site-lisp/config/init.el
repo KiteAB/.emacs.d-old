@@ -79,7 +79,7 @@
     (require 'joker-theme)
     (require 'storybook-theme)
     (require 'printed-theme)
-    (load-theme 'joker t)
+    (load-theme 'storybook t)
 
     (require 'init-key)
     ;; (require 'init-xfk)
