@@ -6,7 +6,7 @@
 ;; Maintainer: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
 ;; Copyright (C) 2021, KiteAB, all rights reserved.
 ;; Created: 2021-01-06 17:17:02
-;; Last-Updated: 2021-01-06 17:18:17
+;; Last-Updated: 2021-01-16 10:09:53
 ;;           By: KiteAB
 ;; URL: https://github.com/KiteAB/.emacs.d/blob/master/site-lisp/config/init-meow.el
 ;; Keywords:
@@ -176,6 +176,7 @@
    '("f" . eval-defun)
    '("g" . meow-keyboard-quit)
    '("G" . goto-line)
+   '("h" . help-command)
    '("i" . kiteab/meow-forward-char)
    '("I" . end-of-line)
    '("j" . eval-buffer)
@@ -224,8 +225,7 @@
 
 (setq meow-cursor-type-insert '(bar . 2))
 (custom-set-faces
- '(meow-motion-cursor ((t (:background "purple"))))
- '(meow-insert-cursor ((t (:background "gold")))))
+ '(meow-motion-cursor ((t (:background "purple")))))
 
 (setq meow-esc-delay 0.001)
 
