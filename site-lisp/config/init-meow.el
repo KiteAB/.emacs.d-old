@@ -6,7 +6,7 @@
 ;; Maintainer: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
 ;; Copyright (C) 2021, KiteAB, all rights reserved.
 ;; Created: 2021-01-06 17:17:02
-;; Last-Updated: 2021-01-16 10:09:53
+;; Last-Updated: 2021-01-16 19:11:43
 ;;           By: KiteAB
 ;; URL: https://github.com/KiteAB/.emacs.d/blob/master/site-lisp/config/init-meow.el
 ;; Keywords:
@@ -224,8 +224,6 @@
    '("m" . magit-status)))
 
 (setq meow-cursor-type-insert '(bar . 2))
-(custom-set-faces
- '(meow-motion-cursor ((t (:background "purple")))))
 
 (setq meow-esc-delay 0.001)
 
