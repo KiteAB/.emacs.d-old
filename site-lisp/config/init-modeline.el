@@ -6,7 +6,7 @@
 ;; Maintainer: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
 ;; Copyright (C) 2021, KiteAB, all rights reserved.
 ;; Created: 2021-01-16 10:03:48
-;; Last-Updated: 2021-01-16 10:03:48
+;; Last-Updated: 2021-01-16 12:25:55
 ;;           By: KiteAB
 ;; URL: https://github.com/KiteAB/.emacs.d/blob/master/site-lisp/config/init-modeline.el
 ;; Keywords:
@@ -56,7 +56,7 @@
 
 (defun +simple-mode-line-render (left right)
   "Return a string of `window-width' length.
-Containing LEFT, and RIGHT aligned respectively."
+Containing `left', and `right' aligned respectively."
   (let ((available-width
          (- (window-total-width)
             (+ (length (format-mode-line left))
@@ -66,19 +66,59 @@ Containing LEFT, and RIGHT aligned respectively."
             (list (format (format "%%%ds" available-width) ""))
             right)))
 
+(defun +modeline-buffer-read-only ()
+  (if (eq buffer-read-only t)
+      (concat "R-O ")
+    ""))
+
+(defface +modeline-buffer-read-only-face
+  '((((background light))
+     :foreground "#cc2444" :bold t)
+    (t
+     :foreground "#ff2d55" :bold t))
+  "Buffer read only face.")
+
+(defface +modeline-git-info-face
+  '((((background light))
+     :foreground "#cc2444")
+    (t
+     :foreground "#ff2d55"))
+  "Git face.")
+
+(defface +modeline-buffer-name-face
+  '((((background light))
+     :foreground "#cc7700")
+    (t
+     :foreground "#ff9500"))
+  "Buffer name face.")
+
+(defface +modeline-dim-face
+  '((((class color) (background dark))
+     (:foreground "grey40"))
+    (((class color) (background light))
+     (:foreground "grey60")))
+  "Dim face in mode-line")
+
 (setq-default mode-line-format
               '((:eval
                  (+simple-mode-line-render
-                  ;; left
+                  ;; left side
                   '((:eval (meow-indicator))
                     " %l:%C "
                     (:propertize (-3 "%p") face +modeline-dim-face)
-                    (:eval (propertize " " 'display '(height 1.1)))
-                    (:eval (rime-lighter)))
-                  ;; right
-                  '((:propertize " %m " face font-lock-keyword-face)
-                    (:eval (+smart-file-name-with-propertize))
-                    " ")))))
+                    (:eval (propertize " " 'display '(height 1.1))))
+
+                  ;; right side
+                  '(
+                    (:propertize " %m " face font-lock-keyword-face)
+                    (:eval (propertize (buffer-name) 'face '+modeline-buffer-name-face))
+                    " "
+                    (:eval (propertize (+modeline-buffer-read-only) 'face '+modeline-buffer-read-only-face))
+                    (:eval (propertize (awesome-tray-module-git-info) 'face '+modeline-git-info-face))
+                    " "
+                    (:eval (propertize (format-time-string "%m-%d %H:%M %a") 'face '+modeline-dim-face))
+                    " ")
+                  ))))
 
 (provide 'init-modeline)
 
