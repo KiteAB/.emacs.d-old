@@ -92,7 +92,6 @@
     (require 'awesome-tray)
     (require 'init-modeline)
 
-
     (require 'init-scratch)
 
     (run-with-idle-timer
