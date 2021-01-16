@@ -6,7 +6,7 @@
 ;; Maintainer: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
 ;; Copyright (C) 2021, KiteAB, all rights reserved.
 ;; Created: 2020-12-10 21:43:50
-;; Last-Updated: 2021-01-15 23:51:48
+;; Last-Updated: 2021-01-16 10:09:43
 ;;           By: KiteAB
 ;; URL: https://github.com/KiteAB/.emacs.d/blob/master/site-lisp/config/init.el
 ;; Keywords:
@@ -74,9 +74,11 @@
     (require 'init-function)
     (require 'init-ui)
 
-    ;; (require 'lazycat-theme)
+    (require 'lazycat-theme)
     ;; (lazycat-theme-load-dark)
     (require 'joker-theme)
+    (require 'storybook-theme)
+    (require 'printed-theme)
     (load-theme 'joker t)
 
     (require 'init-key)
