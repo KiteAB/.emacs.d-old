@@ -6,7 +6,7 @@
 ;; Maintainer: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
 ;; Copyright (C) 2021, KiteAB, all rights reserved.
 ;; Created: 2020-12-10 21:43:50
-;; Last-Updated: 2021-01-16 10:09:43
+;; Last-Updated: 2021-01-16 12:31:15
 ;;           By: KiteAB
 ;; URL: https://github.com/KiteAB/.emacs.d/blob/master/site-lisp/config/init.el
 ;; Keywords:
@@ -88,7 +88,10 @@
     (require 'basic-toolkit)
     (require 'lazy-load)
     (require 'init-performance)
-    (require 'init-awesome-tray)
+    ;; (require 'init-awesome-tray)
+    (require 'awesome-tray)
+    (require 'init-modeline)
+
 
     (require 'init-scratch)
 
