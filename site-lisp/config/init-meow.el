@@ -6,7 +6,7 @@
 ;; Maintainer: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
 ;; Copyright (C) 2021, KiteAB, all rights reserved.
 ;; Created: 2021-01-06 17:17:02
-;; Last-Updated: 2021-01-16 19:11:43
+;; Last-Updated: 2021-01-16 21:19:48
 ;;           By: KiteAB
 ;; URL: https://github.com/KiteAB/.emacs.d/blob/master/site-lisp/config/init-meow.el
 ;; Keywords:
@@ -173,6 +173,7 @@
    '("d" . meow-kill)
    '("e" . next-line)
    '("E" . kiteab/meow-down-5-lines)
+   '("C-e" . scroll-up-command)
    '("f" . eval-defun)
    '("g" . meow-keyboard-quit)
    '("G" . goto-line)
@@ -200,6 +201,7 @@
    '("t" . eval-last-sexp)
    '("u" . previous-line)
    '("U" . kiteab/meow-up-5-lines)
+   '("C-u" . scroll-down-command)
    '("v" . set-mark-command)
    '("V" . mark-line)
    '("w" . kiteab/meow-forward-word)
