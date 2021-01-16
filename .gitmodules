@@ -37,3 +37,9 @@
 [submodule "site-lisp/extensions/joker-theme"]
 	path = site-lisp/extensions/joker-theme
 	url = https://github.com/DogLooksGood/joker-theme
+[submodule "site-lisp/extensions/storybook-theme"]
+	path = site-lisp/extensions/storybook-theme
+	url = https://github.com/DogLooksGood/storybook-theme
+[submodule "site-lisp/extensions/printed-theme"]
+	path = site-lisp/extensions/printed-theme
+	url = https://github.com/DogLooksGood/printed-theme
