@@ -6,7 +6,7 @@
 ;; Maintainer: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
 ;; Copyright (C) 2020, KiteAB, all rights reserved.
 ;; Created: 2020-12-10 20:50:51
-;; Last-Updated: 2021-01-16 18:32:16
+;; Last-Updated: 2021-01-16 19:16:43
 ;;           By: KiteAB
 ;; URL: https://github.com/KiteAB/.emacs.d/blob/master/site-lisp/config/init-generic.el
 ;; Keywords:
@@ -95,6 +95,7 @@
 (global-auto-revert-mode t)
 (setq load-prefer-newer t)
 (setq x-underline-at-descent-line t)
+(setq underline-minimum-offset 0)
 (setq mouse-yank-at-point nil)
 
 (setq kill-buffer-query-functions
