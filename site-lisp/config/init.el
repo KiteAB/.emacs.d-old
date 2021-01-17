@@ -95,7 +95,7 @@
     (require 'init-scratch)
 
     (run-with-idle-timer
-     0.5 nil
+     0.1 nil
      #'(lambda ()
          (require 'init-ace-jump)
          (require 'init-ace-window)
