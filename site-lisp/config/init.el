@@ -74,16 +74,16 @@
     (require 'init-function)
     (require 'init-ui)
 
+    (require 'init-key)
+    ;; (require 'init-xfk)
+    (require 'init-meow)
+
     (require 'lazycat-theme)
     ;; (lazycat-theme-load-dark)
     (require 'joker-theme)
     (require 'storybook-theme)
     (require 'printed-theme)
-    (load-theme 'joker t)
-
-    (require 'init-key)
-    ;; (require 'init-xfk)
-    (require 'init-meow)
+    (load-theme 'storybook t)
 
     (require 'basic-toolkit)
     (require 'lazy-load)
