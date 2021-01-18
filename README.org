@@ -81,7 +81,7 @@
    Then replace ~token~ to your personal token.
 
 ** Notes
-   - This configuration file is best run on GNU/Linux Emacs 27.1, Windows may have some problems such as [[https://github.com/KiteAB/.emacs.d/issues/1][this issue]].
+   - This configuration file is best run on GNU/Linux and GNU/Emacs 27.1 or above, Windows may have some problems such as [[https://github.com/KiteAB/.emacs.d/issues/1][this issue]].
    - Emacs can't search and autoload ~site-start.el~, so you need create an ~.emacs~ file in your home directory and write them in:
      #+begin_src emacs-lisp
        (load-file "path/to/site-start.el")
