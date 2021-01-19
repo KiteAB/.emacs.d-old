@@ -6,7 +6,7 @@
 ;; Maintainer: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
 ;; Copyright (C) 2021, KiteAB, all rights reserved.
 ;; Created: 2021-01-16 10:03:48
-;; Last-Updated: 2021-01-16 12:25:55
+;; Last-Updated: 2021-01-19 19:57:43
 ;;           By: KiteAB
 ;; URL: https://github.com/KiteAB/.emacs.d/blob/master/site-lisp/config/init-modeline.el
 ;; Keywords:
@@ -67,7 +67,8 @@ Containing `left', and `right' aligned respectively."
             right)))
 
 (defun +modeline-buffer-read-only ()
-  (if (eq buffer-read-only t)
+  (if (and buffer-read-only
+           (not (eq buffer-file-name nil)))
       (concat "R-O ")
     ""))
 
@@ -109,8 +110,7 @@ Containing `left', and `right' aligned respectively."
                     (:eval (propertize " " 'display '(height 1.1))))
 
                   ;; right side
-                  '(
-                    (:propertize " %m " face font-lock-keyword-face)
+                  '((:propertize " %m " face font-lock-keyword-face)
                     (:eval (propertize (buffer-name) 'face '+modeline-buffer-name-face))
                     " "
                     (:eval (propertize (+modeline-buffer-read-only) 'face '+modeline-buffer-read-only-face))
