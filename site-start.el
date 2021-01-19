@@ -8,7 +8,7 @@
 ;;      By: KiteAB
 ;; URL: http://github.com/KiteAB/.emacs.d
 ;; Keywords:
-;; Compatibility: GNU Emacs 27.1
+;; Compatibility: GNU Emacs 28
 
 ;;; This file is NOT part of GNU Emacs
 
