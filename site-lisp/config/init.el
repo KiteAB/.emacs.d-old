@@ -83,7 +83,7 @@
     (require 'joker-theme)
     (require 'storybook-theme)
     (require 'printed-theme)
-    (load-theme 'storybook t)
+    (load-theme 'joker t)
 
     (require 'basic-toolkit)
     (require 'lazy-load)
