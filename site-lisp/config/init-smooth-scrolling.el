@@ -1,4 +1,4 @@
-;;; init-smooth-scrolling.el --- Settings for smooth scrolling
+;;; init-smooth-scrolling.el --- Settings for smooth scrolling  -*- lexical-binding: t -*-
 
 ;; Filename: init-smooth-scrolling.el
 ;; Description: Settings for smooth scrolling

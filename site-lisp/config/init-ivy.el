@@ -1,4 +1,4 @@
-;;; init-ivy.el --- Settings for ivy
+;;; init-ivy.el --- Settings for ivy  -*- lexical-binding: t -*-
 
 ;; Filename: init-ivy.el
 ;; Description: Settings for ivy

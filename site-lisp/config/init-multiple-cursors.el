@@ -1,4 +1,4 @@
-;;; init-multiple-cursors.el --- Settings for multiple cursors
+;;; init-multiple-cursors.el --- Settings for multiple cursors  -*- lexical-binding: t -*-
 
 ;; Filename: init-multiple-cursors.el
 ;; Description: Settings for multiple cursors

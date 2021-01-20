@@ -1,4 +1,4 @@
-;;; init-modeline.el --- Settings for modeline
+;;; init-modeline.el --- Settings for modeline  -*- lexical-binding: t -*-
 
 ;; Filename: init-modeline.el
 ;; Description: Settings for modeline
@@ -128,5 +128,5 @@ Containing `left', and `right' aligned respectively."
                  )))
 
 (provide 'init-modeline)
-
+(test test)
 ;;; init-modeline.el ends here

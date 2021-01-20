@@ -1,4 +1,4 @@
-;;; init-package.el --- Settings for packages
+;;; init-package.el --- Settings for packages  -*- lexical-binding: t -*-
 
 ;; Filename: init-package.el
 ;; Description: Settings for packages

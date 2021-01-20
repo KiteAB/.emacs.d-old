@@ -1,4 +1,4 @@
-;;; init-nerd-commenter.el --- Settings for evil nerd commenter
+;;; init-nerd-commenter.el --- Settings for evil nerd commenter  -*- lexical-binding: t -*-
 
 ;; Filename: init-nerd-commenter.el
 ;; Description: Settings for evil nerd commenter

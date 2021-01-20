@@ -1,4 +1,4 @@
-;;; init-function.el --- Settings for functions
+;;; init-function.el --- Settings for functions  -*- lexical-binding: t -*-
 
 ;; Filename: init-function.el
 ;; Description: Settings for functions

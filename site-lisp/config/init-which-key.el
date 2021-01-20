@@ -1,4 +1,4 @@
-;;; init-which-key.el --- Settings for which key
+;;; init-which-key.el --- Settings for which key  -*- lexical-binding: t -*-
 
 ;; Filename: init-which-key.el
 ;; Description: Settings for which key

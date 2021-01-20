@@ -1,4 +1,4 @@
-;;; init-elpy.el --- Settings for elpy
+;;; init-elpy.el --- Settings for elpy  -*- lexical-binding: t -*-
 
 ;; Filename: init-elpy.el
 ;; Description: 2020-12-21 19:13:25

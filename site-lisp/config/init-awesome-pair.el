@@ -1,4 +1,4 @@
-;;; init-awesome-pair.el --- Settings for awesome pair
+;;; init-awesome-pair.el --- Settings for awesome pair  -*- lexical-binding: t -*-
 
 ;; Filename: init-awesome-pair.el
 ;; Description: Settings for awesome pair

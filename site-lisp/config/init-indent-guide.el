@@ -1,4 +1,4 @@
-;;; init-indent-guide.el --- Settings for indent guide
+;;; init-indent-guide.el --- Settings for indent guide  -*- lexical-binding: t -*-
 
 ;; Filename: init-indent-guide.el
 ;; Description: Settings for indent guide

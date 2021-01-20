@@ -1,4 +1,4 @@
-;;; init-awesome-tray.el --- Settings for awesome tray
+;;; init-awesome-tray.el --- Settings for awesome tray  -*- lexical-binding: t -*-
 
 ;; Filename: init-awesome-tray.el
 ;; Description: Settings for awesome tray

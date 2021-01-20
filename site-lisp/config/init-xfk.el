@@ -1,4 +1,4 @@
-;;; init-xfk.el --- Settings for xah fly keys
+;;; init-xfk.el --- Settings for xah fly keys  -*- lexical-binding: t -*-
 
 ;; Filename: init-xfk.el
 ;; Description: Settings for xah fly keys

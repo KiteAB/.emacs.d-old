@@ -1,4 +1,4 @@
-;;; init-disable-mouse.el --- Settings for disable mouse
+;;; init-disable-mouse.el --- Settings for disable mouse  -*- lexical-binding: t -*-
 
 ;; Filename: init-disable-mouse.el
 ;; Description: Settings for disable mouse

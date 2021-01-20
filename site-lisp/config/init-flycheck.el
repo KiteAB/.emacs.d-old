@@ -1,4 +1,4 @@
-;;; init-flycheck.el --- Settings for flycheck
+;;; init-flycheck.el --- Settings for flycheck  -*- lexical-binding: t -*-
 
 ;; Filename: init-flycheck.el
 ;; Description: Settings for flycheck

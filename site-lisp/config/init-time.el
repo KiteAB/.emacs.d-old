@@ -1,4 +1,4 @@
-;;; init-time.el --- Settings for time
+;;; init-time.el --- Settings for time  -*- lexical-binding: t -*-
 
 ;; Filename: init-time.el
 ;; Description: Settings for time

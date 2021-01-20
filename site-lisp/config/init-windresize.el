@@ -1,4 +1,4 @@
-;;; init-windresize.el --- Settings for window resize
+;;; init-windresize.el --- Settings for window resize  -*- lexical-binding: t -*-
 
 ;; Filename: init-windresize.el
 ;; Description: Settings for window resize

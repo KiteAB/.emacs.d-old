@@ -1,4 +1,4 @@
-;;; init-dired.el --- Settings for dired
+;;; init-dired.el --- Settings for dired  -*- lexical-binding: t -*-
 
 ;; Filename: init-dired.el
 ;; Description: Settings for dired

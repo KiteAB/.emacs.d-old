@@ -1,4 +1,4 @@
-;;; init-scratch.el --- Settings for *scratch* buffer
+;;; init-scratch.el --- Settings for *scratch* buffer  -*- lexical-binding: t -*-
 ;;; Code:
 (setq kiteab/system-type (if (eq system-type 'gnu/linux)
                              "GNU/Linux"

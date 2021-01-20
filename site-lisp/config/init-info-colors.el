@@ -1,4 +1,4 @@
-;;; init-info-colors.el --- Settings for info colors
+;;; init-info-colors.el --- Settings for info colors  -*- lexical-binding: t -*-
 
 ;; Filename: init-info-colors.el
 ;; Description: Settings for info colors

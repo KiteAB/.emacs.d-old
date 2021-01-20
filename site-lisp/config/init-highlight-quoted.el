@@ -1,4 +1,4 @@
-;;; init-highlight-quoted.el --- Settings for highlight quoted
+;;; init-highlight-quoted.el --- Settings for highlight quoted  -*- lexical-binding: t -*-
 
 ;; Filename: init-highlight-quoted.el
 ;; Description: Settings for highlight quoted

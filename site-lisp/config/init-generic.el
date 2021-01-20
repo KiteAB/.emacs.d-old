@@ -1,4 +1,4 @@
-;;; init-generic.el --- Basic settings
+;;; init-generic.el --- Basic settings  -*- lexical-binding: t -*-
 
 ;; Filename: init-generic.el
 ;; Description: Basic settings

@@ -1,4 +1,4 @@
-;;; init-recentf.el --- Settings for recentf
+;;; init-recentf.el --- Settings for recentf  -*- lexical-binding: t -*-
 
 ;; Filename: init-recentf.el
 ;; Description: Settings for recentf

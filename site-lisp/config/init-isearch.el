@@ -1,4 +1,4 @@
-;;; init-isearch.el --- Settings for i-search
+;;; init-isearch.el --- Settings for i-search  -*- lexical-binding: t -*-
 
 ;; Filename: init-isearch.el
 ;; Description: Settings for i-search

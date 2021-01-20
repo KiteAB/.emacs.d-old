@@ -1,4 +1,4 @@
-;;; init-session.el --- Settings for emacs session
+;;; init-session.el --- Settings for emacs session  -*- lexical-binding: t -*-
 
 ;; Filename: init-session.el
 ;; Description: Settings for emacs session

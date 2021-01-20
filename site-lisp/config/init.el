@@ -1,4 +1,4 @@
-;;; init.el --- Require features
+;;; init.el --- Require features  -*- lexical-binding: t -*-
 
 ;; Filename: init.el
 ;; Description: Require features

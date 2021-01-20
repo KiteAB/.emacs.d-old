@@ -1,4 +1,4 @@
-;;; init-aggressive-indent.el --- Settings for aggressive indent
+;;; init-aggressive-indent.el --- Settings for aggressive indent  -*- lexical-binding: t -*-
 
 ;; Filename: init-aggressive-indent.el
 ;; Description: Settings for aggressive indent

@@ -1,4 +1,4 @@
-;;; init-youdao-dict.el --- Settings for youdao dictionary
+;;; init-youdao-dict.el --- Settings for youdao dictionary  -*- lexical-binding: t -*-
 
 ;; Filename: init-youdao-dict.el
 ;; Description: Settings for youdao dictionary

@@ -1,4 +1,4 @@
-;;; init-ace-jump.el --- Settings for ace jump
+;;; init-ace-jump.el --- Settings for ace jump  -*- lexical-binding: t -*-
 
 ;; Filename: init-ace-jump.el
 ;; Description: Settings for ace jump

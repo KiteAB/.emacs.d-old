@@ -1,4 +1,4 @@
-;;; init-golang.el --- Settings for golang
+;;; init-golang.el --- Settings for golang  -*- lexical-binding: t -*-
 
 ;; Filename: init-golang.el
 ;; Description: Settings for golang

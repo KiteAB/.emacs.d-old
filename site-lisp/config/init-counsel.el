@@ -1,4 +1,4 @@
-;;; init-counsel.el --- Settings for counsel
+;;; init-counsel.el --- Settings for counsel  -*- lexical-binding: t -*-
 
 ;; Filename: init-counsel.el
 ;; Description: Settings for counsel

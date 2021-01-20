@@ -1,4 +1,4 @@
-;;; init-highlight-defined.el --- Settings for highlight defined
+;;; init-highlight-defined.el --- Settings for highlight defined  -*- lexical-binding: t -*-
 
 ;; Filename: init-highlight-defined.el
 ;; Description: Settings for highlight defined

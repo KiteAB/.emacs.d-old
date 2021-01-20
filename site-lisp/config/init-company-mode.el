@@ -1,4 +1,4 @@
-;;; init-company-mode.el --- Settings for company mode
+;;; init-company-mode.el --- Settings for company mode  -*- lexical-binding: t -*-
 
 ;; Filename: init-company-mode.el
 ;; Description: Settings for company mode

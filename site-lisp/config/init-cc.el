@@ -1,4 +1,4 @@
-;;; init-cc.el --- Settings for C/C++
+;;; init-cc.el --- Settings for C/C++  -*- lexical-binding: t -*-
 
 ;; Filename: init-cc.el
 ;; Description: Settings for C/C++

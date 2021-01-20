@@ -1,4 +1,4 @@
-;;; init-symbol-overlay.el --- Settings for symbol overlay
+;;; init-symbol-overlay.el --- Settings for symbol overlay  -*- lexical-binding: t -*-
 
 ;; Filename: init-symbol-overlay.el
 ;; Description: Settings for symbol overlay

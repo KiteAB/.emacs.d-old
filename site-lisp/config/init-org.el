@@ -1,4 +1,4 @@
-;;; init-org.el --- Settings for org mode
+;;; init-org.el --- Settings for org mode  -*- lexical-binding: t -*-
 
 ;; Filename: init-org.el
 ;; Description: Settings for org mode

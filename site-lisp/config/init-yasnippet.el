@@ -1,4 +1,4 @@
-;;; init-yasnippet.el --- Settings for yasnippet
+;;; init-yasnippet.el --- Settings for yasnippet  -*- lexical-binding: t -*-
 
 ;; Filename: init-yasnippet.el
 ;; Description: Settings for yasnippet

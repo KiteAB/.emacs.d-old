@@ -1,4 +1,4 @@
-;;; init-eaf.el --- Settings for emacs application framework
+;;; init-eaf.el --- Settings for emacs application framework  -*- lexical-binding: t -*-
 
 ;; Filename: init-eaf.el
 ;; Description: Settings for emacs application framework

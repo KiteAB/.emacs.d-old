@@ -1,4 +1,4 @@
-;;; init-treemacs.el --- Settings for treemacs
+;;; init-treemacs.el --- Settings for treemacs  -*- lexical-binding: t -*-
 
 ;; Filename: init-treemacs.el
 ;; Description: Settings for treemacs

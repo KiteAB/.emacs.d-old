@@ -1,4 +1,4 @@
-;;; init-popwin.el --- Settings for popwin
+;;; init-popwin.el --- Settings for popwin  -*- lexical-binding: t -*-
 
 ;; Filename: init-popwin.el
 ;; Description: Settings for popwin

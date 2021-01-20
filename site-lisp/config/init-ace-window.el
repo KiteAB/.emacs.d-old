@@ -1,4 +1,4 @@
-;;; init-ace-window.el --- Settings for ace window
+;;; init-ace-window.el --- Settings for ace window  -*- lexical-binding: t -*-
 
 ;; Filename: init-ace-window.el
 ;; Description: Settings for ace window

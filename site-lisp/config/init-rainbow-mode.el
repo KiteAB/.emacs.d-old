@@ -1,4 +1,4 @@
-;;; init-rainbow-mode.el --- Settings for rainbow mode
+;;; init-rainbow-mode.el --- Settings for rainbow mode  -*- lexical-binding: t -*-
 
 ;; Filename: init-rainbow-mode.el
 ;; Description: Settings for rainbow mode

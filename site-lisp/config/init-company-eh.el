@@ -1,4 +1,4 @@
-;;; init-company-eh.el --- Settings for company english helper
+;;; init-company-eh.el --- Settings for company english helper  -*- lexical-binding: t -*-
 
 ;; Filename: init-company-eh.el
 ;; Description: Settings for company english helper

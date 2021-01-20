@@ -1,4 +1,4 @@
-;;; init-key.el --- Settings for keybindings
+;;; init-key.el --- Settings for keybindings  -*- lexical-binding: t -*-
 
 ;; Filename: init-key.el
 ;; Description: Settings for keybindings

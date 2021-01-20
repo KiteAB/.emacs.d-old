@@ -1,4 +1,4 @@
-;;; init-yaml-mode.el --- Settings for yaml mode
+;;; init-yaml-mode.el --- Settings for yaml mode  -*- lexical-binding: t -*-
 
 ;; Filename: init-yaml-mode.el
 ;; Description: Settings for yaml mode

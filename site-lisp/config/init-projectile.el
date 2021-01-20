@@ -1,4 +1,4 @@
-;;; init-projectile.el --- Settings for projectile
+;;; init-projectile.el --- Settings for projectile  -*- lexical-binding: t -*-
 
 ;; Filename: init-projectile.el
 ;; Description: Settings for projectile

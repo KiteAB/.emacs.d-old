@@ -1,4 +1,4 @@
-;;; init-performance.el --- Improve emacs performance
+;;; init-performance.el --- Improve emacs performance  -*- lexical-binding: t -*-
 
 ;; Filename: init-performance.el
 ;; Description: Improve emacs performance

@@ -1,4 +1,4 @@
-;;; init-web-mode.el --- Settings for web mode
+;;; init-web-mode.el --- Settings for web mode  -*- lexical-binding: t -*-
 
 ;; Filename: init-web-mode.el
 ;; Description: Settings for web mode

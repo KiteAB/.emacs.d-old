@@ -1,4 +1,4 @@
-;;; init-auto-save.el --- Settings for auto save
+;;; init-auto-save.el --- Settings for auto save  -*- lexical-binding: t -*-
 
 ;; Filename: init-auto-save.el
 ;; Description: Settings for auto save

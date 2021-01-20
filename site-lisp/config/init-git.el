@@ -1,4 +1,4 @@
-;;; init-git.el --- Settings for git
+;;; init-git.el --- Settings for git  -*- lexical-binding: t -*-
 
 ;; Filename: init-git.el
 ;; Description: Settings for git

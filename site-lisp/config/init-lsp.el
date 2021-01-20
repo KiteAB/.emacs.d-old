@@ -1,4 +1,4 @@
-;;; init-lsp.el --- Settings for lsp
+;;; init-lsp.el --- Settings for lsp  -*- lexical-binding: t -*-
 
 ;; Filename: init-lsp.el
 ;; Description: Settings for lsp

@@ -1,4 +1,4 @@
-;;; init-valign.el --- Settings for valign
+;;; init-valign.el --- Settings for valign  -*- lexical-binding: t -*-
 
 ;; Filename: init-valign.el
 ;; Description: Settings for valign

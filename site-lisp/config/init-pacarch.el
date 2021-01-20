@@ -1,4 +1,4 @@
-;;; init-pacarch.el --- Settings for pacarch
+;;; init-pacarch.el --- Settings for pacarch  -*- lexical-binding: t -*-
 
 ;; Filename: init-pacarch.el
 ;; Description: Settings for pacarch

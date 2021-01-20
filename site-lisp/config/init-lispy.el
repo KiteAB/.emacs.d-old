@@ -1,4 +1,4 @@
-;;; init-lispy.el --- Settings for lispy
+;;; init-lispy.el --- Settings for lispy  -*- lexical-binding: t -*-
 
 ;; Filename: init-lispy.el
 ;; Description: Settings for lispy

@@ -1,4 +1,4 @@
-;;; init-accelerate.el --- Accelerate for startup
+;;; init-accelerate.el --- Accelerate for startup  -*- lexical-binding: t -*-
 
 ;; Filename: init-accelerate.el
 ;; Description: Accelerate for startup

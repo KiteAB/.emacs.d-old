@@ -1,4 +1,4 @@
-;;; init-insert-translated-name.el --- Settings for insert translated name
+;;; init-insert-translated-name.el --- Settings for insert translated name  -*- lexical-binding: t -*-
 
 ;; Filename: init-insert-translated-name.el
 ;; Description: Settings for insert translated name

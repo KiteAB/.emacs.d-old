@@ -1,4 +1,4 @@
-;;; init-comment.el --- Settings for comment
+;;; init-comment.el --- Settings for comment  -*- lexical-binding: t -*-
 
 ;; Filename: init-comment.el
 ;; Description: Settings for comment

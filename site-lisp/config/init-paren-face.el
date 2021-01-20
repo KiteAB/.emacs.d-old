@@ -1,4 +1,4 @@
-;;; init-paren-face.el --- Settings for paren face
+;;; init-paren-face.el --- Settings for paren face  -*- lexical-binding: t -*-
 
 ;; Filename: init-paren-face.el
 ;; Description: Settings for paren face

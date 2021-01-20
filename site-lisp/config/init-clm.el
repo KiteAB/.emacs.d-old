@@ -1,4 +1,4 @@
-;;; init-clm.el --- Settings for command log mode
+;;; init-clm.el --- Settings for command log mode  -*- lexical-binding: t -*-
 
 ;; Filename: init-clm.el
 ;; Description: Settings for command log mode

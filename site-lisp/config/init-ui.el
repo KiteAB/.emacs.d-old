@@ -1,4 +1,4 @@
-;;; init-ui.el --- Settings for user interface
+;;; init-ui.el --- Settings for user interface  -*- lexical-binding: t -*-
 
 ;; Filename: init-ui.el
 ;; Description: Settings for user interface

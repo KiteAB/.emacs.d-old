@@ -1,4 +1,4 @@
-;;; init-meow.el --- Settings for meow
+;;; init-meow.el --- Settings for meow  -*- lexical-binding: t -*-
 
 ;; Filename: init-meow.el
 ;; Description: Settings for meow

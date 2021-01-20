@@ -1,4 +1,4 @@
-;;; init-whitespace.el --- Settings for whitespace
+;;; init-whitespace.el --- Settings for whitespace  -*- lexical-binding: t -*-
 
 ;; Filename: init-whitespace.el
 ;; Description: Settings for whitespace

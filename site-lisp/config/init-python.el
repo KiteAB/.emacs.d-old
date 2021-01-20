@@ -1,4 +1,4 @@
-;;; init-python.el --- Settings for python
+;;; init-python.el --- Settings for python  -*- lexical-binding: t -*-
 
 ;; Filename: init-python.el
 ;; Description: Settings for python

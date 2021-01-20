@@ -1,4 +1,4 @@
-;;; init-font.el --- Settings for fonts
+;;; init-font.el --- Settings for fonts  -*- lexical-binding: t -*-
 
 ;; Filename: init-font.el
 ;; Description: Settings for fonts

@@ -1,4 +1,4 @@
-;;; init-swiper.el --- Settings for swiper
+;;; init-swiper.el --- Settings for swiper  -*- lexical-binding: t -*-
 
 ;; Filename: init-swiper.el
 ;; Description: Settings for swiper

@@ -1,4 +1,4 @@
-;;; init-modes.el --- Settings for other special modes
+;;; init-modes.el --- Settings for other special modes  -*- lexical-binding: t -*-
 
 ;; Filename: init-modes.el
 ;; Description: Settings for other special modes

@@ -1,4 +1,4 @@
-;;; init-license-templates.el --- Settings for license templates
+;;; init-license-templates.el --- Settings for license templates  -*- lexical-binding: t -*-
 
 ;; Filename: init-license-templates.el
 ;; Description: Settings for license templates

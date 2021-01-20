@@ -1,4 +1,4 @@
-;;; init-auto-sudoedit.el --- Settings for auto sudoedit
+;;; init-auto-sudoedit.el --- Settings for auto sudoedit  -*- lexical-binding: t -*-
 
 ;; Filename: init-auto-sudoedit.el
 ;; Description: Settings for auto sudoedit

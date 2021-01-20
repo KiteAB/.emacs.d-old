@@ -1,4 +1,4 @@
-;;; init-nox.el --- Settings for nox
+;;; init-nox.el --- Settings for nox  -*- lexical-binding: t -*-
 
 ;; Filename: init-nox.el
 ;; Description: Settings for nox
