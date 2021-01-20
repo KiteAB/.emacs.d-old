@@ -110,7 +110,8 @@ Containing `left', and `right' aligned respectively."
                     (:eval (propertize " " 'display '(height 1.1))))
 
                   ;; right side
-                  '((:propertize " %m " face font-lock-keyword-face)
+                  '((:propertize mode-name face font-lock-keyword-face)
+                    " "
                     (:eval (propertize (buffer-name) 'face '+modeline-buffer-name-face))
                     " "
                     (:eval (propertize (+modeline-buffer-read-only) 'face '+modeline-buffer-read-only-face))
