@@ -1,4 +1,4 @@
-;;; KiteAB Emacs - A Simple and Fast Emacs Configuration
+;;; KiteAB Emacs - A Simple and Fast Emacs Configuration  -*- lexical-binding: t -*-
 
 ;; Description: A Simple and Fast Emacs Configuration
 ;; Author: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
