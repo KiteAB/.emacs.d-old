@@ -101,23 +101,31 @@ Containing `left', and `right' aligned respectively."
   "Dim face in mode-line")
 
 (setq-default mode-line-format
-              '((:eval
+              ;; basic quote
+              '(
+                ;; eval +simple-mode-line-render
+                (:eval
                  (+simple-mode-line-render
                   ;; left side
-                  '((:eval (meow-indicator))
+                  '(
+                    (:eval (meow-indicator))
                     " %l:%C "
                     (:propertize (-3 "%p") face +modeline-dim-face)
-                    (:eval (propertize " " 'display '(height 1.1))))
+                    (:eval (propertize " " 'display '(height 1.1)))
+                    )
 
                   ;; right side
-                  '((:propertize mode-name face font-lock-keyword-face)
+                  '(
+                    (:propertize mode-name face font-lock-keyword-face)
                     (:propertize " %b " face +modeline-buffer-name-face)
                     (:eval (propertize (+modeline-buffer-read-only) 'face '+modeline-buffer-read-only-face))
                     (:eval (propertize (awesome-tray-module-git-info) 'face '+modeline-git-info-face))
                     " "
                     (:eval (propertize (format-time-string "%m-%d %H:%M %a") 'face '+modeline-dim-face))
                     " ")
-                  ))))
+                  ;; +simple-mode-line-render ends here
+                  )
+                 )))
 
 (provide 'init-modeline)
 
