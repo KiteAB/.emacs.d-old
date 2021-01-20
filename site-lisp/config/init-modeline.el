@@ -111,9 +111,7 @@ Containing `left', and `right' aligned respectively."
 
                   ;; right side
                   '((:propertize mode-name face font-lock-keyword-face)
-                    " "
-                    (:eval (propertize (buffer-name) 'face '+modeline-buffer-name-face))
-                    " "
+                    (:propertize " %b " face +modeline-buffer-name-face)
                     (:eval (propertize (+modeline-buffer-read-only) 'face '+modeline-buffer-read-only-face))
                     (:eval (propertize (awesome-tray-module-git-info) 'face '+modeline-git-info-face))
                     " "
