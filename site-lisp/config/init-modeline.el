@@ -128,5 +128,5 @@ Containing `left', and `right' aligned respectively."
                  )))
 
 (provide 'init-modeline)
-(test test)
+
 ;;; init-modeline.el ends here
