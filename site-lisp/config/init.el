@@ -6,7 +6,7 @@
 ;; Maintainer: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
 ;; Copyright (C) 2021, KiteAB, all rights reserved.
 ;; Created: 2020-12-10 21:43:50
-;; Last-Updated: 2021-01-16 12:31:15
+;; Last-Updated: 2021-01-22 12:41:15
 ;;           By: KiteAB
 ;; URL: https://github.com/KiteAB/.emacs.d/blob/master/site-lisp/config/init.el
 ;; Keywords:
@@ -112,7 +112,7 @@
          (require 'init-counsel)
          (require 'init-dired)
          (require 'init-disable-mouse)
-         (require 'init-eaf)
+         ;; (require 'init-eaf)
          (require 'init-flycheck)
          (require 'init-git)
          (require 'init-indent-guide)
