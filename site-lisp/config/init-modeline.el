@@ -72,6 +72,18 @@ Containing `left', and `right' aligned respectively."
       (concat "R-O ")
     ""))
 
+(defun +modeline-git ()
+  (if (executable-find "git")
+      (let* ((git-info (with-temp-buffer
+                         (list (apply 'call-process "git" nil (current-buffer) nil '("symbolic-ref" "--short" "HEAD"))
+                               (buffer-string))))
+             (status (nth 0 git-info))
+             (result (nth 1 git-info)))
+        (if (equal status 0)
+            (replace-regexp-in-string "\n" " " result)
+          ""))
+    "Git Not Found"))
+
 (defface +modeline-buffer-read-only-face
   '((((background light))
      :foreground "#cc2444" :bold t)
@@ -119,8 +131,7 @@ Containing `left', and `right' aligned respectively."
                     (:propertize mode-name face font-lock-keyword-face)
                     (:propertize " %b " face +modeline-buffer-name-face)
                     (:eval (propertize (+modeline-buffer-read-only) 'face '+modeline-buffer-read-only-face))
-                    (:eval (propertize (awesome-tray-module-git-info) 'face '+modeline-git-info-face))
-                    " "
+                    (:eval (propertize (+modeline-git) 'face '+modeline-git-info-face))
                     (:eval (propertize (format-time-string "%m-%d %H:%M %a") 'face '+modeline-dim-face))
                     " ")
                   ;; +simple-mode-line-render ends here
