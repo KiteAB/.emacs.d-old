@@ -112,7 +112,7 @@
          (require 'init-counsel)
          (require 'init-dired)
          (require 'init-disable-mouse)
-         ;; (require 'init-eaf)
+         (require 'init-eaf)
          (require 'init-flycheck)
          (require 'init-git)
          (require 'init-indent-guide)
