@@ -66,8 +66,7 @@
 (setq calendar-latitude  27.82681
       calendar-longitude 113.08231)
 (setq circadian-themes
-      ;; '((:sunrise . storybook)
-      '((:sunrise . joker)
+      '((:sunrise . storybook)
         (:sunset  . joker)))
 (circadian-setup)
 
