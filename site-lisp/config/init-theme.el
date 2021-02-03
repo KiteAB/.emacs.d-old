@@ -56,7 +56,6 @@
 (require 'joker-theme)
 (require 'storybook-theme)
 (require 'printed-theme)
-(load-theme 'joker t)
 
 ;;; Code:
 
