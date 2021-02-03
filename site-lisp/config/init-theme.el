@@ -46,12 +46,8 @@
 ;;
 
 ;;; TODO
-;; Turn to Dynamic Window Manager
-;; https://github.com/DogLooksGood/joker-theme
-;; TODO Highlight
-;; Telegram DogLooksGood - Storybook Current line is ugly
-;; Learn how to make a theme
-;; Circadian configure - https://github.com/EvanMeek/.emacs.d/blob/master/etc/config/init-ui.el
+;;
+;;
 ;;
 
 ;;; Require
@@ -69,10 +65,9 @@
 
 ;; Circadian
 (setq calendar-latitude  27.82681
-      calendar-longitude 113.08231)
-(setq circadian-themes
-      '((:sunrise . storybook)
-        (:sunset  . joker)))
+      calendar-longitude 113.08231
+      circadian-themes   '((:sunrise . storybook)
+                           (:sunset  . joker)))
 (circadian-setup)
 
 (provide 'init-theme)
