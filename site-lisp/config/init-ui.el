@@ -4,9 +4,9 @@
 ;; Description: Settings for user interface
 ;; Author: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
 ;; Maintainer: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
-;; Copyright (C) 2020, KiteAB, all rights reserved.
+;; Copyright (C) 2021, KiteAB, all rights reserved.
 ;; Created: 2020-12-10 20:59:12
-;; Last-Updated: 2020-12-18 20:44:12
+;; Last-Updated: 2021-02-03 15:37:17
 ;;           By: KiteAB
 ;; URL: https://github.com/KiteAB/.emacs.d/blob/master/site-lisp/config/init-ui.el
 ;; Keywords:
@@ -55,18 +55,18 @@
 ;;; Code:
 
 ;; Basics
-(menu-bar-mode -1) ; Close the menu bar
-(tool-bar-mode -1) ; Close the tool bar
-(scroll-bar-mode -1) ; Close Scroll bar
-(tab-bar-mode -1) ; Set tab bar not display
-(global-hl-line-mode t) ; Highlight current line
-(setq tab-bar-show nil) ; Always not display tab bar
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+(tab-bar-mode -1)
+(global-hl-line-mode t)
+(setq tab-bar-show nil)
 
 ;; Relative Line Numbers
 (setq display-line-numbers-type 'relative)
 (global-display-line-numbers-mode t)
-(toggle-frame-fullscreen) ; Set fullscreen
-(setq inhibit-splash-screen t) ; Close the startup screen
+;; (toggle-frame-fullscreen)
+(setq inhibit-splash-screen t)
 
 ;; Transparent Background
 (set-frame-parameter nil 'alpha '(90 . 100))
