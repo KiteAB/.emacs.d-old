@@ -6,7 +6,7 @@
 ;; Maintainer: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
 ;; Copyright (C) 2021, KiteAB, all rights reserved.
 ;; Created: 2020-12-10 21:43:50
-;; Last-Updated: 2021-02-02 23:20:07
+;; Last-Updated: 2021-02-03 17:38:09
 ;;           By: KiteAB
 ;; URL: https://github.com/KiteAB/.emacs.d/blob/master/site-lisp/config/init.el
 ;; Keywords:
@@ -86,6 +86,7 @@
     ;; (require 'init-awesome-tray)
     (require 'awesome-tray)
     (require 'init-modeline)
+    (require 'init-yascroll)
 
     (require 'init-scratch)
 
@@ -106,7 +107,7 @@
          (require 'init-company-eh)
          (require 'init-counsel)
          (require 'init-dired)
-         (require 'init-disable-mouse)
+         ;; (require 'init-disable-mouse)
          (require 'init-eaf)
          (require 'init-flycheck)
          (require 'init-git)
