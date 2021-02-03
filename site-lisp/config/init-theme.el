@@ -65,9 +65,11 @@
 
 ;; Circadian
 (setq calendar-latitude  27.82681
-      calendar-longitude 113.08231
-      circadian-themes   '((:sunrise . storybook)
-                           (:sunset  . joker)))
+      calendar-longitude 113.08231)
+(setq circadian-themes
+      ;; '((:sunrise . storybook)
+      '((:sunrise . joker)
+        (:sunset  . joker)))
 (circadian-setup)
 
 (provide 'init-theme)
