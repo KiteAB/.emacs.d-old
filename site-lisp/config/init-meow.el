@@ -133,6 +133,7 @@
 
 ;; Main Function
 (defun meow-setup ()
+  ;; Basic Layout Set
   (setq meow-cheatsheet-layout meow-cheatsheet-layout-colemak)
 
   ;; Insert Mode
