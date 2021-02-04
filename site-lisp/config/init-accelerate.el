@@ -6,7 +6,7 @@
 ;; Maintainer: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
 ;; Copyright (C) 2020, KiteAB, all rights reserved.
 ;; Created: 2020-12-10 20:59:12
-;; Last-Updated: 2021-02-02 22:07:05
+;; Last-Updated: 2021-02-04 13:00:16
 ;;           By: KiteAB
 ;; URL: https://github.com/KiteAB/.emacs.d/blob/master/site-lisp/config/init-accelerate.el
 ;; Keywords:
@@ -56,7 +56,8 @@
 
 (setq package-enable-at-startup nil
       frame-inhibit-implied-resize t
-      byte-compile-warnings '(cl-functions))
+      byte-compile-warnings '(cl-functions)
+      frame-resize-pixelwise t)
 
 (provide 'init-accelerate)
 
