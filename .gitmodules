@@ -43,3 +43,6 @@
 [submodule "site-lisp/extensions/printed-theme"]
 	path = site-lisp/extensions/printed-theme
 	url = https://github.com/DogLooksGood/printed-theme
+[submodule "site-lisp/extensions/chemistry-theme"]
+	path = site-lisp/extensions/chemistry-theme
+	url = https://github.com/KiteAB/chemistry-theme
