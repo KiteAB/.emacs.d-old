@@ -46,7 +46,6 @@
     #+begin_src shell
     git submodule update --recursive
     #+end_src
-    Info: The EAF package is pull from my [[https://gitee.com/KiteAB/emacs-application-framework][mirror repository]], and I'll merge it with the [[https://github.com/manateelazycat/emacs-application-framework][original repository]] every week!
 
 *** Add More Site Lisp
     If you want to add more site lisp, you can run commands below:
