@@ -40,3 +40,6 @@
 [submodule "site-lisp/extensions/printed-theme"]
 	path = site-lisp/extensions/printed-theme
 	url = https://github.com/DogLooksGood/printed-theme
+[submodule "site-lisp/extensions/emacs-application-framework"]
+	path = site-lisp/extensions/emacs-application-framework
+	url = https://github.com/manateelazycat/emacs-application-framework
