@@ -7,9 +7,6 @@
 [submodule "site-lisp/extensions/company-english-helper"]
 	path = site-lisp/extensions/company-english-helper
 	url = https://github.com/manateelazycat/company-english-helper
-[submodule "site-lisp/extensions/emacs-application-framework"]
-	path = site-lisp/extensions/emacs-application-framework
-	url = https://gitee.com/KiteAB/emacs-application-framework
 [submodule "site-lisp/extensions/insert-translated-name"]
 	path = site-lisp/extensions/insert-translated-name
 	url = https://github.com/manateelazycat/insert-translated-name
@@ -43,6 +40,3 @@
 [submodule "site-lisp/extensions/printed-theme"]
 	path = site-lisp/extensions/printed-theme
 	url = https://github.com/DogLooksGood/printed-theme
-[submodule "site-lisp/extensions/chemistry-theme"]
-	path = site-lisp/extensions/chemistry-theme
-	url = https://github.com/KiteAB/chemistry-theme
