@@ -62,6 +62,7 @@
                'js-mode-hook
                'web-mode-hook
                'python-mode-hook
+               'go-mode-hook
                ))
   (add-hook hook '(lambda ()
                     (require 'lsp-mode)
