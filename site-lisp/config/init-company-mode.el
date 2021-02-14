@@ -4,9 +4,9 @@
 ;; Description: Settings for company mode
 ;; Author: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
 ;; Maintainer: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
-;; Copyright (C) 2020, KiteAB, all rights reserved.
+;; Copyright (C) 2021, KiteAB, all rights reserved.
 ;; Created: 2020-12-10 20:59:12
-;; Last-Updated: 2020-12-20 17:18:57
+;; Last-Updated: 2021-02-14 23:45:11
 ;;           By: KiteAB
 ;; URL: https://github.com/KiteAB/.emacs.d/blob/master/site-lisp/config/init-company-mode.el
 ;; Keywords:
@@ -58,7 +58,7 @@
 (global-company-mode 1)
 
 (setq company-minimum-prefix-length 1
-      company-idle-delay 0.5)
+      company-idle-delay 0.1)
 (with-eval-after-load 'company
   (define-key company-active-map (kbd "M-p") nil)
   (define-key company-active-map (kbd "M-n") nil)
