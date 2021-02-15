@@ -56,11 +56,11 @@
 
 (setq kiteab/en-font-name "Fira Code Nerd Font Mono"
       kiteab/en-font-style "Regular"
-      kiteab/en-font-size 28)
+      kiteab/en-font-size 24)
 
 (setq kiteab/zh-font-name "WenQuanYi MicroHei Mono"
       kiteab/zh-font-style "Regular"
-      kiteab/zh-font-size 28)
+      kiteab/zh-font-size 24)
 
 ;; The Quick Brown Fox Jumps Over The Lazy Dog
 ;; 中英文等宽字体测试 - 敏捷的棕色狐狸跳过懒狗
