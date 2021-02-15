@@ -69,7 +69,7 @@
                                      "?=" "?." "??" ";;" "/*" "/=" "/>" "//" "__" "~~" "(*" "*)"
                                      "\\\\" "://"))
 
-(ligature-mode 1)
+(global-ligature-mode 1)
 
 (provide 'init-ligature)
 
