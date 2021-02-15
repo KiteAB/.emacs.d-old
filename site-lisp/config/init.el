@@ -6,7 +6,7 @@
 ;; Maintainer: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
 ;; Copyright (C) 2021, KiteAB, all rights reserved.
 ;; Created: 2020-12-10 21:43:50
-;; Last-Updated: 2021-02-03 17:38:09
+;; Last-Updated: 2021-02-15 20:06:29
 ;;           By: KiteAB
 ;; URL: https://github.com/KiteAB/.emacs.d/blob/master/site-lisp/config/init.el
 ;; Keywords:
@@ -127,6 +127,7 @@
          (require 'init-windresize)
          (require 'init-yasnippet)
          (require 'init-youdao-dict)
+         (require 'init-ligature)
          (require-pkg 'undo-tree)
          (global-undo-tree-mode 1)
 
