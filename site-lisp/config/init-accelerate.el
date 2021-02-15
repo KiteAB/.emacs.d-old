@@ -4,7 +4,7 @@
 ;; Description: Accelerate for startup
 ;; Author: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
 ;; Maintainer: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
-;; Copyright (C) 2020, KiteAB, all rights reserved.
+;; Copyright (C) 2021, KiteAB, all rights reserved.
 ;; Created: 2020-12-10 20:59:12
 ;; Last-Updated: 2021-02-04 13:00:16
 ;;           By: KiteAB
