@@ -6,7 +6,7 @@
 ;; Maintainer: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
 ;; Copyright (C) 2021, KiteAB, all rights reserved.
 ;; Created: 2020-12-10 20:59:12
-;; Last-Updated: 2021-01-25 11:42:58
+;; Last-Updated: 2021-02-15 20:55:18
 ;;           By: KiteAB
 ;; URL: https://github.com/KiteAB/.emacs.d/blob/master/site-lisp/config/init-font.el
 ;; Keywords:
@@ -56,11 +56,11 @@
 
 (setq kiteab/en-font-name "Fira Code Nerd Font Mono"
       kiteab/en-font-style "Regular"
-      kiteab/en-font-size 22)
+      kiteab/en-font-size 28)
 
 (setq kiteab/zh-font-name "WenQuanYi MicroHei Mono"
       kiteab/zh-font-style "Regular"
-      kiteab/zh-font-size 22)
+      kiteab/zh-font-size 28)
 
 ;; The Quick Brown Fox Jumps Over The Lazy Dog
 ;; 中英文等宽字体测试 - 敏捷的棕色狐狸跳过懒狗
