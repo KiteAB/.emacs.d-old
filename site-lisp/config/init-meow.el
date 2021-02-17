@@ -223,8 +223,46 @@
    '("G" . end-of-buffer)
    '("Q" . emacs-session-save)
 
+   ;; Functions
+   '("qc" . open-config-folder)
+   '("qC" . open-require-file)
+   '("qa" . set-alpha)
+   '("qs" . kiteab/open-scratch)
+   '("qT" . kiteab/add-todo-in-code)
+   '("qi" . kiteab/change-indent-type)
+   '("qp" . kiteab/provide-feature-name)
+   '("qt" . kiteab/insert-current-date-time)
+   '("qu" . kiteab/upgrade-modules)
+   '("q TAB" . kiteab/open-erc)
+   '("q SPC" . kiteab/format-commit)
+
+   ;; Buffer
+   '("ts" . counsel-switch-buffer)
+   '("tk" . kill-buffer)
+
+   ;; Window
+   '("w1" . delete-other-windows)
+   '("w2" . split-window-below)
+   '("w3" . split-window-right)
+   '("w0" . delete-window)
+   '("wo" . other-window)
+
+   ;; Useful
+   '("uf" . mark-defun)
+   '("ul" . undo)
+   '("ur" . query-replace)
+   '("ue" . eshell)
+   '("up" . list-processes)
+   '("ug" . goto-line)
+   '("ua" . align-regexp)
+
    ;; Plugins
-   '("m" . magit-status)))
+   ;; Magit
+   '("m" . magit-status)
+
+   ;; Evil Nerd Commenter
+   '("c" . evilnc-comment-or-uncomment-lines)
+   ))
 
 (setq meow-cursor-type-insert '(bar . 2))
 
