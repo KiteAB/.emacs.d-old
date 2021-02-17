@@ -6,7 +6,7 @@
 ;; Maintainer: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
 ;; Copyright (C) 2021, KiteAB, all rights reserved.
 ;; Created: 2021-01-06 17:17:02
-;; Last-Updated: 2021-01-16 21:19:48
+;; Last-Updated: 2021-02-17 22:02:25
 ;;           By: KiteAB
 ;; URL: https://github.com/KiteAB/.emacs.d/blob/master/site-lisp/config/init-meow.el
 ;; Keywords:
@@ -214,6 +214,10 @@
   ;; Leader Key
   ;; Prefix Commands
   (define-prefix-command 'meow-g-command)
+  (define-prefix-command 'meow-q-command)
+  (define-prefix-command 'meow-t-command)
+  (define-prefix-command 'meow-w-command)
+  (define-prefix-command 'meow-u-command)
   (meow-leader-define-key
    ;; Basic
    '("f" . counsel-find-file)
@@ -224,6 +228,7 @@
    '("Q" . emacs-session-save)
 
    ;; Functions
+   '("q"  . meow-q-command)
    '("qc" . open-config-folder)
    '("qC" . open-require-file)
    '("qa" . set-alpha)
@@ -237,10 +242,12 @@
    '("q SPC" . kiteab/format-commit)
 
    ;; Buffer
+   '("t"  . meow-t-command)
    '("ts" . counsel-switch-buffer)
    '("tk" . kill-buffer)
 
    ;; Window
+   '("w"  . meow-w-command)
    '("w1" . delete-other-windows)
    '("w2" . split-window-below)
    '("w3" . split-window-right)
@@ -248,6 +255,7 @@
    '("wo" . other-window)
 
    ;; Useful
+   '("u"  . meow-u-command)
    '("uf" . mark-defun)
    '("ul" . undo)
    '("ur" . query-replace)
