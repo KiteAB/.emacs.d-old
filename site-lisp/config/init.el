@@ -139,6 +139,7 @@
          (require 'init-symbol-overlay)
          ;; (require 'init-highlight-defined)
          (require 'init-highlight-quoted)
+         (require 'init-highlight-numbers)
 
          (require 'init-company-mode)
          (require 'init-lsp)
