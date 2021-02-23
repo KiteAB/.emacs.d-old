@@ -6,7 +6,7 @@
 ;; Maintainer: KiteAB <kiteabpl@outlook.com> (https://kiteab.ga)
 ;; Copyright (C) 2021, KiteAB, all rights reserved.
 ;; Created: 2021-02-02 23:10:24
-;; Last-Updated: 2021-02-20 18:46:02
+;; Last-Updated: 2021-02-23 13:19:15
 ;;           By: KiteAB
 ;; URL: https://github.com/KiteAB/.emacs.d/blob/master/site-lisp/config/init-theme.el
 ;; Keywords:
@@ -52,10 +52,11 @@
 
 ;;; Require
 (require-pkg 'circadian)
-(require 'lazycat-theme)
+(require-pkg 'nord-theme)
+;; (require 'lazycat-theme)
 (require 'joker-theme)
 (require 'storybook-theme)
-(require 'printed-theme)
+;; (require 'printed-theme)
 
 ;;; Code:
 
@@ -72,7 +73,7 @@
 (setq calendar-latitude  27.82681
       calendar-longitude 113.08231)
 (setq circadian-themes
-      '((:sunrise . storybook)
+      '((:sunrise . nord)
         (:sunset  . joker)))
 (circadian-setup)
 
