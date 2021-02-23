@@ -112,6 +112,13 @@ Containing `left', and `right' aligned respectively."
      (:foreground "grey60")))
   "Dim face in mode-line")
 
+(defface +modeline-date-face
+  '((((class color) (background dark))
+     (:foreground "#A64CA6"))
+    (((class color) (background light))
+     (:foreground "grey60")))
+  "Date face in mode-line")
+
 (setq-default mode-line-format
               ;; basic quote
               '(
@@ -132,7 +139,7 @@ Containing `left', and `right' aligned respectively."
                     (:propertize " %b " face +modeline-buffer-name-face)
                     (:eval (propertize (+modeline-buffer-read-only) 'face '+modeline-buffer-read-only-face))
                     (:eval (propertize (+modeline-git) 'face '+modeline-git-info-face))
-                    (:eval (propertize (format-time-string "%m-%d %H:%M %a") 'face '+modeline-dim-face))
+                    (:eval (propertize (format-time-string "%m-%d %H:%M %a") 'face '+modeline-date-face))
                     " ")
                   ;; +simple-mode-line-render ends here
                   )
