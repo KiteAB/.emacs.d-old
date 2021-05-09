@@ -1,5 +1,5 @@
 * KiteAB Emacs
-  Hello everyone, this repository saved my personal emacs configuration file.
+  ~KiteAB Emacs~ is my personal emacs configuration file.
 
   You can find the Emacs Guides at [[https://github.com/KitPixel/emacs-guides][this repository]].
 
