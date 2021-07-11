@@ -72,7 +72,7 @@
 ** Token
    You need to do the following to make markdown/org preview work properly:
    - Edit the ~init-eaf.el~ file and edit somethings below:
-   #+begin_src emacs-lisp
+   #+begin_src emacs-lisp222
      (setq eaf-grip-token "token")
    #+end_src
    And go to the [[https://github.com/settings/tokens/new?scopes=][GitHub Personal Access Token Site]] to create your personal token.
